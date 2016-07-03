@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function lookupIcon</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class="selected module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function lookupIcon</h1>
+			<section>
+				<p>Lookup icon alternatives in icon themes. It uses icon theme cache wherever it's loaded. If searched icon is found in some icon theme all subsequent themes are ignored.
+</p>
+<section><p>This function may require many <b>stat</b> calls, so beware. Use subdirFilter to filter icons by <code class="lang-d"><span class="typ">IconSubDir</span></code> properties (e.g. by size or context) to decrease the number of searchable items and allocations. Loading <code class="lang-d"><a href="../../icontheme/cache/IconThemeCache.html"><span class="pln">icontheme<wbr/></span><span class="pun">.</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="typ">IconThemeCache</span></a></code> may also descrease the number of stats.
+</p>
+</section>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">lookupIcon</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">subdirFilter</span><span class="pun">, </span><span class="typ">IconThemes</span><span class="pun">, </span><span class="typ">BaseDirs</span><span class="pun">, </span><span class="typ">Exts</span><span class="pun">, </span><span class="typ">OutputRange</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">iconName</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">IconThemes</span> <span class="pln">iconThemes</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">BaseDirs</span> <span class="pln">searchIconDirs</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">Exts</span> <span class="pln">extensions</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">OutputRange</span> <span class="pln">sink</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">Flag</span>!"reverse" <span class="pln">reverse</span> <span class="pun">=</span> <span class="typ">No<wbr/></span><span class="pun">.</span><span class="pln">reverse</span>
+								<br/>
+<span class="pun">)</span>
+								<br/>
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="typ">IconThemes </span><span class="pun">&amp;&amp; </span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="typ">BaseDirs </span><span class="pun">&amp;&amp; </span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="typ">Exts </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="typ">IconThemes </span><span class="pun">: </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">IconThemeFile</span><span class="pun">)) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="typ">BaseDirs </span><span class="pun">: </span><span class="typ">string</span><span class="pun">) &amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="typ">Exts </span><span class="pun">: </span><span class="typ">string</span><span class="pun">) &amp;&amp; </span><span class="pln">isOutputRange</span><span class="pun">!(</span><span class="typ">OutputRange</span><span class="pun">, </span><span class="typ">IconSearchResult</span><span class="pun">!(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="typ">IconThemes</span><span class="pun">))</span><span class="pun">);</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="iconName">iconName</td><td> Icon name.</td></tr>
+<tr><td id="iconThemes">iconThemes</td><td> Icon themes to search icon in.</td></tr>
+<tr><td id="searchIconDirs">searchIconDirs</td><td> Case icon directories.</td></tr>
+<tr><td id="extensions">extensions</td><td> Possible file extensions of needed icon file, in order of preference.</td></tr>
+<tr><td id="sink">sink</td><td> Output range accepting <code class="lang-d"><a href="../../icontheme/lookup/IconSearchResult.html"><span class="typ">IconSearchResult</span></a></code>s.</td></tr>
+<tr><td id="reverse">reverse</td><td> Iterate over icon theme sub-directories in reverse way.
+      Usually directories with larger icon size are listed the last,
+      so this parameter may speed up the search when looking for the largest icon.</td></tr>
+</table>
+</section>
+<section><h3>Note</h3>
+<p>Specification says that extension must be ".png", ".xpm" or ".svg", though SVG is not required to be supported. Some icon themes also contain .svgz images.
+</p>
+</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="pln">lookupIcon</span><span class="pun">!(</span><span class="pln">subdir </span><span class="pun">=&gt; </span><span class="pln">subdir<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"Places" </span><span class="pun">&amp;&amp; </span><span class="pln">subdir<wbr/></span><span class="pun">.</span><span class="pln">size </span><span class="pun">&gt;= </span><span class="lit">32</span><span class="pun">)(
+    </span><span class="str">"folder"</span><span class="pun">, <a href="../../icontheme/lookup/lookupIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseIconDirs</span><span class="pun">(), [</span><span class="str">".png"</span><span class="pun">, </span><span class="str">".xpm"</span><span class="pun">],
+    </span><span class="kwd">delegate </span><span class="typ">void </span><span class="pun">(<a href="../../icontheme/lookup/IconSearchResult.html"></span><span class="typ">IconSearchResult</span></a><span class="pun">!</span><span class="typ">IconThemeFile </span><span class="pln">item</span><span class="pun">) {
+        </span><span class="pln">writefln</span><span class="pun">(</span><span class="str">"Icon file: %s. Context: %s. Size: %s. Theme: %s"</span><span class="pun">, </span><span class="pln">item<wbr/></span><span class="pun">.</span><span class="pln">filePath</span><span class="pun">, </span><span class="pln">item<wbr/></span><span class="pun">.</span><span class="pln">subdir<wbr/></span><span class="pun">.</span><span class="pln">context</span><span class="pun">, </span><span class="pln">item<wbr/></span><span class="pun">.</span><span class="pln">subdir<wbr/></span><span class="pun">.</span><span class="pln">size</span><span class="pun">, </span><span class="pln">item<wbr/></span><span class="pun">.</span><span class="pln">iconTheme<wbr/></span><span class="pun">.</span><span class="pln">displayName</span><span class="pun">);
+    });</span></code></pre>
+</section>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../icontheme/paths/baseIconDirs.html"><span class="pln">icontheme<wbr/></span><span class="pun">.</span><span class="pln">paths<wbr/></span><span class="pun">.</span><span class="pln">baseIconDirs</span></a></code>, <code class="lang-d"><a href="../../icontheme/lookup/lookupFallbackIcon.html"><span class="pln">lookupFallbackIcon</span></a></code>
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

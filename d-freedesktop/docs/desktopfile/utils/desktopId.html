@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>desktopId - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class="selected module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>desktopId - multiple declarations</h1>
+			<ul>
+				<li>Function desktopId</li>
+				<li>Function desktopId</li>
+			</ul>
+			<section>
+				<h2>Function desktopId</h2>
+				<p>See <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ape.html">Desktop File ID</a>
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">string</span> <span class="pln">desktopId</span><span class="pun">(</span><span class="typ">Range</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">Range</span> <span class="pln">appsPaths</span>
+								<br/>
+<span class="pun">)</span>
+								<br/>
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isInputRange</span><span class="pun">!</span><span class="typ">Range </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="typ">Range </span><span class="pun">: </span><span class="typ">string</span><span class="pun">)</span><span class="pun">);</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="fileName">fileName</td><td> Desktop file.</td></tr>
+<tr><td id="appsPaths">appsPaths</td><td> Range of base application paths.</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>Desktop file ID or empty string if file does not have an ID.
+</p>
+</section>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../desktopfile/paths/applicationsPaths.html"><span class="pln">desktopfile<wbr/></span><span class="pun">.</span><span class="pln">paths<wbr/></span><span class="pun">.</span><span class="pln">applicationsPaths</span></a></code>
+</p>
+</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="typ">string</span><span class="pun">[] </span><span class="pln">appPaths</span><span class="pun">;
+</span><span class="typ">string </span><span class="pln">filePath</span><span class="pun">, </span><span class="pln">nestedFilePath</span><span class="pun">, </span><span class="pln">wrongFilePath</span><span class="pun">;
+
+</span><span class="kwd">version</span><span class="pun">(</span><span class="typ">Windows</span><span class="pun">) {
+    </span><span class="pln">appPaths </span><span class="pun">= [</span><span class="str">`C:\ProgramData\KDE\share\applications`</span><span class="pun">, </span><span class="str">`C:\Users\username\.kde\share\applications`</span><span class="pun">];
+    </span><span class="pln">filePath </span><span class="pun">= </span><span class="str">`C:\ProgramData\KDE\share\applications\example.desktop`</span><span class="pun">;
+    </span><span class="pln">nestedFilePath </span><span class="pun">= </span><span class="str">`C:\ProgramData\KDE\share\applications\kde\example.desktop`</span><span class="pun">;
+    </span><span class="pln">wrongFilePath </span><span class="pun">= </span><span class="str">`C:\ProgramData\desktop\example.desktop`</span><span class="pun">;
+} </span><span class="kwd">else </span><span class="pun">{
+    </span><span class="pln">appPaths </span><span class="pun">= [</span><span class="str">"/usr/share/applications"</span><span class="pun">, </span><span class="str">"/usr/local/share/applications"</span><span class="pun">];
+    </span><span class="pln">filePath </span><span class="pun">= </span><span class="str">"/usr/share/applications/example.desktop"</span><span class="pun">;
+    </span><span class="pln">nestedFilePath </span><span class="pun">= </span><span class="str">"/usr/share/applications/kde/example.desktop"</span><span class="pun">;
+    </span><span class="pln">wrongFilePath </span><span class="pun">= </span><span class="str">"/etc/desktop/example.desktop"</span><span class="pun">;
+}
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopId</span><span class="pun">(</span><span class="pln">nestedFilePath</span><span class="pun">, </span><span class="pln">appPaths</span><span class="pun">) == </span><span class="str">"kde-example.desktop"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopId</span><span class="pun">(</span><span class="pln">filePath</span><span class="pun">, </span><span class="pln">appPaths</span><span class="pun">) == </span><span class="str">"example.desktop"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopId</span><span class="pun">(</span><span class="pln">wrongFilePath</span><span class="pun">, </span><span class="pln">appPaths</span><span class="pun">)<wbr/>.</span><span class="pln">empty</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopId</span><span class="pun">(</span><span class="str">""</span><span class="pun">, </span><span class="pln">appPaths</span><span class="pun">)<wbr/>.</span><span class="pln">empty</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Function desktopId</h2>
+				<p>See <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ape.html">Desktop File ID</a>
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">string</span> <span class="pln">desktopId</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span>
+								<br/>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @trusted</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Returns</h3>
+<p>Desktop file ID or empty string if file does not have an ID.
+</p>
+</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="fileName">fileName</td><td> Desktop file.</td></tr>
+</table>
+</section>
+<section><h3>Note</h3>
+<p>This function retrieves applications paths each time it's called and therefore can impact performance. To avoid this issue use the overload with argument.
+</p>
+</section>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../desktopfile/paths/applicationsPaths.html"><span class="pln">desktopfile<wbr/></span><span class="pun">.</span><span class="pln">paths<wbr/></span><span class="pun">.</span><span class="pln">applicationsPaths</span></a></code>
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

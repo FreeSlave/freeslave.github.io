@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function IniLikeGroup.localizedValue</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class="selected module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function IniLikeGroup.localizedValue</h1>
+			<section>
+				<p>Perform locale matching lookup as described in <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s04.html">Localized values for keys</a>.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="kwd">final </span><span class="typ">string</span> <span class="pln">localizedValue</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">key</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">locale</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">typecons<wbr/></span><span class="pun">.</span><span class="typ">Flag</span>!("nonLocaleFallback") <span class="pln">nonLocaleFallback</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Flag</span><span class="pun">)</span><span class="kwd">true</span>
+								<br/>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow @safe const</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="key">key</td><td> Non-localized key.</td></tr>
+<tr><td id="locale">locale</td><td> Locale in intereset.</td></tr>
+<tr><td id="nonLocaleFallback">nonLocaleFallback</td><td> Allow fallback to non-localized version.</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>The localized value associated with key and locale,
+  or the value associated with non-localized key if group does not contain localized value and nonLocaleFallback is true.
+</p>
+</section>
+<section><h3>Note</h3>
+<p>The value is not unescaped automatically.
+</p>
+</section>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../inilike/file/IniLikeGroup.setLocalizedValue.html"><span class="pln">setLocalizedValue</span></a></code>, <code class="lang-d"><a href="../../inilike/file/IniLikeGroup.value.html"><span class="pln">value</span></a></code>, <code class="lang-d"><a href="../../inilike/file/IniLikeGroup.readEntry.html"><span class="pln">readEntry</span></a></code>
+</p>
+</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">lilf </span><span class="pun">= </span><span class="kwd">new <a href="../../inilike/file/IniLikeFile.html"></span><span class="typ">IniLikeFile</span></a><span class="pun">;
+</span><span class="pln">lilf<wbr/></span><span class="pun">.</span><span class="pln">addGenericGroup</span><span class="pun">(</span><span class="str">"Entry"</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">group </span><span class="pun">= </span><span class="pln">lilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Entry"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"Entry"</span><span class="pun">); 
+</span><span class="pln">group</span><span class="pun">[</span><span class="str">"Name"</span><span class="pun">] = </span><span class="str">"Programmer"</span><span class="pun">;
+</span><span class="pln">group</span><span class="pun">[</span><span class="str">"Name[ru_RU]"</span><span class="pun">] = </span><span class="str">"Разработчик"</span><span class="pun">;
+</span><span class="pln">group</span><span class="pun">[</span><span class="str">"Name[ru@jargon]"</span><span class="pun">] = </span><span class="str">"Кодер"</span><span class="pun">;
+</span><span class="pln">group</span><span class="pun">[</span><span class="str">"Name[ru]"</span><span class="pun">] = </span><span class="str">"Программист"</span><span class="pun">;
+</span><span class="pln">group</span><span class="pun">[</span><span class="str">"Name[de_DE@dialect]"</span><span class="pun">] = </span><span class="str">"Programmierer"</span><span class="pun">; </span><span class="com">//just example
+</span><span class="pln">group</span><span class="pun">[</span><span class="str">"Name[fr_FR]"</span><span class="pun">] = </span><span class="str">"Programmeur"</span><span class="pun">;
+</span><span class="pln">group</span><span class="pun">[</span><span class="str">"GenericName"</span><span class="pun">] = </span><span class="str">"Program"</span><span class="pun">;
+</span><span class="pln">group</span><span class="pun">[</span><span class="str">"GenericName[ru]"</span><span class="pun">] = </span><span class="str">"Программа"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group</span><span class="pun">[</span><span class="str">"Name"</span><span class="pun">] == </span><span class="str">"Programmer"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"ru@jargon"</span><span class="pun">) == </span><span class="str">"Кодер"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"ru_RU@jargon"</span><span class="pun">) == </span><span class="str">"Разработчик"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"ru"</span><span class="pun">) == </span><span class="str">"Программист"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"ru_RU.UTF-8"</span><span class="pun">) == </span><span class="str">"Разработчик"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"nonexistent locale"</span><span class="pun">) == </span><span class="str">"Programmer"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"de_DE@dialect"</span><span class="pun">) == </span><span class="str">"Programmierer"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"fr_FR.UTF-8"</span><span class="pun">) == </span><span class="str">"Programmeur"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"GenericName"</span><span class="pun">, </span><span class="str">"ru_RU"</span><span class="pun">) == </span><span class="str">"Программа"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"GenericName"</span><span class="pun">, </span><span class="str">"fr_FR"</span><span class="pun">) == </span><span class="str">"Program"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">group<wbr/></span><span class="pun">.</span><span class="pln">localizedValue</span><span class="pun">(</span><span class="str">"GenericName"</span><span class="pun">, </span><span class="str">"fr_FR"</span><span class="pun">, </span><span class="typ">No<wbr/></span><span class="pun">.</span><span class="pln">nonLocaleFallback</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
+
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

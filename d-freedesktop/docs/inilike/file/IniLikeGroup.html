@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class IniLikeGroup</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class="selected module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Class IniLikeGroup</h1>
+			<section>
+				<p>This class represents the group (section) in the ini-like file.
+ Instances of this class can be created only in the context of <code class="lang-d"><a href="../../inilike/file/IniLikeFile.html"><span class="typ">IniLikeFile</span></a></code> or its derivatives.
+</p>
+
+					<section>
+						<h3>Inherits from</h3>
+						<ul>
+							<li>
+								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
+ (base class)
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.this.html" class="protected">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Create instance on IniLikeGroup and set its name to groupName.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.addCommentAfter.html" class="public">
+										<code>addCommentAfter</code>
+									</a>
+								</td>
+								<td>Add comment after some node.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.addCommentBefore.html" class="public">
+										<code>addCommentBefore</code>
+									</a>
+								</td>
+								<td>Add comment before some node.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.appendComment.html" class="public">
+										<code>appendComment</code>
+									</a>
+								</td>
+								<td>Add comment line into the group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.appendValue.html" class="public">
+										<code>appendValue</code>
+									</a>
+								</td>
+								<td>Add key-value entry without association of value with key. Can be used to add duplicates.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.byIniLine.html" class="public">
+										<code>byIniLine</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.byKeyValue.html" class="public">
+										<code>byKeyValue</code>
+									</a>
+								</td>
+								<td>Iterate by Key-Value pairs. Values are left in escaped form.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.byNode.html" class="public">
+										<code>byNode</code>
+									</a>
+								</td>
+								<td>Iterate over nodes of internal list.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.contains.html" class="public">
+										<code>contains</code>
+									</a>
+								</td>
+								<td>Tell if group contains value associated with the key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.emptyByKeyValue.html" class="public">
+										<code>emptyByKeyValue</code>
+									</a>
+								</td>
+								<td>Empty range of the same type as byKeyValue. Can be used in derived classes if it's needed to have empty range.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.getNode.html" class="public">
+										<code>getNode</code>
+									</a>
+								</td>
+								<td>Get internal list node for key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.groupName.html" class="public">
+										<code>groupName</code>
+									</a>
+								</td>
+								<td>Get name of this group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.localizedValue.html" class="public">
+										<code>localizedValue</code>
+									</a>
+								</td>
+								<td>Perform locale matching lookup as described in <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s04.html">Localized values for keys</a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.moveLineAfter.html" class="public">
+										<code>moveLineAfter</code>
+									</a>
+								</td>
+								<td>Move line after other line in the group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.moveLineBefore.html" class="public">
+										<code>moveLineBefore</code>
+									</a>
+								</td>
+								<td>Move line before other line in the group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.moveLineToBack.html" class="public">
+										<code>moveLineToBack</code>
+									</a>
+								</td>
+								<td>Move line to the end of group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.moveLineToFront.html" class="public">
+										<code>moveLineToFront</code>
+									</a>
+								</td>
+								<td>Move line to the start of group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.opIndex.html" class="public">
+										<code>opIndex</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.opIndexAssign.html" class="public">
+										<code>opIndexAssign</code>
+									</a>
+								</td>
+								<td>Assign localized value.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.opIndexAssign.html" class="public">
+										<code>opIndexAssign</code>
+									</a>
+								</td>
+								<td>Insert new value or replaces the old one if value associated with key already exists.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.prependComment.html" class="public">
+										<code>prependComment</code>
+									</a>
+								</td>
+								<td>Add comment line at the start of group (after group header, before any key-value pairs).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.readEntry.html" class="public">
+										<code>readEntry</code>
+									</a>
+								</td>
+								<td>Get value by key. This function automatically unescape the found value before returning.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.removeEntry.html" class="public">
+										<code>removeEntry</code>
+									</a>
+								</td>
+								<td>Removes entry by key. Do nothing if not value associated with key found.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.removeEntry.html" class="public">
+										<code>removeEntry</code>
+									</a>
+								</td>
+								<td>ditto, but remove entry by localized key
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.removeEntry.html" class="public">
+										<code>removeEntry</code>
+									</a>
+								</td>
+								<td>ditto, but remove entry by node.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.setLocalizedValue.html" class="public">
+										<code>setLocalizedValue</code>
+									</a>
+								</td>
+								<td>Same as localized version of opIndexAssign, but uses function syntax.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.setValue.html" class="public">
+										<code>setValue</code>
+									</a>
+								</td>
+								<td>Set value associated with key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.value.html" class="public">
+										<code>value</code>
+									</a>
+								</td>
+								<td>Get value by key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.writeEntry.html" class="public">
+										<code>writeEntry</code>
+									</a>
+								</td>
+								<td>ditto, localized version
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.writeEntry.html" class="public">
+										<code>writeEntry</code>
+									</a>
+								</td>
+								<td>Set value by key. This function automatically escape the value (you should not escape value yourself) when writing it.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.validateKey.html" class="protected">
+										<code>validateKey</code>
+									</a>
+								</td>
+								<td>Validate key before setting value to key for this group and throw exception if not valid.
+ Can be reimplemented in derived classes.
+ Default implementation checks if key is not empty string, does not look like comment and does not contain new line or carriage return characters.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.validateValue.html" class="protected">
+										<code>validateValue</code>
+									</a>
+								</td>
+								<td>Validate value for key before setting value to key for this group and throw exception if not valid.
+ Can be reimplemented in derived classes.
+ Default implementation checks if value is escaped.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Inner structs</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.LineNode.html" class="public">
+										<code>LineNode</code>
+									</a>
+								</td>
+								<td>Wrapper for internal ListMap node.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Enums</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.InvalidKeyPolicy.html" class="public">
+										<code>InvalidKeyPolicy</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Note</h3>
+<p>Keys are case-sensitive.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

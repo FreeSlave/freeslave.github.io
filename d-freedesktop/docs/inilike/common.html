@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module inilike.common</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../inilike/common.html" class="selected module">common</a>
+							</li>
+							<li>
+								<a href="../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Module inilike.common</h1>
+			<p>Common functions for dealing with entries in ini-like file.
+</p>
+
+			<section><section><h2>See Also</h2>
+<p><a href="http://standards.freedesktop.org/desktop-entry-spec/latest/index.html">Desktop Entry Specification</a>
+</p>
+</section>
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th>
+						<th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="boolToString" class="public" href="../inilike/common/boolToString.html">
+								<code>boolToString</code>
+							</a>
+						</td>
+						<td>Convert bool to string. Can be used to set boolean values.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="chooseLocalizedValue" class="public" href="../inilike/common/chooseLocalizedValue.html">
+								<code>chooseLocalizedValue</code>
+							</a>
+						</td>
+						<td>Choose the better localized value matching to locale between two localized values. The "goodness" is determined using algorithm described in <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s04.html">Localized values for keys</a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="doUnescape" class="public" href="../inilike/common/doUnescape.html">
+								<code>doUnescape</code>
+							</a>
+						</td>
+						<td>Unescape value. If value does not need unescaping this function returns original value.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="dropEncodingPart" class="public" href="../inilike/common/dropEncodingPart.html">
+								<code>dropEncodingPart</code>
+							</a>
+						</td>
+						<td>Drop encoding part from locale (it's not used in constructing localized keys).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="escapeValue" class="public" href="../inilike/common/escapeValue.html">
+								<code>escapeValue</code>
+							</a>
+						</td>
+						<td>Escapes string by replacing special symbols with escaped sequences.
+ These symbols are: '\\' (backslash), '\n' (newline), '\r' (carriage return) and '\t' (tab).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="isBoolean" class="public" href="../inilike/common/isBoolean.html">
+								<code>isBoolean</code>
+							</a>
+						</td>
+						<td>Check if the entry value can be interpreted as boolean value.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="isComment" class="public" href="../inilike/common/isComment.html">
+								<code>isComment</code>
+							</a>
+						</td>
+						<td>Test whether the string s represents a comment.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="isFalse" class="public" href="../inilike/common/isFalse.html">
+								<code>isFalse</code>
+							</a>
+						</td>
+						<td>Test whether the entry value represents false.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="isGroupHeader" class="public" href="../inilike/common/isGroupHeader.html">
+								<code>isGroupHeader</code>
+							</a>
+						</td>
+						<td>Test whether the string s represents a group header.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="isTrue" class="public" href="../inilike/common/isTrue.html">
+								<code>isTrue</code>
+							</a>
+						</td>
+						<td>Test whether the entry value represents true.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="isValidDesktopFileKey" class="public" href="../inilike/common/isValidDesktopFileKey.html">
+								<code>isValidDesktopFileKey</code>
+							</a>
+						</td>
+						<td>Test whether the string is valid key in terms of Desktop File Specification. Not actually used in inilike.file.IniLikeFile, but can be used in derivatives.
+ Only the characters A-Za-z0-9- may be used in key names. See <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s02.html">Basic format of the file</a>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="isValidKey" class="public" href="../inilike/common/isValidKey.html">
+								<code>isValidKey</code>
+							</a>
+						</td>
+						<td>Test whether the string is valid key, i.e. does not need escaping, is not a comment and not empty string.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="localizedKey" class="public" href="../inilike/common/localizedKey.html">
+								<code>localizedKey</code>
+							</a>
+						</td>
+						<td>Construct localized key name from key and locale.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="localizedKey" class="public" href="../inilike/common/localizedKey.html">
+								<code>localizedKey</code>
+							</a>
+						</td>
+						<td>ditto, but constructs locale name from arguments.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="makeLocaleName" class="public" href="../inilike/common/makeLocaleName.html">
+								<code>makeLocaleName</code>
+							</a>
+						</td>
+						<td>Make locale name based on language, country, encoding and modifier.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="needEscaping" class="public" href="../inilike/common/needEscaping.html">
+								<code>needEscaping</code>
+							</a>
+						</td>
+						<td>Check if value needs to be escaped. This function is currently tolerant to single slashes and tabs.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="parseGroupHeader" class="public" href="../inilike/common/parseGroupHeader.html">
+								<code>parseGroupHeader</code>
+							</a>
+						</td>
+						<td>Retrieve group name from header entry.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="parseKeyValue" class="public" href="../inilike/common/parseKeyValue.html">
+								<code>parseKeyValue</code>
+							</a>
+						</td>
+						<td>Parse entry of kind Key=Value into pair of Key and Value.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="parseLocaleName" class="public" href="../inilike/common/parseLocaleName.html">
+								<code>parseLocaleName</code>
+							</a>
+						</td>
+						<td>Parse locale name into the tuple of 4 values corresponding to language, country, encoding and modifier
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="separateFromLocale" class="public" href="../inilike/common/separateFromLocale.html">
+								<code>separateFromLocale</code>
+							</a>
+						</td>
+						<td>Separate key name into non-localized key and locale name.
+ If key is not localized returns original key and empty string.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="unescapeValue" class="public" href="../inilike/common/unescapeValue.html">
+								<code>unescapeValue</code>
+							</a>
+						</td>
+						<td>Unescapes string. You should unescape values returned by library before displaying until you want keep them as is (e.g., to allow user to edit values in escaped form).
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

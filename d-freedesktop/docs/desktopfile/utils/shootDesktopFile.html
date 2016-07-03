@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>shootDesktopFile - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class="selected module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>shootDesktopFile - multiple declarations</h1>
+			<ul>
+				<li>Function shootDesktopFile</li>
+				<li>Function shootDesktopFile</li>
+			</ul>
+			<section>
+				<h2>Function shootDesktopFile</h2>
+				<p>Read the desktop file and run application or open link depending on the type of the given desktop file.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">shootDesktopFile</span><span class="pun">(</span><span class="typ">IniLikeReader</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">IniLikeReader</span> <span class="pln">reader</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<a href="../../desktopfile/utils/ShootOptions.html"><span class="typ">ShootOptions</span></a> <span class="pln">options</span> <span class="pun">=</span> <span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="pln">init</span>
+								<br/>
+<span class="pun">)</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="reader">reader</td><td> IniLikeReader constructed from range of strings using iniLikeRangeReader</td></tr>
+<tr><td id="fileName">fileName</td><td> file name of desktop file where data read from. Can be used in field code expanding, should be set to the file name from which contents IniLikeReader was constructed.</td></tr>
+<tr><td id="options">options</td><td> options that set behavior of the function.
+ Use this function to execute desktop file fast, without creating of DesktopFile instance.</td></tr>
+</table>
+</section>
+<section><h3>Throws</h3>
+<p>ProcessException on failure to start the process.
+  <code class="lang-d"><a href="../../desktopfile/utils/DesktopExecException.html"><span class="typ">DesktopExecException</span></a></code> if exec string is invalid.
+  Exception on other errors.
+</p>
+</section>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../desktopfile/utils/ShootOptions.html"><span class="typ">ShootOptions</span></a></code>
+</p>
+</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">contents</span><span class="pun">;
+<a href="../../desktopfile/utils/ShootOptions.html"></span><span class="typ">ShootOptions</span></a><span class="pln"> options</span><span class="pun">;
+
+</span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Desktop Entry]\nURL=testurl"</span><span class="pun">;
+</span><span class="pln">options<wbr/></span><span class="pun">.</span><span class="pln">flags </span><span class="pun">= <a href="../../desktopfile/utils/ShootOptions.FollowLink.html"></span><span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="typ">FollowLink</span></a><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">shootDesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="kwd">null</span><span class="pun">, <a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pun">));
+
+</span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Group]\nKey=Value"</span><span class="pun">;
+<a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pln"> </span><span class="pun">= </span><span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">shootDesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="kwd">null</span><span class="pun">, <a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pun">));
+
+</span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Desktop Entry]\nURL=testurl"</span><span class="pun">;
+<a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pln"> </span><span class="pun">= </span><span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">;
+</span><span class="typ">bool </span><span class="pln">wasCalled</span><span class="pun">;
+</span><span class="pln">options<wbr/></span><span class="pun">.</span><span class="pln">opener </span><span class="pun">= </span><span class="kwd">delegate </span><span class="typ">void </span><span class="pun">(</span><span class="typ">string </span><span class="pln">url</span><span class="pun">) {
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">url </span><span class="pun">== </span><span class="str">"testurl"</span><span class="pun">);
+    </span><span class="pln">wasCalled </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
+};
+
+</span><span class="pln">shootDesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="kwd">null</span><span class="pun">, <a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">wasCalled</span><span class="pun">);
+
+</span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Desktop Entry]"</span><span class="pun">;
+<a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pln"> </span><span class="pun">= </span><span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">shootDesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="kwd">null</span><span class="pun">, <a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pun">));
+
+</span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Desktop Entry]\nURL=testurl"</span><span class="pun">;
+</span><span class="pln">options<wbr/></span><span class="pun">.</span><span class="pln">flags </span><span class="pun">= <a href="../../desktopfile/utils/ShootOptions.Exec.html"></span><span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="typ">Exec</span></a><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">shootDesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="kwd">null</span><span class="pun">, <a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pun">));
+
+</span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Desktop Entry]\nExec=whoami"</span><span class="pun">;
+</span><span class="pln">options<wbr/></span><span class="pun">.</span><span class="pln">flags </span><span class="pun">= <a href="../../desktopfile/utils/ShootOptions.Link.html"></span><span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="typ">Link</span></a><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">shootDesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="kwd">null</span><span class="pun">, <a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pun">));
+
+</span><span class="kwd">static if </span><span class="pun">(</span><span class="pln">isFreedesktop</span><span class="pun">) {
+    </span><span class="kwd">try </span><span class="pun">{
+        </span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Desktop Entry]\nExec=whoami\nTerminal=true"</span><span class="pun">;
+        </span><span class="pln">options<wbr/></span><span class="pun">.</span><span class="pln">flags </span><span class="pun">= <a href="../../desktopfile/utils/ShootOptions.Exec.html"></span><span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="typ">Exec</span></a><span class="pun">;
+        </span><span class="pln">wasCalled </span><span class="pun">= </span><span class="kwd">false</span><span class="pun">;
+        </span><span class="pln">options<wbr/></span><span class="pun">.</span><span class="pln">terminalDetector </span><span class="pun">= </span><span class="kwd">delegate </span><span class="typ">string</span><span class="pun">[] () {</span><span class="pln">wasCalled </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">; </span><span class="kwd">return null</span><span class="pun">;};
+        </span><span class="pln">shootDesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="kwd">null</span><span class="pun">, <a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pun">);
+        </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">wasCalled</span><span class="pun">);
+        
+        </span><span class="typ">string </span><span class="pln">tempPath </span><span class="pun">= </span><span class="pln">buildPath</span><span class="pun">(</span><span class="pln">tempDir</span><span class="pun">(), </span><span class="str">"desktopfile-unittest-tempdir"</span><span class="pun">);
+        </span><span class="kwd">if </span><span class="pun">(!</span><span class="pln">tempPath<wbr/></span><span class="pun">.</span><span class="pln">exists</span><span class="pun">) {
+            </span><span class="pln">mkdir</span><span class="pun">(</span><span class="pln">tempPath</span><span class="pun">);
+        }
+        </span><span class="kwd">scope</span><span class="pun">(</span><span class="pln">exit</span><span class="pun">) </span><span class="pln">rmdir</span><span class="pun">(</span><span class="pln">tempPath</span><span class="pun">);
+        
+        </span><span class="typ">string </span><span class="pln">tempDesktopFile </span><span class="pun">= </span><span class="pln">buildPath</span><span class="pun">(</span><span class="pln">tempPath</span><span class="pun">, </span><span class="str">"followtest.desktop"</span><span class="pun">);
+        </span><span class="kwd">auto </span><span class="pln">f </span><span class="pun">= </span><span class="typ">File</span><span class="pun">(</span><span class="pln">tempDesktopFile</span><span class="pun">, </span><span class="str">"w"</span><span class="pun">);
+        </span><span class="kwd">scope</span><span class="pun">(</span><span class="pln">exit</span><span class="pun">) </span><span class="pln">remove</span><span class="pun">(</span><span class="pln">tempDesktopFile</span><span class="pun">);
+        </span><span class="pln">f<wbr/></span><span class="pun">.</span><span class="pln">rawWrite</span><span class="pun">(</span><span class="str">"[Desktop Entry]\nURL=testurl"</span><span class="pun">);
+        </span><span class="pln">f<wbr/></span><span class="pun">.</span><span class="pln">flush</span><span class="pun">();
+        
+        </span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Desktop Entry]\nURL=" </span><span class="pun">~ </span><span class="pln">tempDesktopFile</span><span class="pun">;
+        </span><span class="pln">options<wbr/></span><span class="pun">.</span><span class="pln">flags </span><span class="pun">= <a href="../../desktopfile/utils/ShootOptions.Link.html"></span><span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="typ">Link</span></a><span class="pln"> </span><span class="pun">| <a href="../../desktopfile/utils/ShootOptions.FollowLink.html"></span><span class="typ">ShootOptions<wbr/></span><span class="pun">.</span><span class="typ">FollowLink</span></a><span class="pun">;
+        </span><span class="pln">options<wbr/></span><span class="pun">.</span><span class="pln">opener </span><span class="pun">= </span><span class="kwd">delegate </span><span class="typ">void </span><span class="pun">(</span><span class="typ">string </span><span class="pln">url</span><span class="pun">) {
+            </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">url </span><span class="pun">== </span><span class="str">"testurl"</span><span class="pun">);
+            </span><span class="pln">wasCalled </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
+        };
+        
+        </span><span class="pln">shootDesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="kwd">null</span><span class="pun">, <a href="../../desktopfile/utils/shootDesktopFile.html#options"></span><span class="pln">options</span></a><span class="pun">);
+        </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">wasCalled</span><span class="pun">);
+    } </span><span class="kwd">catch</span><span class="pun">(</span><span class="typ">Exception </span><span class="pln">e</span><span class="pun">) {
+        
+    }
+}
+
+
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Function shootDesktopFile</h2>
+				<p>ditto, but automatically create IniLikeReader from the file.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">void</span> <span class="pln">shootDesktopFile</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<a href="../../desktopfile/utils/ShootOptions.html"><span class="typ">ShootOptions</span></a> <span class="pln">options</span> <span class="pun">=</span> <span class="typ">ShootOptions</span><span class="pun">(</span><span class="lit">7</span><span class="pun">, </span><span class="kwd">null</span><span class="pun">, </span><span class="kwd">null</span><span class="pun">, </span><span class="kwd">null</span><span class="pun">, </span><span class="kwd">null</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">)</span>
+								<br/>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">@trusted</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class IconThemeCache</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class="selected module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Class IconThemeCache</h1>
+			<section>
+				<p>Class representation of icon-theme.cache file contained icon theme cache.
+</p>
+
+					<section>
+						<h3>Inherits from</h3>
+						<ul>
+							<li>
+								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
+ (base class)
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Read icon theme cache from memory mapped file and validate it.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Read icon theme cache from data and validate it.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.containsIcon.html" class="public">
+										<code>containsIcon</code>
+									</a>
+								</td>
+								<td>Test if icon is listed in cache.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.containsIcon.html" class="public">
+										<code>containsIcon</code>
+									</a>
+								</td>
+								<td>Test if icon is listed in cache and belongs to specified subdirectory.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.directories.html" class="public">
+										<code>directories</code>
+									</a>
+								</td>
+								<td>Sub directories of icon theme listed in cache.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.fileName.html" class="public">
+										<code>fileName</code>
+									</a>
+								</td>
+								<td>Path of cache file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.iconDirectories.html" class="public">
+										<code>iconDirectories</code>
+									</a>
+								</td>
+								<td>Find all sub directories the icon belongs to according to cache.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.icons.html" class="public">
+										<code>icons</code>
+									</a>
+								</td>
+								<td>All icon names listed in cache.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.isOutdated.html" class="public">
+										<code>isOutdated</code>
+									</a>
+								</td>
+								<td>Test if icon theme is outdated, i.e. modification time of cache file is older than modification time of icon theme directory.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../icontheme/cache/IconThemeCache.isOutdated.html" class="public">
+										<code>isOutdated</code>
+									</a>
+								</td>
+								<td>Test if icon theme file is outdated, i.e. modification time of cache file is older than modification time of icon theme directory.
+ This function is static and therefore can be used before actual reading and validating cache file.
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">cachePath </span><span class="pun">= </span><span class="str">"./test/Tango/icon-theme.cache"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cachePath<wbr/></span><span class="pun">.</span><span class="pln">exists</span><span class="pun">);
+
+</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">IconThemeCache</span><span class="pun">) </span><span class="pln">cache </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">IconThemeCache</span><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">fileName </span><span class="pun">== </span><span class="pln">cachePath</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">containsIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">containsIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">, </span><span class="str">"24x24/places"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">containsIcon</span><span class="pun">(</span><span class="str">"edit-copy"</span><span class="pun">, </span><span class="str">"32x32/actions"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">iconDirectories</span><span class="pun">(</span><span class="str">"text-x-generic"</span><span class="pun">)<wbr/>.</span><span class="pln">canFind</span><span class="pun">(</span><span class="str">"32x32/mimetypes"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">directories</span><span class="pun">()<wbr/>.</span><span class="pln">canFind</span><span class="pun">(</span><span class="str">"32x32/devices"</span><span class="pun">));
+
+</span><span class="kwd">auto <a href="../../icontheme/cache/IconThemeCache.icons.html"></span><span class="pln">icons</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">icons</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">icons<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">icons<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">(</span><span class="str">"text-x-generic"</span><span class="pun">));
+
+</span><span class="kwd">try </span><span class="pun">{
+    </span><span class="typ">SysTime </span><span class="pln">pathAccessTime</span><span class="pun">, </span><span class="pln">pathModificationTime</span><span class="pun">;
+    </span><span class="typ">SysTime </span><span class="pln">fileAccessTime</span><span class="pun">, </span><span class="pln">fileModificationTime</span><span class="pun">;
+    
+    </span><span class="pln">getTimes</span><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">, </span><span class="pln">fileAccessTime</span><span class="pun">, </span><span class="pln">fileModificationTime</span><span class="pun">);
+    </span><span class="pln">getTimes</span><span class="pun">(</span><span class="pln">cachePath<wbr/></span><span class="pun">.</span><span class="pln">dirName</span><span class="pun">, </span><span class="pln">pathAccessTime</span><span class="pun">, </span><span class="pln">pathModificationTime</span><span class="pun">);
+    
+    </span><span class="pln">setTimes</span><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">, </span><span class="pln">pathAccessTime</span><span class="pun">, </span><span class="pln">pathModificationTime</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">(!<a href="../../icontheme/cache/IconThemeCache.isOutdated.html"></span><span class="typ">IconThemeCache<wbr/></span><span class="pun">.</span><span class="pln">isOutdated</span></a><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">));
+}
+</span><span class="kwd">catch</span><span class="pun">(</span><span class="typ">Exception </span><span class="pln">e</span><span class="pun">) {
+    </span><span class="com">// some environmental error, just ignore
+</span><span class="pun">}
+
+</span><span class="kwd">try </span><span class="pun">{
+    </span><span class="kwd">auto </span><span class="pln">fileData </span><span class="pun">= </span><span class="pln">assumeUnique</span><span class="pun">(</span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">));
+    </span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="kwd">new </span><span class="typ">IconThemeCache</span><span class="pun">(</span><span class="pln">fileData</span><span class="pun">, </span><span class="pln">cachePath</span><span class="pun">));
+} </span><span class="kwd">catch</span><span class="pun">(</span><span class="typ">FileException </span><span class="pln">e</span><span class="pun">) {
+    
+}
+
+</span><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)[] </span><span class="pln">data </span><span class="pun">= [</span><span class="lit">0</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">];
+<a href="../../icontheme/cache/IconThemeCacheException.html"></span><span class="typ">IconThemeCacheException</span></a><span class="pln"> thrown </span><span class="pun">= </span><span class="pln">collectException</span><span class="pun">!<a href="../../icontheme/cache/IconThemeCacheException.html"></span><span class="typ">IconThemeCacheException</span></a><span class="pun">(</span><span class="kwd">new </span><span class="typ">IconThemeCache</span><span class="pun">(</span><span class="pln">data</span><span class="pun">, </span><span class="pln">cachePath</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Invalid cache must throw"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"major version"</span><span class="pun">);
+
+</span><span class="pln">data </span><span class="pun">= [</span><span class="lit">0</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">1</span><span class="pun">];
+</span><span class="pln">thrown </span><span class="pun">= </span><span class="pln">collectException</span><span class="pun">!<a href="../../icontheme/cache/IconThemeCacheException.html"></span><span class="typ">IconThemeCacheException</span></a><span class="pun">(</span><span class="kwd">new </span><span class="typ">IconThemeCache</span><span class="pun">(</span><span class="pln">data</span><span class="pun">, </span><span class="pln">cachePath</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Invalid cache must throw"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"minor version"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

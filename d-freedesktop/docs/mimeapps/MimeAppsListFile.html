@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class MimeAppsListFile</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../mimeapps.html" class="selected module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Class MimeAppsListFile</h1>
+			<section>
+				<p>Class represenation of single mimeapps.list file containing information about MIME type associations and default applications.
+</p>
+
+					<section>
+						<h3>Inherits from</h3>
+						<ul>
+							<li>
+								<code class="prettyprint lang-d"><a href="../inilike/file/IniLikeFile.html"><span class="typ">IniLikeFile</span></a></code>
+ (base class)
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Read mimeapps.list file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Read MIME type associations from IniLikeReader, e.g. acquired from iniLikeFileReader or iniLikeStringReader.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.addAssociation.html" class="public">
+										<code>addAssociation</code>
+									</a>
+								</td>
+								<td>Add desktopId as association for mimeType.
+ Delete it from removed associations if listed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.addedAssociations.html" class="public">
+										<code>addedAssociations</code>
+									</a>
+								</td>
+								<td>Access "Added Associations" group of explicitly added associations.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.defaultApplications.html" class="public">
+										<code>defaultApplications</code>
+									</a>
+								</td>
+								<td>Access "Desktop Applications" group of default associations.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.ensureAddedAssociations.html" class="public">
+										<code>ensureAddedAssociations</code>
+									</a>
+								</td>
+								<td>Create empty "Added Associations" group if it does not exist.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.ensureDefaultApplications.html" class="public">
+										<code>ensureDefaultApplications</code>
+									</a>
+								</td>
+								<td>Create empty "Default Applications" group if it does not exist.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.ensureRemovedAssociations.html" class="public">
+										<code>ensureRemovedAssociations</code>
+									</a>
+								</td>
+								<td>Create empty "Removed Associations" group if it does not exist.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.removeAssociation.html" class="public">
+										<code>removeAssociation</code>
+									</a>
+								</td>
+								<td>Explicitly remove desktopId association for mimeType.
+ Delete it from added associations and default applications.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.removedAssociations.html" class="public">
+										<code>removedAssociations</code>
+									</a>
+								</td>
+								<td>Access "Removed Associations" group of explicitily removed associations.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.setAddedAssocations.html" class="public">
+										<code>setAddedAssocations</code>
+									</a>
+								</td>
+								<td>Set list of desktop ids as assocations for mimeType. This overwrites existing assocations.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../mimeapps/MimeAppsListFile.setDefaultApplication.html" class="public">
+										<code>setDefaultApplication</code>
+									</a>
+								</td>
+								<td>Set desktopId as default application for mimeType.
+ Set it as first element in the list of added associations.
+ Delete it from removed associations if listed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.addGenericGroup.html" class="public inherited">
+										<code>addGenericGroup</code>
+									</a>
+								</td>
+								<td>Create new group using groupName.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.appendLeadingComment.html" class="public inherited">
+										<code>appendLeadingComment</code>
+									</a>
+								</td>
+								<td>Add leading comment. This will be appended to the list of leadingComments.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.byGroup.html" class="public inherited">
+										<code>byGroup</code>
+									</a>
+								</td>
+								<td>Range of groups in order how they were defined in file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.byNode.html" class="public inherited">
+										<code>byNode</code>
+									</a>
+								</td>
+								<td>Iterate over <code class="lang-d"><a href="../inilike/file/IniLikeFile.GroupNode.html"><span class="typ">GroupNode</span></a></code>s.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.clearLeadingComments.html" class="public inherited">
+										<code>clearLeadingComments</code>
+									</a>
+								</td>
+								<td>Remove all coments met before groups.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.fileName.html" class="public inherited">
+										<code>fileName</code>
+									</a>
+								</td>
+								<td>File path where the object was loaded from.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.getNode.html" class="public inherited">
+										<code>getNode</code>
+									</a>
+								</td>
+								<td>Get <code class="lang-d"><a href="../inilike/file/IniLikeFile.GroupNode.html"><span class="typ">GroupNode</span></a></code> by groupName.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.group.html" class="public inherited">
+										<code>group</code>
+									</a>
+								</td>
+								<td>Get group by name.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.leadingComments.html" class="public inherited">
+										<code>leadingComments</code>
+									</a>
+								</td>
+								<td>Leading comments.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.moveGroupAfter.html" class="public inherited">
+										<code>moveGroupAfter</code>
+									</a>
+								</td>
+								<td>Move group after other.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.moveGroupBefore.html" class="public inherited">
+										<code>moveGroupBefore</code>
+									</a>
+								</td>
+								<td>Move group before other.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.moveGroupToBack.html" class="public inherited">
+										<code>moveGroupToBack</code>
+									</a>
+								</td>
+								<td>Move the group to make it the last.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.moveGroupToFront.html" class="public inherited">
+										<code>moveGroupToFront</code>
+									</a>
+								</td>
+								<td>Move the group to make it the first.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.prependLeadingComment.html" class="public inherited">
+										<code>prependLeadingComment</code>
+									</a>
+								</td>
+								<td>Prepend leading comment (e.g. for setting shebang line).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.removeGroup.html" class="public inherited">
+										<code>removeGroup</code>
+									</a>
+								</td>
+								<td>Remove group by name. Do nothing if group with such name does not exist.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.save.html" class="public inherited">
+										<code>save</code>
+									</a>
+								</td>
+								<td>Use Output range or delegate to retrieve strings line by line.
+ Those strings can be written to the file or be showed in text area.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.saveToFile.html" class="public inherited">
+										<code>saveToFile</code>
+									</a>
+								</td>
+								<td>Save object to the file using .ini-like format.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.saveToString.html" class="public inherited">
+										<code>saveToString</code>
+									</a>
+								</td>
+								<td>Save object to string using .ini like format.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.createEmptyGroup.html" class="protected inherited">
+										<code>createEmptyGroup</code>
+									</a>
+								</td>
+								<td>Can be used in derived classes to create instance of IniLikeGroup.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.createGroupByName.html" class="protected inherited">
+										<code>createGroupByName</code>
+									</a>
+								</td>
+								<td>Reimplement in derive class.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.insertGroup.html" class="protected inherited">
+										<code>insertGroup</code>
+									</a>
+								</td>
+								<td>Insert group into <code class="lang-d"><a href="../inilike/file/IniLikeFile.html"><span class="typ">IniLikeFile</span></a></code> object and use its name as key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.onCommentInGroup.html" class="protected inherited">
+										<code>onCommentInGroup</code>
+									</a>
+								</td>
+								<td>Add comment for group.
+ This function is called only in constructor and can be reimplemented in derived classes.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.onGroup.html" class="protected inherited">
+										<code>onGroup</code>
+									</a>
+								</td>
+								<td>Create iniLikeGroup by groupName during file parsing.
+ This function can be reimplemented in derived classes,
+ e.g. to insert additional checks or create specific derived class depending on groupName.
+ Returned value is later passed to <code class="lang-d"><a href="../inilike/file/IniLikeFile.onCommentInGroup.html"><span class="pln">onCommentInGroup</span></a></code> and <code class="lang-d"><a href="../inilike/file/IniLikeFile.onKeyValue.html"><span class="pln">onKeyValue</span></a></code> methods as currentGroup.
+ Reimplemented method also is allowed to return null.
+ Default implementation just returns empty IniLikeGroup with name set to groupName.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.onKeyValue.html" class="protected inherited">
+										<code>onKeyValue</code>
+									</a>
+								</td>
+								<td>Add key/value pair for group.
+ This function is called only in constructor and can be reimplemented in derived classes.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.onLeadingComment.html" class="protected inherited">
+										<code>onLeadingComment</code>
+									</a>
+								</td>
+								<td>Add comment before groups.
+ This function is called only in constructor and can be reimplemented in derived classes.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.putGroup.html" class="protected inherited">
+										<code>putGroup</code>
+									</a>
+								</td>
+								<td>Append group to group list without associating group name with it. Can be used to add groups with duplicated names.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Inner structs</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.GroupNode.html" class="public inherited">
+										<code>GroupNode</code>
+									</a>
+								</td>
+								<td>Wrapper for internal ListMap node.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.ReadOptions.html" class="public inherited">
+										<code>ReadOptions</code>
+									</a>
+								</td>
+								<td>Behavior of ini-like file reading.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.WriteOptions.html" class="public inherited">
+										<code>WriteOptions</code>
+									</a>
+								</td>
+								<td>Behavior of ini-like file saving.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Enums</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.DuplicateGroupPolicy.html" class="public inherited">
+										<code>DuplicateGroupPolicy</code>
+									</a>
+								</td>
+								<td>Behavior on group with duplicate name in the file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../inilike/file/IniLikeFile.DuplicateKeyPolicy.html" class="public inherited">
+										<code>DuplicateKeyPolicy</code>
+									</a>
+								</td>
+								<td>Behavior on duplicate key in the group.
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">content </span><span class="pun">= 
+</span><span class="str">`[Added Associations]
+text/plain=geany.desktop;kde4-kwrite.desktop;
+image/png=kde4-gwenview.desktop;gthumb.desktop;
+
+[Removed Associations]
+text/plain=libreoffice-writer.desktop;
+
+[Default Applications]
+text/plain=kde4-kate.desktop
+x-scheme-handler/http=chromium.desktop;iceweasel.desktop;
+
+
+[Unknown group]
+Key=Value`</span><span class="pun">;
+</span><span class="kwd">auto </span><span class="pln">mimeAppsList </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">MimeAppsListFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">content</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeAppsList<wbr/></span><span class="pun">.</span><span class="pln">addedAssociations</span><span class="pun">() !</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeAppsList<wbr/></span><span class="pun">.</span><span class="pln">removedAssociations</span><span class="pun">() !</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeAppsList<wbr/></span><span class="pun">.</span><span class="pln">defaultApplications</span><span class="pun">() !</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeAppsList<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Unknown group"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeAppsList<wbr/></span><span class="pun">.</span><span class="pln">addedAssociations</span><span class="pun">()<wbr/>.</span><span class="pln">appsForMimeType</span><span class="pun">(</span><span class="str">"text/plain"</span><span class="pun">)<wbr/>.</span><span class="pln">equal</span><span class="pun">([</span><span class="str">"geany.desktop"</span><span class="pun">, </span><span class="str">"kde4-kwrite.desktop"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeAppsList<wbr/></span><span class="pun">.</span><span class="pln">removedAssociations</span><span class="pun">()<wbr/>.</span><span class="pln">appsForMimeType</span><span class="pun">(</span><span class="str">"text/plain"</span><span class="pun">)<wbr/>.</span><span class="pln">equal</span><span class="pun">([</span><span class="str">"libreoffice-writer.desktop"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeAppsList<wbr/></span><span class="pun">.</span><span class="pln">defaultApplications</span><span class="pun">()<wbr/>.</span><span class="pln">appsForMimeType</span><span class="pun">(</span><span class="str">"x-scheme-handler/http"</span><span class="pun">)<wbr/>.</span><span class="pln">equal</span><span class="pun">([</span><span class="str">"chromium.desktop"</span><span class="pun">, </span><span class="str">"iceweasel.desktop"</span><span class="pun">]));
+
+</span><span class="pln">content </span><span class="pun">=
+</span><span class="str">`[Default Applications]
+text/plain=geany.desktop
+notmimetype=value
+`</span><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">!</span><span class="typ">IniLikeReadException</span><span class="pun">(</span><span class="kwd">new </span><span class="typ">MimeAppsListFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">content</span><span class="pun">)));
+</span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="pln">mimeAppsList </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">MimeAppsListFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">content</span><span class="pun">), </span><span class="kwd">null</span><span class="pun">, </span><span class="typ">IniLikeFile<wbr/></span><span class="pun">.</span><span class="typ">ReadOptions</span><span class="pun">(</span><span class="typ">IniLikeGroup<wbr/></span><span class="pun">.</span><span class="typ">InvalidKeyPolicy<wbr/></span><span class="pun">.</span><span class="pln">save</span><span class="pun">)));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeAppsList<wbr/></span><span class="pun">.</span><span class="pln">defaultApplications</span><span class="pun">()<wbr/>.</span><span class="pln">value</span><span class="pun">(</span><span class="str">"notmimetype"</span><span class="pun">) == </span><span class="str">"value"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

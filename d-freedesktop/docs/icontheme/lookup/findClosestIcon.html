@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>findClosestIcon - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class="selected module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>findClosestIcon - multiple declarations</h1>
+			<ul>
+				<li>Function findClosestIcon</li>
+				<li>Function findClosestIcon</li>
+			</ul>
+			<section>
+				<h2>Function findClosestIcon</h2>
+				<p>Find icon closest of the size. It uses icon theme cache wherever possible. The first perfect match is used.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">string</span> <span class="pln">findClosestIcon</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">subdirFilter</span><span class="pun">, </span><span class="typ">IconThemes</span><span class="pun">, </span><span class="typ">BaseDirs</span><span class="pun">, </span><span class="typ">Exts</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">iconName</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">size</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">IconThemes</span> <span class="pln">iconThemes</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">BaseDirs</span> <span class="pln">searchIconDirs</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">Exts</span> <span class="pln">extensions</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">Flag</span>!"allowFallbackIcon" <span class="pln">allowFallback</span> <span class="pun">=</span> <span class="typ">Yes<wbr/></span><span class="pun">.</span><span class="pln">allowFallbackIcon</span>
+								<br/>
+<span class="pun">)</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="iconName">iconName</td><td> Name of icon to search as defined by Icon Theme Specification (i.e. without path and extension parts).</td></tr>
+<tr><td id="size">size</td><td> Preferred icon size to get.</td></tr>
+<tr><td id="iconThemes">iconThemes</td><td> Range of icontheme.file.IconThemeFile objects.</td></tr>
+<tr><td id="searchIconDirs">searchIconDirs</td><td> Base icon directories.</td></tr>
+<tr><td id="extensions">extensions</td><td> Allowed file extensions.</td></tr>
+<tr><td id="allowFallback">allowFallback</td><td> Allow searching for non-themed fallback if could not find icon in themes (non-themed icon can be any size).</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>Icon file path or empty string if not found.
+</p>
+</section>
+<section><h3>Note</h3>
+<p>If icon of some size was found in the icon theme, this algorithm does not check following themes, even if they contain icons with closer size. Therefore the icon found in the more preferred theme always has presedence over icons from other themes.
+</p>
+</section>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../icontheme/paths/baseIconDirs.html"><span class="pln">icontheme<wbr/></span><span class="pun">.</span><span class="pln">paths<wbr/></span><span class="pun">.</span><span class="pln">baseIconDirs</span></a></code>, <code class="lang-d"><a href="../../icontheme/lookup/lookupIcon.html"><span class="pln">lookupIcon</span></a></code>, <code class="lang-d"><a href="../../icontheme/lookup/findFallbackIcon.html"><span class="pln">findFallbackIcon</span></a></code>, <code class="lang-d"><a href="../../icontheme/lookup/iconSizeDistance.html"><span class="pln">iconSizeDistance</span></a></code>
+</p>
+</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">baseDirs </span><span class="pun">= [</span><span class="str">"test"</span><span class="pun">];
+</span><span class="kwd">auto <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pln"> </span><span class="pun">= [<a href="../../icontheme/lookup/openIconTheme.html"></span><span class="pln">openIconTheme</span></a><span class="pun">(</span><span class="str">"Tango"</span><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">), <a href="../../icontheme/lookup/openIconTheme.html"></span><span class="pln">openIconTheme</span></a><span class="pun">(</span><span class="str">"hicolor"</span><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">)];
+
+</span><span class="typ">string </span><span class="pln">found</span><span class="pun">;
+
+</span><span class="com">//exact match
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">, </span><span class="lit">32</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"Tango"</span><span class="pun">, </span><span class="str">"32x32/places"</span><span class="pun">, </span><span class="str">"folder.png"</span><span class="pun">));
+
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">, </span><span class="lit">24</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"Tango"</span><span class="pun">, </span><span class="str">"24x24/devices"</span><span class="pun">, </span><span class="str">"folder.png"</span><span class="pun">));
+
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">!(</span><span class="pln">subdir </span><span class="pun">=&gt; </span><span class="pln">subdir<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"Places"</span><span class="pun">)(</span><span class="str">"folder"</span><span class="pun">, </span><span class="lit">32</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"Tango"</span><span class="pun">, </span><span class="str">"32x32/places"</span><span class="pun">, </span><span class="str">"folder.png"</span><span class="pun">));
+
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">!(</span><span class="pln">subdir </span><span class="pun">=&gt; </span><span class="pln">subdir<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"Places"</span><span class="pun">)(</span><span class="str">"folder"</span><span class="pun">, </span><span class="lit">24</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"Tango"</span><span class="pun">, </span><span class="str">"32x32/places"</span><span class="pun">, </span><span class="str">"folder.png"</span><span class="pun">));
+
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">!(</span><span class="pln">subdir </span><span class="pun">=&gt; </span><span class="pln">subdir<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"MimeTypes"</span><span class="pun">)(</span><span class="str">"folder"</span><span class="pun">, </span><span class="lit">32</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found<wbr/></span><span class="pun">.</span><span class="pln">empty</span><span class="pun">);
+
+</span><span class="com">//hicolor has exact match, but Tango is more preferred.
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">, </span><span class="lit">64</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"Tango"</span><span class="pun">, </span><span class="str">"32x32/places"</span><span class="pun">, </span><span class="str">"folder.png"</span><span class="pun">));
+
+</span><span class="com">//find xpm
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">, </span><span class="lit">32</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">, [</span><span class="str">".xpm"</span><span class="pun">]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"Tango"</span><span class="pun">, </span><span class="str">"32x32/places"</span><span class="pun">, </span><span class="str">"folder.xpm"</span><span class="pun">));
+
+</span><span class="com">//find big png, not exact match
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">, </span><span class="lit">200</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"Tango"</span><span class="pun">, </span><span class="str">"128x128/places"</span><span class="pun">, </span><span class="str">"folder.png"</span><span class="pun">));
+
+</span><span class="com">//svg is closer
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">, </span><span class="lit">200</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">, [</span><span class="str">".png"</span><span class="pun">, </span><span class="str">".svg"</span><span class="pun">]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"Tango"</span><span class="pun">, </span><span class="str">"scalable/places"</span><span class="pun">, </span><span class="str">"folder.svg"</span><span class="pun">));
+
+</span><span class="com">//lookup with fallback
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">(</span><span class="str">"pidgin"</span><span class="pun">, </span><span class="lit">96</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"pidgin.png"</span><span class="pun">));
+
+</span><span class="com">//lookup without fallback
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">(</span><span class="str">"pidgin"</span><span class="pun">, </span><span class="lit">96</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">, <a href="../../icontheme/lookup/defaultIconExtensions.html"></span><span class="pln">defaultIconExtensions</span></a><span class="pun">, </span><span class="typ">No<wbr/></span><span class="pun">.</span><span class="pln">allowFallbackIcon</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found<wbr/></span><span class="pun">.</span><span class="pln">empty</span><span class="pun">);
+
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">(</span><span class="str">"text-plain"</span><span class="pun">, </span><span class="lit">48</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"hicolor"</span><span class="pun">, </span><span class="str">"48x48/mimetypes"</span><span class="pun">, </span><span class="str">"text-plain.png"</span><span class="pun">));
+
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">!(</span><span class="pln">subdir </span><span class="pun">=&gt; </span><span class="pln">subdir<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"MimeTypes"</span><span class="pun">)(</span><span class="str">"text-plain"</span><span class="pun">, </span><span class="lit">48</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found </span><span class="pun">== </span><span class="pln">buildPath</span><span class="pun">(</span><span class="str">"test"</span><span class="pun">, </span><span class="str">"hicolor"</span><span class="pun">, </span><span class="str">"48x48/mimetypes"</span><span class="pun">, </span><span class="str">"text-plain.png"</span><span class="pun">));
+
+</span><span class="pln">found </span><span class="pun">= </span><span class="pln">findClosestIcon</span><span class="pun">!(</span><span class="pln">subdir </span><span class="pun">=&gt; </span><span class="pln">subdir<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"Actions"</span><span class="pun">)(</span><span class="str">"text-plain"</span><span class="pun">, </span><span class="lit">48</span><span class="pun">, <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">found<wbr/></span><span class="pun">.</span><span class="pln">empty</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Function findClosestIcon</h2>
+				<p>ditto, but with predefined extensions and fallback allowed.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">string</span> <span class="pln">findClosestIcon</span><span class="pun">(</span><span class="kwd">alias </span><span class="pln">subdirFilter</span><span class="pun">, </span><span class="typ">IconThemes</span><span class="pun">, </span><span class="typ">BaseDirs</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">iconName</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">size</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">IconThemes</span> <span class="pln">iconThemes</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">BaseDirs</span> <span class="pln">searchIconDirs</span>
+								<br/>
+<span class="pun">)</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../icontheme/lookup/defaultIconExtensions.html"><span class="pln">defaultIconExtensions</span></a></code>
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

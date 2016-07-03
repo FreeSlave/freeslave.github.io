@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function findAssociatedApplications</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="collapsed tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../desktopfile/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../mimeapps.html" class="selected module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Function findAssociatedApplications</h1>
+			<section>
+				<p>Find associated applications for mimeType.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="kwd">const</span><span class="pun">(</span><a href="../desktopfile/file/DesktopFile.html"><span class="typ">DesktopFile</span></a><span class="pun">)</span><span class="pun">[]</span> <span class="pln">findAssociatedApplications</span><span class="pun">(</span><span class="typ">ListRange</span><span class="pun">, </span><span class="typ">CacheRange</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">mimeType</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">ListRange</span> <span class="pln">mimeAppsListFiles</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">CacheRange</span> <span class="pln">mimeInfoCacheFiles</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<a href="../mimeapps/IDesktopFileProvider.html"><span class="typ">IDesktopFileProvider</span></a> <span class="pln">desktopFileProvider</span>
+								<br/>
+<span class="pun">)</span>
+								<br/>
+<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="typ">ListRange </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="typ">ListRange </span><span class="pun">: </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">MimeAppsListFile</span><span class="pun">)) &amp;&amp; </span><span class="pln">isForwardRange</span><span class="pun">!</span><span class="typ">CacheRange </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementType</span><span class="pun">!</span><span class="typ">CacheRange </span><span class="pun">: </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">MimeInfoCacheFile</span><span class="pun">))</span><span class="pun">);</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="mimeType">mimeType</td><td> MIME type or uri scheme handler in question.</td></tr>
+<tr><td id="mimeAppsListFiles">mimeAppsListFiles</td><td> Range of <code class="lang-d"><a href="../mimeapps/MimeAppsListFile.html"><span class="typ">MimeAppsListFile</span></a></code> objects to use in searching.</td></tr>
+<tr><td id="mimeInfoCacheFiles">mimeInfoCacheFiles</td><td> Range of <code class="lang-d"><a href="../mimeapps/MimeInfoCacheFile.html"><span class="typ">MimeInfoCacheFile</span></a></code> objects to use in searching.</td></tr>
+<tr><td id="desktopFileProvider">desktopFileProvider</td><td> Desktop file provider instance. Must be non-null.</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p>Array of found <b>DesktopFile</b> objects capable of opening file of given MIME type or url of given scheme.
+</p>
+</section>
+<section><h3>Note</h3>
+<p>If no applications found for this mimeType, you may consider to use this function on parent MIME type.
+</p>
+</section>
+<section><h3>See Also</h3>
+<p><a href="https://specifications.freedesktop.org/mime-apps-spec/latest/ar01s03.html">Adding/removing associations</a>, <code class="lang-d"><a href="../mimeapps/findKnownAssociatedApplications.html"><span class="pln">findKnownAssociatedApplications</span></a></code>, <code class="lang-d"><a href="../mimeapps/listAssociatedApplications.html"><span class="pln">listAssociatedApplications</span></a></code>
+</p>
+</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">desktopProvider </span><span class="pun">= </span><span class="kwd">new <a href="../mimeapps/DesktopFileProvider.html"></span><span class="typ">DesktopFileProvider</span></a><span class="pun">([</span><span class="str">"test/applications"</span><span class="pun">]);
+</span><span class="kwd">auto </span><span class="pln">mimeAppsList </span><span class="pun">= </span><span class="kwd">new <a href="../mimeapps/MimeAppsListFile.html"></span><span class="typ">MimeAppsListFile</span></a><span class="pun">(</span><span class="str">"test/applications/mimeapps.list"</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">mimeInfoCache </span><span class="pun">= </span><span class="kwd">new <a href="../mimeapps/MimeInfoCacheFile.html"></span><span class="typ">MimeInfoCacheFile</span></a><span class="pun">(</span><span class="str">"test/applications/mimeinfo.cache"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">findAssociatedApplications</span><span class="pun">(</span><span class="str">"text/plain"</span><span class="pun">, [</span><span class="kwd">null</span><span class="pun">, </span><span class="pln">mimeAppsList</span><span class="pun">], [</span><span class="kwd">null</span><span class="pun">, </span><span class="pln">mimeInfoCache</span><span class="pun">], </span><span class="pln">desktopProvider</span><span class="pun">)
+    <wbr/>.</span><span class="pln">map</span><span class="pun">!(</span><span class="pln">d </span><span class="pun">=&gt; </span><span class="pln">d<wbr/></span><span class="pun">.</span><span class="pln">displayName</span><span class="pun">())<wbr/>.</span><span class="pln">equal</span><span class="pun">([</span><span class="str">"Geany"</span><span class="pun">, </span><span class="str">"Kate"</span><span class="pun">, </span><span class="str">"Emacs"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">findAssociatedApplications</span><span class="pun">(</span><span class="str">"application/nonexistent"</span><span class="pun">, [</span><span class="pln">mimeAppsList</span><span class="pun">], [</span><span class="pln">mimeInfoCache</span><span class="pun">], </span><span class="pln">desktopProvider</span><span class="pun">)<wbr/>.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">0</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">findAssociatedApplications</span><span class="pun">(</span><span class="str">"application/x-data"</span><span class="pun">, [</span><span class="pln">mimeAppsList</span><span class="pun">], [</span><span class="pln">mimeInfoCache</span><span class="pun">], </span><span class="pln">desktopProvider</span><span class="pun">)<wbr/>.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">0</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

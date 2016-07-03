@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class DesktopFile</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class="selected module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Class DesktopFile</h1>
+			<section>
+				<p>Represents .desktop file.
+</p>
+
+					<section>
+						<h3>Inherits from</h3>
+						<ul>
+							<li>
+								<code class="prettyprint lang-d"><a href="../../inilike/file/IniLikeFile.html"><span class="typ">IniLikeFile</span></a></code>
+ (base class)
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Reads desktop file from file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Reads desktop file from IniLikeReader, e.g. acquired from iniLikeFileReader or iniLikeStringReader.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Constructs DesktopFile with "Desktop Entry" group and Version set to 1.0
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.action.html" class="public">
+										<code>action</code>
+									</a>
+								</td>
+								<td>Get <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s10.html">additional application action</a> by name.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.byAction.html" class="public">
+										<code>byAction</code>
+									</a>
+								</td>
+								<td>Iterating over existing actions.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.desktopEntry.html" class="public">
+										<code>desktopEntry</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.expandExecValue.html" class="public">
+										<code>expandExecValue</code>
+									</a>
+								</td>
+								<td>Expand "Exec" value into the array of command line arguments to use to start the program.
+ It applies unquoting and unescaping.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.id.html" class="public">
+										<code>id</code>
+									</a>
+								</td>
+								<td>See <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ape.html">Desktop File ID</a>
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.id.html" class="public">
+										<code>id</code>
+									</a>
+								</td>
+								<td>See <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ape.html">Desktop File ID</a>
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.joinValues.html" class="public">
+										<code>joinValues</code>
+									</a>
+								</td>
+								<td>Join range of multiple values into a string using semicolon as separator. Adds trailing semicolon.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.removeGroup.html" class="public">
+										<code>removeGroup</code>
+									</a>
+								</td>
+								<td>Removes group by name. You can't remove "Desktop Entry" group with this function.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.splitValues.html" class="public">
+										<code>splitValues</code>
+									</a>
+								</td>
+								<td>Some keys can have multiple values, separated by semicolon. This function helps to parse such kind of strings into the range.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.start.html" class="public">
+										<code>start</code>
+									</a>
+								</td>
+								<td>Starts application or open link depending on desktop entry type.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.startApplication.html" class="public">
+										<code>startApplication</code>
+									</a>
+								</td>
+								<td>ditto, but uses the only url.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.startApplication.html" class="public">
+										<code>startApplication</code>
+									</a>
+								</td>
+								<td>Starts the application associated with this .desktop file using urls as command line params.
+ If the program should be run in terminal it tries to find system defined terminal emulator to run in.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.startLink.html" class="public">
+										<code>startLink</code>
+									</a>
+								</td>
+								<td>Opens url defined in .desktop file using <a href="https://portland.freedesktop.org/doc/xdg-open.html">xdg-open</a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.type.html" class="public">
+										<code>type</code>
+									</a>
+								</td>
+								<td>Type of desktop entry.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.addGenericGroup.html" class="public inherited">
+										<code>addGenericGroup</code>
+									</a>
+								</td>
+								<td>Create new group using groupName.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.appendLeadingComment.html" class="public inherited">
+										<code>appendLeadingComment</code>
+									</a>
+								</td>
+								<td>Add leading comment. This will be appended to the list of leadingComments.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.byGroup.html" class="public inherited">
+										<code>byGroup</code>
+									</a>
+								</td>
+								<td>Range of groups in order how they were defined in file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.byNode.html" class="public inherited">
+										<code>byNode</code>
+									</a>
+								</td>
+								<td>Iterate over <code class="lang-d"><a href="../../inilike/file/IniLikeFile.GroupNode.html"><span class="typ">GroupNode</span></a></code>s.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.clearLeadingComments.html" class="public inherited">
+										<code>clearLeadingComments</code>
+									</a>
+								</td>
+								<td>Remove all coments met before groups.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.fileName.html" class="public inherited">
+										<code>fileName</code>
+									</a>
+								</td>
+								<td>File path where the object was loaded from.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.getNode.html" class="public inherited">
+										<code>getNode</code>
+									</a>
+								</td>
+								<td>Get <code class="lang-d"><a href="../../inilike/file/IniLikeFile.GroupNode.html"><span class="typ">GroupNode</span></a></code> by groupName.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.group.html" class="public inherited">
+										<code>group</code>
+									</a>
+								</td>
+								<td>Get group by name.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.leadingComments.html" class="public inherited">
+										<code>leadingComments</code>
+									</a>
+								</td>
+								<td>Leading comments.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.moveGroupAfter.html" class="public inherited">
+										<code>moveGroupAfter</code>
+									</a>
+								</td>
+								<td>Move group after other.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.moveGroupBefore.html" class="public inherited">
+										<code>moveGroupBefore</code>
+									</a>
+								</td>
+								<td>Move group before other.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.moveGroupToBack.html" class="public inherited">
+										<code>moveGroupToBack</code>
+									</a>
+								</td>
+								<td>Move the group to make it the last.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.moveGroupToFront.html" class="public inherited">
+										<code>moveGroupToFront</code>
+									</a>
+								</td>
+								<td>Move the group to make it the first.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.prependLeadingComment.html" class="public inherited">
+										<code>prependLeadingComment</code>
+									</a>
+								</td>
+								<td>Prepend leading comment (e.g. for setting shebang line).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.save.html" class="public inherited">
+										<code>save</code>
+									</a>
+								</td>
+								<td>Use Output range or delegate to retrieve strings line by line.
+ Those strings can be written to the file or be showed in text area.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.saveToFile.html" class="public inherited">
+										<code>saveToFile</code>
+									</a>
+								</td>
+								<td>Save object to the file using .ini-like format.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.saveToString.html" class="public inherited">
+										<code>saveToString</code>
+									</a>
+								</td>
+								<td>Save object to string using .ini like format.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.isActionName.html" class="protected">
+										<code>isActionName</code>
+									</a>
+								</td>
+								<td>Check if groupName is name of Desktop Action group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.createEmptyGroup.html" class="protected inherited">
+										<code>createEmptyGroup</code>
+									</a>
+								</td>
+								<td>Can be used in derived classes to create instance of IniLikeGroup.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.createGroupByName.html" class="protected inherited">
+										<code>createGroupByName</code>
+									</a>
+								</td>
+								<td>Reimplement in derive class.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.insertGroup.html" class="protected inherited">
+										<code>insertGroup</code>
+									</a>
+								</td>
+								<td>Insert group into <code class="lang-d"><a href="../../inilike/file/IniLikeFile.html"><span class="typ">IniLikeFile</span></a></code> object and use its name as key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.onCommentInGroup.html" class="protected inherited">
+										<code>onCommentInGroup</code>
+									</a>
+								</td>
+								<td>Add comment for group.
+ This function is called only in constructor and can be reimplemented in derived classes.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.onGroup.html" class="protected inherited">
+										<code>onGroup</code>
+									</a>
+								</td>
+								<td>Create iniLikeGroup by groupName during file parsing.
+ This function can be reimplemented in derived classes,
+ e.g. to insert additional checks or create specific derived class depending on groupName.
+ Returned value is later passed to <code class="lang-d"><a href="../../inilike/file/IniLikeFile.onCommentInGroup.html"><span class="pln">onCommentInGroup</span></a></code> and <code class="lang-d"><a href="../../inilike/file/IniLikeFile.onKeyValue.html"><span class="pln">onKeyValue</span></a></code> methods as currentGroup.
+ Reimplemented method also is allowed to return null.
+ Default implementation just returns empty IniLikeGroup with name set to groupName.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.onKeyValue.html" class="protected inherited">
+										<code>onKeyValue</code>
+									</a>
+								</td>
+								<td>Add key/value pair for group.
+ This function is called only in constructor and can be reimplemented in derived classes.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.onLeadingComment.html" class="protected inherited">
+										<code>onLeadingComment</code>
+									</a>
+								</td>
+								<td>Add comment before groups.
+ This function is called only in constructor and can be reimplemented in derived classes.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.putGroup.html" class="protected inherited">
+										<code>putGroup</code>
+									</a>
+								</td>
+								<td>Append group to group list without associating group name with it. Can be used to add groups with duplicated names.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Inner structs</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.DesktopReadOptions.html" class="public">
+										<code>DesktopReadOptions</code>
+									</a>
+								</td>
+								<td>Options to manage desktop file reading
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.GroupNode.html" class="public inherited">
+										<code>GroupNode</code>
+									</a>
+								</td>
+								<td>Wrapper for internal ListMap node.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.ReadOptions.html" class="public inherited">
+										<code>ReadOptions</code>
+									</a>
+								</td>
+								<td>Behavior of ini-like file reading.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.WriteOptions.html" class="public inherited">
+										<code>WriteOptions</code>
+									</a>
+								</td>
+								<td>Behavior of ini-like file saving.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Enums</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.ActionGroupPolicy.html" class="public">
+										<code>ActionGroupPolicy</code>
+									</a>
+								</td>
+								<td>Policy about reading Desktop Action groups.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.ExtensionGroupPolicy.html" class="public">
+										<code>ExtensionGroupPolicy</code>
+									</a>
+								</td>
+								<td>Policy about reading extension groups (those start with 'X-').
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.UnknownGroupPolicy.html" class="public">
+										<code>UnknownGroupPolicy</code>
+									</a>
+								</td>
+								<td>Policy about reading groups with names which meaning is unknown, i.e. it's not extension nor Desktop Action.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.DuplicateGroupPolicy.html" class="public inherited">
+										<code>DuplicateGroupPolicy</code>
+									</a>
+								</td>
+								<td>Behavior on group with duplicate name in the file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeFile.DuplicateKeyPolicy.html" class="public inherited">
+										<code>DuplicateKeyPolicy</code>
+									</a>
+								</td>
+								<td>Behavior on duplicate key in the group.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Aliases</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.Type.html" class="public">
+										<code>Type</code>
+									</a>
+								</td>
+								<td>Alias for backward compatibility.
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">file</span><span class="pun">;
+</span><span class="typ">string </span><span class="pln">desktopFileContents </span><span class="pun">= 
+</span><span class="str">`[Desktop Entry]
+# Comment
+Name=Double Commander
+Name[ru]=Двухпанельный коммандер
+GenericName=File manager
+GenericName[ru]=Файловый менеджер
+Comment=Double Commander is a cross platform open source file manager with two panels side by side.
+Comment[ru]=Double Commander - кроссплатформенный файловый менеджер.
+Terminal=false
+Icon=doublecmd
+Icon[ru]=doublecmd_ru
+Exec=doublecmd %f
+TryExec=doublecmd
+Type=Application
+Categories=Application;Utility;FileManager;
+Keywords=folder;manager;disk;filesystem;operations;
+Keywords[ru]=папка;директория;диск;файловый;менеджер;
+Actions=OpenDirectory;NotPresented;Settings;X-NoName;
+MimeType=inode/directory;application/x-directory;
+NoDisplay=false
+Hidden=false
+StartupNotify=true
+DBusActivatable=true
+Path=/opt/doublecmd
+OnlyShowIn=GNOME;XFCE;LXDE;
+NotShowIn=KDE;
+
+[Desktop Action OpenDirectory]
+Name=Open directory
+Name[ru]=Открыть папку
+Icon=open
+Exec=doublecmd %u
+
+[X-NoName]
+Icon=folder
+
+[Desktop Action Settings]
+Name=Settings
+Name[ru]=Настройки
+Icon=edit
+Exec=doublecmd settings
+
+[Desktop Action Notspecified]
+Name=Notspecified Action`</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">DesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">desktopFileContents</span><span class="pun">), </span><span class="str">"doublecmd.desktop"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">()<wbr/>.</span><span class="pln">groupName</span><span class="pun">() == </span><span class="str">"Desktop Entry"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">fileName</span><span class="pun">() == </span><span class="str">"doublecmd.desktop"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">displayName</span><span class="pun">() == </span><span class="str">"Double Commander"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">localizedDisplayName</span><span class="pun">(</span><span class="str">"ru_RU"</span><span class="pun">) == </span><span class="str">"Двухпанельный коммандер"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">genericName</span><span class="pun">() == </span><span class="str">"File manager"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">localizedGenericName</span><span class="pun">(</span><span class="str">"ru_RU"</span><span class="pun">) == </span><span class="str">"Файловый менеджер"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">comment</span><span class="pun">() == </span><span class="str">"Double Commander is a cross platform open source file manager with two panels side by side."</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">localizedComment</span><span class="pun">(</span><span class="str">"ru_RU"</span><span class="pun">) == </span><span class="str">"Double Commander - кроссплатформенный файловый менеджер."</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">iconName</span><span class="pun">() == </span><span class="str">"doublecmd"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">localizedIconName</span><span class="pun">(</span><span class="str">"ru_RU"</span><span class="pun">) == </span><span class="str">"doublecmd_ru"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">tryExecValue</span><span class="pun">() == </span><span class="str">"doublecmd"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">terminal</span><span class="pun">());
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">noDisplay</span><span class="pun">());
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">hidden</span><span class="pun">());
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">startupNotify</span><span class="pun">());
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">dbusActivable</span><span class="pun">());
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">workingDirectory</span><span class="pun">() == </span><span class="str">"/opt/doublecmd"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">type</span><span class="pun">() == </span><span class="typ">DesktopFile<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Application</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">keywords</span><span class="pun">(), [</span><span class="str">"folder"</span><span class="pun">, </span><span class="str">"manager"</span><span class="pun">, </span><span class="str">"disk"</span><span class="pun">, </span><span class="str">"filesystem"</span><span class="pun">, </span><span class="str">"operations"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">localizedKeywords</span><span class="pun">(</span><span class="str">"ru_RU"</span><span class="pun">), [</span><span class="str">"папка"</span><span class="pun">, </span><span class="str">"директория"</span><span class="pun">, </span><span class="str">"диск"</span><span class="pun">, </span><span class="str">"файловый"</span><span class="pun">, </span><span class="str">"менеджер"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">categories</span><span class="pun">(), [</span><span class="str">"Application"</span><span class="pun">, </span><span class="str">"Utility"</span><span class="pun">, </span><span class="str">"FileManager"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">actions</span><span class="pun">(), [</span><span class="str">"OpenDirectory"</span><span class="pun">, </span><span class="str">"NotPresented"</span><span class="pun">, </span><span class="str">"Settings"</span><span class="pun">, </span><span class="str">"X-NoName"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">mimeTypes</span><span class="pun">(), [</span><span class="str">"inode/directory"</span><span class="pun">, </span><span class="str">"application/x-directory"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">onlyShowIn</span><span class="pun">(), [</span><span class="str">"GNOME"</span><span class="pun">, </span><span class="str">"XFCE"</span><span class="pun">, </span><span class="str">"LXDE"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">notShowIn</span><span class="pun">(), [</span><span class="str">"KDE"</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"X-NoName"</span><span class="pun">) !</span><span class="kwd">is null</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">byAction</span><span class="pun">()<wbr/>.</span><span class="pln">map</span><span class="pun">!(</span><span class="pln">desktopAction </span><span class="pun">=&gt; 
+</span><span class="pln">tuple</span><span class="pun">(</span><span class="pln">desktopAction<wbr/></span><span class="pun">.</span><span class="pln">displayName</span><span class="pun">(), </span><span class="pln">desktopAction<wbr/></span><span class="pun">.</span><span class="pln">localizedDisplayName</span><span class="pun">(</span><span class="str">"ru"</span><span class="pun">), </span><span class="pln">desktopAction<wbr/></span><span class="pun">.</span><span class="pln">iconName</span><span class="pun">(), </span><span class="pln">desktopAction<wbr/></span><span class="pun">.</span><span class="pln">execValue</span><span class="pun">())), 
+             [</span><span class="pln">tuple</span><span class="pun">(</span><span class="str">"Open directory"</span><span class="pun">, </span><span class="str">"Открыть папку"</span><span class="pun">, </span><span class="str">"open"</span><span class="pun">, </span><span class="str">"doublecmd %u"</span><span class="pun">), </span><span class="pln">tuple</span><span class="pun">(</span><span class="str">"Settings"</span><span class="pun">, </span><span class="str">"Настройки"</span><span class="pun">, </span><span class="str">"edit"</span><span class="pun">, </span><span class="str">"doublecmd settings"</span><span class="pun">)]));
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">action</span><span class="pun">(</span><span class="str">"NotPresented"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">action</span><span class="pun">(</span><span class="str">"Notspecified"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">action</span><span class="pun">(</span><span class="str">"X-NoName"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">action</span><span class="pun">(</span><span class="str">"Settings"</span><span class="pun">) !</span><span class="kwd">is null</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">saveToString</span><span class="pun">() == </span><span class="pln">desktopFileContents</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"Icon"</span><span class="pun">));
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">removeEntry</span><span class="pun">(</span><span class="str">"Icon"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"Icon"</span><span class="pun">));
+</span><span class="pln">df</span><span class="pun">[</span><span class="str">"Icon"</span><span class="pun">] = </span><span class="str">"files"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">contains</span><span class="pun">(</span><span class="str">"Icon"</span><span class="pun">));
+
+</span><span class="typ">string </span><span class="pln">contents </span><span class="pun">= 
+</span><span class="str">`# First comment
+[Desktop Entry]
+Key=Value
+# Comment in group`</span><span class="pun">;
+
+</span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">DesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="str">"test.desktop"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">fileName</span><span class="pun">() == </span><span class="str">"test.desktop"</span><span class="pun">);
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">removeGroup</span><span class="pun">(</span><span class="str">"Desktop Entry"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Desktop Entry"</span><span class="pun">) !</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">() !</span><span class="kwd">is null</span><span class="pun">);
+
+</span><span class="pln">contents </span><span class="pun">= 
+</span><span class="str">`[X-SomeGroup]
+Key=Value`</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">thrown </span><span class="pun">= </span><span class="pln">collectException</span><span class="pun">!</span><span class="typ">IniLikeReadException</span><span class="pun">(</span><span class="kwd">new </span><span class="typ">DesktopFile</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">)));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown<wbr/></span><span class="pun">.</span><span class="pln">lineNumber </span><span class="pun">== </span><span class="lit">0</span><span class="pun">);
+
+</span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">DesktopFile</span><span class="pun">();
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">()<wbr/>.</span><span class="pln">writeEntry</span><span class="pun">(</span><span class="str">"$Invalid"</span><span class="pun">, </span><span class="str">"Valid value"</span><span class="pun">, </span><span class="typ">IniLikeGroup<wbr/></span><span class="pun">.</span><span class="typ">InvalidKeyPolicy<wbr/></span><span class="pun">.</span><span class="pln">save</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">()<wbr/>.</span><span class="pln">value</span><span class="pun">(</span><span class="str">"$Invalid"</span><span class="pun">) == </span><span class="str">"Valid value"</span><span class="pun">);
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">()<wbr/>.</span><span class="pln">writeEntry</span><span class="pun">(</span><span class="str">"Another$Invalid"</span><span class="pun">, </span><span class="str">"Valid value"</span><span class="pun">, </span><span class="typ">IniLikeGroup<wbr/></span><span class="pun">.</span><span class="typ">InvalidKeyPolicy<wbr/></span><span class="pun">.</span><span class="pln">skip</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">()<wbr/>.</span><span class="pln">value</span><span class="pun">(</span><span class="str">"Another$Invalid"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">terminal </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">= </span><span class="typ">DesktopFile<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Application</span><span class="pun">;
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">categories </span><span class="pun">= [</span><span class="str">"Development"</span><span class="pun">, </span><span class="str">"Compilers"</span><span class="pun">, </span><span class="str">"One;Two"</span><span class="pun">, </span><span class="str">"Three\\;Four"</span><span class="pun">, </span><span class="str">"New\nLine"</span><span class="pun">];
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">terminal</span><span class="pun">() == </span><span class="kwd">true</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">type</span><span class="pun">() == </span><span class="typ">DesktopFile<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Application</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">categories</span><span class="pun">(), [</span><span class="str">"Development"</span><span class="pun">, </span><span class="str">"Compilers"</span><span class="pun">, </span><span class="str">"One;Two"</span><span class="pun">, </span><span class="str">"Three\\;Four"</span><span class="pun">,</span><span class="str">"New\nLine"</span><span class="pun">]));
+
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">displayName </span><span class="pun">= </span><span class="str">"Program name"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">displayName</span><span class="pun">() == </span><span class="str">"Program name"</span><span class="pun">);
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">genericName </span><span class="pun">= </span><span class="str">"Program"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">genericName</span><span class="pun">() == </span><span class="str">"Program"</span><span class="pun">);
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">comment </span><span class="pun">= </span><span class="str">"Do\nthings"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">comment</span><span class="pun">() == </span><span class="str">"Do\nthings"</span><span class="pun">);
+
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">execValue </span><span class="pun">= </span><span class="str">"utilname"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">execValue</span><span class="pun">() == </span><span class="str">"utilname"</span><span class="pun">);
+
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">noDisplay </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">noDisplay</span><span class="pun">());
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">hidden </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">hidden</span><span class="pun">());
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">dbusActivable </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">dbusActivable</span><span class="pun">());
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">startupNotify </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">startupNotify</span><span class="pun">());
+
+</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">url </span><span class="pun">= </span><span class="str">"/some/url"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">url </span><span class="pun">== </span><span class="str">"/some/url"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

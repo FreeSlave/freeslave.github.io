@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class DesktopEntry</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class="selected module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Class DesktopEntry</h1>
+			<section>
+				<p>Subclass of IniLikeGroup for easy accessing of Desktop Entry properties.
+</p>
+
+					<section>
+						<h3>Inherits from</h3>
+						<ul>
+							<li>
+								<code class="prettyprint lang-d"><a href="../../inilike/file/IniLikeGroup.html"><span class="typ">IniLikeGroup</span></a></code>
+ (base class)
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Methods</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.actions.html" class="public">
+										<code>actions</code>
+									</a>
+								</td>
+								<td>Actions supported by application.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.actions.html" class="public">
+										<code>actions</code>
+									</a>
+								</td>
+								<td>Sets the list of values for "Actions" list.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.categories.html" class="public">
+										<code>categories</code>
+									</a>
+								</td>
+								<td>Sets the list of values for the "Categories" list.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.categories.html" class="public">
+										<code>categories</code>
+									</a>
+								</td>
+								<td>Categories this program belongs to.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.comment.html" class="public">
+										<code>comment</code>
+									</a>
+								</td>
+								<td>Tooltip for the entry, for example "View sites on the Internet".
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.comment.html" class="public">
+										<code>comment</code>
+									</a>
+								</td>
+								<td>Set "Comment" to commentary escaping the value if needed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.dbusActivable.html" class="public">
+										<code>dbusActivable</code>
+									</a>
+								</td>
+								<td>setter
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.dbusActivable.html" class="public">
+										<code>dbusActivable</code>
+									</a>
+								</td>
+								<td>A boolean value specifying if D-Bus activation is supported for this application.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.displayName.html" class="public">
+										<code>displayName</code>
+									</a>
+								</td>
+								<td>Specific name of the application, for example "Qupzilla".
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.displayName.html" class="public">
+										<code>displayName</code>
+									</a>
+								</td>
+								<td>Set "Name" to name escaping the value if needed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.execValue.html" class="public">
+										<code>execValue</code>
+									</a>
+								</td>
+								<td>Exec value of desktop file.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.execValue.html" class="public">
+										<code>execValue</code>
+									</a>
+								</td>
+								<td>Set "Exec" to exec escaping the value if needed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.genericName.html" class="public">
+										<code>genericName</code>
+									</a>
+								</td>
+								<td>Generic name of the application, for example "Web Browser".
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.genericName.html" class="public">
+										<code>genericName</code>
+									</a>
+								</td>
+								<td>Set "GenericName" to name escaping the value if needed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.hidden.html" class="public">
+										<code>hidden</code>
+									</a>
+								</td>
+								<td>setter
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.hidden.html" class="public">
+										<code>hidden</code>
+									</a>
+								</td>
+								<td>Hidden means the user deleted (at his level) something that was present (at an upper level, e.g. in the system dirs).
+ It's strictly equivalent to the .desktop file not existing at all, as far as that user is concerned.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.iconName.html" class="public">
+										<code>iconName</code>
+									</a>
+								</td>
+								<td>Icon to display in file manager, menus, etc.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.iconName.html" class="public">
+										<code>iconName</code>
+									</a>
+								</td>
+								<td>Set Icon value.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.keywords.html" class="public">
+										<code>keywords</code>
+									</a>
+								</td>
+								<td>Sets the list of values for the "Keywords" list.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.keywords.html" class="public">
+										<code>keywords</code>
+									</a>
+								</td>
+								<td>A list of strings which may be used in addition to other metadata to describe this entry.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.localizedComment.html" class="public">
+										<code>localizedComment</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.localizedDisplayName.html" class="public">
+										<code>localizedDisplayName</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.localizedGenericName.html" class="public">
+										<code>localizedGenericName</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.localizedIconName.html" class="public">
+										<code>localizedIconName</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.localizedKeywords.html" class="public">
+										<code>localizedKeywords</code>
+									</a>
+								</td>
+								<td>A list of localied strings which may be used in addition to other metadata to describe this entry.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.mimeTypes.html" class="public">
+										<code>mimeTypes</code>
+									</a>
+								</td>
+								<td>Sets the list of values for the "MimeType" list.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.mimeTypes.html" class="public">
+										<code>mimeTypes</code>
+									</a>
+								</td>
+								<td>The MIME type(s) supported by this application.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.noDisplay.html" class="public">
+										<code>noDisplay</code>
+									</a>
+								</td>
+								<td>NoDisplay means "this application exists, but don't display it in the menus".
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.noDisplay.html" class="public">
+										<code>noDisplay</code>
+									</a>
+								</td>
+								<td>setter
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.notShowIn.html" class="public">
+										<code>notShowIn</code>
+									</a>
+								</td>
+								<td>A list of strings identifying the desktop environments that should not display a given desktop entry.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.notShowIn.html" class="public">
+										<code>notShowIn</code>
+									</a>
+								</td>
+								<td>setter
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.onlyShowIn.html" class="public">
+										<code>onlyShowIn</code>
+									</a>
+								</td>
+								<td>A list of strings identifying the desktop environments that should display a given desktop entry.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.onlyShowIn.html" class="public">
+										<code>onlyShowIn</code>
+									</a>
+								</td>
+								<td>setter
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.showIn.html" class="public">
+										<code>showIn</code>
+									</a>
+								</td>
+								<td>Check if desktop file should be shown in menu of specific desktop environment.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.startupNotify.html" class="public">
+										<code>startupNotify</code>
+									</a>
+								</td>
+								<td>A boolean value specifying if an application uses Startup Notification Protocol.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.startupNotify.html" class="public">
+										<code>startupNotify</code>
+									</a>
+								</td>
+								<td>setter
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.terminal.html" class="public">
+										<code>terminal</code>
+									</a>
+								</td>
+								<td>Whether the program runs in a terminal window.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.terminal.html" class="public">
+										<code>terminal</code>
+									</a>
+								</td>
+								<td>setter
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.tryExecValue.html" class="public">
+										<code>tryExecValue</code>
+									</a>
+								</td>
+								<td>Set TryExec value escaping it if needed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.tryExecValue.html" class="public">
+										<code>tryExecValue</code>
+									</a>
+								</td>
+								<td>Value used to determine if the program is actually installed. If the path is not an absolute path, the file should be looked up in the <b>PATH</b> environment variable. If the file is not present or if it is not executable, the entry may be ignored (not be used in menus, for example).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.type.html" class="public">
+										<code>type</code>
+									</a>
+								</td>
+								<td>Sets "Type" field to type
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.type.html" class="public">
+										<code>type</code>
+									</a>
+								</td>
+								<td>Type of desktop entry.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.url.html" class="public">
+										<code>url</code>
+									</a>
+								</td>
+								<td>Set "URL" to link escaping the value if needed.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.url.html" class="public">
+										<code>url</code>
+									</a>
+								</td>
+								<td>URL to access.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.workingDirectory.html" class="public">
+										<code>workingDirectory</code>
+									</a>
+								</td>
+								<td>Set Path value.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.workingDirectory.html" class="public">
+										<code>workingDirectory</code>
+									</a>
+								</td>
+								<td>The working directory to run the program in.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.addCommentAfter.html" class="public inherited">
+										<code>addCommentAfter</code>
+									</a>
+								</td>
+								<td>Add comment after some node.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.addCommentBefore.html" class="public inherited">
+										<code>addCommentBefore</code>
+									</a>
+								</td>
+								<td>Add comment before some node.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.appendComment.html" class="public inherited">
+										<code>appendComment</code>
+									</a>
+								</td>
+								<td>Add comment line into the group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.appendValue.html" class="public inherited">
+										<code>appendValue</code>
+									</a>
+								</td>
+								<td>Add key-value entry without association of value with key. Can be used to add duplicates.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.byIniLine.html" class="public inherited">
+										<code>byIniLine</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.byKeyValue.html" class="public inherited">
+										<code>byKeyValue</code>
+									</a>
+								</td>
+								<td>Iterate by Key-Value pairs. Values are left in escaped form.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.byNode.html" class="public inherited">
+										<code>byNode</code>
+									</a>
+								</td>
+								<td>Iterate over nodes of internal list.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.contains.html" class="public inherited">
+										<code>contains</code>
+									</a>
+								</td>
+								<td>Tell if group contains value associated with the key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.emptyByKeyValue.html" class="public inherited">
+										<code>emptyByKeyValue</code>
+									</a>
+								</td>
+								<td>Empty range of the same type as byKeyValue. Can be used in derived classes if it's needed to have empty range.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.getNode.html" class="public inherited">
+										<code>getNode</code>
+									</a>
+								</td>
+								<td>Get internal list node for key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.groupName.html" class="public inherited">
+										<code>groupName</code>
+									</a>
+								</td>
+								<td>Get name of this group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.localizedValue.html" class="public inherited">
+										<code>localizedValue</code>
+									</a>
+								</td>
+								<td>Perform locale matching lookup as described in <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s04.html">Localized values for keys</a>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.moveLineAfter.html" class="public inherited">
+										<code>moveLineAfter</code>
+									</a>
+								</td>
+								<td>Move line after other line in the group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.moveLineBefore.html" class="public inherited">
+										<code>moveLineBefore</code>
+									</a>
+								</td>
+								<td>Move line before other line in the group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.moveLineToBack.html" class="public inherited">
+										<code>moveLineToBack</code>
+									</a>
+								</td>
+								<td>Move line to the end of group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.moveLineToFront.html" class="public inherited">
+										<code>moveLineToFront</code>
+									</a>
+								</td>
+								<td>Move line to the start of group.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.opIndex.html" class="public inherited">
+										<code>opIndex</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.opIndexAssign.html" class="public inherited">
+										<code>opIndexAssign</code>
+									</a>
+								</td>
+								<td>Insert new value or replaces the old one if value associated with key already exists.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.opIndexAssign.html" class="public inherited">
+										<code>opIndexAssign</code>
+									</a>
+								</td>
+								<td>Assign localized value.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.prependComment.html" class="public inherited">
+										<code>prependComment</code>
+									</a>
+								</td>
+								<td>Add comment line at the start of group (after group header, before any key-value pairs).
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.readEntry.html" class="public inherited">
+										<code>readEntry</code>
+									</a>
+								</td>
+								<td>Get value by key. This function automatically unescape the found value before returning.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.removeEntry.html" class="public inherited">
+										<code>removeEntry</code>
+									</a>
+								</td>
+								<td>ditto, but remove entry by localized key
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.removeEntry.html" class="public inherited">
+										<code>removeEntry</code>
+									</a>
+								</td>
+								<td>Removes entry by key. Do nothing if not value associated with key found.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.removeEntry.html" class="public inherited">
+										<code>removeEntry</code>
+									</a>
+								</td>
+								<td>ditto, but remove entry by node.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.setLocalizedValue.html" class="public inherited">
+										<code>setLocalizedValue</code>
+									</a>
+								</td>
+								<td>Same as localized version of opIndexAssign, but uses function syntax.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.setValue.html" class="public inherited">
+										<code>setValue</code>
+									</a>
+								</td>
+								<td>Set value associated with key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.value.html" class="public inherited">
+										<code>value</code>
+									</a>
+								</td>
+								<td>Get value by key.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.writeEntry.html" class="public inherited">
+										<code>writeEntry</code>
+									</a>
+								</td>
+								<td>ditto, localized version
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.writeEntry.html" class="public inherited">
+										<code>writeEntry</code>
+									</a>
+								</td>
+								<td>Set value by key. This function automatically escape the value (you should not escape value yourself) when writing it.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.validateKey.html" class="protected inherited">
+										<code>validateKey</code>
+									</a>
+								</td>
+								<td>Validate key before setting value to key for this group and throw exception if not valid.
+ Can be reimplemented in derived classes.
+ Default implementation checks if key is not empty string, does not look like comment and does not contain new line or carriage return characters.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.validateValue.html" class="protected inherited">
+										<code>validateValue</code>
+									</a>
+								</td>
+								<td>Validate value for key before setting value to key for this group and throw exception if not valid.
+ Can be reimplemented in derived classes.
+ Default implementation checks if value is escaped.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Inner structs</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.LineNode.html" class="public inherited">
+										<code>LineNode</code>
+									</a>
+								</td>
+								<td>Wrapper for internal ListMap node.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Enums</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.Type.html" class="public">
+										<code>Type</code>
+									</a>
+								</td>
+								<td>Desktop entry type
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../inilike/file/IniLikeGroup.InvalidKeyPolicy.html" class="public inherited">
+										<code>InvalidKeyPolicy</code>
+									</a>
+								</td>
+								<td></td>
+							</tr>
+						</table>
+					</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>

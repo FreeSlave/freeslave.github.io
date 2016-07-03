@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Struct DesktopFile.DesktopReadOptions</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
+		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+						<ul class="tree-view">
+							<li class="tree-view">
+								<a href="#" class="package">desktopfile</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../desktopfile.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/file.html" class="selected module">file</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/paths.html" class=" module">paths</a>
+							</li>
+							<li>
+								<a href="../../desktopfile/utils.html" class=" module">utils</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">icontheme</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../icontheme.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../icontheme/cache.html" class=" module">cache</a>
+							</li>
+							<li>
+								<a href="../../icontheme/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../icontheme/lookup.html" class=" module">lookup</a>
+							</li>
+							<li>
+								<a href="../../icontheme/paths.html" class=" module">paths</a>
+							</li>
+						</ul>
+							</li>
+							<li class="collapsed tree-view">
+								<a href="#" class="package">inilike</a>
+						<ul class="tree-view">
+							<li>
+								<a href="../../inilike.html" class=" module">Package members</a>
+							</li>
+							<li>
+								<a href="../../inilike/common.html" class=" module">common</a>
+							</li>
+							<li>
+								<a href="../../inilike/file.html" class=" module">file</a>
+							</li>
+							<li>
+								<a href="../../inilike/range.html" class=" module">range</a>
+							</li>
+						</ul>
+							</li>
+							<li>
+								<a href="../../mimeapps.html" class=" module">mimeapps</a>
+							</li>
+						</ul>
+				<noscript>
+					<p style="color: red">The search functionality needs JavaScript enabled</p>
+				</noscript>
+				<div id="symbolSearchPane" style="display: none">
+					<p>
+						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+					</p>
+	<ul id="symbolSearchResults" style="display: none"></ul>
+	<script type="application/javascript" src="../../symbols.js"></script>
+	<script type="application/javascript">
+var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();
+	</script>
+				</div>
+		</nav>
+		<div id="main-contents">
+			<h1>Struct DesktopFile.DesktopReadOptions</h1>
+			<section>
+				<p>Options to manage desktop file reading
+</p>
+
+					<section>
+						<h3>Constructors</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.DesktopReadOptions.this.html" class="public">
+										<code>this</code>
+									</a>
+								</td>
+								<td>Setting parameters in any order, leaving not mentioned ones in default state.
+</td>
+							</tr>
+						</table>
+					</section>
+					<section>
+						<h3>Fields</h3>
+						<table>
+							<col class="caption"/>
+							<tr>
+								<th>Name</th>
+								<th>Type</th>
+								<th>Description</th>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.DesktopReadOptions.actionGroupPolicy.html" class="public"><code>actionGroupPolicy</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../desktopfile/file/DesktopFile.ActionGroupPolicy.html"><span class="typ">DesktopFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">ActionGroupPolicy</span></a></code></td>
+								<td>Set policy about desktop action groups. By default they are all preserved.
+ Note that all groups still need to be preserved if desktop file must be rewritten.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.DesktopReadOptions.baseOptions.html" class="public"><code>baseOptions</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../inilike/file/IniLikeFile.ReadOptions.html"><span class="typ">IniLikeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">ReadOptions</span></a></code></td>
+								<td>Base <b>ReadOptions</b> of <b>IniLikeFile</b>.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.DesktopReadOptions.extensionGroupPolicy.html" class="public"><code>extensionGroupPolicy</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../desktopfile/file/DesktopFile.ExtensionGroupPolicy.html"><span class="typ">DesktopFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">ExtensionGroupPolicy</span></a></code></td>
+								<td>Set policy about extension groups. By default they are all preserved.
+ Set it to skip if you're not willing to support any extensions in your applications.
+ Note that all groups still need to be preserved if desktop file must be rewritten.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopFile.DesktopReadOptions.unknownGroupPolicy.html" class="public"><code>unknownGroupPolicy</code></a>
+								</td>
+								<td class="typecol"><code class="prettyprint lang-d"><a href="../../desktopfile/file/DesktopFile.UnknownGroupPolicy.html"><span class="typ">DesktopFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">UnknownGroupPolicy</span></a></code></td>
+								<td>Set policy about unknown groups. By default they are skipped without errors.
+ Note that all groups still need to be preserved if desktop file must be rewritten.
+</td>
+							</tr>
+						</table>
+					</section>
+<section><h3>Example</h3>
+<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">contents </span><span class="pun">= 
+</span><span class="str">`[Desktop Entry]
+Key=Value
+Actions=Action1;
+[Desktop Action Action1]
+Key=Value`</span><span class="pun">;
+
+</span><span class="kwd">alias </span><span class="typ">DesktopFile<wbr/></span><span class="pun">.</span><span class="typ">DesktopReadOptions DesktopReadOptions</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="typ">DesktopReadOptions</span><span class="pun">(<a href="../../desktopfile/file/DesktopFile.ActionGroupPolicy.skip.html"></span><span class="typ">ActionGroupPolicy<wbr/></span><span class="pun">.</span><span class="pln">skip</span></a><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">action</span><span class="pun">(</span><span class="str">"Action1"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
+
+</span><span class="pln">contents </span><span class="pun">= 
+</span><span class="str">`[Desktop Entry]
+Key=Value
+Actions=Action1;
+[X-SomeGroup]
+Key=Value`</span><span class="pun">;
+
+</span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"X-SomeGroup"</span><span class="pun">) !</span><span class="kwd">is null</span><span class="pun">);
+
+</span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="typ">DesktopReadOptions</span><span class="pun">(<a href="../../desktopfile/file/DesktopFile.ExtensionGroupPolicy.skip.html"></span><span class="typ">ExtensionGroupPolicy<wbr/></span><span class="pun">.</span><span class="pln">skip</span></a><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"X-SomeGroup"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
+
+</span><span class="pln">contents </span><span class="pun">= 
+</span><span class="str">`[Desktop Entry]
+Valid=Key
+$=Invalid`</span><span class="pun">;
+
+</span><span class="kwd">auto </span><span class="pln">thrown </span><span class="pun">= </span><span class="pln">collectException</span><span class="pun">!</span><span class="typ">IniLikeReadException</span><span class="pun">(</span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">)));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown<wbr/></span><span class="pun">.</span><span class="pln">entryException </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown<wbr/></span><span class="pun">.</span><span class="pln">entryException<wbr/></span><span class="pun">.</span><span class="pln">key </span><span class="pun">== </span><span class="str">"$"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown<wbr/></span><span class="pun">.</span><span class="pln">entryException<wbr/></span><span class="pun">.</span><span class="pln">value </span><span class="pun">== </span><span class="str">"Invalid"</span><span class="pun">);
+
+</span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="typ">DesktopReadOptions</span><span class="pun">(</span><span class="typ">IniLikeGroup<wbr/></span><span class="pun">.</span><span class="typ">InvalidKeyPolicy<wbr/></span><span class="pun">.</span><span class="pln">skip</span><span class="pun">)));
+
+</span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="typ">DesktopReadOptions</span><span class="pun">(</span><span class="typ">IniLikeGroup<wbr/></span><span class="pun">.</span><span class="typ">InvalidKeyPolicy<wbr/></span><span class="pun">.</span><span class="pln">save</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">value</span><span class="pun">(</span><span class="str">"$"</span><span class="pun">) == </span><span class="str">"Invalid"</span><span class="pun">);
+
+</span><span class="pln">contents </span><span class="pun">= 
+</span><span class="str">`[Desktop Entry]
+Name=Name
+[Unknown]
+Key=Value`</span><span class="pun">;
+
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="typ">DesktopReadOptions</span><span class="pun">(<a href="../../desktopfile/file/DesktopFile.UnknownGroupPolicy.throwError.html"></span><span class="typ">UnknownGroupPolicy<wbr/></span><span class="pun">.</span><span class="pln">throwError</span></a><span class="pun">)));
+
+</span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="typ">DesktopReadOptions</span><span class="pun">(<a href="../../desktopfile/file/DesktopFile.UnknownGroupPolicy.preserve.html"></span><span class="typ">UnknownGroupPolicy<wbr/></span><span class="pun">.</span><span class="pln">preserve</span></a><span class="pun">)));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Unknown"</span><span class="pun">) !</span><span class="kwd">is null</span><span class="pun">);
+
+</span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="typ">DesktopReadOptions</span><span class="pun">(<a href="../../desktopfile/file/DesktopFile.UnknownGroupPolicy.skip.html"></span><span class="typ">UnknownGroupPolicy<wbr/></span><span class="pun">.</span><span class="pln">skip</span></a><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Unknown"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
+
+</span><span class="pln">contents </span><span class="pun">= 
+</span><span class="str">`[Desktop Entry]
+Name=One
+[Desktop Entry]
+Name=Two`</span><span class="pun">;
+
+</span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), </span><span class="typ">DesktopReadOptions</span><span class="pun">(<a href="../../inilike/file/IniLikeFile.DuplicateGroupPolicy.preserve.html"></span><span class="typ">DuplicateGroupPolicy<wbr/></span><span class="pun">.</span><span class="pln">preserve</span></a><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">displayName</span><span class="pun">() == </span><span class="str">"One"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">byGroup</span><span class="pun">()<wbr/>.</span><span class="pln">map</span><span class="pun">!(</span><span class="pln">g </span><span class="pun">=&gt; </span><span class="pln">g</span><span class="pun">[</span><span class="str">"Name"</span><span class="pun">])<wbr/>.</span><span class="pln">equal</span><span class="pun">([</span><span class="str">"One"</span><span class="pun">, </span><span class="str">"Two"</span><span class="pun">]));
+
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Authors</h2>
+<p><a href="https://github.com/MyLittleRobo">Roman Chistokhodov</a>
+</p>
+
+			</section>
+			<section>
+				<h2>Copyright</h2>
+<p>Roman Chistokhodov, 2015-2016
+</p>
+
+			</section>
+			<section>
+				<h2>License</h2>
+<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+			</section>
+		</div>
+	</body>
+</html>
