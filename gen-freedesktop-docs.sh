@@ -14,7 +14,7 @@ fi
 
 REPOS=repos
 
-for repo in inilike desktopfile icontheme mimeapps
+for repo in inilike desktopfile icontheme mimeapps xdgpaths
 do
     if [ ! -d $REPOS/$repo ]; then
         (cd $REPOS && git clone https://github.com/MyLittleRobo/$repo)

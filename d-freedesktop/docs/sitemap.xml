@@ -307,6 +307,9 @@
 <url><loc>http://127.0.0.1/icontheme/file/IconSubDir.size.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconSubDir.threshold.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconSubDir.Type.html</loc></url>
+<url><loc>http://127.0.0.1/icontheme/file/IconSubDir.Type.Fixed.html</loc></url>
+<url><loc>http://127.0.0.1/icontheme/file/IconSubDir.Type.Scalable.html</loc></url>
+<url><loc>http://127.0.0.1/icontheme/file/IconSubDir.Type.Threshold.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconSubDir.type.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconThemeFile.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconThemeFile.bySubdir.html</loc></url>
@@ -326,6 +329,7 @@
 <url><loc>http://127.0.0.1/icontheme/file/IconThemeFile.joinValues.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconThemeFile.removeGroup.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconThemeFile.splitValues.html</loc></url>
+<url><loc>http://127.0.0.1/icontheme/file/IconThemeFile.this.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconThemeFile.this.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconThemeFile.this.html</loc></url>
 <url><loc>http://127.0.0.1/icontheme/file/IconThemeFile.this.html</loc></url>
@@ -808,4 +812,13 @@
 <url><loc>http://127.0.0.1/mimeapps/updateAssociations.html</loc></url>
 <url><loc>http://127.0.0.1/mimeapps/updateAssociations.html</loc></url>
 <url><loc>http://127.0.0.1/mimeapps/writableMimeAppsListPaths.html</loc></url>
+<url><loc>http://127.0.0.1/xdgpaths.html</loc></url>
+<url><loc>http://127.0.0.1/xdgpaths/xdgAllConfigDirs.html</loc></url>
+<url><loc>http://127.0.0.1/xdgpaths/xdgAllDataDirs.html</loc></url>
+<url><loc>http://127.0.0.1/xdgpaths/xdgCacheHome.html</loc></url>
+<url><loc>http://127.0.0.1/xdgpaths/xdgConfigDirs.html</loc></url>
+<url><loc>http://127.0.0.1/xdgpaths/xdgConfigHome.html</loc></url>
+<url><loc>http://127.0.0.1/xdgpaths/xdgDataDirs.html</loc></url>
+<url><loc>http://127.0.0.1/xdgpaths/xdgDataHome.html</loc></url>
+<url><loc>http://127.0.0.1/xdgpaths/xdgRuntimeDir.html</loc></url>
 </urlset>

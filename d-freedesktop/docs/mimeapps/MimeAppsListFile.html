@@ -68,6 +68,9 @@
 							<li>
 								<a href="../mimeapps.html" class="selected module">mimeapps</a>
 							</li>
+							<li>
+								<a href="../xdgpaths.html" class=" module">xdgpaths</a>
+							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -436,11 +439,6 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>Create iniLikeGroup by groupName during file parsing.
- This function can be reimplemented in derived classes,
- e.g. to insert additional checks or create specific derived class depending on groupName.
- Returned value is later passed to <code class="lang-d"><a href="../inilike/file/IniLikeFile.onCommentInGroup.html"><span class="pln">onCommentInGroup</span></a></code> and <code class="lang-d"><a href="../inilike/file/IniLikeFile.onKeyValue.html"><span class="pln">onKeyValue</span></a></code> methods as currentGroup.
- Reimplemented method also is allowed to return null.
- Default implementation just returns empty IniLikeGroup with name set to groupName.
 </td>
 							</tr>
 							<tr>

@@ -68,6 +68,9 @@
 							<li>
 								<a href="../../mimeapps.html" class=" module">mimeapps</a>
 							</li>
+							<li>
+								<a href="../../xdgpaths.html" class=" module">xdgpaths</a>
+							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -91,6 +94,44 @@ $('#symbolSearchPane').show();
 				<li>Function IconThemeFile.this</li>
 				<li>Function IconThemeFile.this</li>
 			</ul>
+			<section>
+				<h2>Function IconThemeFile.this</h2>
+				<p>Reads icon theme file from range of IniLikeReader, e.g. acquired from iniLikeFileReader or iniLikeStringReader.
+</p>
+
+					<section>
+						<h3>Prototypes</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="pln">this</span><span class="pun">(</span><span class="typ">IniLikeReader</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">IniLikeReader</span> <span class="pln">reader</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<a href="../../icontheme/file/IconThemeFile.IconThemeReadOptions.html"><span class="typ">IconThemeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">IconThemeReadOptions</span></a> <span class="pln">options</span> <span class="pun">=</span> <span class="typ">IconThemeReadOptions<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span> <span class="pun">=</span> <span class="kwd">null</span>
+								<br/>
+<span class="pun">)</span><span class="pun">;</span>
+								<br/>
+								<br/>
+<span class="pln">this</span><span class="pun">(</span><span class="typ">IniLikeReader</span><span class="pun">)</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">IniLikeReader</span> <span class="pln">reader</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<a href="../../icontheme/file/IconThemeFile.IconThemeReadOptions.html"><span class="typ">IconThemeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">IconThemeReadOptions</span></a> <span class="pln">options</span> <span class="pun">=</span> <span class="typ">IconThemeReadOptions<wbr/></span><span class="pun">.</span><span class="pln">init</span>
+								<br/>
+<span class="pun">)</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Throws</h3>
+<p><code class="lang-d"><a href="../../inilike/file/IniLikeReadException.html"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IniLikeReadException</span></a></code> if error occured while parsing.
+</p>
+</section>
+
+			</section>
 			<section>
 				<h2>Function IconThemeFile.this</h2>
 				<p>Constructs IconThemeFile with empty "Icon Theme" group.
@@ -134,34 +175,7 @@ $('#symbolSearchPane').show();
 					</section>
 <section><h3>Throws</h3>
 <p><b>ErrnoException</b> if file could not be opened.
-  <b>IniLikeException</b> if error occured while reading the file.
-</p>
-</section>
-
-			</section>
-			<section>
-				<h2>Function IconThemeFile.this</h2>
-				<p>Reads icon theme file from range of IniLikeReader, e.g. acquired from iniLikeFileReader or iniLikeStringReader.
-</p>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="pln">this</span><span class="pun">(</span><span class="typ">IniLikeReader</span><span class="pun">)</span><span class="pun">(</span>
-								<br/>
-&nbsp;&nbsp;<span class="typ">IniLikeReader</span> <span class="pln">reader</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<a href="../../icontheme/file/IconThemeFile.IconThemeReadOptions.html"><span class="typ">IconThemeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">IconThemeReadOptions</span></a> <span class="pln">options</span> <span class="pun">=</span> <span class="typ">IconThemeReadOptions<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span> <span class="pun">=</span> <span class="kwd">null</span>
-								<br/>
-<span class="pun">)</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Throws</h3>
-<p><b>IniLikeException</b> if error occured while parsing.
+  <code class="lang-d"><a href="../../inilike/file/IniLikeReadException.html"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IniLikeReadException</span></a></code> if error occured while reading the file.
 </p>
 </section>
 

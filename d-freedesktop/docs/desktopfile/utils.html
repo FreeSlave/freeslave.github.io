@@ -68,6 +68,9 @@
 							<li>
 								<a href="../mimeapps.html" class=" module">mimeapps</a>
 							</li>
+							<li>
+								<a href="../xdgpaths.html" class=" module">xdgpaths</a>
+							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -126,7 +129,7 @@ $('#symbolSearchPane').show();
 								<code>expandExecArgs</code>
 							</a>
 						</td>
-						<td>Expand Exec arguments (usually returned by unquoteExec) replacing field codes with given values, making the array suitable for passing to spawnProcess. Deprecated field codes are ignored.
+						<td>Expand Exec arguments (usually returned by <code class="lang-d"><a href="../desktopfile/utils/unquoteExec.html"><span class="pln">unquoteExec</span></a></code>) replacing field codes with given values, making the array suitable for passing to spawnProcess. Deprecated field codes are ignored.
 </td>
 					</tr>
 					<tr>
@@ -155,10 +158,6 @@ $('#symbolSearchPane').show();
 							</a>
 						</td>
 						<td>Detect command which will run program in terminal emulator.
- On Freedesktop it looks for x-terminal-emulator first. If found ["/path/to/x-terminal-emulator", "-e"] is returned.
- Otherwise it looks for xdg-terminal. If found ["/path/to/xdg-terminal"] is returned.
- Otherwise it tries to detect your desktop environment and find default terminal emulator for it.
- If all guesses failed, it uses ["xterm", "-e"] as fallback.
 </td>
 					</tr>
 					<tr>
@@ -167,9 +166,7 @@ $('#symbolSearchPane').show();
 								<code>isTrusted</code>
 							</a>
 						</td>
-						<td>Check if .desktop file is trusted. This is not actually part of Desktop File Specification but many file managers has this concept.
- The trusted .desktop file is a file the current user has executable access to or the owner of which is root.
- This function should be applicable only to desktop files of Application type.
+						<td>Check if .desktop file is trusted.
 </td>
 					</tr>
 					<tr>
@@ -223,7 +220,7 @@ $('#symbolSearchPane').show();
 								<code>unquoteExec</code>
 							</a>
 						</td>
-						<td>Apply unquoting to Exec value making it into an array of escaped arguments. It automatically performs quote-related unescaping. Read more: [specification](http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s06.html).
+						<td>Apply unquoting to Exec value making it into an array of escaped arguments. It automatically performs quote-related unescaping.
 </td>
 					</tr>
 				</table>

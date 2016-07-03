@@ -68,6 +68,9 @@
 							<li>
 								<a href="../../mimeapps.html" class=" module">mimeapps</a>
 							</li>
+							<li>
+								<a href="../../xdgpaths.html" class=" module">xdgpaths</a>
+							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -88,11 +91,13 @@ $('#symbolSearchPane').show();
 			<h1>Function getTerminalCommand</h1>
 			<section>
 				<p>Detect command which will run program in terminal emulator.
- On Freedesktop it looks for x-terminal-emulator first. If found ["/path/to/x-terminal-emulator", "-e"] is returned.
+</p>
+<section><p>On Freedesktop it looks for x-terminal-emulator first. If found ["/path/to/x-terminal-emulator", "-e"] is returned.
  Otherwise it looks for xdg-terminal. If found ["/path/to/xdg-terminal"] is returned.
  Otherwise it tries to detect your desktop environment and find default terminal emulator for it.
  If all guesses failed, it uses ["xterm", "-e"] as fallback.
 </p>
+</section>
 
 					<section>
 						<h3>Prototype</h3>

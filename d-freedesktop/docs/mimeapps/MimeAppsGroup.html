@@ -68,6 +68,9 @@
 							<li>
 								<a href="../mimeapps.html" class="selected module">mimeapps</a>
 							</li>
+							<li>
+								<a href="../xdgpaths.html" class=" module">xdgpaths</a>
+							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -87,7 +90,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Class MimeAppsGroup</h1>
 			<section>
-				<p>IniLikeGroup subclass for easy access to the list of applications associated with given type.
+				<p><code class="lang-d"><a href="../inilike/file/IniLikeGroup.html"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IniLikeGroup</span></a></code> subclass for easy access to the list of applications associated with given type.
 </p>
 
 					<section>
@@ -420,7 +423,6 @@ $('#symbolSearchPane').show();
 								</td>
 								<td>Validate key before setting value to key for this group and throw exception if not valid.
  Can be reimplemented in derived classes.
- Default implementation checks if key is not empty string, does not look like comment and does not contain new line or carriage return characters.
 </td>
 							</tr>
 							<tr>
@@ -431,7 +433,6 @@ $('#symbolSearchPane').show();
 								</td>
 								<td>Validate value for key before setting value to key for this group and throw exception if not valid.
  Can be reimplemented in derived classes.
- Default implementation checks if value is escaped.
 </td>
 							</tr>
 						</table>

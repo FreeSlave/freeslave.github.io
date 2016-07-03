@@ -68,6 +68,9 @@
 							<li>
 								<a href="../../mimeapps.html" class=" module">mimeapps</a>
 							</li>
+							<li>
+								<a href="../../xdgpaths.html" class=" module">xdgpaths</a>
+							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -87,10 +90,13 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function isTrusted</h1>
 			<section>
-				<p>Check if .desktop file is trusted. This is not actually part of Desktop File Specification but many file managers has this concept.
- The trusted .desktop file is a file the current user has executable access to or the owner of which is root.
- This function should be applicable only to desktop files of Application type.
+				<p>Check if .desktop file is trusted.
 </p>
+<section><p>This is not actually part of Desktop File Specification but many desktop envrionments have this concept.
+ The trusted .desktop file is a file the current user has executable access on or the owner of which is root.
+ This function should be applicable only to desktop files of <code class="lang-d"><span class="typ">DesktopEntry<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Application</span></code> type.
+</p>
+</section>
 
 					<section>
 						<h3>Prototype</h3>

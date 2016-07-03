@@ -68,6 +68,9 @@
 							<li>
 								<a href="../../mimeapps.html" class=" module">mimeapps</a>
 							</li>
+							<li>
+								<a href="../../xdgpaths.html" class=" module">xdgpaths</a>
+							</li>
 						</ul>
 				<noscript>
 					<p style="color: red">The search functionality needs JavaScript enabled</p>
@@ -87,7 +90,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Class DesktopEntry</h1>
 			<section>
-				<p>Subclass of IniLikeGroup for easy accessing of Desktop Entry properties.
+				<p>Subclass of <code class="lang-d"><a href="../../inilike/file/IniLikeGroup.html"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IniLikeGroup</span></a></code> for easy accessing of Desktop Entry properties.
 </p>
 
 					<section>
@@ -461,7 +464,7 @@ $('#symbolSearchPane').show();
 										<code>tryExecValue</code>
 									</a>
 								</td>
-								<td>Value used to determine if the program is actually installed. If the path is not an absolute path, the file should be looked up in the <b>PATH</b> environment variable. If the file is not present or if it is not executable, the entry may be ignored (not be used in menus, for example).
+								<td>Value used to determine if the program is actually installed.
 </td>
 							</tr>
 							<tr>
@@ -785,7 +788,6 @@ $('#symbolSearchPane').show();
 								</td>
 								<td>Validate key before setting value to key for this group and throw exception if not valid.
  Can be reimplemented in derived classes.
- Default implementation checks if key is not empty string, does not look like comment and does not contain new line or carriage return characters.
 </td>
 							</tr>
 							<tr>
@@ -796,7 +798,6 @@ $('#symbolSearchPane').show();
 								</td>
 								<td>Validate value for key before setting value to key for this group and throw exception if not valid.
  Can be reimplemented in derived classes.
- Default implementation checks if value is escaped.
 </td>
 							</tr>
 						</table>
