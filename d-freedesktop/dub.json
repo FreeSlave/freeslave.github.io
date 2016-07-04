@@ -1,12 +1,12 @@
 {
-	"name": "d-freedesktop",
-	"description": "A minimal D application.",
-	"copyright": "Copyright © 2016, freeslave",
-	"authors": ["freeslave"],
-	"dependencies": {
+    "name": "d-freedesktop",
+    "description": "A minimal D application.",
+    "copyright": "Copyright © 2016, freeslave",
+    "authors": ["freeslave"],
+    "dependencies": {
         "findexecutable" : "0.1.0",
-        "xdgpaths" : "0.2.2"
-	},
+        "isfreedesktop" : "0.1.0"
+    },
     "targetType" : "library",
     "targetPath" : "lib"
 }
