@@ -104,6 +104,9 @@
 								<a href="../../../mime/files/subclasses.html" class=" module">subclasses</a>
 							</li>
 							<li>
+								<a href="../../../mime/files/treemagic.html" class=" module">treemagic</a>
+							</li>
+							<li>
 								<a href="../../../mime/files/types.html" class=" module">types</a>
 							</li>
 						</ul>
@@ -115,6 +118,9 @@
 								<a href="../../../mime/stores/files.html" class="selected module">files</a>
 							</li>
 						</ul>
+							</li>
+							<li>
+								<a href="../../../mime.html" class=" module">Package members</a>
 							</li>
 							<li>
 								<a href="../../../mime/cache.html" class=" module">cache</a>
@@ -142,6 +148,9 @@
 							</li>
 							<li>
 								<a href="../../../mime/text.html" class=" module">text</a>
+							</li>
+							<li>
+								<a href="../../../mime/treemagic.html" class=" module">treemagic</a>
 							</li>
 							<li>
 								<a href="../../../mime/type.html" class=" module">type</a>
@@ -199,12 +208,14 @@ $('#symbolSearchPane').show();
 </table>
 </section>
 <section><h3>Throws</h3>
-<p>MimeFileException if some info file has errors.
-  ErrnoException if some important file does not exist or could not be read.
+<p><code class="lang-d"><a href="../../../mime/files/common/MimeFileException.html"><span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">files<wbr/></span><span class="pun">.</span><span class="pln">common<wbr/></span><span class="pun">.</span><span class="typ">MimeFileException</span></a></code> if some info file has errors.
+  <code class="lang-d"><a href="../../../mime/files/magic/MimeMagicFileException.html"><span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">files<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="typ">MimeMagicFileException</span></a></code> if magic file has errors.
+  <code class="lang-d"><a href="../../../mime/files/treemagic/TreeMagicFileException.html"><span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">files<wbr/></span><span class="pun">.</span><span class="pln">treemagic<wbr/></span><span class="pun">.</span><span class="typ">TreeMagicFileException</span></a></code> if treemagic file has errors.
+  ErrnoException or FileException if some important file does not exist or could not be read.
 </p>
 </section>
 <section><h3>See Also</h3>
-<p>mime.paths.mimePaths
+<p><code class="lang-d"><a href="../../../mime/paths/mimePaths.html"><span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">paths<wbr/></span><span class="pun">.</span><span class="pln">mimePaths</span></a></code>
 </p>
 </section>
 

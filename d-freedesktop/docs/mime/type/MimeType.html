@@ -104,6 +104,9 @@
 								<a href="../../mime/files/subclasses.html" class=" module">subclasses</a>
 							</li>
 							<li>
+								<a href="../../mime/files/treemagic.html" class=" module">treemagic</a>
+							</li>
+							<li>
 								<a href="../../mime/files/types.html" class=" module">types</a>
 							</li>
 						</ul>
@@ -115,6 +118,9 @@
 								<a href="../../mime/stores/files.html" class=" module">files</a>
 							</li>
 						</ul>
+							</li>
+							<li>
+								<a href="../../mime.html" class=" module">Package members</a>
 							</li>
 							<li>
 								<a href="../../mime/cache.html" class=" module">cache</a>
@@ -142,6 +148,9 @@
 							</li>
 							<li>
 								<a href="../../mime/text.html" class=" module">text</a>
+							</li>
+							<li>
+								<a href="../../mime/treemagic.html" class=" module">treemagic</a>
 							</li>
 							<li>
 								<a href="../../mime/type.html" class="selected module">type</a>
@@ -251,6 +260,15 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../mime/type/MimeType.addTreeMagic.html" class="public">
+										<code>addTreeMagic</code>
+									</a>
+								</td>
+								<td>Add treemagic rule.
+</td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../mime/type/MimeType.aliases.html" class="public">
 										<code>aliases</code>
 									</a>
@@ -296,6 +314,15 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
+									<a href="../../mime/type/MimeType.clearTreeMagic.html" class="public">
+										<code>clearTreeMagic</code>
+									</a>
+								</td>
+								<td>Remove all treemagic rules.
+</td>
+							</tr>
+							<tr>
+								<td>
 									<a href="../../mime/type/MimeType.clone.html" class="public">
 										<code>clone</code>
 									</a>
@@ -309,8 +336,7 @@ $('#symbolSearchPane').show();
 										<code>genericIcon</code>
 									</a>
 								</td>
-								<td>Get generic icon name.
- Use this if the icon could not be found.
+								<td>Set generic icon name.
 </td>
 							</tr>
 							<tr>
@@ -319,7 +345,8 @@ $('#symbolSearchPane').show();
 										<code>genericIcon</code>
 									</a>
 								</td>
-								<td>Set generic icon name.
+								<td>Get generic icon name.
+ Use this if the icon could not be found.
 </td>
 							</tr>
 							<tr>
@@ -350,7 +377,7 @@ $('#symbolSearchPane').show();
 										<code>icon</code>
 									</a>
 								</td>
-								<td>Get icon name.
+								<td>Set icon name.
 </td>
 							</tr>
 							<tr>
@@ -359,7 +386,7 @@ $('#symbolSearchPane').show();
 										<code>icon</code>
 									</a>
 								</td>
-								<td>Set icon name.
+								<td>Get icon name.
 </td>
 							</tr>
 							<tr>
@@ -377,7 +404,7 @@ $('#symbolSearchPane').show();
 										<code>name</code>
 									</a>
 								</td>
-								<td>The name of MIME type.
+								<td>Set MIME type name.
 </td>
 							</tr>
 							<tr>
@@ -386,16 +413,7 @@ $('#symbolSearchPane').show();
 										<code>name</code>
 									</a>
 								</td>
-								<td>Set MIME type name.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../mime/type/MimeType.namespaceUri.html" class="public">
-										<code>namespaceUri</code>
-									</a>
-								</td>
-								<td>Get namespace uri for XML-based types.
+								<td>The name of MIME type.
 </td>
 							</tr>
 							<tr>
@@ -405,6 +423,15 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>Set namespace uri.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../mime/type/MimeType.namespaceUri.html" class="public">
+										<code>namespaceUri</code>
+									</a>
+								</td>
+								<td>Get namespace uri for XML-based types.
 </td>
 							</tr>
 							<tr>
@@ -423,6 +450,15 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>Array of MIME glob patterns applied to this MIME type.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../mime/type/MimeType.treeMagics.html" class="public">
+										<code>treeMagics</code>
+									</a>
+								</td>
+								<td>Treemagic rules for this MIME type.
 </td>
 							</tr>
 						</table>

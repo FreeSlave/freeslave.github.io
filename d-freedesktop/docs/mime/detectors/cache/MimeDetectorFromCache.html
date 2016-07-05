@@ -104,6 +104,9 @@
 								<a href="../../../mime/files/subclasses.html" class=" module">subclasses</a>
 							</li>
 							<li>
+								<a href="../../../mime/files/treemagic.html" class=" module">treemagic</a>
+							</li>
+							<li>
 								<a href="../../../mime/files/types.html" class=" module">types</a>
 							</li>
 						</ul>
@@ -115,6 +118,9 @@
 								<a href="../../../mime/stores/files.html" class=" module">files</a>
 							</li>
 						</ul>
+							</li>
+							<li>
+								<a href="../../../mime.html" class=" module">Package members</a>
 							</li>
 							<li>
 								<a href="../../../mime/cache.html" class=" module">cache</a>
@@ -142,6 +148,9 @@
 							</li>
 							<li>
 								<a href="../../../mime/text.html" class=" module">text</a>
+							</li>
+							<li>
+								<a href="../../../mime/treemagic.html" class=" module">treemagic</a>
 							</li>
 							<li>
 								<a href="../../../mime/type.html" class=" module">type</a>
@@ -226,14 +235,6 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../../mime/detectors/cache/MimeDetectorFromCache.isSubclassOf.html" class="public">
-										<code>isSubclassOf</code>
-									</a>
-								</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>
 									<a href="../../../mime/detectors/cache/MimeDetectorFromCache.mimeCaches.html" class="public">
 										<code>mimeCaches</code>
 									</a>
@@ -243,23 +244,34 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../../mime/detectors/cache/MimeDetectorFromCache.mimeTypeForData.html" class="public">
+									<a href="../../../mime/detector/IMimeDetector.isSubclassOf.html" class="public inherited">
+										<code>isSubclassOf</code>
+									</a>
+								</td>
+								<td>Check if mimeType is subclass of parent.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../../mime/detector/IMimeDetector.mimeTypeForData.html" class="public inherited">
 										<code>mimeTypeForData</code>
 									</a>
 								</td>
-								<td></td>
+								<td>The preferable mime type for data.
+</td>
 							</tr>
 							<tr>
 								<td>
-									<a href="../../../mime/detectors/cache/MimeDetectorFromCache.mimeTypeForFileName.html" class="public">
+									<a href="../../../mime/detector/IMimeDetector.mimeTypeForFileName.html" class="public inherited">
 										<code>mimeTypeForFileName</code>
 									</a>
 								</td>
-								<td></td>
+								<td>The preferable mime type for fileName.
+</td>
 							</tr>
 							<tr>
 								<td>
-									<a href="../../../mime/detectors/cache/MimeDetectorFromCache.mimeTypeForNamespaceUri.html" class="public">
+									<a href="../../../mime/detector/IMimeDetector.mimeTypeForNamespaceUri.html" class="public inherited">
 										<code>mimeTypeForNamespaceUri</code>
 									</a>
 								</td>
@@ -267,27 +279,32 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../../mime/detectors/cache/MimeDetectorFromCache.mimeTypesForData.html" class="public">
+									<a href="../../../mime/detector/IMimeDetector.mimeTypesForData.html" class="public inherited">
 										<code>mimeTypesForData</code>
 									</a>
 								</td>
-								<td></td>
+								<td>The list of the most preferred mime types for data.
+ If its length is greater than 1 it means there are many mime type with same priority matching this data.
+</td>
 							</tr>
 							<tr>
 								<td>
-									<a href="../../../mime/detectors/cache/MimeDetectorFromCache.mimeTypesForFileName.html" class="public">
+									<a href="../../../mime/detector/IMimeDetector.mimeTypesForFileName.html" class="public inherited">
 										<code>mimeTypesForFileName</code>
 									</a>
 								</td>
-								<td></td>
+								<td>The list of the most preferred mime types for fileName.
+ If its length is greater than 1 it means there are many mime type with same priority matching this fileName.
+</td>
 							</tr>
 							<tr>
 								<td>
-									<a href="../../../mime/detectors/cache/MimeDetectorFromCache.resolveAlias.html" class="public">
+									<a href="../../../mime/detector/IMimeDetector.resolveAlias.html" class="public inherited">
 										<code>resolveAlias</code>
 									</a>
 								</td>
-								<td></td>
+								<td>Get real name of mime type by alias.
+</td>
 							</tr>
 						</table>
 					</section>

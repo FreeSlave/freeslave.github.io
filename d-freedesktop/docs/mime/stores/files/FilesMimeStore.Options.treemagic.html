@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function MimeDetectorFromCache.mimeTypesForData</title>
+		<title>Variable FilesMimeStore.Options.treemagic</title>
 		<link rel="stylesheet" type="text/css" href="../../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../../scripts/jquery.js">/**/</script>
@@ -68,11 +68,11 @@
 							<li class="tree-view">
 								<a href="#" class="package">mime</a>
 						<ul class="tree-view">
-							<li class="tree-view">
+							<li class="collapsed tree-view">
 								<a href="#" class="package">detectors</a>
 						<ul class="tree-view">
 							<li>
-								<a href="../../../mime/detectors/cache.html" class="selected module">cache</a>
+								<a href="../../../mime/detectors/cache.html" class=" module">cache</a>
 							</li>
 						</ul>
 							</li>
@@ -104,17 +104,23 @@
 								<a href="../../../mime/files/subclasses.html" class=" module">subclasses</a>
 							</li>
 							<li>
+								<a href="../../../mime/files/treemagic.html" class=" module">treemagic</a>
+							</li>
+							<li>
 								<a href="../../../mime/files/types.html" class=" module">types</a>
 							</li>
 						</ul>
 							</li>
-							<li class="collapsed tree-view">
+							<li class="tree-view">
 								<a href="#" class="package">stores</a>
 						<ul class="tree-view">
 							<li>
-								<a href="../../../mime/stores/files.html" class=" module">files</a>
+								<a href="../../../mime/stores/files.html" class="selected module">files</a>
 							</li>
 						</ul>
+							</li>
+							<li>
+								<a href="../../../mime.html" class=" module">Package members</a>
 							</li>
 							<li>
 								<a href="../../../mime/cache.html" class=" module">cache</a>
@@ -144,6 +150,9 @@
 								<a href="../../../mime/text.html" class=" module">text</a>
 							</li>
 							<li>
+								<a href="../../../mime/treemagic.html" class=" module">treemagic</a>
+							</li>
+							<li>
 								<a href="../../../mime/type.html" class=" module">type</a>
 							</li>
 						</ul>
@@ -171,26 +180,29 @@ $('#symbolSearchPane').show();
 				</div>
 		</nav>
 		<div id="main-contents">
-			<h1>Function MimeDetectorFromCache.mimeTypesForData</h1>
+			<h1>Variable FilesMimeStore.Options.treemagic</h1>
 			<section>
-				<p></p>
+				<p>Options for reading treemagic file.
+</p>
 
 					<section>
-						<h3>Prototype</h3>
+						<h3>Declaration</h3>
 						<div class="prototype">
 							<code class="lang-d">
-<span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">[]</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">mimeTypesForData</span><span class="pun">(</span>
+<span class="kwd">struct</span> <a href="../../../mime/stores/files/FilesMimeStore.Options.html"><span class="typ">FilesMimeStore.Options</span></a>
 								<br/>
-&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">void</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">data</span>
+								<span class="pun">{</span>
 								<br/>
-<span class="pun">)</span><span class="pun">;</span>
+&nbsp;&nbsp;<span class="com">// ...</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">ubyte</span> <span class="pln">treemagic</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">;</span>
+								<br/>
+&nbsp;&nbsp;<span class="com">// ...</span>
+								<br/>
+								<span class="pun">}</span>
 							</code>
 						</div>
 					</section>
-<section><h3>See Also</h3>
-<p><code class="lang-d"><a href="../../../mime/detector/IMimeDetector.mimeTypesForData.html"><span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="typ">IMimeDetector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypesForData</span></a></code>
-</p>
-</section>
 
 			</section>
 			<section>
@@ -201,7 +213,7 @@ $('#symbolSearchPane').show();
 			</section>
 			<section>
 				<h2>Copyright</h2>
-<p>Roman Chistokhodov, 2016
+<p>Roman Chistokhodov, 2015-2016
 </p>
 
 			</section>
