@@ -320,7 +320,7 @@ $('#symbolSearchPane').show();
 <pre class="code"><code class="lang-d"><span class="kwd">import <a href="../../mime/stores/files.html"></span><span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">stores<wbr/></span><span class="pun">.</span><span class="pln">files</span></a><span class="pun">;
 </span><span class="kwd">import <a href="../../mime/detectors/cache.html"></span><span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">detectors<wbr/></span><span class="pun">.</span><span class="pln">cache</span></a><span class="pun">;
 
-</span><span class="kwd">auto </span><span class="pln">mimePaths </span><span class="pun">= [</span><span class="str">"./test/mime"</span><span class="pun">];
+</span><span class="kwd">auto </span><span class="pln">mimePaths </span><span class="pun">= [</span><span class="str">"./test/mime"</span><span class="pun">, </span><span class="str">"./test/discard"</span><span class="pun">, </span><span class="str">"./test/nonexistent"</span><span class="pun">];
 
 </span><span class="kwd">alias </span><span class="typ">FilesMimeStore<wbr/></span><span class="pun">.</span><span class="typ">Options FOptions</span><span class="pun">;
 </span><span class="typ">FOptions </span><span class="pln">foptions</span><span class="pun">;
@@ -338,17 +338,19 @@ $('#symbolSearchPane').show();
 </span><span class="pln">foptions<wbr/></span><span class="pun">.</span><span class="pln">treemagic </span><span class="pun">= </span><span class="pln">opt</span><span class="pun">;
 
 </span><span class="kwd">auto <a href="../../mime/database/MimeDatabase.store.html"></span><span class="pln">store</span></a><span class="pln"> </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">FilesMimeStore</span><span class="pun">(</span><span class="pln">mimePaths</span><span class="pun">, </span><span class="pln">foptions</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">store<wbr/></span><span class="pun">.</span><span class="pln">byMimeType</span><span class="pun">()<wbr/>.</span><span class="pln">empty</span><span class="pun">);
 </span><span class="kwd">auto <a href="../../mime/database/MimeDatabase.detector.html"></span><span class="pln">detector</span></a><span class="pln"> </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">MimeDetectorFromCache</span><span class="pun">(</span><span class="pln">mimePaths</span><span class="pun">);
 
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeCaches</span><span class="pun">()<wbr/>.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeCaches</span><span class="pun">()<wbr/>.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">2</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"sprite.spr"</span><span class="pun">)<wbr/>.</span><span class="pln">length</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"model01.mdl"</span><span class="pun">)<wbr/>.</span><span class="pln">length</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"liblist.gam"</span><span class="pun">)<wbr/>.</span><span class="pln">length</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"no.exist"</span><span class="pun">)<wbr/>.</span><span class="pln">empty</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForData</span><span class="pun">(</span><span class="str">"IDSP\x02\x00\x00\x00"</span><span class="pun">) == </span><span class="str">"image/x-hlsprite"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">resolveAlias</span><span class="pun">(</span><span class="str">"application/nonexistent"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForNamespaceUri</span><span class="pun">(</span><span class="str">"http://www.w3.org/1999/ent"</span><span class="pun">) == </span><span class="str">"text/x-ent"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForNamespaceUri</span><span class="pun">(</span><span class="str">"nonexisten"</span><span class="pun">)<wbr/>.</span><span class="pln">empty</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForNamespaceUri</span><span class="pun">(</span><span class="str">"nonexistent"</span><span class="pun">)<wbr/>.</span><span class="pln">empty</span><span class="pun">);
 
 </span><span class="kwd">auto </span><span class="pln">database </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">MimeDatabase</span><span class="pun">(<a href="../../mime/database/MimeDatabase.store.html"></span><span class="pln">store</span></a><span class="pun">, <a href="../../mime/database/MimeDatabase.detector.html"></span><span class="pln">detector</span></a><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">detector</span><span class="pun">() </span><span class="kwd">is <a href="../../mime/database/MimeDatabase.detector.html"></span><span class="pln">detector</span></a><span class="pun">);
@@ -411,6 +413,10 @@ $('#symbolSearchPane').show();
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">qsprite </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">qsprite<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"image/x-qsprite"</span><span class="pun">);
 
+</span><span class="kwd">auto </span><span class="pln">q2sprite </span><span class="pun">= </span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForData</span><span class="pun">(</span><span class="str">"IDS2"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">q2sprite </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">q2sprite<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"image/x-q2sprite"</span><span class="pun">);
+
 </span><span class="com">//testing case-insensitive suffix
 </span><span class="kwd">auto </span><span class="pln">vpk </span><span class="pun">= </span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"pakdir.vpk"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">vpk </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">);
@@ -427,12 +433,30 @@ $('#symbolSearchPane').show();
 </span><span class="pln">modelseq </span><span class="pun">= </span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"model01.MDL"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">modelseq </span><span class="pun">!</span><span class="kwd">is null </span><span class="pun">&amp;&amp; </span><span class="pln">modelseq<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"application/x-hlmdl-sequence"</span><span class="pun">);
 
+</span><span class="kwd">auto </span><span class="pln">generalGlob </span><span class="pun">= </span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"general_test_long_glob"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">generalGlob </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">generalGlob<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"application/x-general-long-glob"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"general_test_long_glob"</span><span class="pun">));
+
 </span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"pak1.PAK"</span><span class="pun">));
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"pak1.pak"</span><span class="pun">));
 
 </span><span class="com">//testing case-sensitive suffix
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"my.shader"</span><span class="pun">));
 </span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"my.SHADER"</span><span class="pun">));
+
+</span><span class="com">//testing literal
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"liblist.gam"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"GNUmakefile"</span><span class="pun">));
+
+</span><span class="com">//testing discard magic
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForData</span><span class="pun">(</span><span class="str">"PAK"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForData</span><span class="pun">(</span><span class="str">"PAK"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"file.qwad"</span><span class="pun">));
+
+</span><span class="com">//conflicts
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"file.jmf"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForData</span><span class="pun">(</span><span class="str">"PACK"</span><span class="pun">));
 </span></code></pre>
 </section>
 

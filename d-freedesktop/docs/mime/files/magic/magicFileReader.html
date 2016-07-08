@@ -212,7 +212,7 @@ $('#symbolSearchPane').show();
     "0&gt;4=\x00\x02\x55\x40&amp;\xff\xf0~2+8\n"
         "1&gt;12=\x00\x04\x55\x40\xff\xf0~4+10\n"</span><span class="pun">;
 
-</span><span class="typ">void <a href="../../../mime/files/magic/magicFileReader.html#sink"></span><span class="pln">sink</span></a><span class="pun">(</span><span class="typ">MagicEntry </span><span class="pln">t</span><span class="pun">) {
+</span><span class="typ">void <a href="../../../mime/files/magic/magicFileReader.html#sink"></span><span class="pln">sink</span></a><span class="pun">(<a href="../../../mime/files/magic/MagicEntry.html"></span><span class="typ">MagicEntry</span></a><span class="pln"> t</span><span class="pun">) {
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">mimeType </span><span class="pun">== </span><span class="str">"text/x-diff"</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">weight </span><span class="pun">== </span><span class="lit">60</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">matches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
@@ -235,7 +235,7 @@ $('#symbolSearchPane').show();
 }
 </span><span class="pln">magicFileReader</span><span class="pun">(<a href="../../../mime/files/magic/magicFileReader.html#data"></span><span class="pln">data</span></a><span class="pun">, &amp;<a href="../../../mime/files/magic/magicFileReader.html#sink"></span><span class="pln">sink</span></a><span class="pun">);
 
-</span><span class="typ">void </span><span class="pln">emptySink</span><span class="pun">(</span><span class="typ">MagicEntry </span><span class="pln">t</span><span class="pun">) {
+</span><span class="typ">void </span><span class="pln">emptySink</span><span class="pun">(<a href="../../../mime/files/magic/MagicEntry.html"></span><span class="typ">MagicEntry</span></a><span class="pln"> t</span><span class="pun">) {
     
 }
 </span><span class="pln">assertThrown</span><span class="pun">!<a href="../../../mime/files/magic/MimeMagicFileException.html"></span><span class="typ">MimeMagicFileException</span></a><span class="pun">(</span><span class="pln">magicFileReader</span><span class="pun">(</span><span class="str">"MIME-wrong-magic"</span><span class="pun">, &amp;</span><span class="pln">emptySink</span><span class="pun">));

@@ -637,6 +637,7 @@
 <url><loc>http://127.0.0.1/mime/files/icons/IconLine.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/icons/iconsFileReader.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/magic.html</loc></url>
+<url><loc>http://127.0.0.1/mime/files/magic/MagicEntry.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/magic/magicFileReader.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/magic/MimeMagicFileException.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/namespaces.html</loc></url>
@@ -646,6 +647,7 @@
 <url><loc>http://127.0.0.1/mime/files/subclasses/subclassesFileReader.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/subclasses/SubclassLine.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/treemagic.html</loc></url>
+<url><loc>http://127.0.0.1/mime/files/treemagic/TreeMagicEntry.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/treemagic/TreeMagicFileException.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/treemagic/treeMagicFileReader.html</loc></url>
 <url><loc>http://127.0.0.1/mime/files/types.html</loc></url>

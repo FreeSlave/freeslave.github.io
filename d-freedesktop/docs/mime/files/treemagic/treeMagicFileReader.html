@@ -211,7 +211,7 @@ $('#symbolSearchPane').show();
     "&gt;\"BDAV\"=directory,non-empty\n"
         "1&gt;\"autorun\"=file,executable,match-case\n"</span><span class="pun">;
 
-</span><span class="typ">void <a href="../../../mime/files/treemagic/treeMagicFileReader.html#sink"></span><span class="pln">sink</span></a><span class="pun">(</span><span class="typ">TreeMagicEntry </span><span class="pln">t</span><span class="pun">) {
+</span><span class="typ">void <a href="../../../mime/files/treemagic/treeMagicFileReader.html#sink"></span><span class="pln">sink</span></a><span class="pun">(<a href="../../../mime/files/treemagic/TreeMagicEntry.html"></span><span class="typ">TreeMagicEntry</span></a><span class="pln"> t</span><span class="pun">) {
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">mimeType </span><span class="pun">== </span><span class="str">"x-content/video-bluray"</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">weight </span><span class="pun">== </span><span class="lit">50</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">matches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
@@ -230,7 +230,7 @@ $('#symbolSearchPane').show();
 }
 </span><span class="pln">treeMagicFileReader</span><span class="pun">(<a href="../../../mime/files/treemagic/treeMagicFileReader.html#data"></span><span class="pln">data</span></a><span class="pun">, &amp;<a href="../../../mime/files/treemagic/treeMagicFileReader.html#sink"></span><span class="pln">sink</span></a><span class="pun">);
 
-</span><span class="typ">void </span><span class="pln">emptySink</span><span class="pun">(</span><span class="typ">TreeMagicEntry </span><span class="pln">t</span><span class="pun">) {
+</span><span class="typ">void </span><span class="pln">emptySink</span><span class="pun">(<a href="../../../mime/files/treemagic/TreeMagicEntry.html"></span><span class="typ">TreeMagicEntry</span></a><span class="pln"> t</span><span class="pun">) {
     
 }
 </span><span class="pln">assertThrown</span><span class="pun">!<a href="../../../mime/files/treemagic/TreeMagicFileException.html"></span><span class="typ">TreeMagicFileException</span></a><span class="pun">(</span><span class="pln">treeMagicFileReader</span><span class="pun">(</span><span class="str">"MIME-wrong-magic"</span><span class="pun">, &amp;</span><span class="pln">emptySink</span><span class="pun">));
