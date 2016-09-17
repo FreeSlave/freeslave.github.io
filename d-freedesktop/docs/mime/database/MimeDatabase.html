@@ -447,7 +447,17 @@ $('#symbolSearchPane').show();
 
 </span><span class="com">//testing literal
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"liblist.gam"</span><span class="pun">));
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"GNUmakefile"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"makefile"</span><span class="pun">));
+
+</span><span class="com">//testing discard glob
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"GNUmakefile"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"GNUmakefile"</span><span class="pun">));
+
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"file.qvm3"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"file.qvm3"</span><span class="pun">));
+
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"model01.sequence"</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"model01.sequence"</span><span class="pun">));
 
 </span><span class="com">//testing discard magic
 </span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForData</span><span class="pun">(</span><span class="str">"PAK"</span><span class="pun">));

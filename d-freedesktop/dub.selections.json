@@ -1,7 +1,8 @@
 {
 	"fileVersion": 1,
 	"versions": {
-		"isfreedesktop": "0.1.0",
-		"findexecutable": "0.1.0"
+		"detached": "0.1.1",
+		"findexecutable": "0.1.0",
+		"isfreedesktop": "0.1.0"
 	}
 }

@@ -182,7 +182,8 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function expandExecArgs</h1>
 			<section>
-				<p>Expand Exec arguments (usually returned by <code class="lang-d"><a href="../../desktopfile/utils/unquoteExec.html"><span class="pln">unquoteExec</span></a></code>) replacing field codes with given values, making the array suitable for passing to spawnProcess. Deprecated field codes are ignored.
+				<p>Expand Exec arguments (usually returned by <code class="lang-d"><a href="../../desktopfile/utils/unquoteExec.html"><span class="pln">unquoteExec</span></a></code>) replacing field codes with given values, making the array suitable for passing to spawnProcess or spawnProcessDetached.
+ Deprecated field codes are ignored.
 </p>
 
 					<section>
@@ -206,7 +207,7 @@ $('#symbolSearchPane').show();
 						</div>
 					</section>
 <section><h3>Note</h3>
-<p>Returned array may be empty and should be checked before passing to spawnProcess.
+<p>Returned array may be empty and must be checked before passing to spawning the process.
 </p>
 </section>
 <section><h3>Parameters</h3>

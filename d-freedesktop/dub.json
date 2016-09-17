@@ -4,7 +4,7 @@
     "copyright": "Copyright © 2016, freeslave",
     "authors": ["freeslave"],
     "dependencies": {
-        "findexecutable" : "0.1.0",
+        "detached" : "0.1.1",
         "isfreedesktop" : "0.1.0"
     },
     "targetType" : "library",
