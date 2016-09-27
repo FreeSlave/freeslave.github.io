@@ -17,7 +17,7 @@ REPOS=repos
 for repo in inilike desktopfile icontheme mimeapps xdgpaths mime
 do
     if [ ! -d $REPOS/$repo ]; then
-        (cd $REPOS && git clone https://github.com/MyLittleRobo/$repo)
+        (cd $REPOS && git clone https://github.com/FreeSlave/$repo --branch master --single-branch)
     fi
     
     (cd $REPOS/$repo && git pull --ff --rebase=false origin master)
