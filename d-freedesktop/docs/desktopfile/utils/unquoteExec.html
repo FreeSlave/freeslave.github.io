@@ -191,7 +191,7 @@ $('#symbolSearchPane').show();
 							<code class="lang-d">
 <span class="kwd">auto </span><span class="typ">string</span><span class="pun">[]</span> <span class="pln">unquoteExec</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">value</span>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">unescapedValue</span>
 								<br/>
 <span class="pun">)</span><span class="pln"> </span><span class="kwd">pure @trusted</span><span class="pun">;</span>
 							</code>
@@ -199,7 +199,7 @@ $('#symbolSearchPane').show();
 					</section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="value">value</td><td> value of Exec key. Must be unescaped by unescapeValue before passing.</td></tr>
+<tr><td id="unescapedValue">unescapedValue</td><td> value of Exec key. Must be unescaped by <code class="lang-d"><span class="pln">unescapeValue</span></code> before passing (general escape rule is not the same as quote escape rule).</td></tr>
 </table>
 </section>
 <section><h3>Throws</h3>
@@ -215,8 +215,10 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">``</span><span class="pun">), </span><span class="typ">string</span><span class="pun">[]<wbr/>.</span><span class="pln">init</span><span class="pun">));
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`   `</span><span class="pun">), </span><span class="typ">string</span><span class="pun">[]<wbr/>.</span><span class="pln">init</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`""`</span><span class="pun">), [</span><span class="str">``</span><span class="pun">]));
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`"" "  "`</span><span class="pun">), [</span><span class="str">``</span><span class="pun">, </span><span class="str">`  `</span><span class="pun">]));
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`cmd arg1  arg2   arg3   `</span><span class="pun">), [</span><span class="str">`cmd`</span><span class="pun">, </span><span class="str">`arg1`</span><span class="pun">, </span><span class="str">`arg2`</span><span class="pun">, </span><span class="str">`arg3`</span><span class="pun">]));
@@ -236,12 +238,14 @@ $('#symbolSearchPane').show();
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`'quoted cmd' arg`</span><span class="pun">), [</span><span class="str">`quoted cmd`</span><span class="pun">, </span><span class="str">`arg`</span><span class="pun">]));
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`test\ "one""two"\ more\ \ test `</span><span class="pun">), [</span><span class="str">`test onetwo more  test`</span><span class="pun">]));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`"one"two"three"`</span><span class="pun">), [</span><span class="str">`onetwothree`</span><span class="pun">]));
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`env WINEPREFIX="/home/freeslave/.wine" wine C:\\windows\\command\\start.exe /Unix /home/freeslave/.wine/dosdevices/c:/windows/profiles/freeslave/Start\ Menu/Programs/True\ Remembrance/True\ Remembrance.lnk`</span><span class="pun">), [
     </span><span class="str">"env"</span><span class="pun">, </span><span class="str">"WINEPREFIX=/home/freeslave/.wine"</span><span class="pun">, </span><span class="str">"wine"</span><span class="pun">, </span><span class="str">`C:\\windows\\command\\start.exe`</span><span class="pun">, </span><span class="str">"/Unix"</span><span class="pun">, </span><span class="str">"/home/freeslave/.wine/dosdevices/c:/windows/profiles/freeslave/Start Menu/Programs/True Remembrance/True Remembrance.lnk"
 </span><span class="pun">]));
 
 </span><span class="pln">assertThrown</span><span class="pun">!<a href="../../desktopfile/utils/DesktopExecException.html"></span><span class="typ">DesktopExecException</span></a><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`cmd "quoted arg`</span><span class="pun">));
+</span><span class="pln">assertThrown</span><span class="pun">!<a href="../../desktopfile/utils/DesktopExecException.html"></span><span class="typ">DesktopExecException</span></a><span class="pun">(</span><span class="pln">unquoteExec</span><span class="pun">(</span><span class="str">`"`</span><span class="pun">));
 </span></code></pre>
 </section>
 

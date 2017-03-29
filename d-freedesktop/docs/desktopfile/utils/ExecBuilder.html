@@ -272,7 +272,7 @@ $('#symbolSearchPane').show();
 										<code>result</code>
 									</a>
 								</td>
-								<td>Get resulting string that can be set to Exec field of Desktop Entry.
+								<td>Get resulting string that can be set to Exec field of Desktop Entry. The returned string is escaped.
 </td>
 							</tr>
 							<tr>
@@ -295,14 +295,22 @@ $('#symbolSearchPane').show();
 							</tr>
 						</table>
 					</section>
+<section><h3>Note</h3>
+<p>While Desktop Entry Specification says that field codes must not be inside quoted argument,
+  ExecBuilder does not consider it as error and may create quoted argument if field code is prepended by the string that needs quotation.
+</p>
+</section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="typ">ExecBuilder</span><span class="pun">(</span><span class="str">"quoted program"</span><span class="pun">)<wbr/>.</span><span class="pln">icon</span><span class="pun">()
         <wbr/>.</span><span class="pln">argument</span><span class="pun">(</span><span class="str">"-w"</span><span class="pun">)<wbr/>.</span><span class="pln">displayName</span><span class="pun">()
         <wbr/>.</span><span class="pln">argument</span><span class="pun">(</span><span class="str">"$value"</span><span class="pun">)
         <wbr/>.</span><span class="pln">argument</span><span class="pun">(</span><span class="str">"slash\\"</span><span class="pun">)
         <wbr/>.</span><span class="pln">argument</span><span class="pun">(</span><span class="str">"100%"</span><span class="pun">)
         <wbr/>.</span><span class="pln">location</span><span class="pun">(</span><span class="str">"--location="</span><span class="pun">)
-        <wbr/>.</span><span class="pln">urls</span><span class="pun">()<wbr/>.</span><span class="pln">url</span><span class="pun">()<wbr/>.</span><span class="pln">file</span><span class="pun">(</span><span class="str">"--file="</span><span class="pun">)<wbr/>.</span><span class="pln">files</span><span class="pun">()<wbr/>.</span><span class="pln">result</span><span class="pun">() == </span><span class="str">`"quoted program" %i -w %c "\$value" "slash\\\\" 100%% --location=%k %U %u --file=%f %F`</span><span class="pun">);
+        <wbr/>.</span><span class="pln">urls</span><span class="pun">()<wbr/>.</span><span class="pln">url</span><span class="pun">()<wbr/>.</span><span class="pln">file</span><span class="pun">(</span><span class="str">"--file="</span><span class="pun">)<wbr/>.</span><span class="pln">files</span><span class="pun">()<wbr/>.</span><span class="pln">result</span><span class="pun">() == </span><span class="str">`"quoted program" %i -w %c "\\$value" "slash\\\\" 100%% --location=%k %U %u --file=%f %F`</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="typ">ExecBuilder</span><span class="pun">(</span><span class="str">"program"</span><span class="pun">)<wbr/>.</span><span class="pln">argument</span><span class="pun">(</span><span class="str">""</span><span class="pun">)<wbr/>.</span><span class="pln">url</span><span class="pun">(</span><span class="str">"my url "</span><span class="pun">)<wbr/>.</span><span class="pln">result</span><span class="pun">() == </span><span class="str">`program "" "my url %u"`</span><span class="pun">);
 
 </span><span class="pln">assertThrown</span><span class="pun">(</span><span class="typ">ExecBuilder</span><span class="pun">(</span><span class="str">"./relative/path"</span><span class="pun">));
 </span></code></pre>

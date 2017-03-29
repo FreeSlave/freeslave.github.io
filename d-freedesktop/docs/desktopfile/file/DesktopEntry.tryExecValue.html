@@ -187,40 +187,6 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function DesktopEntry.tryExecValue</h2>
-				<p>Set TryExec value escaping it if needed.
-</p>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="typ">string</span> <span class="pln">tryExecValue</span><span class="pun">(</span>
-								<br/>
-&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">tryExec</span>
-								<br/>
-<span class="pun">)</span><span class="pln"> </span><span class="kwd">@safe</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Throws</h3>
-<p><b>IniLikeEntryException</b> if tryExec is not abolute path nor base name.
-</p>
-</section>
-<section><h3>Example</h3>
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">();
-</span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">tryExecValue </span><span class="pun">= </span><span class="str">"base"</span><span class="pun">);
-</span><span class="kwd">version</span><span class="pun">(</span><span class="typ">Posix</span><span class="pun">) {
-    </span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">tryExecValue </span><span class="pun">= </span><span class="str">"/absolute/path"</span><span class="pun">);
-}
-</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">tryExecValue </span><span class="pun">= </span><span class="str">"not/absolute"</span><span class="pun">);
-</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">tryExecValue </span><span class="pun">= </span><span class="str">"./relative"</span><span class="pun">);
-
-</span></code></pre>
-</section>
-
-			</section>
-			<section>
-				<h2>Function DesktopEntry.tryExecValue</h2>
 				<p>Value used to determine if the program is actually installed.
 </p>
 <section><p>If the path is not an absolute path, the file should be looked up in the <b>PATH</b> environment variable. If the file is not present or if it is not executable, the entry may be ignored (not be used in menus, for example).
@@ -242,6 +208,41 @@ $('#symbolSearchPane').show();
 <section><h3>See Also</h3>
 <p><code class="lang-d"><a href="../../desktopfile/file/DesktopEntry.execValue.html"><span class="pln">execValue</span></a></code>
 </p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function DesktopEntry.tryExecValue</h2>
+				<p>Set TryExec value escaping it if needed.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">string</span> <span class="pln">tryExecValue</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">tryExec</span>
+								<br/>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">@safe</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Throws</h3>
+<p><b>IniLikeEntryException</b> if tryExec is not abolute path nor base name.
+</p>
+</section>
+<section><h3>Example</h3>
+
+<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">();
+</span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">tryExecValue </span><span class="pun">= </span><span class="str">"base"</span><span class="pun">);
+</span><span class="kwd">version</span><span class="pun">(</span><span class="typ">Posix</span><span class="pun">) {
+    </span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">tryExecValue </span><span class="pun">= </span><span class="str">"/absolute/path"</span><span class="pun">);
+}
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">tryExecValue </span><span class="pun">= </span><span class="str">"not/absolute"</span><span class="pun">);
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">tryExecValue </span><span class="pun">= </span><span class="str">"./relative"</span><span class="pun">);
+
+</span></code></pre>
 </section>
 
 			</section>

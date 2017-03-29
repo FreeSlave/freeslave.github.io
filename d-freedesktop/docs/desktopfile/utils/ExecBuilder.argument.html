@@ -191,7 +191,9 @@ $('#symbolSearchPane').show();
 							<code class="lang-d">
 <span class="kwd">ref </span><a href="../../desktopfile/utils/ExecBuilder.html"><span class="typ">ExecBuilder</span></a> <span class="pln">argument</span><span class="pun">(</span>
 								<br/>
-&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">arg</span>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">arg</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">typecons<wbr/></span><span class="pun">.</span><span class="typ">Flag</span>!("forceQuoting") <span class="pln">forceQuoting</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Flag</span><span class="pun">)</span><span class="kwd">false</span>
 								<br/>
 <span class="pun">)</span><span class="pln"> </span><span class="kwd">@safe</span><span class="pun">;</span>
 							</code>
@@ -200,6 +202,7 @@ $('#symbolSearchPane').show();
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="arg">arg</td><td> Literal argument. Value will be escaped and quoted as needed.</td></tr>
+<tr><td id="forceQuoting">forceQuoting</td><td> Whether to force argument quotation.</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>

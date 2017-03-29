@@ -187,6 +187,25 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function DesktopEntry.workingDirectory</h2>
+				<p>The working directory to run the program in.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">string</span> <span class="pln">workingDirectory<span class="pun">()</span><span class="pln"> </span><span class="kwd">pure nothrow @safe const</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Returns</h3>
+<p>The value associated with "Path" key.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function DesktopEntry.workingDirectory</h2>
 				<p>Set Path value.
 </p>
 
@@ -207,6 +226,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">();
 </span><span class="kwd">version</span><span class="pun">(</span><span class="typ">Posix</span><span class="pun">) {
     </span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">workingDirectory </span><span class="pun">= </span><span class="str">"/valid"</span><span class="pun">);
@@ -215,25 +235,6 @@ $('#symbolSearchPane').show();
 </span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">workingDirectory </span><span class="pun">= </span><span class="str">"/foo\0/bar"</span><span class="pun">);
 
 </span></code></pre>
-</section>
-
-			</section>
-			<section>
-				<h2>Function DesktopEntry.workingDirectory</h2>
-				<p>The working directory to run the program in.
-</p>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="typ">string</span> <span class="pln">workingDirectory<span class="pun">()</span><span class="pln"> </span><span class="kwd">pure nothrow @safe const</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Returns</h3>
-<p>The value associated with "Path" key.
-</p>
 </section>
 
 			</section>

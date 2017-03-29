@@ -208,6 +208,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="typ">string</span><span class="pun">[] </span><span class="pln">lines </span><span class="pun">= [</span><span class="str">"application/x-archive:package-x-generic"</span><span class="pun">, </span><span class="str">"application/x-perl:text-x-script"</span><span class="pun">];
 </span><span class="kwd">auto </span><span class="pln">expected </span><span class="pun">= [<a href="../../../mime/files/icons/IconLine.html"></span><span class="typ">IconLine</span></a><span class="pun">(</span><span class="str">"application/x-archive"</span><span class="pun">, </span><span class="str">"package-x-generic"</span><span class="pun">), <a href="../../../mime/files/icons/IconLine.html"></span><span class="typ">IconLine</span></a><span class="pun">(</span><span class="str">"application/x-perl"</span><span class="pun">, </span><span class="str">"text-x-script"</span><span class="pun">)];
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">iconsFileReader</span><span class="pun">(</span><span class="pln">lines</span><span class="pun">), </span><span class="pln">expected</span><span class="pun">));

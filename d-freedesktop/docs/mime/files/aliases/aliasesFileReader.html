@@ -208,6 +208,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="typ">string</span><span class="pun">[] </span><span class="pln">lines </span><span class="pun">= [</span><span class="str">"application/acrobat application/pdf"</span><span class="pun">, </span><span class="str">"application/ico image/vnd.microsoft.icon"</span><span class="pun">];
 </span><span class="kwd">auto </span><span class="pln">expected </span><span class="pun">= [<a href="../../../mime/files/aliases/AliasLine.html"></span><span class="typ">AliasLine</span></a><span class="pun">(</span><span class="str">"application/acrobat"</span><span class="pun">, </span><span class="str">"application/pdf"</span><span class="pun">), <a href="../../../mime/files/aliases/AliasLine.html"></span><span class="typ">AliasLine</span></a><span class="pun">(</span><span class="str">"application/ico"</span><span class="pun">, </span><span class="str">"image/vnd.microsoft.icon"</span><span class="pun">)];
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">aliasesFileReader</span><span class="pun">(</span><span class="pln">lines</span><span class="pun">), </span><span class="pln">expected</span><span class="pun">));

@@ -188,6 +188,32 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function IconThemeFile.this</h2>
+				<p>Reads icon theme from file.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="pln">this</span><span class="pun">(</span>
+								<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span><span class="pun">,</span>
+								<br/>
+&nbsp;&nbsp;<a href="../../icontheme/file/IconThemeFile.IconThemeReadOptions.html"><span class="typ">IconThemeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">IconThemeReadOptions</span></a> <span class="pln">options</span> <span class="pun">=</span> <span class="typ">IconThemeReadOptions</span><span class="pun">(</span><span class="typ">ReadOptions</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">DuplicateGroupPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">1u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">DuplicateKeyPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">InvalidKeyPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">Flag</span><span class="pun">)</span><span class="kwd">true</span><span class="pun">), </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">UnknownGroupPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ExtensionGroupPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">1u</span><span class="pun">)</span>
+								<br/>
+<span class="pun">)</span><span class="pln"> </span><span class="kwd">@trusted</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Throws</h3>
+<p><b>ErrnoException</b> if file could not be opened.
+  <code class="lang-d"><a href="../../inilike/file/IniLikeReadException.html"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IniLikeReadException</span></a></code> if error occured while reading the file.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function IconThemeFile.this</h2>
 				<p>Reads icon theme file from range of IniLikeReader, e.g. acquired from iniLikeFileReader or iniLikeStringReader.
 </p>
 
@@ -238,37 +264,12 @@ $('#symbolSearchPane').show();
 						</div>
 					</section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">itf </span><span class="pun">= </span><span class="kwd">new <a href="../../icontheme/file/IconThemeFile.html"></span><span class="typ">IconThemeFile</span></a><span class="pun">();
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">itf<wbr/></span><span class="pun">.</span><span class="pln">iconTheme</span><span class="pun">());
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">itf<wbr/></span><span class="pun">.</span><span class="pln">directories</span><span class="pun">()<wbr/>.</span><span class="pln">empty</span><span class="pun">);
 
 </span></code></pre>
-</section>
-
-			</section>
-			<section>
-				<h2>Function IconThemeFile.this</h2>
-				<p>Reads icon theme from file.
-</p>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="pln">this</span><span class="pun">(</span>
-								<br/>
-&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span><span class="pun">,</span>
-								<br/>
-&nbsp;&nbsp;<a href="../../icontheme/file/IconThemeFile.IconThemeReadOptions.html"><span class="typ">IconThemeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">IconThemeReadOptions</span></a> <span class="pln">options</span> <span class="pun">=</span> <span class="typ">IconThemeReadOptions</span><span class="pun">(</span><span class="typ">ReadOptions</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">DuplicateGroupPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">1u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">DuplicateKeyPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">InvalidKeyPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">Flag</span><span class="pun">)</span><span class="kwd">true</span><span class="pun">), </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">UnknownGroupPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ExtensionGroupPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">1u</span><span class="pun">)</span>
-								<br/>
-<span class="pun">)</span><span class="pln"> </span><span class="kwd">@trusted</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Throws</h3>
-<p><b>ErrnoException</b> if file could not be opened.
-  <code class="lang-d"><a href="../../inilike/file/IniLikeReadException.html"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IniLikeReadException</span></a></code> if error occured while reading the file.
-</p>
 </section>
 
 			</section>

@@ -212,6 +212,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="typ">DesktopFile<wbr/></span><span class="pun">.</span><span class="pln">joinValues</span><span class="pun">([</span><span class="str">""</span><span class="pun">])<wbr/>.</span><span class="pln">empty</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="typ">DesktopFile<wbr/></span><span class="pun">.</span><span class="pln">joinValues</span><span class="pun">([</span><span class="str">"Application"</span><span class="pun">, </span><span class="str">"Utility"</span><span class="pun">, </span><span class="str">"FileManager"</span><span class="pun">]), </span><span class="str">"Application;Utility;FileManager;"</span><span class="pun">));
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="typ">DesktopFile<wbr/></span><span class="pun">.</span><span class="pln">joinValues</span><span class="pun">([</span><span class="str">"I;Me"</span><span class="pun">, </span><span class="str">";You;We;"</span><span class="pun">]), </span><span class="str">"I\\;Me;\\;You\\;We\\;;"</span><span class="pun">));

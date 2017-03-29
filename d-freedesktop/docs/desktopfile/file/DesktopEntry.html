@@ -226,7 +226,7 @@ $('#symbolSearchPane').show();
 										<code>categories</code>
 									</a>
 								</td>
-								<td>Sets the list of values for the "Categories" list.
+								<td>Categories this program belongs to.
 </td>
 							</tr>
 							<tr>
@@ -235,7 +235,7 @@ $('#symbolSearchPane').show();
 										<code>categories</code>
 									</a>
 								</td>
-								<td>Categories this program belongs to.
+								<td>Sets the list of values for the "Categories" list.
 </td>
 							</tr>
 							<tr>
@@ -262,7 +262,7 @@ $('#symbolSearchPane').show();
 										<code>dbusActivable</code>
 									</a>
 								</td>
-								<td>setter
+								<td>A boolean value specifying if D-Bus activation is supported for this application.
 </td>
 							</tr>
 							<tr>
@@ -271,7 +271,7 @@ $('#symbolSearchPane').show();
 										<code>dbusActivable</code>
 									</a>
 								</td>
-								<td>A boolean value specifying if D-Bus activation is supported for this application.
+								<td>setter
 </td>
 							</tr>
 							<tr>
@@ -334,7 +334,8 @@ $('#symbolSearchPane').show();
 										<code>hidden</code>
 									</a>
 								</td>
-								<td>setter
+								<td>Hidden means the user deleted (at his level) something that was present (at an upper level, e.g. in the system dirs).
+ It's strictly equivalent to the .desktop file not existing at all, as far as that user is concerned.
 </td>
 							</tr>
 							<tr>
@@ -343,8 +344,7 @@ $('#symbolSearchPane').show();
 										<code>hidden</code>
 									</a>
 								</td>
-								<td>Hidden means the user deleted (at his level) something that was present (at an upper level, e.g. in the system dirs).
- It's strictly equivalent to the .desktop file not existing at all, as far as that user is concerned.
+								<td>setter
 </td>
 							</tr>
 							<tr>
@@ -371,7 +371,7 @@ $('#symbolSearchPane').show();
 										<code>keywords</code>
 									</a>
 								</td>
-								<td>Sets the list of values for the "Keywords" list.
+								<td>A list of strings which may be used in addition to other metadata to describe this entry.
 </td>
 							</tr>
 							<tr>
@@ -380,7 +380,7 @@ $('#symbolSearchPane').show();
 										<code>keywords</code>
 									</a>
 								</td>
-								<td>A list of strings which may be used in addition to other metadata to describe this entry.
+								<td>Sets the list of values for the "Keywords" list.
 </td>
 							</tr>
 							<tr>
@@ -430,7 +430,7 @@ $('#symbolSearchPane').show();
 										<code>mimeTypes</code>
 									</a>
 								</td>
-								<td>Sets the list of values for the "MimeType" list.
+								<td>The MIME type(s) supported by this application.
 </td>
 							</tr>
 							<tr>
@@ -439,7 +439,7 @@ $('#symbolSearchPane').show();
 										<code>mimeTypes</code>
 									</a>
 								</td>
-								<td>The MIME type(s) supported by this application.
+								<td>Sets the list of values for the "MimeType" list.
 </td>
 							</tr>
 							<tr>
@@ -547,7 +547,7 @@ $('#symbolSearchPane').show();
 										<code>tryExecValue</code>
 									</a>
 								</td>
-								<td>Set TryExec value escaping it if needed.
+								<td>Value used to determine if the program is actually installed.
 </td>
 							</tr>
 							<tr>
@@ -556,16 +556,7 @@ $('#symbolSearchPane').show();
 										<code>tryExecValue</code>
 									</a>
 								</td>
-								<td>Value used to determine if the program is actually installed.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../desktopfile/file/DesktopEntry.type.html" class="public">
-										<code>type</code>
-									</a>
-								</td>
-								<td>Sets "Type" field to type
+								<td>Set TryExec value escaping it if needed.
 </td>
 							</tr>
 							<tr>
@@ -579,11 +570,11 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../desktopfile/file/DesktopEntry.url.html" class="public">
-										<code>url</code>
+									<a href="../../desktopfile/file/DesktopEntry.type.html" class="public">
+										<code>type</code>
 									</a>
 								</td>
-								<td>Set "URL" to link escaping the value if needed.
+								<td>Sets "Type" field to type
 </td>
 							</tr>
 							<tr>
@@ -597,11 +588,11 @@ $('#symbolSearchPane').show();
 							</tr>
 							<tr>
 								<td>
-									<a href="../../desktopfile/file/DesktopEntry.workingDirectory.html" class="public">
-										<code>workingDirectory</code>
+									<a href="../../desktopfile/file/DesktopEntry.url.html" class="public">
+										<code>url</code>
 									</a>
 								</td>
-								<td>Set Path value.
+								<td>Set "URL" to link escaping the value if needed.
 </td>
 							</tr>
 							<tr>
@@ -611,6 +602,15 @@ $('#symbolSearchPane').show();
 									</a>
 								</td>
 								<td>The working directory to run the program in.
+</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="../../desktopfile/file/DesktopEntry.workingDirectory.html" class="public">
+										<code>workingDirectory</code>
+									</a>
+								</td>
+								<td>Set Path value.
 </td>
 							</tr>
 							<tr>
@@ -806,7 +806,7 @@ $('#symbolSearchPane').show();
 										<code>removeEntry</code>
 									</a>
 								</td>
-								<td>ditto, but remove entry by localized key
+								<td>Removes entry by key. Do nothing if not value associated with key found.
 </td>
 							</tr>
 							<tr>
@@ -815,7 +815,7 @@ $('#symbolSearchPane').show();
 										<code>removeEntry</code>
 									</a>
 								</td>
-								<td>Removes entry by key. Do nothing if not value associated with key found.
+								<td>ditto, but remove entry by localized key
 </td>
 							</tr>
 							<tr>
@@ -860,7 +860,7 @@ $('#symbolSearchPane').show();
 										<code>writeEntry</code>
 									</a>
 								</td>
-								<td>ditto, localized version
+								<td>Set value by key. This function automatically escape the value (you should not escape value yourself) when writing it.
 </td>
 							</tr>
 							<tr>
@@ -869,7 +869,7 @@ $('#symbolSearchPane').show();
 										<code>writeEntry</code>
 									</a>
 								</td>
-								<td>Set value by key. This function automatically escape the value (you should not escape value yourself) when writing it.
+								<td>ditto, localized version
 </td>
 							</tr>
 							<tr>

@@ -182,7 +182,7 @@ $('#symbolSearchPane').show();
 		<div id="main-contents">
 			<h1>Function openIconTheme</h1>
 			<section>
-				<p>Find index.theme file for given theme and create instance of IconThemeFile. The first found file will be used.
+				<p>Find index.theme file for given theme and create instance of <code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html"><span class="pln">icontheme<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IconThemeFile</span></a></code>. The first found file will be used.
 </p>
 
 					<section>
@@ -202,14 +202,14 @@ $('#symbolSearchPane').show();
 						</div>
 					</section>
 <section><h3>Returns</h3>
-<p>IconThemeFile object read from the first found index.theme file corresponding to given theme or null if none were found.
+<p><code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html"><span class="pln">icontheme<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IconThemeFile</span></a></code> object read from the first found index.theme file corresponding to given theme or null if none were found.
 </p>
 </section>
 <section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="themeName">themeName</td><td> theme name.</td></tr>
 <tr><td id="searchIconDirs">searchIconDirs</td><td> base icon directories to search icon themes.</td></tr>
-<tr><td id="options">options</td><td> options for IconThemeFile reading.</td></tr>
+<tr><td id="options">options</td><td> options for <code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html"><span class="pln">icontheme<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IconThemeFile</span></a></code> reading.</td></tr>
 </table>
 </section>
 <section><h3>Throws</h3>
@@ -222,6 +222,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">tango </span><span class="pun">= </span><span class="pln">openIconTheme</span><span class="pun">(</span><span class="str">"Tango"</span><span class="pun">, [</span><span class="str">"test"</span><span class="pun">]);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">tango</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">tango<wbr/></span><span class="pun">.</span><span class="pln">displayName</span><span class="pun">() == </span><span class="str">"Tango"</span><span class="pun">);

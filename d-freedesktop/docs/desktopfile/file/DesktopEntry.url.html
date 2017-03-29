@@ -187,6 +187,25 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function DesktopEntry.url</h2>
+				<p>URL to access.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<span class="typ">string</span> <span class="pln">url<span class="pun">()</span><span class="pln"> </span><span class="kwd">pure nothrow @safe const</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Returns</h3>
+<p>The value associated with "URL" key.
+</p>
+</section>
+
+			</section>
+			<section>
+				<h2>Function DesktopEntry.url</h2>
 				<p>Set "URL" to link escaping the value if needed.
 </p>
 
@@ -203,29 +222,11 @@ $('#symbolSearchPane').show();
 						</div>
 					</section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="str">"[Desktop Entry]\nType=Link\nURL=https://github.com/"</span><span class="pun">));
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">url</span><span class="pun">() == </span><span class="str">"https://github.com/"</span><span class="pun">);
 
 </span></code></pre>
-</section>
-
-			</section>
-			<section>
-				<h2>Function DesktopEntry.url</h2>
-				<p>URL to access.
-</p>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<span class="typ">string</span> <span class="pln">url<span class="pun">()</span><span class="pln"> </span><span class="kwd">pure nothrow @safe const</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Returns</h3>
-<p>The value associated with "URL" key.
-</p>
 </section>
 
 			</section>

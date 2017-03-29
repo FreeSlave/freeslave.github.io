@@ -208,6 +208,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="typ">string</span><span class="pun">[] </span><span class="pln">lines </span><span class="pun">= [</span><span class="str">"#comment"</span><span class="pun">, </span><span class="str">"text/x-c++src:*.cpp"</span><span class="pun">, </span><span class="str">"text/x-csrc:*.c"</span><span class="pun">];
 </span><span class="kwd">auto </span><span class="pln">expected </span><span class="pun">= [<a href="../../../mime/files/globs/GlobLine.html"></span><span class="typ">GlobLine</span></a><span class="pun">(</span><span class="pln">defaultGlobWeight</span><span class="pun">, </span><span class="str">"text/x-c++src"</span><span class="pun">, </span><span class="str">"*.cpp"</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">), <a href="../../../mime/files/globs/GlobLine.html"></span><span class="typ">GlobLine</span></a><span class="pun">(</span><span class="pln">defaultGlobWeight</span><span class="pun">, </span><span class="str">"text/x-csrc"</span><span class="pun">, </span><span class="str">"*.c"</span><span class="pun">, </span><span class="kwd">false</span><span class="pun">)];
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">globsFileReader</span><span class="pun">(</span><span class="pln">lines</span><span class="pun">), </span><span class="pln">expected</span><span class="pun">));

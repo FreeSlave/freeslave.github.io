@@ -210,14 +210,15 @@ $('#symbolSearchPane').show();
 <tr><td id="iconTheme">iconTheme</td><td> Original icon theme to search for its base themes. Included as first element in resulting array.</td></tr>
 <tr><td id="searchIconDirs">searchIconDirs</td><td> Base icon directories to search icon themes.</td></tr>
 <tr><td id="fallbackThemeName">fallbackThemeName</td><td> Name of fallback theme which is loaded the last. Not used if empty. It's NOT loaded twice if some theme in inheritance tree has it as base theme.</td></tr>
-<tr><td id="options">options</td><td> Options for IconThemeFile reading.</td></tr>
+<tr><td id="options">options</td><td> Options for <code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html"><span class="pln">icontheme<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IconThemeFile</span></a></code> reading.</td></tr>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>Array of unique IconThemeFile objects represented base themes.
+<p>Array of unique <code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html"><span class="pln">icontheme<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IconThemeFile</span></a></code> objects represented base themes.
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">tango </span><span class="pun">= <a href="../../icontheme/lookup/openIconTheme.html"></span><span class="pln">openIconTheme</span></a><span class="pun">(</span><span class="str">"NewTango"</span><span class="pun">, [</span><span class="str">"test"</span><span class="pun">]);
 </span><span class="kwd">auto </span><span class="pln">baseThemes </span><span class="pun">= </span><span class="pln">openBaseThemes</span><span class="pun">(</span><span class="pln">tango</span><span class="pun">, [</span><span class="str">"test"</span><span class="pun">]);
 

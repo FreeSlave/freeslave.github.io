@@ -210,6 +210,7 @@ $('#symbolSearchPane').show();
 </table>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">dataDirsGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_DIRS"</span><span class="pun">);
 
 </span><span class="kwd">auto </span><span class="pln">newDataDirs </span><span class="pun">= [</span><span class="str">"/usr/local/data"</span><span class="pun">, </span><span class="str">"/usr/data"</span><span class="pun">];
@@ -225,6 +226,7 @@ $('#symbolSearchPane').show();
 </span></code></pre>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">homeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"HOME"</span><span class="pun">);
 </span><span class="kwd">auto </span><span class="pln">dataHomeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_HOME"</span><span class="pun">);
 </span><span class="kwd">auto </span><span class="pln">dataDirsGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_DIRS"</span><span class="pun">);
@@ -244,6 +246,7 @@ $('#symbolSearchPane').show();
 </span></code></pre>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">dataConfigGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_CONFIG_DIRS"</span><span class="pun">);
 
 </span><span class="kwd">auto </span><span class="pln">newConfigDirs </span><span class="pun">= [</span><span class="str">"/usr/local/config"</span><span class="pun">, </span><span class="str">"/usr/config"</span><span class="pun">];
@@ -259,6 +262,7 @@ $('#symbolSearchPane').show();
 </span></code></pre>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">homeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"HOME"</span><span class="pun">);
 </span><span class="kwd">auto </span><span class="pln">configHomeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_CONFIG_HOME"</span><span class="pun">);
 </span><span class="kwd">auto </span><span class="pln">configDirsGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_CONFIG_DIRS"</span><span class="pun">);
@@ -278,6 +282,7 @@ $('#symbolSearchPane').show();
 </span></code></pre>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">runtimePath </span><span class="pun">= </span><span class="pln">buildPath</span><span class="pun">(</span><span class="pln">tempDir</span><span class="pun">(), </span><span class="str">"xdgpaths-runtime-test"</span><span class="pun">);
 </span><span class="kwd">try </span><span class="pun">{
     </span><span class="pln">collectException</span><span class="pun">(</span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="pln">rmdir</span><span class="pun">(</span><span class="pln">runtimePath</span><span class="pun">));

@@ -216,7 +216,7 @@ $('#symbolSearchPane').show();
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="iconName">iconName</td><td> Name of icon to search as defined by Icon Theme Specification (i.e. without path and extension parts).</td></tr>
 <tr><td id="size">size</td><td> Preferred icon size to get.</td></tr>
-<tr><td id="iconThemes">iconThemes</td><td> Range of icontheme.file.IconThemeFile objects.</td></tr>
+<tr><td id="iconThemes">iconThemes</td><td> Range of <code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html"><span class="pln">icontheme<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IconThemeFile</span></a></code> objects.</td></tr>
 <tr><td id="searchIconDirs">searchIconDirs</td><td> Base icon directories.</td></tr>
 <tr><td id="extensions">extensions</td><td> Allowed file extensions.</td></tr>
 <tr><td id="allowFallback">allowFallback</td><td> Allow searching for non-themed fallback if could not find icon in themes (non-themed icon can be any size).</td></tr>
@@ -235,6 +235,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">baseDirs </span><span class="pun">= [</span><span class="str">"test"</span><span class="pun">];
 </span><span class="kwd">auto <a href="../../icontheme/lookup/findClosestIcon.html#iconThemes"></span><span class="pln">iconThemes</span></a><span class="pln"> </span><span class="pun">= [<a href="../../icontheme/lookup/openIconTheme.html"></span><span class="pln">openIconTheme</span></a><span class="pun">(</span><span class="str">"Tango"</span><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">), <a href="../../icontheme/lookup/openIconTheme.html"></span><span class="pln">openIconTheme</span></a><span class="pun">(</span><span class="str">"hicolor"</span><span class="pun">, </span><span class="pln">baseDirs</span><span class="pun">)];
 

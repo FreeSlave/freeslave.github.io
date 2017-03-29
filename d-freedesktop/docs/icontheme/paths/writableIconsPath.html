@@ -201,6 +201,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">dataHomeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_HOME"</span><span class="pun">);
 </span><span class="pln">environment</span><span class="pun">[</span><span class="str">"XDG_DATA_HOME"</span><span class="pun">] = </span><span class="str">"/home/user/data"</span><span class="pun">;
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">writableIconsPath</span><span class="pun">() == </span><span class="str">"/home/user/data/icons"</span><span class="pun">);

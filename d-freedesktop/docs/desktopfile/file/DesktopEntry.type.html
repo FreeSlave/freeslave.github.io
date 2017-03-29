@@ -187,6 +187,39 @@ $('#symbolSearchPane').show();
 			</ul>
 			<section>
 				<h2>Function DesktopEntry.type</h2>
+				<p>Type of desktop entry.
+</p>
+
+					<section>
+						<h3>Prototype</h3>
+						<div class="prototype">
+							<code class="lang-d">
+<a href="../../desktopfile/file/DesktopEntry.Type.html"><span class="typ">DesktopEntry<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Type</span></a> <span class="pln">type<span class="pun">()</span><span class="pln"> </span><span class="kwd">pure nothrow @nogc @safe const</span><span class="pun">;</span>
+							</code>
+						</div>
+					</section>
+<section><h3>Returns</h3>
+<p>Type of desktop entry.
+</p>
+</section>
+<section><h3>Example</h3>
+
+<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Desktop Entry]\nType=Application"</span><span class="pun">;
+</span><span class="kwd">auto </span><span class="pln">desktopFile </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">));
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== <a href="../../desktopfile/file/DesktopEntry.Type.Application.html"></span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Application</span></a><span class="pun">);
+
+</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">[</span><span class="str">"Type"</span><span class="pun">] = </span><span class="str">"Link"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== <a href="../../desktopfile/file/DesktopEntry.Type.Link.html"></span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Link</span></a><span class="pun">);
+
+</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">[</span><span class="str">"Type"</span><span class="pun">] = </span><span class="str">"Directory"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== <a href="../../desktopfile/file/DesktopEntry.Type.Directory.html"></span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Directory</span></a><span class="pun">);
+
+</span></code></pre>
+</section>
+
+			</section>
+			<section>
+				<h2>Function DesktopEntry.type</h2>
 				<p>Sets "Type" field to type
 </p>
 
@@ -207,6 +240,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">desktopFile </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">();
 </span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">= <a href="../../desktopfile/file/DesktopEntry.Type.Application.html"></span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Application</span></a><span class="pun">;
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry<wbr/></span><span class="pun">.</span><span class="pln">value</span><span class="pun">(</span><span class="str">"Type"</span><span class="pun">) == </span><span class="str">"Application"</span><span class="pun">);
@@ -217,38 +251,6 @@ $('#symbolSearchPane').show();
 
 </span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">= <a href="../../desktopfile/file/DesktopEntry.Type.Unknown.html"></span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Unknown</span></a><span class="pun">;
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry<wbr/></span><span class="pun">.</span><span class="pln">value</span><span class="pun">(</span><span class="str">"Type"</span><span class="pun">)<wbr/>.</span><span class="pln">empty</span><span class="pun">);
-
-</span></code></pre>
-</section>
-
-			</section>
-			<section>
-				<h2>Function DesktopEntry.type</h2>
-				<p>Type of desktop entry.
-</p>
-
-					<section>
-						<h3>Prototype</h3>
-						<div class="prototype">
-							<code class="lang-d">
-<a href="../../desktopfile/file/DesktopEntry.Type.html"><span class="typ">DesktopEntry<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Type</span></a> <span class="pln">type<span class="pun">()</span><span class="pln"> </span><span class="kwd">pure nothrow @nogc @safe const</span><span class="pun">;</span>
-							</code>
-						</div>
-					</section>
-<section><h3>Returns</h3>
-<p>Type of desktop entry.
-</p>
-</section>
-<section><h3>Example</h3>
-<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">contents </span><span class="pun">= </span><span class="str">"[Desktop Entry]\nType=Application"</span><span class="pun">;
-</span><span class="kwd">auto </span><span class="pln">desktopFile </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">));
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== <a href="../../desktopfile/file/DesktopEntry.Type.Application.html"></span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Application</span></a><span class="pun">);
-
-</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">[</span><span class="str">"Type"</span><span class="pun">] = </span><span class="str">"Link"</span><span class="pun">;
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== <a href="../../desktopfile/file/DesktopEntry.Type.Link.html"></span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Link</span></a><span class="pun">);
-
-</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">[</span><span class="str">"Type"</span><span class="pun">] = </span><span class="str">"Directory"</span><span class="pun">;
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopFile<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== <a href="../../desktopfile/file/DesktopEntry.Type.Directory.html"></span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Directory</span></a><span class="pun">);
 
 </span></code></pre>
 </section>

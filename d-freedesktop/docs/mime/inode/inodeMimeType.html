@@ -210,6 +210,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inodeMimeType</span><span class="pun">(</span><span class="pln">S_IFCHR</span><span class="pun">) == </span><span class="str">"inode/chardevice"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inodeMimeType</span><span class="pun">(</span><span class="pln">S_IFBLK</span><span class="pun">) == </span><span class="str">"inode/blockdevice"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inodeMimeType</span><span class="pun">(</span><span class="pln">S_IFIFO</span><span class="pun">) == </span><span class="str">"inode/fifo"</span><span class="pun">);
@@ -245,6 +246,7 @@ $('#symbolSearchPane').show();
 </p>
 </section>
 <section><h3>Example</h3>
+
 <pre class="code"><code class="lang-d"><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inodeMimeType</span><span class="pun">(</span><span class="str">"source"</span><span class="pun">) == </span><span class="str">"inode/directory"</span><span class="pun">); </span><span class="com">//directory
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inodeMimeType</span><span class="pun">(</span><span class="str">"dub.json"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">); </span><span class="com">//regular file
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">inodeMimeType</span><span class="pun">(</span><span class="str">"test/|nonexistent|"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">); </span><span class="com">//nonexistent path
