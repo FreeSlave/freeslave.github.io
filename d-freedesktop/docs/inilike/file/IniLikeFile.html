@@ -1,557 +1,67 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Class IniLikeFile</title>
-		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="collapsed tree-view">
-								<a href="#" class="package">desktopfile</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../desktopfile.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../desktopfile/file.html" class=" module">file</a>
-							</li>
-							<li>
-								<a href="../../desktopfile/paths.html" class=" module">paths</a>
-							</li>
-							<li>
-								<a href="../../desktopfile/utils.html" class=" module">utils</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">icontheme</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../icontheme.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../icontheme/cache.html" class=" module">cache</a>
-							</li>
-							<li>
-								<a href="../../icontheme/file.html" class=" module">file</a>
-							</li>
-							<li>
-								<a href="../../icontheme/lookup.html" class=" module">lookup</a>
-							</li>
-							<li>
-								<a href="../../icontheme/paths.html" class=" module">paths</a>
-							</li>
-						</ul>
-							</li>
-							<li class="tree-view">
-								<a href="#" class="package">inilike</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../inilike.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../inilike/common.html" class=" module">common</a>
-							</li>
-							<li>
-								<a href="../../inilike/file.html" class="selected module">file</a>
-							</li>
-							<li>
-								<a href="../../inilike/range.html" class=" module">range</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">mime</a>
-						<ul class="tree-view">
-							<li class="collapsed tree-view">
-								<a href="#" class="package">detectors</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../mime/detectors/cache.html" class=" module">cache</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">files</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../mime/files.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../mime/files/aliases.html" class=" module">aliases</a>
-							</li>
-							<li>
-								<a href="../../mime/files/common.html" class=" module">common</a>
-							</li>
-							<li>
-								<a href="../../mime/files/globs.html" class=" module">globs</a>
-							</li>
-							<li>
-								<a href="../../mime/files/icons.html" class=" module">icons</a>
-							</li>
-							<li>
-								<a href="../../mime/files/magic.html" class=" module">magic</a>
-							</li>
-							<li>
-								<a href="../../mime/files/namespaces.html" class=" module">namespaces</a>
-							</li>
-							<li>
-								<a href="../../mime/files/subclasses.html" class=" module">subclasses</a>
-							</li>
-							<li>
-								<a href="../../mime/files/treemagic.html" class=" module">treemagic</a>
-							</li>
-							<li>
-								<a href="../../mime/files/types.html" class=" module">types</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">stores</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../../mime/stores/files.html" class=" module">files</a>
-							</li>
-						</ul>
-							</li>
-							<li>
-								<a href="../../mime.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../../mime/cache.html" class=" module">cache</a>
-							</li>
-							<li>
-								<a href="../../mime/common.html" class=" module">common</a>
-							</li>
-							<li>
-								<a href="../../mime/database.html" class=" module">database</a>
-							</li>
-							<li>
-								<a href="../../mime/detector.html" class=" module">detector</a>
-							</li>
-							<li>
-								<a href="../../mime/inode.html" class=" module">inode</a>
-							</li>
-							<li>
-								<a href="../../mime/magic.html" class=" module">magic</a>
-							</li>
-							<li>
-								<a href="../../mime/paths.html" class=" module">paths</a>
-							</li>
-							<li>
-								<a href="../../mime/store.html" class=" module">store</a>
-							</li>
-							<li>
-								<a href="../../mime/text.html" class=" module">text</a>
-							</li>
-							<li>
-								<a href="../../mime/treemagic.html" class=" module">treemagic</a>
-							</li>
-							<li>
-								<a href="../../mime/type.html" class=" module">type</a>
-							</li>
-						</ul>
-							</li>
-							<li>
-								<a href="../../mimeapps.html" class=" module">mimeapps</a>
-							</li>
-							<li>
-								<a href="../../xdgpaths.html" class=" module">xdgpaths</a>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Class IniLikeFile</h1>
-			<section>
-				<p>Ini-like file.
-</p>
-<section></section>
-
-					<section>
-						<h3>Inherits from</h3>
-						<ul>
-							<li>
-								<code class="prettyprint lang-d"><span class="typ">Object</span></code>
- (base class)
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Constructors</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td>Construct empty IniLikeFile, i.e. without any groups or values
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td>Read from file.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.this.html" class="public">
-										<code>this</code>
-									</a>
-								</td>
-								<td>Read from range of <code class="lang-d"><a href="../../inilike/range/IniLikeReader.html"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="typ">IniLikeReader</span></a></code>.
-</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Methods</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.addGenericGroup.html" class="public">
-										<code>addGenericGroup</code>
-									</a>
-								</td>
-								<td>Create new group using groupName.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.appendLeadingComment.html" class="public">
-										<code>appendLeadingComment</code>
-									</a>
-								</td>
-								<td>Add leading comment. This will be appended to the list of leadingComments.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.byGroup.html" class="public">
-										<code>byGroup</code>
-									</a>
-								</td>
-								<td>Range of groups in order how they were defined in file.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.byNode.html" class="public">
-										<code>byNode</code>
-									</a>
-								</td>
-								<td>Iterate over <code class="lang-d"><a href="../../inilike/file/IniLikeFile.GroupNode.html"><span class="typ">GroupNode</span></a></code>s.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.clearLeadingComments.html" class="public">
-										<code>clearLeadingComments</code>
-									</a>
-								</td>
-								<td>Remove all coments met before groups.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.fileName.html" class="public">
-										<code>fileName</code>
-									</a>
-								</td>
-								<td>File path where the object was loaded from.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.getNode.html" class="public">
-										<code>getNode</code>
-									</a>
-								</td>
-								<td>Get <code class="lang-d"><a href="../../inilike/file/IniLikeFile.GroupNode.html"><span class="typ">GroupNode</span></a></code> by groupName.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.group.html" class="public">
-										<code>group</code>
-									</a>
-								</td>
-								<td>Get group by name.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.leadingComments.html" class="public">
-										<code>leadingComments</code>
-									</a>
-								</td>
-								<td>Leading comments.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.moveGroupAfter.html" class="public">
-										<code>moveGroupAfter</code>
-									</a>
-								</td>
-								<td>Move group after other.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.moveGroupBefore.html" class="public">
-										<code>moveGroupBefore</code>
-									</a>
-								</td>
-								<td>Move group before other.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.moveGroupToBack.html" class="public">
-										<code>moveGroupToBack</code>
-									</a>
-								</td>
-								<td>Move the group to make it the last.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.moveGroupToFront.html" class="public">
-										<code>moveGroupToFront</code>
-									</a>
-								</td>
-								<td>Move the group to make it the first.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.prependLeadingComment.html" class="public">
-										<code>prependLeadingComment</code>
-									</a>
-								</td>
-								<td>Prepend leading comment (e.g. for setting shebang line).
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.removeGroup.html" class="public">
-										<code>removeGroup</code>
-									</a>
-								</td>
-								<td>Remove group by name. Do nothing if group with such name does not exist.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.save.html" class="public">
-										<code>save</code>
-									</a>
-								</td>
-								<td>Use Output range or delegate to retrieve strings line by line.
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Class IniLikeFile</title>
+<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package "><a href="../../desktopfile.html">desktopfile</a></div><ul class="tree-view"><li><div class="module "><a href="../../desktopfile/file.html">file</a></div></li><li><div class="module "><a href="../../desktopfile/paths.html">paths</a></div></li><li><div class="module "><a href="../../desktopfile/utils.html">utils</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../../icontheme.html">icontheme</a></div><ul class="tree-view"><li><div class="module "><a href="../../icontheme/cache.html">cache</a></div></li><li><div class="module "><a href="../../icontheme/file.html">file</a></div></li><li><div class="module "><a href="../../icontheme/lookup.html">lookup</a></div></li><li><div class="module "><a href="../../icontheme/paths.html">paths</a></div></li></ul></li><li class="tree-view "><div class="package "><a href="../../inilike.html">inilike</a></div><ul class="tree-view"><li><div class="module "><a href="../../inilike/common.html">common</a></div></li><li><div class="module selected"><a href="../../inilike/file.html">file</a></div></li><li><div class="module "><a href="../../inilike/range.html">range</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../../mime.html">mime</a></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">detectors</div><ul class="tree-view"><li><div class="module "><a href="../../mime/detectors/cache.html">cache</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../../mime/files.html">files</a></div><ul class="tree-view"><li><div class="module "><a href="../../mime/files/aliases.html">aliases</a></div></li><li><div class="module "><a href="../../mime/files/common.html">common</a></div></li><li><div class="module "><a href="../../mime/files/globs.html">globs</a></div></li><li><div class="module "><a href="../../mime/files/icons.html">icons</a></div></li><li><div class="module "><a href="../../mime/files/magic.html">magic</a></div></li><li><div class="module "><a href="../../mime/files/namespaces.html">namespaces</a></div></li><li><div class="module "><a href="../../mime/files/subclasses.html">subclasses</a></div></li><li><div class="module "><a href="../../mime/files/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../../mime/files/types.html">types</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">stores</div><ul class="tree-view"><li><div class="module "><a href="../../mime/stores/files.html">files</a></div></li></ul></li><li><div class="module "><a href="../../mime/cache.html">cache</a></div></li><li><div class="module "><a href="../../mime/common.html">common</a></div></li><li><div class="module "><a href="../../mime/database.html">database</a></div></li><li><div class="module "><a href="../../mime/detector.html">detector</a></div></li><li><div class="module "><a href="../../mime/inode.html">inode</a></div></li><li><div class="module "><a href="../../mime/magic.html">magic</a></div></li><li><div class="module "><a href="../../mime/paths.html">paths</a></div></li><li><div class="module "><a href="../../mime/store.html">store</a></div></li><li><div class="module "><a href="../../mime/text.html">text</a></div></li><li><div class="module "><a href="../../mime/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../../mime/type.html">type</a></div></li></ul></li><li><div class="module "><a href="../../mimeapps.html">mimeapps</a></div></li><li><div class="module "><a href="../../xdgpaths.html">xdgpaths</a></div></li></ul></nav><div id="main-contents"><h1>Class IniLikeFile</h1><p>Ini-like file.
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">class</span> <span class="typ">IniLikeFile</span>
+<span class="pun">;</span></div></code></div><section></section>
+<section><h2>Constructors</h2><h4>Constructors</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../inilike/file/IniLikeFile.this.html" class="["public"]"><code>this</code></a></td><td>Construct empty <code class="lang-d"><a href="../../inilike/file/IniLikeFile.html"><span class="typ">IniLikeFile</span></a></code>, i.e. without any groups or values
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.this.html" class="["public"]"><code>this</code></a></td><td>Read from file.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.this.html" class="["public"]"><code>this</code></a></td><td>Read from range of <code class="lang-d"><a href="../../inilike/range/IniLikeReader.html" title="inilike.range.IniLikeReader"><span class="typ">IniLikeReader</span></a></code>.
+</td></tr></table></section><section><h2>Methods</h2><h4>Methods</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../inilike/file/IniLikeFile.addGenericGroup.html" class="["public"]"><code>addGenericGroup</code></a></td><td>Create new group using groupName.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.appendLeadingComment.html" class="["public"]"><code>appendLeadingComment</code></a></td><td>Add leading comment. This will be appended to the list of leadingComments.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.byGroup.html" class="["public"]"><code>byGroup</code></a></td><td>Range of groups in order how they were defined in file.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.byNode.html" class="["public"]"><code>byNode</code></a></td><td>Iterate over <code class="lang-d"><a href="../../inilike/file/IniLikeFile.GroupNode.html"><span class="typ">GroupNode</span></a></code>s.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.clearLeadingComments.html" class="["public"]"><code>clearLeadingComments</code></a></td><td>Remove all coments met before groups.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.fileName.html" class="["public"]"><code>fileName</code></a></td><td>File path where the object was loaded from.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.getNode.html" class="["public"]"><code>getNode</code></a></td><td>Get <code class="lang-d"><a href="../../inilike/file/IniLikeFile.GroupNode.html"><span class="typ">GroupNode</span></a></code> by groupName.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.group.html" class="["public"]"><code>group</code></a></td><td>Get group by name.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.leadingComments.html" class="["public"]"><code>leadingComments</code></a></td><td>Leading comments.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.moveGroupAfter.html" class="["public"]"><code>moveGroupAfter</code></a></td><td>Move group after other.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.moveGroupBefore.html" class="["public"]"><code>moveGroupBefore</code></a></td><td>Move group before other.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.moveGroupToBack.html" class="["public"]"><code>moveGroupToBack</code></a></td><td>Move the group to make it the last.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.moveGroupToFront.html" class="["public"]"><code>moveGroupToFront</code></a></td><td>Move the group to make it the first.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.prependLeadingComment.html" class="["public"]"><code>prependLeadingComment</code></a></td><td>Prepend leading comment (e.g. for setting shebang line).
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.removeGroup.html" class="["public"]"><code>removeGroup</code></a></td><td>Remove group by name. Do nothing if group with such name does not exist.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.save.html" class="["public"]"><code>save</code></a></td><td>Use Output range or delegate to retrieve strings line by line.
  Those strings can be written to the file or be showed in text area.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.saveToFile.html" class="public">
-										<code>saveToFile</code>
-									</a>
-								</td>
-								<td>Save object to the file using .ini-like format.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.saveToString.html" class="public">
-										<code>saveToString</code>
-									</a>
-								</td>
-								<td>Save object to string using .ini like format.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.createEmptyGroup.html" class="protected">
-										<code>createEmptyGroup</code>
-									</a>
-								</td>
-								<td>Can be used in derived classes to create instance of IniLikeGroup.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.createGroupByName.html" class="protected">
-										<code>createGroupByName</code>
-									</a>
-								</td>
-								<td>Reimplement in derive class.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.insertGroup.html" class="protected">
-										<code>insertGroup</code>
-									</a>
-								</td>
-								<td>Insert group into <code class="lang-d"><a href="../../inilike/file/IniLikeFile.html"><span class="typ">IniLikeFile</span></a></code> object and use its name as key.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.onCommentInGroup.html" class="protected">
-										<code>onCommentInGroup</code>
-									</a>
-								</td>
-								<td>Add comment for group.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.saveToFile.html" class="["public"]"><code>saveToFile</code></a></td><td>Save object to the file using .ini-like format.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.saveToString.html" class="["public"]"><code>saveToString</code></a></td><td>Save object to string using .ini like format.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.createEmptyGroup.html" class="["protected"]"><code>createEmptyGroup</code></a></td><td>Can be used in derived classes to create instance of IniLikeGroup.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.createGroupByName.html" class="["protected"]"><code>createGroupByName</code></a></td><td>Reimplement in derive class.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.insertGroup.html" class="["protected"]"><code>insertGroup</code></a></td><td>Insert group into <code class="lang-d"><a href="../../inilike/file/IniLikeFile.html"><span class="typ">IniLikeFile</span></a></code> object and use its name as key.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.onCommentInGroup.html" class="["protected"]"><code>onCommentInGroup</code></a></td><td>Add comment for group.
  This function is called only in constructor and can be reimplemented in derived classes.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.onGroup.html" class="protected">
-										<code>onGroup</code>
-									</a>
-								</td>
-								<td>Create iniLikeGroup by groupName during file parsing.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.onKeyValue.html" class="protected">
-										<code>onKeyValue</code>
-									</a>
-								</td>
-								<td>Add key/value pair for group.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.onGroup.html" class="["protected"]"><code>onGroup</code></a></td><td>Create <code class="lang-d"><a href="../../inilike/file/IniLikeGroup.html"><span class="typ">IniLikeGroup</span></a></code> by groupName during file parsing.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.onKeyValue.html" class="["protected"]"><code>onKeyValue</code></a></td><td>Add key/value pair for group.
  This function is called only in constructor and can be reimplemented in derived classes.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.onLeadingComment.html" class="protected">
-										<code>onLeadingComment</code>
-									</a>
-								</td>
-								<td>Add comment before groups.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.onLeadingComment.html" class="["protected"]"><code>onLeadingComment</code></a></td><td>Add comment before groups.
  This function is called only in constructor and can be reimplemented in derived classes.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.putGroup.html" class="protected">
-										<code>putGroup</code>
-									</a>
-								</td>
-								<td>Append group to group list without associating group name with it. Can be used to add groups with duplicated names.
-</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Inner structs</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.GroupNode.html" class="public">
-										<code>GroupNode</code>
-									</a>
-								</td>
-								<td>Wrapper for internal ListMap node.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.ReadOptions.html" class="public">
-										<code>ReadOptions</code>
-									</a>
-								</td>
-								<td>Behavior of ini-like file reading.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.WriteOptions.html" class="public">
-										<code>WriteOptions</code>
-									</a>
-								</td>
-								<td>Behavior of ini-like file saving.
-</td>
-							</tr>
-						</table>
-					</section>
-					<section>
-						<h3>Enums</h3>
-						<table>
-							<col class="caption"/>
-							<tr>
-								<th>Name</th>
-								<th>Description</th>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.DuplicateGroupPolicy.html" class="public">
-										<code>DuplicateGroupPolicy</code>
-									</a>
-								</td>
-								<td>Behavior on group with duplicate name in the file.
-</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="../../inilike/file/IniLikeFile.DuplicateKeyPolicy.html" class="public">
-										<code>DuplicateKeyPolicy</code>
-									</a>
-								</td>
-								<td>Behavior on duplicate key in the group.
-</td>
-							</tr>
-						</table>
-					</section>
-<section><h3>Example</h3>
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.putGroup.html" class="["protected"]"><code>putGroup</code></a></td><td>Append group to group list without associating group name with it. Can be used to add groups with duplicated names.
+</td></tr></table></section><section><h2>Inner structs</h2><h4>Inner structs</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../inilike/file/IniLikeFile.GroupNode.html" class="["public"]"><code>GroupNode</code></a></td><td>Wrapper for internal <code class="lang-d"><a href="../../inilike/file/ListMap.html"><span class="typ">ListMap</span></a></code> node.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.ReadOptions.html" class="["public"]"><code>ReadOptions</code></a></td><td>Behavior of ini-like file reading.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.WriteOptions.html" class="["public"]"><code>WriteOptions</code></a></td><td>Behavior of ini-like file saving.
+</td></tr></table></section><section><h2>Enums</h2><h4>Enums</h4><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../../inilike/file/IniLikeFile.DuplicateGroupPolicy.html" class="["public"]"><code>DuplicateGroupPolicy</code></a></td><td>Behavior on group with duplicate name in the file.
+</td></tr><tr><td><a href="../../inilike/file/IniLikeFile.DuplicateKeyPolicy.html" class="["public"]"><code>DuplicateKeyPolicy</code></a></td><td>Behavior on duplicate key in the group.
+</td></tr></table></section>
+<section><h2>Example</h2>
 
 <pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">file</span><span class="pun">;
 </span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">path</span><span class="pun">;
 </span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">stdio</span><span class="pun">;
 
-</span><span class="typ">string </span><span class="pln">contents </span><span class="pun">= 
+</span><span class="typ">string </span><span class="pln">contents </span><span class="pun">=
 </span><span class="str">`# The first comment
 [First Entry]
 # Comment
@@ -577,23 +87,26 @@ Comment=Manage files
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">getNode</span><span class="pun">(</span><span class="str">"NonExistent"</span><span class="pun">)<wbr/>.</span><span class="pln">group</span><span class="pun">() </span><span class="kwd">is null</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">saveToString</span><span class="pun">(<a href="../../inilike/file/IniLikeFile.WriteOptions.exact.html"></span><span class="typ">IniLikeFile<wbr/></span><span class="pun">.</span><span class="typ">WriteOptions<wbr/></span><span class="pun">.</span><span class="pln">exact</span></a><span class="pun">) == </span><span class="pln">contents</span><span class="pun">);
 
-</span><span class="typ">string </span><span class="pln">tempFile </span><span class="pun">= </span><span class="pln">buildPath</span><span class="pun">(</span><span class="pln">tempDir</span><span class="pun">(), </span><span class="str">"inilike-unittest-tempfile"</span><span class="pun">);
-</span><span class="kwd">try </span><span class="pun">{
-    </span><span class="pln">assertNotThrown</span><span class="pun">!<a href="../../inilike/file/IniLikeReadException.html"></span><span class="typ">IniLikeReadException</span></a><span class="pun">(</span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">saveToFile</span><span class="pun">(</span><span class="pln">tempFile</span><span class="pun">));
-    </span><span class="kwd">auto </span><span class="pln">fileContents </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">tempFile</span><span class="pun">);
-    </span><span class="kwd">static if</span><span class="pun">( </span><span class="kwd">__VERSION__ </span><span class="pun">&lt; </span><span class="lit">2067 </span><span class="pun">) {
-        </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">fileContents<wbr/></span><span class="pun">.</span><span class="pln">splitLines</span><span class="pun">, </span><span class="pln">contents<wbr/></span><span class="pun">.</span><span class="pln">splitLines</span><span class="pun">), </span><span class="str">"Contents should be preserved as is"</span><span class="pun">);
-    } </span><span class="kwd">else </span><span class="pun">{
-        </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">fileContents<wbr/></span><span class="pun">.</span><span class="pln">lineSplitter</span><span class="pun">, </span><span class="pln">contents<wbr/></span><span class="pun">.</span><span class="pln">lineSplitter</span><span class="pun">), </span><span class="str">"Contents should be preserved as is"</span><span class="pun">);
-    }
-    
-    </span><span class="typ">IniLikeFile </span><span class="pln">filf</span><span class="pun">; 
-    </span><span class="pln">assertNotThrown</span><span class="pun">!<a href="../../inilike/file/IniLikeReadException.html"></span><span class="typ">IniLikeReadException</span></a><span class="pun">(</span><span class="pln">filf </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">IniLikeFile</span><span class="pun">(</span><span class="pln">tempFile</span><span class="pun">));
-    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">filf<wbr/></span><span class="pun">.</span><span class="pln">fileName</span><span class="pun">() == </span><span class="pln">tempFile</span><span class="pun">);
-    </span><span class="pln">remove</span><span class="pun">(</span><span class="pln">tempFile</span><span class="pun">);
-} </span><span class="kwd">catch</span><span class="pun">(</span><span class="typ">Exception </span><span class="pln">e</span><span class="pun">) {
-    </span><span class="com">//environmental error in unittests
-</span><span class="pun">}
+</span><span class="kwd">version</span><span class="pun">(</span><span class="pln">inilikeFileTest</span><span class="pun">)
+{
+    </span><span class="typ">string </span><span class="pln">tempFile </span><span class="pun">= </span><span class="pln">buildPath</span><span class="pun">(</span><span class="pln">tempDir</span><span class="pun">(), </span><span class="str">"inilike-unittest-tempfile"</span><span class="pun">);
+    </span><span class="kwd">try </span><span class="pun">{
+        </span><span class="pln">assertNotThrown</span><span class="pun">!<a href="../../inilike/file/IniLikeReadException.html"></span><span class="typ">IniLikeReadException</span></a><span class="pun">(</span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">saveToFile</span><span class="pun">(</span><span class="pln">tempFile</span><span class="pun">));
+        </span><span class="kwd">auto </span><span class="pln">fileContents </span><span class="pun">= </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">tempFile</span><span class="pun">);
+        </span><span class="kwd">static if</span><span class="pun">( </span><span class="kwd">__VERSION__ </span><span class="pun">&lt; </span><span class="lit">2067 </span><span class="pun">) {
+            </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">fileContents<wbr/></span><span class="pun">.</span><span class="pln">splitLines</span><span class="pun">, </span><span class="pln">contents<wbr/></span><span class="pun">.</span><span class="pln">splitLines</span><span class="pun">), </span><span class="str">"Contents should be preserved as is"</span><span class="pun">);
+        } </span><span class="kwd">else </span><span class="pun">{
+            </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">fileContents<wbr/></span><span class="pun">.</span><span class="pln">lineSplitter</span><span class="pun">, </span><span class="pln">contents<wbr/></span><span class="pun">.</span><span class="pln">lineSplitter</span><span class="pun">), </span><span class="str">"Contents should be preserved as is"</span><span class="pun">);
+        }
+
+        </span><span class="typ">IniLikeFile </span><span class="pln">filf</span><span class="pun">;
+        </span><span class="pln">assertNotThrown</span><span class="pun">!<a href="../../inilike/file/IniLikeReadException.html"></span><span class="typ">IniLikeReadException</span></a><span class="pun">(</span><span class="pln">filf </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">IniLikeFile</span><span class="pun">(</span><span class="pln">tempFile</span><span class="pun">));
+        </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">filf<wbr/></span><span class="pun">.</span><span class="pln">fileName</span><span class="pun">() == </span><span class="pln">tempFile</span><span class="pun">);
+        </span><span class="pln">remove</span><span class="pun">(</span><span class="pln">tempFile</span><span class="pun">);
+    } </span><span class="kwd">catch</span><span class="pun">(</span><span class="typ">Exception </span><span class="pln">e</span><span class="pun">) {
+        </span><span class="com">//environmental error in unittests
+    </span><span class="pun">}
+}
 
 </span><span class="kwd">auto </span><span class="pln">firstEntry </span><span class="pun">= </span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"First Entry"</span><span class="pun">);
 
@@ -647,7 +160,7 @@ Comment=Manage files
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Another Group"</span><span class="pun">)<wbr/>.</span><span class="pln">prependComment</span><span class="pun">(</span><span class="str">"The first comment"</span><span class="pun">)<wbr/>.</span><span class="pln">line<wbr/></span><span class="pun">.</span><span class="pln">comment </span><span class="pun">== </span><span class="str">"#The first comment"</span><span class="pun">);
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(
-    </span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Another Group"</span><span class="pun">)<wbr/>.</span><span class="pln">byIniLine</span><span class="pun">(), 
+    </span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Another Group"</span><span class="pun">)<wbr/>.</span><span class="pln">byIniLine</span><span class="pun">(),
     [<a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#The first comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"Commander"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Comment"</span><span class="pun">, </span><span class="str">"Manage files"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"# The last comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#The latest comment"</span><span class="pun">)]
 ));
 
@@ -660,10 +173,10 @@ Comment=Manage files
 </span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Another Group"</span><span class="pun">)<wbr/>.</span><span class="pln">addCommentBefore</span><span class="pun">(</span><span class="pln">commentLineNode</span><span class="pun">, </span><span class="str">"Average comment"</span><span class="pun">);
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(
-    </span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Another Group"</span><span class="pun">)<wbr/>.</span><span class="pln">byIniLine</span><span class="pun">(), 
+    </span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Another Group"</span><span class="pun">)<wbr/>.</span><span class="pln">byIniLine</span><span class="pun">(),
     [
-        <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#The first comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"Commander"</span><span class="pun">), 
-        <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#Middle comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#Average comment"</span><span class="pun">), 
+        <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#The first comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"Commander"</span><span class="pun">),
+        <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#Middle comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#Average comment"</span><span class="pun">),
         <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Comment"</span><span class="pun">, </span><span class="str">"Manage files"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"# The last comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#The latest comment"</span><span class="pun">)
     ]
 ));
@@ -671,10 +184,10 @@ Comment=Manage files
 </span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Another Group"</span><span class="pun">)<wbr/>.</span><span class="pln">removeEntry</span><span class="pun">(</span><span class="pln">latestCommentNode</span><span class="pun">);
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(
-    </span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Another Group"</span><span class="pun">)<wbr/>.</span><span class="pln">byIniLine</span><span class="pun">(), 
+    </span><span class="pln">ilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"Another Group"</span><span class="pun">)<wbr/>.</span><span class="pln">byIniLine</span><span class="pun">(),
     [
-        <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#The first comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"Commander"</span><span class="pun">), 
-        <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#Middle comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#Average comment"</span><span class="pun">), 
+        <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#The first comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Name"</span><span class="pun">, </span><span class="str">"Commander"</span><span class="pun">),
+        <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#Middle comment"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"#Average comment"</span><span class="pun">),
         <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Comment"</span><span class="pun">, </span><span class="str">"Manage files"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"# The last comment"</span><span class="pun">)
     ]
 ));
@@ -706,7 +219,7 @@ Comment=Manage files
 </span><span class="kwd">static assert</span><span class="pun">(</span><span class="pln">isForwardRange</span><span class="pun">!(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">cilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"First Entry"</span><span class="pun">)<wbr/>.</span><span class="pln">byKeyValue</span><span class="pun">())));
 </span><span class="kwd">static assert</span><span class="pun">(</span><span class="pln">isForwardRange</span><span class="pun">!(</span><span class="kwd">typeof</span><span class="pun">(</span><span class="pln">cilf<wbr/></span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="str">"First Entry"</span><span class="pun">)<wbr/>.</span><span class="pln">byIniLine</span><span class="pun">())));
 
-</span><span class="pln">contents </span><span class="pun">= 
+</span><span class="pln">contents </span><span class="pun">=
 </span><span class="str">`[Group]
 GenericName=File manager
 [Group]
@@ -718,7 +231,7 @@ GenericName=Commander`</span><span class="pun">;
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">shouldThrow<wbr/></span><span class="pun">.</span><span class="pln">lineIndex </span><span class="pun">== </span><span class="lit">2</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">shouldThrow<wbr/></span><span class="pun">.</span><span class="pln">fileName </span><span class="pun">== </span><span class="str">"config.ini"</span><span class="pun">);
 
-</span><span class="pln">contents </span><span class="pun">= 
+</span><span class="pln">contents </span><span class="pun">=
 </span><span class="str">`[Group]
 Key=Value1
 Key=Value2`</span><span class="pun">;
@@ -736,7 +249,7 @@ Key=Value
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">shouldThrow </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Empty key should throw"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">shouldThrow<wbr/></span><span class="pun">.</span><span class="pln">lineNumber </span><span class="pun">== </span><span class="lit">3</span><span class="pun">);
 
-</span><span class="pln">contents </span><span class="pun">= 
+</span><span class="pln">contents </span><span class="pun">=
 </span><span class="str">`[Group]
 #Comment
 Valid=Key
@@ -746,7 +259,7 @@ NotKeyNotGroupNotComment`</span><span class="pun">;
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">shouldThrow </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Invalid entry should throw"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">shouldThrow<wbr/></span><span class="pun">.</span><span class="pln">lineNumber </span><span class="pun">== </span><span class="lit">4</span><span class="pun">);
 
-</span><span class="pln">contents </span><span class="pun">= 
+</span><span class="pln">contents </span><span class="pun">=
 </span><span class="str">`#Comment
 NotComment
 [Group]
@@ -792,7 +305,7 @@ Key3=Value3`</span><span class="pun">;
 </span><span class="pln">groupOne<wbr/></span><span class="pun">.</span><span class="pln">moveLineToBack</span><span class="pun">(</span><span class="pln">groupOne<wbr/></span><span class="pun">.</span><span class="pln">getNode</span><span class="pun">(</span><span class="str">"Key1"</span><span class="pun">));
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">groupOne<wbr/></span><span class="pun">.</span><span class="pln">byIniLine</span><span class="pun">()<wbr/>.</span><span class="pln">equal</span><span class="pun">([
-    <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Key3"</span><span class="pun">, </span><span class="str">"Value3"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"# Comment1"</span><span class="pun">), 
+    <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Key3"</span><span class="pun">, </span><span class="str">"Value3"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"# Comment1"</span><span class="pun">),
     <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Key2"</span><span class="pun">, </span><span class="str">"Value2"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Key1"</span><span class="pun">, </span><span class="str">"Value1"</span><span class="pun">)
 ]));
 
@@ -801,31 +314,16 @@ Key3=Value3`</span><span class="pun">;
 </span><span class="pln">groupTwo<wbr/></span><span class="pun">.</span><span class="pln">moveLineAfter</span><span class="pun">(</span><span class="pln">groupTwo<wbr/></span><span class="pun">.</span><span class="pln">getNode</span><span class="pun">(</span><span class="str">"Key2"</span><span class="pun">), </span><span class="pln">groupTwo<wbr/></span><span class="pun">.</span><span class="pln">getNode</span><span class="pun">(</span><span class="str">"Key1"</span><span class="pun">));
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">groupTwo<wbr/></span><span class="pun">.</span><span class="pln">byIniLine</span><span class="pun">()<wbr/>.</span><span class="pln">equal</span><span class="pun">([
-    <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Key3"</span><span class="pun">, </span><span class="str">"Value3"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Key2"</span><span class="pun">, </span><span class="str">"Value2"</span><span class="pun">), 
+    <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Key3"</span><span class="pun">, </span><span class="str">"Value3"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Key2"</span><span class="pun">, </span><span class="str">"Value2"</span><span class="pun">),
      <a href="../../inilike/file/IniLikeLine.fromKeyValue.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromKeyValue</span></a><span class="pun">(</span><span class="str">"Key1"</span><span class="pun">, </span><span class="str">"Value1"</span><span class="pun">), <a href="../../inilike/file/IniLikeLine.fromComment.html"></span><span class="typ">IniLikeLine<wbr/></span><span class="pun">.</span><span class="pln">fromComment</span></a><span class="pun">(</span><span class="str">"# Comment2"</span><span class="pun">)
 ]));
 </span></code></pre>
 </section>
 
-			</section>
-			<section>
-				<h2>Authors</h2>
-<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+<footer><table class="license-info"><tr><th>Authors</th><td><p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
 </p>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-<p>Roman Chistokhodov, 2015-2016
+</td></tr><tr><th>Copyright</th><td><p>Roman Chistokhodov, 2015-2016
 </p>
-
-			</section>
-			<section>
-				<h2>License</h2>
-<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</td></tr><tr><th>License</th><td><p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
 </p>
-
-			</section>
-		</div>
-	</body>
-</html>
+</td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

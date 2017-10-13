@@ -1,0 +1,70 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>findClosestThemedIcon - multiple declarations</title>
+<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package "><a href="../../desktopfile.html">desktopfile</a></div><ul class="tree-view"><li><div class="module "><a href="../../desktopfile/file.html">file</a></div></li><li><div class="module "><a href="../../desktopfile/paths.html">paths</a></div></li><li><div class="module "><a href="../../desktopfile/utils.html">utils</a></div></li></ul></li><li class="tree-view "><div class="package "><a href="../../icontheme.html">icontheme</a></div><ul class="tree-view"><li><div class="module "><a href="../../icontheme/cache.html">cache</a></div></li><li><div class="module "><a href="../../icontheme/file.html">file</a></div></li><li><div class="module selected"><a href="../../icontheme/lookup.html">lookup</a></div></li><li><div class="module "><a href="../../icontheme/paths.html">paths</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../../inilike.html">inilike</a></div><ul class="tree-view"><li><div class="module "><a href="../../inilike/common.html">common</a></div></li><li><div class="module "><a href="../../inilike/file.html">file</a></div></li><li><div class="module "><a href="../../inilike/range.html">range</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../../mime.html">mime</a></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">detectors</div><ul class="tree-view"><li><div class="module "><a href="../../mime/detectors/cache.html">cache</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../../mime/files.html">files</a></div><ul class="tree-view"><li><div class="module "><a href="../../mime/files/aliases.html">aliases</a></div></li><li><div class="module "><a href="../../mime/files/common.html">common</a></div></li><li><div class="module "><a href="../../mime/files/globs.html">globs</a></div></li><li><div class="module "><a href="../../mime/files/icons.html">icons</a></div></li><li><div class="module "><a href="../../mime/files/magic.html">magic</a></div></li><li><div class="module "><a href="../../mime/files/namespaces.html">namespaces</a></div></li><li><div class="module "><a href="../../mime/files/subclasses.html">subclasses</a></div></li><li><div class="module "><a href="../../mime/files/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../../mime/files/types.html">types</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">stores</div><ul class="tree-view"><li><div class="module "><a href="../../mime/stores/files.html">files</a></div></li></ul></li><li><div class="module "><a href="../../mime/cache.html">cache</a></div></li><li><div class="module "><a href="../../mime/common.html">common</a></div></li><li><div class="module "><a href="../../mime/database.html">database</a></div></li><li><div class="module "><a href="../../mime/detector.html">detector</a></div></li><li><div class="module "><a href="../../mime/inode.html">inode</a></div></li><li><div class="module "><a href="../../mime/magic.html">magic</a></div></li><li><div class="module "><a href="../../mime/paths.html">paths</a></div></li><li><div class="module "><a href="../../mime/store.html">store</a></div></li><li><div class="module "><a href="../../mime/text.html">text</a></div></li><li><div class="module "><a href="../../mime/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../../mime/type.html">type</a></div></li></ul></li><li><div class="module "><a href="../../mimeapps.html">mimeapps</a></div></li><li><div class="module "><a href="../../xdgpaths.html">xdgpaths</a></div></li></ul></nav><div id="main-contents"><h1>findClosestThemedIcon - multiple declarations</h1><nav class="page-nav"><ul><li><a href="#0">Function <code>findClosestThemedIcon</code></a></li><li><a href="#1">Function <code>findClosestThemedIcon</code></a></li></ul></nav><h2 id="0">Function findClosestThemedIcon</h2><p>Find icon of the closest size. It uses icon theme cache wherever possible. The first perfect match is used. It searches only for icons in themes.
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
+<span class="kwd">auto </span><span class="kwd">auto</span> <span class="pln">findClosestThemedIcon</span>(alias subdirFilter, IconThemes, BaseDirs, Exts)
+<span class="pun">(</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">iconName</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">desiredSize</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">IconThemes</span> <span class="pln">iconThemes</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">BaseDirs</span> <span class="pln">searchIconDirs</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">Exts</span> <span class="pln">extensions</span>
+<br/>
+<span class="pun">)</span><span class="pun">;</span></div></code></div>
+<section><h3>Parameters</h3>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="iconName">iconName</td><td> Name of icon to search as defined by Icon Theme Specification (i.e. without path and extension parts).</td></tr>
+<tr><td id="desiredSize">desiredSize</td><td> Preferred icon size to get.</td></tr>
+<tr><td id="iconThemes">iconThemes</td><td> Range of <code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html" title="icontheme.file.IconThemeFile"><span class="typ">IconThemeFile</span></a></code> objects.</td></tr>
+<tr><td id="searchIconDirs">searchIconDirs</td><td> Base icon directories.</td></tr>
+<tr><td id="extensions">extensions</td><td> Allowed file extensions.</td></tr>
+</table>
+</section>
+<section><h3>Returns</h3>
+<p><code class="lang-d"><a href="../../icontheme/lookup/IconSearchResult.html"><span class="typ">IconSearchResult</span></a></code> with icon file path and <code class="lang-d"><a href="../../icontheme/file/IconSubDir.html" title="icontheme.file.IconSubDir"><span class="typ">IconSubDir</span></a></code> and <code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html" title="icontheme.file.IconThemeFile"><span class="typ">IconThemeFile</span></a></code> it belongs to. Path will be empty if icon is not found.
+</p>
+</section>
+<section><h3>Note</h3>
+<p>If icon of some size was found in the icon theme, this algorithm does not check following themes, even if they contain icons with closer size. Therefore the icon found in the more preferred theme always has presedence over icons from other themes.
+</p>
+</section>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../icontheme/lookup/findClosestIcon.html"><span class="pln">findClosestIcon</span></a></code>, <code class="lang-d"><a href="../../icontheme/paths/baseIconDirs.html" title="icontheme.paths.baseIconDirs"><span class="pln">baseIconDirs</span></a></code>, <code class="lang-d"><a href="../../icontheme/lookup/lookupIcon.html"><span class="pln">lookupIcon</span></a></code>, <code class="lang-d"><a href="../../icontheme/lookup/iconSizeDistance.html"><span class="pln">iconSizeDistance</span></a></code>
+</p>
+</section>
+<h2 id="1">Function findClosestThemedIcon</h2><p>ditto, but with predefined extensions.
+</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
+<span class="kwd">auto </span><span class="kwd">auto</span> <span class="pln">findClosestThemedIcon</span>(alias subdirFilter, IconThemes, BaseDirs)
+<span class="pun">(</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">iconName</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">uint</span> <span class="pln">size</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">IconThemes</span> <span class="pln">iconThemes</span><span class="pun">,</span>
+<br/>
+&nbsp;&nbsp;<span class="typ">BaseDirs</span> <span class="pln">searchIconDirs</span>
+<br/>
+<span class="pun">)</span><span class="pun">;</span></div></code></div>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../icontheme/lookup/defaultIconExtensions.html"><span class="pln">defaultIconExtensions</span></a></code>
+</p>
+</section>
+
+<footer><table class="license-info"><tr><th>Authors</th><td><p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</p>
+</td></tr><tr><th>Copyright</th><td><p>Roman Chistokhodov, 2015-2016
+</p>
+</td></tr><tr><th>License</th><td><p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+</td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>

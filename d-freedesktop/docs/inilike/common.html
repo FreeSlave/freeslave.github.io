@@ -1,413 +1,45 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Module inilike.common</title>
-		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-		<script type="text/javascript" src="../scripts/jquery.js">/**/</script>
-		<script type="text/javascript" src="../scripts/ddox.js">/**/</script>
-	</head>
-	<body onload="setupDdox();">
-		<nav id="main-nav">
-						<ul class="tree-view">
-							<li class="collapsed tree-view">
-								<a href="#" class="package">desktopfile</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../desktopfile.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../desktopfile/file.html" class=" module">file</a>
-							</li>
-							<li>
-								<a href="../desktopfile/paths.html" class=" module">paths</a>
-							</li>
-							<li>
-								<a href="../desktopfile/utils.html" class=" module">utils</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">icontheme</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../icontheme.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../icontheme/cache.html" class=" module">cache</a>
-							</li>
-							<li>
-								<a href="../icontheme/file.html" class=" module">file</a>
-							</li>
-							<li>
-								<a href="../icontheme/lookup.html" class=" module">lookup</a>
-							</li>
-							<li>
-								<a href="../icontheme/paths.html" class=" module">paths</a>
-							</li>
-						</ul>
-							</li>
-							<li class="tree-view">
-								<a href="#" class="package">inilike</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../inilike.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../inilike/common.html" class="selected module">common</a>
-							</li>
-							<li>
-								<a href="../inilike/file.html" class=" module">file</a>
-							</li>
-							<li>
-								<a href="../inilike/range.html" class=" module">range</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">mime</a>
-						<ul class="tree-view">
-							<li class="collapsed tree-view">
-								<a href="#" class="package">detectors</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../mime/detectors/cache.html" class=" module">cache</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">files</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../mime/files.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../mime/files/aliases.html" class=" module">aliases</a>
-							</li>
-							<li>
-								<a href="../mime/files/common.html" class=" module">common</a>
-							</li>
-							<li>
-								<a href="../mime/files/globs.html" class=" module">globs</a>
-							</li>
-							<li>
-								<a href="../mime/files/icons.html" class=" module">icons</a>
-							</li>
-							<li>
-								<a href="../mime/files/magic.html" class=" module">magic</a>
-							</li>
-							<li>
-								<a href="../mime/files/namespaces.html" class=" module">namespaces</a>
-							</li>
-							<li>
-								<a href="../mime/files/subclasses.html" class=" module">subclasses</a>
-							</li>
-							<li>
-								<a href="../mime/files/treemagic.html" class=" module">treemagic</a>
-							</li>
-							<li>
-								<a href="../mime/files/types.html" class=" module">types</a>
-							</li>
-						</ul>
-							</li>
-							<li class="collapsed tree-view">
-								<a href="#" class="package">stores</a>
-						<ul class="tree-view">
-							<li>
-								<a href="../mime/stores/files.html" class=" module">files</a>
-							</li>
-						</ul>
-							</li>
-							<li>
-								<a href="../mime.html" class=" module">Package members</a>
-							</li>
-							<li>
-								<a href="../mime/cache.html" class=" module">cache</a>
-							</li>
-							<li>
-								<a href="../mime/common.html" class=" module">common</a>
-							</li>
-							<li>
-								<a href="../mime/database.html" class=" module">database</a>
-							</li>
-							<li>
-								<a href="../mime/detector.html" class=" module">detector</a>
-							</li>
-							<li>
-								<a href="../mime/inode.html" class=" module">inode</a>
-							</li>
-							<li>
-								<a href="../mime/magic.html" class=" module">magic</a>
-							</li>
-							<li>
-								<a href="../mime/paths.html" class=" module">paths</a>
-							</li>
-							<li>
-								<a href="../mime/store.html" class=" module">store</a>
-							</li>
-							<li>
-								<a href="../mime/text.html" class=" module">text</a>
-							</li>
-							<li>
-								<a href="../mime/treemagic.html" class=" module">treemagic</a>
-							</li>
-							<li>
-								<a href="../mime/type.html" class=" module">type</a>
-							</li>
-						</ul>
-							</li>
-							<li>
-								<a href="../mimeapps.html" class=" module">mimeapps</a>
-							</li>
-							<li>
-								<a href="../xdgpaths.html" class=" module">xdgpaths</a>
-							</li>
-						</ul>
-				<noscript>
-					<p style="color: red">The search functionality needs JavaScript enabled</p>
-				</noscript>
-				<div id="symbolSearchPane" style="display: none">
-					<p>
-						<input id="symbolSearch" type="text" placeholder="Search for symbols" onchange="performSymbolSearch(24);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
-					</p>
-	<ul id="symbolSearchResults" style="display: none"></ul>
-	<script type="application/javascript" src="../symbols.js"></script>
-	<script type="application/javascript">
-var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();
-	</script>
-				</div>
-		</nav>
-		<div id="main-contents">
-			<h1>Module inilike.common</h1>
-			<p>Common functions for dealing with entries in ini-like file.
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"/>
+<title>Module inilike.common</title>
+<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
+<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package "><a href="../desktopfile.html">desktopfile</a></div><ul class="tree-view"><li><div class="module "><a href="../desktopfile/file.html">file</a></div></li><li><div class="module "><a href="../desktopfile/paths.html">paths</a></div></li><li><div class="module "><a href="../desktopfile/utils.html">utils</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../icontheme.html">icontheme</a></div><ul class="tree-view"><li><div class="module "><a href="../icontheme/cache.html">cache</a></div></li><li><div class="module "><a href="../icontheme/file.html">file</a></div></li><li><div class="module "><a href="../icontheme/lookup.html">lookup</a></div></li><li><div class="module "><a href="../icontheme/paths.html">paths</a></div></li></ul></li><li class="tree-view "><div class="package "><a href="../inilike.html">inilike</a></div><ul class="tree-view"><li><div class="module selected"><a href="../inilike/common.html">common</a></div></li><li><div class="module "><a href="../inilike/file.html">file</a></div></li><li><div class="module "><a href="../inilike/range.html">range</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../mime.html">mime</a></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">detectors</div><ul class="tree-view"><li><div class="module "><a href="../mime/detectors/cache.html">cache</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../mime/files.html">files</a></div><ul class="tree-view"><li><div class="module "><a href="../mime/files/aliases.html">aliases</a></div></li><li><div class="module "><a href="../mime/files/common.html">common</a></div></li><li><div class="module "><a href="../mime/files/globs.html">globs</a></div></li><li><div class="module "><a href="../mime/files/icons.html">icons</a></div></li><li><div class="module "><a href="../mime/files/magic.html">magic</a></div></li><li><div class="module "><a href="../mime/files/namespaces.html">namespaces</a></div></li><li><div class="module "><a href="../mime/files/subclasses.html">subclasses</a></div></li><li><div class="module "><a href="../mime/files/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../mime/files/types.html">types</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">stores</div><ul class="tree-view"><li><div class="module "><a href="../mime/stores/files.html">files</a></div></li></ul></li><li><div class="module "><a href="../mime/cache.html">cache</a></div></li><li><div class="module "><a href="../mime/common.html">common</a></div></li><li><div class="module "><a href="../mime/database.html">database</a></div></li><li><div class="module "><a href="../mime/detector.html">detector</a></div></li><li><div class="module "><a href="../mime/inode.html">inode</a></div></li><li><div class="module "><a href="../mime/magic.html">magic</a></div></li><li><div class="module "><a href="../mime/paths.html">paths</a></div></li><li><div class="module "><a href="../mime/store.html">store</a></div></li><li><div class="module "><a href="../mime/text.html">text</a></div></li><li><div class="module "><a href="../mime/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../mime/type.html">type</a></div></li></ul></li><li><div class="module "><a href="../mimeapps.html">mimeapps</a></div></li><li><div class="module "><a href="../xdgpaths.html">xdgpaths</a></div></li></ul></nav><div id="main-contents"><h1>Module inilike.common</h1><p>Common functions for dealing with entries in ini-like file.
 </p>
-
-			<section><section><h2>See Also</h2>
+<section><section><h2>See Also</h2>
 <p><a href="http://standards.freedesktop.org/desktop-entry-spec/latest/index.html">Desktop Entry Specification</a>
 </p>
 </section>
-</section>
-			<section>
-				<h2>Functions</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th>
-						<th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<a id="boolToString" class="public" href="../inilike/common/boolToString.html">
-								<code>boolToString</code>
-							</a>
-						</td>
-						<td>Convert bool to string. Can be used to set boolean values.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="chooseLocalizedValue" class="public" href="../inilike/common/chooseLocalizedValue.html">
-								<code>chooseLocalizedValue</code>
-							</a>
-						</td>
-						<td>Choose the better localized value matching to locale between two localized values. The "goodness" is determined using algorithm described in <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s04.html">Localized values for keys</a>.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="doUnescape" class="public" href="../inilike/common/doUnescape.html">
-								<code>doUnescape</code>
-							</a>
-						</td>
-						<td>Unescape value. If value does not need unescaping this function returns original value.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="dropEncodingPart" class="public" href="../inilike/common/dropEncodingPart.html">
-								<code>dropEncodingPart</code>
-							</a>
-						</td>
-						<td>Drop encoding part from locale (it's not used in constructing localized keys).
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="escapeValue" class="public" href="../inilike/common/escapeValue.html">
-								<code>escapeValue</code>
-							</a>
-						</td>
-						<td>Escapes string by replacing special symbols with escaped sequences.
+</section><section><h2>Functions</h2><table>
+<col class="caption"/>
+<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="boolToString" class="["public"]" href="../inilike/common/boolToString.html">boolToString</a><span class="decoration">(b)</span></code></td><td>Convert bool to string. Can be used to set boolean values.
+</td></tr><tr><td><code><a id="chooseLocalizedValue" class="["public"]" href="../inilike/common/chooseLocalizedValue.html">chooseLocalizedValue</a><span class="decoration">(locale, firstLocale, firstValue, secondLocale, secondValue)</span></code></td><td>Choose the better localized value matching to locale between two localized values. The "goodness" is determined using algorithm described in <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s04.html">Localized values for keys</a>.
+</td></tr><tr><td><code><a id="doUnescape" class="["public"]" href="../inilike/common/doUnescape.html">doUnescape</a><span class="decoration">(value, pairs)</span></code></td><td>Unescape value. If value does not need unescaping this function returns original value.
+</td></tr><tr><td><code><a id="dropEncodingPart" class="["public"]" href="../inilike/common/dropEncodingPart.html">dropEncodingPart</a><span class="decoration">(locale)</span></code></td><td>Drop encoding part from locale (it's not used in constructing localized keys).
+</td></tr><tr><td><code><a id="escapeValue" class="["public"]" href="../inilike/common/escapeValue.html">escapeValue</a><span class="decoration">(value)</span></code></td><td>Escapes string by replacing special symbols with escaped sequences.
  These symbols are: '\\' (backslash), '\n' (newline), '\r' (carriage return) and '\t' (tab).
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="isBoolean" class="public" href="../inilike/common/isBoolean.html">
-								<code>isBoolean</code>
-							</a>
-						</td>
-						<td>Check if the entry value can be interpreted as boolean value.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="isComment" class="public" href="../inilike/common/isComment.html">
-								<code>isComment</code>
-							</a>
-						</td>
-						<td>Test whether the string s represents a comment.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="isFalse" class="public" href="../inilike/common/isFalse.html">
-								<code>isFalse</code>
-							</a>
-						</td>
-						<td>Test whether the entry value represents false.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="isGroupHeader" class="public" href="../inilike/common/isGroupHeader.html">
-								<code>isGroupHeader</code>
-							</a>
-						</td>
-						<td>Test whether the string s represents a group header.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="isTrue" class="public" href="../inilike/common/isTrue.html">
-								<code>isTrue</code>
-							</a>
-						</td>
-						<td>Test whether the entry value represents true.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="isValidDesktopFileKey" class="public" href="../inilike/common/isValidDesktopFileKey.html">
-								<code>isValidDesktopFileKey</code>
-							</a>
-						</td>
-						<td>Test whether the string is valid key in terms of Desktop File Specification.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="isValidKey" class="public" href="../inilike/common/isValidKey.html">
-								<code>isValidKey</code>
-							</a>
-						</td>
-						<td>Test whether the string is valid key, i.e. does not need escaping, is not a comment and not empty string.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="localizedKey" class="public" href="../inilike/common/localizedKey.html">
-								<code>localizedKey</code>
-							</a>
-						</td>
-						<td>Construct localized key name from key and locale.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="localizedKey" class="public" href="../inilike/common/localizedKey.html">
-								<code>localizedKey</code>
-							</a>
-						</td>
-						<td>ditto, but constructs locale name from arguments.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="makeLocaleName" class="public" href="../inilike/common/makeLocaleName.html">
-								<code>makeLocaleName</code>
-							</a>
-						</td>
-						<td>Make locale name based on language, country, encoding and modifier.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="needEscaping" class="public" href="../inilike/common/needEscaping.html">
-								<code>needEscaping</code>
-							</a>
-						</td>
-						<td>Check if value needs to be escaped. This function is currently tolerant to single slashes and tabs.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="parseGroupHeader" class="public" href="../inilike/common/parseGroupHeader.html">
-								<code>parseGroupHeader</code>
-							</a>
-						</td>
-						<td>Retrieve group name from header entry.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="parseKeyValue" class="public" href="../inilike/common/parseKeyValue.html">
-								<code>parseKeyValue</code>
-							</a>
-						</td>
-						<td>Parse entry of kind Key=Value into pair of Key and Value.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="parseLocaleName" class="public" href="../inilike/common/parseLocaleName.html">
-								<code>parseLocaleName</code>
-							</a>
-						</td>
-						<td>Parse locale name into the tuple of 4 values corresponding to language, country, encoding and modifier
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="separateFromLocale" class="public" href="../inilike/common/separateFromLocale.html">
-								<code>separateFromLocale</code>
-							</a>
-						</td>
-						<td>Separate key name into non-localized key and locale name.
+</td></tr><tr><td><code><a id="isBoolean" class="["public"]" href="../inilike/common/isBoolean.html">isBoolean</a><span class="decoration">(value)</span></code></td><td>Check if the entry value can be interpreted as boolean value.
+</td></tr><tr><td><code><a id="isComment" class="["public"]" href="../inilike/common/isComment.html">isComment</a><span class="decoration">(s)</span></code></td><td>Test whether the string s represents a comment.
+</td></tr><tr><td><code><a id="isFalse" class="["public"]" href="../inilike/common/isFalse.html">isFalse</a><span class="decoration">(value)</span></code></td><td>Test whether the entry value represents false.
+</td></tr><tr><td><code><a id="isGroupHeader" class="["public"]" href="../inilike/common/isGroupHeader.html">isGroupHeader</a><span class="decoration">(s)</span></code></td><td>Test whether the string s represents a group header.
+</td></tr><tr><td><code><a id="isTrue" class="["public"]" href="../inilike/common/isTrue.html">isTrue</a><span class="decoration">(value)</span></code></td><td>Test whether the entry value represents true.
+</td></tr><tr><td><code><a id="isValidDesktopFileKey" class="["public"]" href="../inilike/common/isValidDesktopFileKey.html">isValidDesktopFileKey</a><span class="decoration">(desktopKey)</span></code></td><td>Test whether the string is valid key in terms of Desktop File Specification.
+</td></tr><tr><td><code><a id="isValidKey" class="["public"]" href="../inilike/common/isValidKey.html">isValidKey</a><span class="decoration">(key)</span></code></td><td>Test whether the string is valid key, i.e. does not need escaping, is not a comment and not empty string.
+</td></tr><tr><td><code><a id="localizedKey" class="["public"]" href="../inilike/common/localizedKey.html">localizedKey</a><span class="decoration">(key, locale)</span></code></td><td>Construct localized key name from key and locale.
+</td></tr><tr><td><code><a id="localizedKey" class="["public"]" href="../inilike/common/localizedKey.html">localizedKey</a><span class="decoration">(key, lang, country, modifier)</span></code></td><td>ditto, but constructs locale name from arguments.
+</td></tr><tr><td><code><a id="makeLocaleName" class="["public"]" href="../inilike/common/makeLocaleName.html">makeLocaleName</a><span class="decoration">(lang, country, encoding, modifier)</span></code></td><td>Make locale name based on language, country, encoding and modifier.
+</td></tr><tr><td><code><a id="needEscaping" class="["public"]" href="../inilike/common/needEscaping.html">needEscaping</a><span class="decoration">(value)</span></code></td><td>Check if value needs to be escaped. This function is currently tolerant to single slashes and tabs.
+</td></tr><tr><td><code><a id="parseGroupHeader" class="["public"]" href="../inilike/common/parseGroupHeader.html">parseGroupHeader</a><span class="decoration">(s)</span></code></td><td>Retrieve group name from header entry.
+</td></tr><tr><td><code><a id="parseKeyValue" class="["public"]" href="../inilike/common/parseKeyValue.html">parseKeyValue</a><span class="decoration">(s)</span></code></td><td>Parse entry of kind Key=Value into pair of Key and Value.
+</td></tr><tr><td><code><a id="parseLocaleName" class="["public"]" href="../inilike/common/parseLocaleName.html">parseLocaleName</a><span class="decoration">(locale)</span></code></td><td>Parse locale name into the tuple of 4 values corresponding to language, country, encoding and modifier
+</td></tr><tr><td><code><a id="separateFromLocale" class="["public"]" href="../inilike/common/separateFromLocale.html">separateFromLocale</a><span class="decoration">(key)</span></code></td><td>Separate key name into non-localized key and locale name.
  If key is not localized returns original key and empty string.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a id="unescapeValue" class="public" href="../inilike/common/unescapeValue.html">
-								<code>unescapeValue</code>
-							</a>
-						</td>
-						<td>Unescapes string. You should unescape values returned by library before displaying until you want keep them as is (e.g., to allow user to edit values in escaped form).
-</td>
-					</tr>
-				</table>
-			</section>
-			<section>
-				<h2>Authors</h2>
-<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</td></tr><tr><td><code><a id="unescapeValue" class="["public"]" href="../inilike/common/unescapeValue.html">unescapeValue</a><span class="decoration">(value)</span></code></td><td>Unescapes string. You should unescape values returned by library before displaying until you want keep them as is (e.g., to allow user to edit values in escaped form).
+</td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td><p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
 </p>
-
-			</section>
-			<section>
-				<h2>Copyright</h2>
-<p>Roman Chistokhodov, 2015-2016
+</td></tr><tr><th>Copyright</th><td><p>Roman Chistokhodov, 2015-2016
 </p>
-
-			</section>
-			<section>
-				<h2>License</h2>
-<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</td></tr><tr><th>License</th><td><p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
 </p>
-
-			</section>
-		</div>
-	</body>
-</html>
+</td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
