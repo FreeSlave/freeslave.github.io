@@ -1,30 +1,391 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module mime.common</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package "><a href="../desktopfile.html">desktopfile</a></div><ul class="tree-view"><li><div class="module "><a href="../desktopfile/file.html">file</a></div></li><li><div class="module "><a href="../desktopfile/paths.html">paths</a></div></li><li><div class="module "><a href="../desktopfile/utils.html">utils</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../icontheme.html">icontheme</a></div><ul class="tree-view"><li><div class="module "><a href="../icontheme/cache.html">cache</a></div></li><li><div class="module "><a href="../icontheme/file.html">file</a></div></li><li><div class="module "><a href="../icontheme/lookup.html">lookup</a></div></li><li><div class="module "><a href="../icontheme/paths.html">paths</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../inilike.html">inilike</a></div><ul class="tree-view"><li><div class="module "><a href="../inilike/common.html">common</a></div></li><li><div class="module "><a href="../inilike/exception.html">exception</a></div></li><li><div class="module "><a href="../inilike/file.html">file</a></div></li><li><div class="module "><a href="../inilike/range.html">range</a></div></li><li><div class="module "><a href="../inilike/read.html">read</a></div></li></ul></li><li class="tree-view "><div class="package "><a href="../mime.html">mime</a></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">detectors</div><ul class="tree-view"><li><div class="module "><a href="../mime/detectors/cache.html">cache</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../mime/files.html">files</a></div><ul class="tree-view"><li><div class="module "><a href="../mime/files/aliases.html">aliases</a></div></li><li><div class="module "><a href="../mime/files/common.html">common</a></div></li><li><div class="module "><a href="../mime/files/globs.html">globs</a></div></li><li><div class="module "><a href="../mime/files/icons.html">icons</a></div></li><li><div class="module "><a href="../mime/files/magic.html">magic</a></div></li><li><div class="module "><a href="../mime/files/namespaces.html">namespaces</a></div></li><li><div class="module "><a href="../mime/files/subclasses.html">subclasses</a></div></li><li><div class="module "><a href="../mime/files/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../mime/files/types.html">types</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">stores</div><ul class="tree-view"><li><div class="module "><a href="../mime/stores/files.html">files</a></div></li></ul></li><li><div class="module "><a href="../mime/cache.html">cache</a></div></li><li><div class="module selected"><a href="../mime/common.html">common</a></div></li><li><div class="module "><a href="../mime/database.html">database</a></div></li><li><div class="module "><a href="../mime/detector.html">detector</a></div></li><li><div class="module "><a href="../mime/inode.html">inode</a></div></li><li><div class="module "><a href="../mime/magic.html">magic</a></div></li><li><div class="module "><a href="../mime/paths.html">paths</a></div></li><li><div class="module "><a href="../mime/store.html">store</a></div></li><li><div class="module "><a href="../mime/text.html">text</a></div></li><li><div class="module "><a href="../mime/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../mime/type.html">type</a></div></li></ul></li><li><div class="module "><a href="../mimeapps.html">mimeapps</a></div></li><li><div class="module "><a href="../xdgpaths.html">xdgpaths</a></div></li></ul></nav><div id="main-contents"><h1>Module mime.common</h1><p>Common functions and constants to work with MIME types.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module mime.common</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../mime/stores/files.html">files</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/type.html">type</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module mime.common</h1><p>Common functions and constants to work with MIME types.
 </p>
-<section></section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="defaultGenericIconName" class="["public"]" href="../mime/common/defaultGenericIconName.html">defaultGenericIconName</a><span class="decoration">(mimeType)</span></code></td><td>Default generic icon for MIME type.
-</td></tr><tr><td><code><a id="defaultIconName" class="["public"]" href="../mime/common/defaultIconName.html">defaultIconName</a><span class="decoration">(mimeType)</span></code></td><td>Default icon for MIME type.
-</td></tr><tr><td><code><a id="implicitParent" class="["public"]" href="../mime/common/implicitParent.html">implicitParent</a><span class="decoration">(mimeType)</span></code></td><td>Get implicit parent type if mimeType. This is text/plain for all text/* types
+			<section></section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="defaultGenericIconName" class="public" href="../mime/common/defaultGenericIconName.html">defaultGenericIconName</a><span class="decoration">(mimeType)</span>
+							</code>
+						</td>
+						<td>Default generic icon for MIME type.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="defaultIconName" class="public" href="../mime/common/defaultIconName.html">defaultIconName</a><span class="decoration">(mimeType)</span>
+							</code>
+						</td>
+						<td>Default icon for MIME type.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="implicitParent" class="public" href="../mime/common/implicitParent.html">implicitParent</a><span class="decoration">(mimeType)</span>
+							</code>
+						</td>
+						<td>Get implicit parent type if mimeType. This is text/plain for all text/* types
  and application/octet-stream for all streamable types.
-</td></tr><tr><td><code><a id="isNoGlobs" class="["public"]" href="../mime/common/isNoGlobs.html">isNoGlobs</a><span class="decoration">(pattern)</span></code></td><td>Check is pattern is _NOGLOBS__. This means glob patterns from the less preferable MIME paths should be ignored.
-</td></tr><tr><td><code><a id="isNoMagic" class="["public"]" href="../mime/common/isNoMagic.html">isNoMagic</a><span class="decoration">(value)</span></code></td><td>Check if value is _NOMAGIC__. This means magic rules from the less preferable MIME paths should be ignored.
-</td></tr><tr><td><code><a id="isValidMimeTypeName" class="["public"]" href="../mime/common/isValidMimeTypeName.html">isValidMimeTypeName</a><span class="decoration">(name)</span></code></td><td>Check if name is valid MIME type name.
-</td></tr><tr><td><code><a id="parseMimeTypeName" class="["public"]" href="../mime/common/parseMimeTypeName.html">parseMimeTypeName</a><span class="decoration">(name)</span></code></td><td>Parse MIME type name into pair of media and subtype strings.
-</td></tr></table></section><section><h2>Manifest constants</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Type</th><th>Description</th></tr><tr><td><a id="defaultGlobWeight" class="["public"]" href="../mime/common/defaultGlobWeight.html"><code>defaultGlobWeight</code></a></td><td></td><td>Default glob pattern weight to use when it's not explicitly provided.
-</td></tr><tr><td><a id="defaultMatchWeight" class="["public"]" href="../mime/common/defaultMatchWeight.html"><code>defaultMatchWeight</code></a></td><td></td><td>Default magic rule priority to use when it's not explicitly provided.
-</td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td><p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="isNoGlobs" class="public" href="../mime/common/isNoGlobs.html">isNoGlobs</a><span class="decoration">(pattern)</span>
+							</code>
+						</td>
+						<td>Check is pattern is _NOGLOBS__. This means glob patterns from the less preferable MIME paths should be ignored.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="isNoMagic" class="public" href="../mime/common/isNoMagic.html">isNoMagic</a><span class="decoration">(value)</span>
+							</code>
+						</td>
+						<td>Check if value is _NOMAGIC__. This means magic rules from the less preferable MIME paths should be ignored.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="isValidMimeTypeName" class="public" href="../mime/common/isValidMimeTypeName.html">isValidMimeTypeName</a><span class="decoration">(name)</span>
+							</code>
+						</td>
+						<td>Check if name is valid MIME type name.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="parseMimeTypeName" class="public" href="../mime/common/parseMimeTypeName.html">parseMimeTypeName</a><span class="decoration">(name)</span>
+							</code>
+						</td>
+						<td>Parse MIME type name into pair of media and subtype strings.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Manifest constants</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Type</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a id="defaultGlobWeight" class="public" href="../mime/common/defaultGlobWeight.html">
+								<code>defaultGlobWeight</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td>Default glob pattern weight to use when it's not explicitly provided.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a id="defaultMatchWeight" class="public" href="../mime/common/defaultMatchWeight.html">
+								<code>defaultMatchWeight</code>
+							</a>
+						</td>
+						<td>
+						</td>
+						<td>Default magic rule priority to use when it's not explicitly provided.
+</td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
 </p>
-</td></tr><tr><th>Copyright</th><td><p>Roman Chistokhodov, 2015-2016
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2015-2016
 </p>
-</td></tr><tr><th>License</th><td><p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
 </p>
-</td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

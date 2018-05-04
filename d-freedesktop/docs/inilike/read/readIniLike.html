@@ -1,31 +1,283 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Function readIniLike</title>
-<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
-<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package "><a href="../../desktopfile.html">desktopfile</a></div><ul class="tree-view"><li><div class="module "><a href="../../desktopfile/file.html">file</a></div></li><li><div class="module "><a href="../../desktopfile/paths.html">paths</a></div></li><li><div class="module "><a href="../../desktopfile/utils.html">utils</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../../icontheme.html">icontheme</a></div><ul class="tree-view"><li><div class="module "><a href="../../icontheme/cache.html">cache</a></div></li><li><div class="module "><a href="../../icontheme/file.html">file</a></div></li><li><div class="module "><a href="../../icontheme/lookup.html">lookup</a></div></li><li><div class="module "><a href="../../icontheme/paths.html">paths</a></div></li></ul></li><li class="tree-view "><div class="package "><a href="../../inilike.html">inilike</a></div><ul class="tree-view"><li><div class="module "><a href="../../inilike/common.html">common</a></div></li><li><div class="module "><a href="../../inilike/exception.html">exception</a></div></li><li><div class="module "><a href="../../inilike/file.html">file</a></div></li><li><div class="module "><a href="../../inilike/range.html">range</a></div></li><li><div class="module selected"><a href="../../inilike/read.html">read</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../../mime.html">mime</a></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">detectors</div><ul class="tree-view"><li><div class="module "><a href="../../mime/detectors/cache.html">cache</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../../mime/files.html">files</a></div><ul class="tree-view"><li><div class="module "><a href="../../mime/files/aliases.html">aliases</a></div></li><li><div class="module "><a href="../../mime/files/common.html">common</a></div></li><li><div class="module "><a href="../../mime/files/globs.html">globs</a></div></li><li><div class="module "><a href="../../mime/files/icons.html">icons</a></div></li><li><div class="module "><a href="../../mime/files/magic.html">magic</a></div></li><li><div class="module "><a href="../../mime/files/namespaces.html">namespaces</a></div></li><li><div class="module "><a href="../../mime/files/subclasses.html">subclasses</a></div></li><li><div class="module "><a href="../../mime/files/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../../mime/files/types.html">types</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">stores</div><ul class="tree-view"><li><div class="module "><a href="../../mime/stores/files.html">files</a></div></li></ul></li><li><div class="module "><a href="../../mime/cache.html">cache</a></div></li><li><div class="module "><a href="../../mime/common.html">common</a></div></li><li><div class="module "><a href="../../mime/database.html">database</a></div></li><li><div class="module "><a href="../../mime/detector.html">detector</a></div></li><li><div class="module "><a href="../../mime/inode.html">inode</a></div></li><li><div class="module "><a href="../../mime/magic.html">magic</a></div></li><li><div class="module "><a href="../../mime/paths.html">paths</a></div></li><li><div class="module "><a href="../../mime/store.html">store</a></div></li><li><div class="module "><a href="../../mime/text.html">text</a></div></li><li><div class="module "><a href="../../mime/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../../mime/type.html">type</a></div></li></ul></li><li><div class="module "><a href="../../mimeapps.html">mimeapps</a></div></li><li><div class="module "><a href="../../xdgpaths.html">xdgpaths</a></div></li></ul></nav><div id="main-contents"><h1>Function readIniLike</h1><p>Read ini-like file entries via the set of callbacks.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<span class="typ">void</span> <span class="pln">readIniLike</span>(IniLikeReader)
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">IniLikeReader</span> <span class="pln">reader</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onLeadingComment</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="kwd">scope </span><a href="../../inilike/read/ActionOnGroup.html"><span class="typ">ActionOnGroup</span></a> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onGroup</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onKeyValue</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onCommentInGroup</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span> <span class="pun">=</span> <span class="kwd">null</span>
-<br/>
-<span class="pun">)</span><span class="pun">;</span></div></code></div>
-<section><h2>Parameters</h2>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function readIniLike</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/files.html">files</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/type.html">type</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function readIniLike</h1><p>Read ini-like file entries via the set of callbacks.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">void</span> <span class="pln">readIniLike</span>(IniLikeReader)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">IniLikeReader</span> <span class="pln">reader</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onLeadingComment</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">scope </span><a href="../../inilike/read/ActionOnGroup.html"><span class="typ">ActionOnGroup</span></a> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onGroup</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onKeyValue</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onCommentInGroup</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span> <span class="pun">=</span> <span class="kwd">null</span>
+			<br/>
+			<span class="pun">)</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Parameters</h2>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="reader">reader</td><td> <code class="lang-d"><span class="typ">IniLikeReader</span></code> object as returned by <code class="lang-d"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">iniLikeReader</span></code> or similar function.</td></tr>
+<tr><td id="reader">reader</td><td> <code class="lang-d"><a href="../../inilike/range/IniLikeReader.html" title="inilike.range.IniLikeReader"><span class="typ">IniLikeReader</span></a></code> object as returned by <code class="lang-d"><a href="../../inilike/range/iniLikeRangeReader.html" title="inilike.range.iniLikeRangeReader"><span class="pln">iniLikeRangeReader</span></a></code> or similar function.</td></tr>
 <tr><td id="onLeadingComment">onLeadingComment</td><td> Delegate to call after leading comment (i.e. the one before any group) is read. The parameter is either comment of empty line.</td></tr>
 <tr><td id="onGroup">onGroup</td><td> Delegate to call after group header is read. The parameter is group name (without brackets). Must return <code class="lang-d"><a href="../../inilike/read/ActionOnGroup.html"><span class="typ">ActionOnGroup</span></a></code>.</td></tr>
 <tr><td id="onKeyValue">onKeyValue</td><td> Delegate to call after key-value entry is read and parsed. Parameters are key, value and group name.</td></tr>
@@ -37,11 +289,73 @@ $('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tr
 <p><code class="lang-d"><a href="../../inilike/exception/IniLikeReadException.html" title="inilike.exception.IniLikeReadException"><span class="typ">IniLikeReadException</span></a></code> if error occured while parsing. Any exception thrown by callbacks will be transformed to <code class="lang-d"><a href="../../inilike/exception/IniLikeReadException.html" title="inilike.exception.IniLikeReadException"><span class="typ">IniLikeReadException</span></a></code>.
 </p>
 </section>
+<section><h2>Example</h2>
 
-<footer><table class="license-info"><tr><th>Authors</th><td><p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">contents </span><span class="pun">=
+</span><span class="str">`# Comment
+[ToSkip]
+KeyInSkippedGroup=Value
+[ToProceed]
+KeyInNormalGroup=Value2
+# Comment2
+[ToStopAfter]
+KeyInStopAfterGroup=Value3
+# Comment3
+[NeverGetThere]
+KeyNeverGetThere=Value4
+# Comment4`</span><span class="pun">;
+</span><span class="kwd">auto <a href="../../inilike/read/readIniLike.html#onLeadingComment"></span><span class="pln">onLeadingComment</span></a><span class="pln"> </span><span class="pun">= </span><span class="kwd">delegate </span><span class="typ">void</span><span class="pun">(</span><span class="typ">string </span><span class="pln">line</span><span class="pun">) {
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">line </span><span class="pun">== </span><span class="str">"# Comment"</span><span class="pun">);
+};
+</span><span class="kwd">auto <a href="../../inilike/read/readIniLike.html#onGroup"></span><span class="pln">onGroup</span></a><span class="pln"> </span><span class="pun">= </span><span class="kwd">delegate <a href="../../inilike/read/ActionOnGroup.html"></span><span class="typ">ActionOnGroup</span></a><span class="pun">(</span><span class="typ">string </span><span class="pln">groupName</span><span class="pun">) {
+    </span><span class="kwd">if </span><span class="pun">(</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"ToSkip"</span><span class="pun">) {
+        </span><span class="kwd">return <a href="../../inilike/read/ActionOnGroup.html#skip"></span><span class="typ">ActionOnGroup<wbr/></span><span class="pun">.</span><span class="pln">skip</span></a><span class="pun">;
+    } </span><span class="kwd">else if </span><span class="pun">(</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"ToProceed"</span><span class="pun">) {
+        </span><span class="kwd">return <a href="../../inilike/read/ActionOnGroup.html#proceed"></span><span class="typ">ActionOnGroup<wbr/></span><span class="pun">.</span><span class="pln">proceed</span></a><span class="pun">;
+    } </span><span class="kwd">else if </span><span class="pun">(</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"ToStopAfter"</span><span class="pun">) {
+        </span><span class="kwd">return <a href="../../inilike/read/ActionOnGroup.html#stopAfter"></span><span class="typ">ActionOnGroup<wbr/></span><span class="pun">.</span><span class="pln">stopAfter</span></a><span class="pun">;
+    } </span><span class="kwd">else assert</span><span class="pun">(</span><span class="kwd">false</span><span class="pun">);
+};
+</span><span class="kwd">auto <a href="../../inilike/read/readIniLike.html#onKeyValue"></span><span class="pln">onKeyValue</span></a><span class="pln"> </span><span class="pun">= </span><span class="kwd">delegate </span><span class="typ">void</span><span class="pun">(</span><span class="typ">string </span><span class="pln">key</span><span class="pun">, </span><span class="typ">string </span><span class="pln">value</span><span class="pun">, </span><span class="typ">string </span><span class="pln">groupName</span><span class="pun">) {
+    </span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"ToProceed" </span><span class="pun">&amp;&amp; </span><span class="pln">key </span><span class="pun">== </span><span class="str">"KeyInNormalGroup" </span><span class="pun">&amp;&amp; </span><span class="pln">value </span><span class="pun">== </span><span class="str">"Value2"</span><span class="pun">) ||
+        (</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"ToStopAfter" </span><span class="pun">&amp;&amp; </span><span class="pln">key </span><span class="pun">== </span><span class="str">"KeyInStopAfterGroup" </span><span class="pun">&amp;&amp; </span><span class="pln">value </span><span class="pun">== </span><span class="str">"Value3"</span><span class="pun">));
+};
+</span><span class="kwd">auto <a href="../../inilike/read/readIniLike.html#onCommentInGroup"></span><span class="pln">onCommentInGroup</span></a><span class="pln"> </span><span class="pun">= </span><span class="kwd">delegate </span><span class="typ">void</span><span class="pun">(</span><span class="typ">string </span><span class="pln">line</span><span class="pun">, </span><span class="typ">string </span><span class="pln">groupName</span><span class="pun">) {
+    </span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"ToProceed" </span><span class="pun">&amp;&amp; </span><span class="pln">line </span><span class="pun">== </span><span class="str">"# Comment2"</span><span class="pun">) || (</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"ToStopAfter" </span><span class="pun">&amp;&amp; </span><span class="pln">line </span><span class="pun">== </span><span class="str">"# Comment3"</span><span class="pun">));
+};
+</span><span class="pln">readIniLike</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), <a href="../../inilike/read/readIniLike.html#onLeadingComment"></span><span class="pln">onLeadingComment</span></a><span class="pun">, <a href="../../inilike/read/readIniLike.html#onGroup"></span><span class="pln">onGroup</span></a><span class="pun">, <a href="../../inilike/read/readIniLike.html#onKeyValue"></span><span class="pln">onKeyValue</span></a><span class="pun">, <a href="../../inilike/read/readIniLike.html#onCommentInGroup"></span><span class="pln">onCommentInGroup</span></a><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
 </p>
-</td></tr><tr><th>Copyright</th><td><p>Roman Chistokhodov, 2017
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2017
 </p>
-</td></tr><tr><th>License</th><td><p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
 </p>
-</td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

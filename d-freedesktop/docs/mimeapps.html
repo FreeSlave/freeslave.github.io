@@ -1,51 +1,545 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Module mimeapps</title>
-<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
-<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package "><a href="./desktopfile.html">desktopfile</a></div><ul class="tree-view"><li><div class="module "><a href="./desktopfile/file.html">file</a></div></li><li><div class="module "><a href="./desktopfile/paths.html">paths</a></div></li><li><div class="module "><a href="./desktopfile/utils.html">utils</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="./icontheme.html">icontheme</a></div><ul class="tree-view"><li><div class="module "><a href="./icontheme/cache.html">cache</a></div></li><li><div class="module "><a href="./icontheme/file.html">file</a></div></li><li><div class="module "><a href="./icontheme/lookup.html">lookup</a></div></li><li><div class="module "><a href="./icontheme/paths.html">paths</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="./inilike.html">inilike</a></div><ul class="tree-view"><li><div class="module "><a href="./inilike/common.html">common</a></div></li><li><div class="module "><a href="./inilike/exception.html">exception</a></div></li><li><div class="module "><a href="./inilike/file.html">file</a></div></li><li><div class="module "><a href="./inilike/range.html">range</a></div></li><li><div class="module "><a href="./inilike/read.html">read</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="./mime.html">mime</a></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">detectors</div><ul class="tree-view"><li><div class="module "><a href="./mime/detectors/cache.html">cache</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="./mime/files.html">files</a></div><ul class="tree-view"><li><div class="module "><a href="./mime/files/aliases.html">aliases</a></div></li><li><div class="module "><a href="./mime/files/common.html">common</a></div></li><li><div class="module "><a href="./mime/files/globs.html">globs</a></div></li><li><div class="module "><a href="./mime/files/icons.html">icons</a></div></li><li><div class="module "><a href="./mime/files/magic.html">magic</a></div></li><li><div class="module "><a href="./mime/files/namespaces.html">namespaces</a></div></li><li><div class="module "><a href="./mime/files/subclasses.html">subclasses</a></div></li><li><div class="module "><a href="./mime/files/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="./mime/files/types.html">types</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">stores</div><ul class="tree-view"><li><div class="module "><a href="./mime/stores/files.html">files</a></div></li></ul></li><li><div class="module "><a href="./mime/cache.html">cache</a></div></li><li><div class="module "><a href="./mime/common.html">common</a></div></li><li><div class="module "><a href="./mime/database.html">database</a></div></li><li><div class="module "><a href="./mime/detector.html">detector</a></div></li><li><div class="module "><a href="./mime/inode.html">inode</a></div></li><li><div class="module "><a href="./mime/magic.html">magic</a></div></li><li><div class="module "><a href="./mime/paths.html">paths</a></div></li><li><div class="module "><a href="./mime/store.html">store</a></div></li><li><div class="module "><a href="./mime/text.html">text</a></div></li><li><div class="module "><a href="./mime/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="./mime/type.html">type</a></div></li></ul></li><li><div class="module selected"><a href="./mimeapps.html">mimeapps</a></div></li><li><div class="module "><a href="./xdgpaths.html">xdgpaths</a></div></li></ul></nav><div id="main-contents"><h1>Module mimeapps</h1><p>Finding associations between MIME types and applications.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Module mimeapps</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="./desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="./icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="./inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="./mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="./mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mime/stores/files.html">files</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/type.html">type</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="./mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Module mimeapps</h1><p>Finding associations between MIME types and applications.
 </p>
-<section><section><h2>See Also</h2>
+			<section><section><h2>See Also</h2>
 <p><a href="https://www.freedesktop.org/wiki/Specifications/mime-apps-spec/">MIME Applications Associations</a>
 </p>
 </section>
-</section><section><h2>Functions</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="findAssociatedApplications" class="["public"]" href="./mimeapps/findAssociatedApplications.html">findAssociatedApplications</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles, desktopFileProvider)</span></code></td><td>Find associated applications for given MIME type.
-</td></tr><tr><td><code><a id="findDefaultApplication" class="["public"]" href="./mimeapps/findDefaultApplication.html">findDefaultApplication</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles, desktopFileProvider)</span></code></td><td>Find default application for given MIME type.
-</td></tr><tr><td><code><a id="findKnownAssociatedApplications" class="["public"]" href="./mimeapps/findKnownAssociatedApplications.html">findKnownAssociatedApplications</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles, desktopFileProvider)</span></code></td><td>Find all known associated applications for given MIME type, including explicitly removed by user.
-</td></tr><tr><td><code><a id="listAssociatedApplications" class="["public"]" href="./mimeapps/listAssociatedApplications.html">listAssociatedApplications</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles)</span></code></td><td>List associated applications for given MIME type.
-</td></tr><tr><td><code><a id="listDefaultApplications" class="["public"]" href="./mimeapps/listDefaultApplications.html">listDefaultApplications</a><span class="decoration">(mimeType, mimeAppsListFiles)</span></code></td><td>List explicitily set default applications for given MIME type.
-</td></tr><tr><td><code><a id="listKnownAssociatedApplications" class="["public"]" href="./mimeapps/listKnownAssociatedApplications.html">listKnownAssociatedApplications</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles)</span></code></td><td>List all known associated applications for given MIME type, including explicitly removed by user.
-</td></tr><tr><td><code><a id="mimeAppsListFiles" class="["public"]" href="./mimeapps/mimeAppsListFiles.html">mimeAppsListFiles</a><span class="decoration">(paths)</span></code></td><td>Create <code class="lang-d"><a href="./mimeapps/MimeAppsListFile.html"><span class="typ">MimeAppsListFile</span></a></code> objects for paths.
-</td></tr><tr><td><code><a id="mimeAppsListFiles" class="["public"]" href="./mimeapps/mimeAppsListFiles.html">mimeAppsListFiles</a><span class="decoration">()</span></code></td><td>ditto, but automatically read <code class="lang-d"><a href="./mimeapps/MimeAppsListFile.html"><span class="typ">MimeAppsListFile</span></a></code> objects from determined system paths.
-</td></tr><tr><td><code><a id="mimeAppsListPaths" class="["public"]" href="./mimeapps/mimeAppsListPaths.html">mimeAppsListPaths</a><span class="decoration">()</span></code></td><td>Find all known mimeapps.list files locations. Found paths are not checked for existence.
-</td></tr><tr><td><code><a id="mimeInfoCacheFiles" class="["public"]" href="./mimeapps/mimeInfoCacheFiles.html">mimeInfoCacheFiles</a><span class="decoration">(paths)</span></code></td><td>Create <code class="lang-d"><a href="./mimeapps/MimeInfoCacheFile.html"><span class="typ">MimeInfoCacheFile</span></a></code> objects for paths.
-</td></tr><tr><td><code><a id="mimeInfoCacheFiles" class="["public"]" href="./mimeapps/mimeInfoCacheFiles.html">mimeInfoCacheFiles</a><span class="decoration">()</span></code></td><td>ditto, but automatically read MimeInfoCacheFile objects from determined system paths.
-</td></tr><tr><td><code><a id="mimeInfoCachePaths" class="["public"]" href="./mimeapps/mimeInfoCachePaths.html">mimeInfoCachePaths</a><span class="decoration">()</span></code></td><td>Find all known mimeinfo.cache files locations. Found paths are not checked for existence.
-</td></tr><tr><td><code><a id="updateAssociations" class="["public"]" href="./mimeapps/updateAssociations.html">updateAssociations</a><span class="decoration">(fileName, query)</span></code></td><td>Apply query for file with fileName. This should be mimeapps.list file.
+</section>
+			<section>
+				<h2>Functions</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="findAssociatedApplications" class="public" href="./mimeapps/findAssociatedApplications.html">findAssociatedApplications</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles, desktopFileProvider)</span>
+							</code>
+						</td>
+						<td>Find associated applications for given MIME type.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="findDefaultApplication" class="public" href="./mimeapps/findDefaultApplication.html">findDefaultApplication</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles, desktopFileProvider)</span>
+							</code>
+						</td>
+						<td>Find default application for given MIME type.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="findKnownAssociatedApplications" class="public" href="./mimeapps/findKnownAssociatedApplications.html">findKnownAssociatedApplications</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles, desktopFileProvider)</span>
+							</code>
+						</td>
+						<td>Find all known associated applications for given MIME type, including explicitly removed by user.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="listAssociatedApplications" class="public" href="./mimeapps/listAssociatedApplications.html">listAssociatedApplications</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles)</span>
+							</code>
+						</td>
+						<td>List associated applications for given MIME type.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="listDefaultApplications" class="public" href="./mimeapps/listDefaultApplications.html">listDefaultApplications</a><span class="decoration">(mimeType, mimeAppsListFiles)</span>
+							</code>
+						</td>
+						<td>List explicitily set default applications for given MIME type.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="listKnownAssociatedApplications" class="public" href="./mimeapps/listKnownAssociatedApplications.html">listKnownAssociatedApplications</a><span class="decoration">(mimeType, mimeAppsListFiles, mimeInfoCacheFiles)</span>
+							</code>
+						</td>
+						<td>List all known associated applications for given MIME type, including explicitly removed by user.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mimeAppsListFiles" class="public" href="./mimeapps/mimeAppsListFiles.html">mimeAppsListFiles</a><span class="decoration">(paths)</span>
+							</code>
+						</td>
+						<td>Create <code class="lang-d"><a href="./mimeapps/MimeAppsListFile.html"><span class="typ">MimeAppsListFile</span></a></code> objects for paths.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mimeAppsListFiles" class="public" href="./mimeapps/mimeAppsListFiles.html">mimeAppsListFiles</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>ditto, but automatically read <code class="lang-d"><a href="./mimeapps/MimeAppsListFile.html"><span class="typ">MimeAppsListFile</span></a></code> objects from determined system paths.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mimeAppsListPaths" class="public" href="./mimeapps/mimeAppsListPaths.html">mimeAppsListPaths</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>Find all known mimeapps.list files locations. Found paths are not checked for existence.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mimeAppsListPaths" class="public" href="./mimeapps/mimeAppsListPaths.html">mimeAppsListPaths</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>Find all known mimeapps.list files locations. Found paths are not checked for existence.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mimeInfoCacheFiles" class="public" href="./mimeapps/mimeInfoCacheFiles.html">mimeInfoCacheFiles</a><span class="decoration">(paths)</span>
+							</code>
+						</td>
+						<td>Create <code class="lang-d"><a href="./mimeapps/MimeInfoCacheFile.html"><span class="typ">MimeInfoCacheFile</span></a></code> objects for paths.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mimeInfoCacheFiles" class="public" href="./mimeapps/mimeInfoCacheFiles.html">mimeInfoCacheFiles</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>ditto, but automatically read MimeInfoCacheFile objects from determined system paths.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mimeInfoCachePaths" class="public" href="./mimeapps/mimeInfoCachePaths.html">mimeInfoCachePaths</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>Find all known mimeinfo.cache files locations. Found paths are not checked for existence.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="mimeInfoCachePaths" class="public" href="./mimeapps/mimeInfoCachePaths.html">mimeInfoCachePaths</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>Find all known mimeinfo.cache files locations. Found paths are not checked for existence.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="updateAssociations" class="public" href="./mimeapps/updateAssociations.html">updateAssociations</a><span class="decoration">(fileName, query)</span>
+							</code>
+						</td>
+						<td>Apply query for file with fileName. This should be mimeapps.list file.
  If file does not exist it will be created.
-</td></tr><tr><td><code><a id="updateAssociations" class="["public"]" href="./mimeapps/updateAssociations.html">updateAssociations</a><span class="decoration">(query)</span></code></td><td>Apply query for writable mimeapps.list files.
-</td></tr><tr><td><code><a id="writableMimeAppsListPaths" class="["public"]" href="./mimeapps/writableMimeAppsListPaths.html">writableMimeAppsListPaths</a><span class="decoration">()</span></code></td><td>Find all writable mimeapps.list files locations. Found paths are not checked for existence.
-</td></tr></table></section><section><h2>Interfaces</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="IDesktopFileProvider" class="["public"]" href="./mimeapps/IDesktopFileProvider.html">IDesktopFileProvider</a></code></td><td>Interface for desktop file provider.
-</td></tr></table></section><section><h2>Classes</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="DesktopFileProvider" class="["public"]" href="./mimeapps/DesktopFileProvider.html">DesktopFileProvider</a></code></td><td>Implementation of simple desktop file provider.
-</td></tr><tr><td><code><a id="MimeAppsGroup" class="["public"]" href="./mimeapps/MimeAppsGroup.html">MimeAppsGroup</a></code></td><td><code class="lang-d"><a href="./inilike/file/IniLikeGroup.html" title="inilike.file.IniLikeGroup"><span class="typ">IniLikeGroup</span></a></code> subclass for easy access to the list of applications associated with given type.
-</td></tr><tr><td><code><a id="MimeAppsListFile" class="["public"]" href="./mimeapps/MimeAppsListFile.html">MimeAppsListFile</a></code></td><td>Class represenation of single mimeapps.list file containing information about MIME type associations and default applications.
-</td></tr><tr><td><code><a id="MimeInfoCacheFile" class="["public"]" href="./mimeapps/MimeInfoCacheFile.html">MimeInfoCacheFile</a></code></td><td>Class represenation of single mimeinfo.cache file containing information about MIME type associations.
-</td></tr></table></section><section><h2>Structs</h2><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><code><a id="AssociationUpdateQuery" class="["public"]" href="./mimeapps/AssociationUpdateQuery.html">AssociationUpdateQuery</a></code></td><td>Struct used for construction of file assocation update query.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="updateAssociations" class="public" href="./mimeapps/updateAssociations.html">updateAssociations</a><span class="decoration">(query)</span>
+							</code>
+						</td>
+						<td>Apply query for writable mimeapps.list files.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="writableMimeAppsListPaths" class="public" href="./mimeapps/writableMimeAppsListPaths.html">writableMimeAppsListPaths</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>Find all writable mimeapps.list files locations. Found paths are not checked for existence.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="writableMimeAppsListPaths" class="public" href="./mimeapps/writableMimeAppsListPaths.html">writableMimeAppsListPaths</a><span class="decoration">()</span>
+							</code>
+						</td>
+						<td>Find all writable mimeapps.list files locations. Found paths are not checked for existence.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Interfaces</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="IDesktopFileProvider" class="public" href="./mimeapps/IDesktopFileProvider.html">IDesktopFileProvider</a>
+							</code>
+						</td>
+						<td>Interface for desktop file provider.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Classes</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="DesktopFileProvider" class="public" href="./mimeapps/DesktopFileProvider.html">DesktopFileProvider</a>
+							</code>
+						</td>
+						<td>Implementation of simple desktop file provider.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="MimeAppsGroup" class="public" href="./mimeapps/MimeAppsGroup.html">MimeAppsGroup</a>
+							</code>
+						</td>
+						<td><code class="lang-d"><a href="./inilike/file/IniLikeGroup.html" title="inilike.file.IniLikeGroup"><span class="typ">IniLikeGroup</span></a></code> subclass for easy access to the list of applications associated with given type.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="MimeAppsListFile" class="public" href="./mimeapps/MimeAppsListFile.html">MimeAppsListFile</a>
+							</code>
+						</td>
+						<td>Class represenation of single mimeapps.list file containing information about MIME type associations and default applications.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="MimeInfoCacheFile" class="public" href="./mimeapps/MimeInfoCacheFile.html">MimeInfoCacheFile</a>
+							</code>
+						</td>
+						<td>Class represenation of single mimeinfo.cache file containing information about MIME type associations.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section>
+				<h2>Structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="AssociationUpdateQuery" class="public" href="./mimeapps/AssociationUpdateQuery.html">AssociationUpdateQuery</a>
+							</code>
+						</td>
+						<td>Struct used for construction of file assocation update query.
  This allows to reuse the same query many times or for many mimeapps.list files.
-</td></tr></table></section><footer><table class="license-info"><tr><th>Authors</th><td><p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</td>
+					</tr>
+				</table>
+			</section>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
 </p>
-</td></tr><tr><th>Copyright</th><td><p>Roman Chistokhodov, 2016
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2016
 </p>
-</td></tr><tr><th>License</th><td><p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
 </p>
-</td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

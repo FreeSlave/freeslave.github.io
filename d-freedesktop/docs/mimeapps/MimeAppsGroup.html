@@ -1,62 +1,638 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>Class MimeAppsGroup</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package "><a href="../desktopfile.html">desktopfile</a></div><ul class="tree-view"><li><div class="module "><a href="../desktopfile/file.html">file</a></div></li><li><div class="module "><a href="../desktopfile/paths.html">paths</a></div></li><li><div class="module "><a href="../desktopfile/utils.html">utils</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../icontheme.html">icontheme</a></div><ul class="tree-view"><li><div class="module "><a href="../icontheme/cache.html">cache</a></div></li><li><div class="module "><a href="../icontheme/file.html">file</a></div></li><li><div class="module "><a href="../icontheme/lookup.html">lookup</a></div></li><li><div class="module "><a href="../icontheme/paths.html">paths</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../inilike.html">inilike</a></div><ul class="tree-view"><li><div class="module "><a href="../inilike/common.html">common</a></div></li><li><div class="module "><a href="../inilike/exception.html">exception</a></div></li><li><div class="module "><a href="../inilike/file.html">file</a></div></li><li><div class="module "><a href="../inilike/range.html">range</a></div></li><li><div class="module "><a href="../inilike/read.html">read</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../mime.html">mime</a></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">detectors</div><ul class="tree-view"><li><div class="module "><a href="../mime/detectors/cache.html">cache</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../mime/files.html">files</a></div><ul class="tree-view"><li><div class="module "><a href="../mime/files/aliases.html">aliases</a></div></li><li><div class="module "><a href="../mime/files/common.html">common</a></div></li><li><div class="module "><a href="../mime/files/globs.html">globs</a></div></li><li><div class="module "><a href="../mime/files/icons.html">icons</a></div></li><li><div class="module "><a href="../mime/files/magic.html">magic</a></div></li><li><div class="module "><a href="../mime/files/namespaces.html">namespaces</a></div></li><li><div class="module "><a href="../mime/files/subclasses.html">subclasses</a></div></li><li><div class="module "><a href="../mime/files/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../mime/files/types.html">types</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">stores</div><ul class="tree-view"><li><div class="module "><a href="../mime/stores/files.html">files</a></div></li></ul></li><li><div class="module "><a href="../mime/cache.html">cache</a></div></li><li><div class="module "><a href="../mime/common.html">common</a></div></li><li><div class="module "><a href="../mime/database.html">database</a></div></li><li><div class="module "><a href="../mime/detector.html">detector</a></div></li><li><div class="module "><a href="../mime/inode.html">inode</a></div></li><li><div class="module "><a href="../mime/magic.html">magic</a></div></li><li><div class="module "><a href="../mime/paths.html">paths</a></div></li><li><div class="module "><a href="../mime/store.html">store</a></div></li><li><div class="module "><a href="../mime/text.html">text</a></div></li><li><div class="module "><a href="../mime/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../mime/type.html">type</a></div></li></ul></li><li><div class="module selected"><a href="../mimeapps.html">mimeapps</a></div></li><li><div class="module "><a href="../xdgpaths.html">xdgpaths</a></div></li></ul></nav><div id="main-contents"><h1>Class MimeAppsGroup</h1><p><code class="lang-d"><a href="../inilike/file/IniLikeGroup.html" title="inilike.file.IniLikeGroup"><span class="typ">IniLikeGroup</span></a></code> subclass for easy access to the list of applications associated with given type.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype"><span class="kwd">class</span> <span class="typ">MimeAppsGroup</span>
-<br>&nbsp;&nbsp;: <a href="../inilike/file/IniLikeGroup.html"><span class="typ">IniLikeGroup</span></a>
-<span class="pun">;</span></div></code></div><section><h2>Methods</h2><h4>Methods</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../mimeapps/MimeAppsGroup.appsForMimeType.html" class="["public"]"><code>appsForMimeType</code></a></td><td>List applications for given mimeType.
-</td></tr><tr><td><a href="../mimeapps/MimeAppsGroup.deleteAssociation.html" class="["public"]"><code>deleteAssociation</code></a></td><td>Delete desktopId from the list of desktop ids for mimeType.
-</td></tr><tr><td><a href="../mimeapps/MimeAppsGroup.joinApps.html" class="["public"]"><code>joinApps</code></a></td><td>Join list of desktop ids into string.
-</td></tr><tr><td><a href="../mimeapps/MimeAppsGroup.setAssocations.html" class="["public"]"><code>setAssocations</code></a></td><td>Set list of desktop ids for mimeType. This overwrites existing list completely.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Class MimeAppsGroup</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../mime/stores/files.html">files</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/type.html">type</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Class MimeAppsGroup</h1><p><code class="lang-d"><a href="../inilike/file/IniLikeGroup.html" title="inilike.file.IniLikeGroup"><span class="typ">IniLikeGroup</span></a></code> subclass for easy access to the list of applications associated with given type.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">class</span> <span class="typ">MimeAppsGroup</span>
+			<br>&nbsp;&nbsp;: <a href="../inilike/file/IniLikeGroup.html"><span class="typ">IniLikeGroup</span></a>
+			<span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Methods</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../mimeapps/MimeAppsGroup.appsForMimeType.html" class="public">
+								<code>appsForMimeType</code>
+							</a>
+						</td>
+						<td>List applications for given mimeType.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../mimeapps/MimeAppsGroup.deleteAssociation.html" class="public">
+								<code>deleteAssociation</code>
+							</a>
+						</td>
+						<td>Delete desktopId from the list of desktop ids for mimeType.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../mimeapps/MimeAppsGroup.joinApps.html" class="public">
+								<code>joinApps</code>
+							</a>
+						</td>
+						<td>Join list of desktop ids into string.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../mimeapps/MimeAppsGroup.setAssocations.html" class="public">
+								<code>setAssocations</code>
+							</a>
+						</td>
+						<td>Set list of desktop ids for mimeType. This overwrites existing list completely.
  Can be used to set the list of added assocations rearranged in client code to manage the preference order.
-</td></tr><tr><td><a href="../mimeapps/MimeAppsGroup.splitApps.html" class="["public"]"><code>splitApps</code></a></td><td>Split string list of desktop ids into range.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.addCommentAfter.html" class="["public", "inherited"]"><code>addCommentAfter</code></a></td><td>Add comment after some node.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.addCommentBefore.html" class="["public", "inherited"]"><code>addCommentBefore</code></a></td><td>Add comment before some node.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.appendComment.html" class="["public", "inherited"]"><code>appendComment</code></a></td><td>Add comment line into the group.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.appendValue.html" class="["public", "inherited"]"><code>appendValue</code></a></td><td>Add key-value entry without diret association of the value with the key. Can be used to add duplicates.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.byIniLine.html" class="["public", "inherited"]"><code>byIniLine</code></a></td><td></td></tr><tr><td><a href="../inilike/file/IniLikeGroup.byKeyValue.html" class="["public", "inherited"]"><code>byKeyValue</code></a></td><td>Iterate by Key-Value pairs. Values are left in escaped form.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.byNode.html" class="["public", "inherited"]"><code>byNode</code></a></td><td>Iterate over nodes of internal list.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.contains.html" class="["public", "inherited"]"><code>contains</code></a></td><td>Check if the group contains a value associated with the key.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.emptyByKeyValue.html" class="["public", "inherited"]"><code>emptyByKeyValue</code></a></td><td>Empty range of the same type as <code class="lang-d"><a href="../inilike/file/IniLikeGroup.byKeyValue.html"><span class="pln">byKeyValue</span></a></code>. Can be used in derived classes if it's needed to have an empty range.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.escapedValue.html" class="["public", "inherited"]"><code>escapedValue</code></a></td><td>Get value by key in escaped form.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.escapedValue.html" class="["public", "inherited"]"><code>escapedValue</code></a></td><td>Perform locale matching lookup as described in <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s04.html">Localized values for keys</a>.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.getNode.html" class="["public", "inherited"]"><code>getNode</code></a></td><td>Get internal list node for key.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.groupName.html" class="["public", "inherited"]"><code>groupName</code></a></td><td>Get name of this group.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.moveLineAfter.html" class="["public", "inherited"]"><code>moveLineAfter</code></a></td><td>Move line after other line in the group.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.moveLineBefore.html" class="["public", "inherited"]"><code>moveLineBefore</code></a></td><td>Move line before other line in the group.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.moveLineToBack.html" class="["public", "inherited"]"><code>moveLineToBack</code></a></td><td>Move line to the end of group.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.moveLineToFront.html" class="["public", "inherited"]"><code>moveLineToFront</code></a></td><td>Move line to the start of group.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.prependComment.html" class="["public", "inherited"]"><code>prependComment</code></a></td><td>Add comment line at the start of group (after group header, before any key-value pairs).
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.removeEntry.html" class="["public", "inherited"]"><code>removeEntry</code></a></td><td>Removes entry by key. Do nothing if no value associated with key found.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.removeEntry.html" class="["public", "inherited"]"><code>removeEntry</code></a></td><td>ditto, but remove entry by localized key.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.removeEntry.html" class="["public", "inherited"]"><code>removeEntry</code></a></td><td>ditto, but remove entry by node.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.setEscapedValue.html" class="["public", "inherited"]"><code>setEscapedValue</code></a></td><td>Set value associated with key.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.setEscapedValue.html" class="["public", "inherited"]"><code>setEscapedValue</code></a></td><td>Set value associated with key and locale.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.setUnescapedValue.html" class="["public", "inherited"]"><code>setUnescapedValue</code></a></td><td>Set value by key. The value is considered to be in the unescaped form.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.setUnescapedValue.html" class="["public", "inherited"]"><code>setUnescapedValue</code></a></td><td>ditto, localized version
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.unescapedValue.html" class="["public", "inherited"]"><code>unescapedValue</code></a></td><td>Get value by key.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.validateKey.html" class="["protected", "inherited"]"><code>validateKey</code></a></td><td>Validate key before setting value to key for this group and throw exception if not valid.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../mimeapps/MimeAppsGroup.splitApps.html" class="public">
+								<code>splitApps</code>
+							</a>
+						</td>
+						<td>Split string list of desktop ids into range.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.addCommentAfter.html" class="public inherited">
+								<code>addCommentAfter</code>
+							</a>
+						</td>
+						<td>Add comment after some node.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.addCommentBefore.html" class="public inherited">
+								<code>addCommentBefore</code>
+							</a>
+						</td>
+						<td>Add comment before some node.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.appendComment.html" class="public inherited">
+								<code>appendComment</code>
+							</a>
+						</td>
+						<td>Add comment line into the group.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.appendValue.html" class="public inherited">
+								<code>appendValue</code>
+							</a>
+						</td>
+						<td>Add key-value entry without diret association of the value with the key. Can be used to add duplicates.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.byIniLine.html" class="public inherited">
+								<code>byIniLine</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.byKeyValue.html" class="public inherited">
+								<code>byKeyValue</code>
+							</a>
+						</td>
+						<td>Iterate by Key-Value pairs. Values are left in escaped form.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.byNode.html" class="public inherited">
+								<code>byNode</code>
+							</a>
+						</td>
+						<td>Iterate over nodes of internal list.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.contains.html" class="public inherited">
+								<code>contains</code>
+							</a>
+						</td>
+						<td>Check if the group contains a value associated with the key.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.emptyByKeyValue.html" class="public inherited">
+								<code>emptyByKeyValue</code>
+							</a>
+						</td>
+						<td>Empty range of the same type as <code class="lang-d"><a href="../inilike/file/IniLikeGroup.byKeyValue.html"><span class="pln">byKeyValue</span></a></code>. Can be used in derived classes if it's needed to have an empty range.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.escapedValue.html" class="public inherited">
+								<code>escapedValue</code>
+							</a>
+						</td>
+						<td>Get value by key in escaped form.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.escapedValue.html" class="public inherited">
+								<code>escapedValue</code>
+							</a>
+						</td>
+						<td>Perform locale matching lookup as described in <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s04.html">Localized values for keys</a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.getNode.html" class="public inherited">
+								<code>getNode</code>
+							</a>
+						</td>
+						<td>Get internal list node for key.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.groupName.html" class="public inherited">
+								<code>groupName</code>
+							</a>
+						</td>
+						<td>Get name of this group.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.moveLineAfter.html" class="public inherited">
+								<code>moveLineAfter</code>
+							</a>
+						</td>
+						<td>Move line after other line in the group.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.moveLineBefore.html" class="public inherited">
+								<code>moveLineBefore</code>
+							</a>
+						</td>
+						<td>Move line before other line in the group.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.moveLineToBack.html" class="public inherited">
+								<code>moveLineToBack</code>
+							</a>
+						</td>
+						<td>Move line to the end of group.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.moveLineToFront.html" class="public inherited">
+								<code>moveLineToFront</code>
+							</a>
+						</td>
+						<td>Move line to the start of group.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.prependComment.html" class="public inherited">
+								<code>prependComment</code>
+							</a>
+						</td>
+						<td>Add comment line at the start of group (after group header, before any key-value pairs).
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.removeEntry.html" class="public inherited">
+								<code>removeEntry</code>
+							</a>
+						</td>
+						<td>Removes entry by key. Do nothing if no value associated with key found.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.removeEntry.html" class="public inherited">
+								<code>removeEntry</code>
+							</a>
+						</td>
+						<td>ditto, but remove entry by localized key.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.removeEntry.html" class="public inherited">
+								<code>removeEntry</code>
+							</a>
+						</td>
+						<td>ditto, but remove entry by node.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.setEscapedValue.html" class="public inherited">
+								<code>setEscapedValue</code>
+							</a>
+						</td>
+						<td>Set value associated with key.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.setEscapedValue.html" class="public inherited">
+								<code>setEscapedValue</code>
+							</a>
+						</td>
+						<td>Set value associated with key and locale.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.setUnescapedValue.html" class="public inherited">
+								<code>setUnescapedValue</code>
+							</a>
+						</td>
+						<td>Set value by key. The value is considered to be in the unescaped form.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.setUnescapedValue.html" class="public inherited">
+								<code>setUnescapedValue</code>
+							</a>
+						</td>
+						<td>ditto, localized version
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.unescapedValue.html" class="public inherited">
+								<code>unescapedValue</code>
+							</a>
+						</td>
+						<td>Get value by key.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.validateKey.html" class="protected inherited">
+								<code>validateKey</code>
+							</a>
+						</td>
+						<td>Validate key before setting value to key for this group and throw exception if not valid.
  Can be reimplemented in derived classes.
-</td></tr><tr><td><a href="../inilike/file/IniLikeGroup.validateValue.html" class="["protected", "inherited"]"><code>validateValue</code></a></td><td>Validate value for key before setting value to key for this group and throw exception if not valid.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.validateValue.html" class="protected inherited">
+								<code>validateValue</code>
+							</a>
+						</td>
+						<td>Validate value for key before setting value to key for this group and throw exception if not valid.
  Can be reimplemented in derived classes.
  The key is provided because you may want to implement specific checks depending on the key name.
-</td></tr></table></section><section><h2>Inner structs</h2><h4>Inner structs</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../inilike/file/IniLikeGroup.LineNode.html" class="["public", "inherited"]"><code>LineNode</code></a></td><td>Wrapper for internal ListMap node.
-</td></tr></table></section><section><h2>Enums</h2><h4>Enums</h4><table>
-<col class="caption"/>
-<tr><th>Name</th><th>Description</th></tr><tr><td><a href="../inilike/file/IniLikeGroup.InvalidKeyPolicy.html" class="["public", "inherited"]"><code>InvalidKeyPolicy</code></a></td><td></td></tr></table></section>
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Inner structs</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.LineNode.html" class="public inherited">
+								<code>LineNode</code>
+							</a>
+						</td>
+						<td>Wrapper for internal ListMap node.
+</td>
+					</tr>
+				</table>
+			</section>
+			<section><h2>Enums</h2>
+				<table>
+					<col class="caption"/>
+					<tr>
+						<th>Name</th><th>Description</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="../inilike/file/IniLikeGroup.InvalidKeyPolicy.html" class="public inherited">
+								<code>InvalidKeyPolicy</code>
+							</a>
+						</td>
+						<td></td>
+					</tr>
+				</table>
+			</section>
+			
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</p>
 
-<footer><table class="license-info"><tr><th>Authors</th><td><p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2016
 </p>
-</td></tr><tr><th>Copyright</th><td><p>Roman Chistokhodov, 2016
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
 </p>
-</td></tr><tr><th>License</th><td><p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
-</p>
-</td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

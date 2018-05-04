@@ -1,53 +1,636 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>API documentation</title>
-<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
-<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view "><div class="package "><a href="./desktopfile.html">desktopfile</a></div><ul class="tree-view"><li><div class="module "><a href="./desktopfile/file.html">file</a></div></li><li><div class="module "><a href="./desktopfile/paths.html">paths</a></div></li><li><div class="module "><a href="./desktopfile/utils.html">utils</a></div></li></ul></li><li class="tree-view "><div class="package "><a href="./icontheme.html">icontheme</a></div><ul class="tree-view"><li><div class="module "><a href="./icontheme/cache.html">cache</a></div></li><li><div class="module "><a href="./icontheme/file.html">file</a></div></li><li><div class="module "><a href="./icontheme/lookup.html">lookup</a></div></li><li><div class="module "><a href="./icontheme/paths.html">paths</a></div></li></ul></li><li class="tree-view "><div class="package "><a href="./inilike.html">inilike</a></div><ul class="tree-view"><li><div class="module "><a href="./inilike/common.html">common</a></div></li><li><div class="module "><a href="./inilike/exception.html">exception</a></div></li><li><div class="module "><a href="./inilike/file.html">file</a></div></li><li><div class="module "><a href="./inilike/range.html">range</a></div></li><li><div class="module "><a href="./inilike/read.html">read</a></div></li></ul></li><li class="tree-view "><div class="package "><a href="./mime.html">mime</a></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">detectors</div><ul class="tree-view"><li><div class="module "><a href="./mime/detectors/cache.html">cache</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="./mime/files.html">files</a></div><ul class="tree-view"><li><div class="module "><a href="./mime/files/aliases.html">aliases</a></div></li><li><div class="module "><a href="./mime/files/common.html">common</a></div></li><li><div class="module "><a href="./mime/files/globs.html">globs</a></div></li><li><div class="module "><a href="./mime/files/icons.html">icons</a></div></li><li><div class="module "><a href="./mime/files/magic.html">magic</a></div></li><li><div class="module "><a href="./mime/files/namespaces.html">namespaces</a></div></li><li><div class="module "><a href="./mime/files/subclasses.html">subclasses</a></div></li><li><div class="module "><a href="./mime/files/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="./mime/files/types.html">types</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">stores</div><ul class="tree-view"><li><div class="module "><a href="./mime/stores/files.html">files</a></div></li></ul></li><li><div class="module "><a href="./mime/cache.html">cache</a></div></li><li><div class="module "><a href="./mime/common.html">common</a></div></li><li><div class="module "><a href="./mime/database.html">database</a></div></li><li><div class="module "><a href="./mime/detector.html">detector</a></div></li><li><div class="module "><a href="./mime/inode.html">inode</a></div></li><li><div class="module "><a href="./mime/magic.html">magic</a></div></li><li><div class="module "><a href="./mime/paths.html">paths</a></div></li><li><div class="module "><a href="./mime/store.html">store</a></div></li><li><div class="module "><a href="./mime/text.html">text</a></div></li><li><div class="module "><a href="./mime/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="./mime/type.html">type</a></div></li></ul></li><li><div class="module "><a href="./mimeapps.html">mimeapps</a></div></li><li><div class="module "><a href="./xdgpaths.html">xdgpaths</a></div></li></ul></nav><div id="main-contents"><h1>API documentation</h1><table>
-<col class="caption"/>
-<tr><th>Module</th><th>Description</th></tr><tr><td><a href="./desktopfile/file.html">desktopfile.file</a></td><td>Class representation of desktop file.
-</td></tr><tr><td><a href="./desktopfile/paths.html">desktopfile.paths</a></td><td>Getting applications paths where desktop files are stored.
-</td></tr><tr><td><a href="./desktopfile/utils.html">desktopfile.utils</a></td><td>Utility functions for reading and executing desktop files.
-</td></tr><tr><td><a href="./icontheme/cache.html">icontheme.cache</a></td><td>This module provides class for loading and validating icon theme caches.
-</td></tr><tr><td><a href="./icontheme/file.html">icontheme.file</a></td><td>This module provides class for reading and accessing icon theme descriptions.
-</td></tr><tr><td><a href="./icontheme/lookup.html">icontheme.lookup</a></td><td>Lookup of icon themes and icons.
-</td></tr><tr><td><a href="./icontheme/paths.html">icontheme.paths</a></td><td>Getting paths where icon themes and icons are stored.
-</td></tr><tr><td><a href="./inilike/common.html">inilike.common</a></td><td>Common functions for dealing with entries in ini-like file.
-</td></tr><tr><td><a href="./inilike/exception.html">inilike.exception</a></td><td>Exception classes used in the library.
-</td></tr><tr><td><a href="./inilike/file.html">inilike.file</a></td><td>Class representation of ini-like file.
-</td></tr><tr><td><a href="./inilike/range.html">inilike.range</a></td><td>Parsing contents of ini-like files via range-based interface.
-</td></tr><tr><td><a href="./inilike/read.html">inilike.read</a></td><td>Reading ini-like files without usage of <code class="lang-d"><a href="./inilike/file/IniLikeFile.html" title="inilike.file.IniLikeFile"><span class="typ">IniLikeFile</span></a></code> class.
-</td></tr><tr><td><a href="./mime/detectors/cache.html">mime.detectors.cache</a></td><td>Detecting MIME type of file using MIME cache.
-</td></tr><tr><td><a href="./mime/files/aliases.html">mime.files.aliases</a></td><td>Parsing mime/aliases files.
-</td></tr><tr><td><a href="./mime/files/common.html">mime.files.common</a></td><td>Common code for modules that read shared MIME-info database files.
-</td></tr><tr><td><a href="./mime/files/globs.html">mime.files.globs</a></td><td>Parsing mime/globs and mime/globs2 files.
-</td></tr><tr><td><a href="./mime/files/icons.html">mime.files.icons</a></td><td>Parsing mime/icons and mime/generic-icons files.
-</td></tr><tr><td><a href="./mime/files/magic.html">mime.files.magic</a></td><td>Parsing mime/magic files.
-</td></tr><tr><td><a href="./mime/files/namespaces.html">mime.files.namespaces</a></td><td>Parsing mime/XMLnamespaces files.
-</td></tr><tr><td><a href="./mime/files/subclasses.html">mime.files.subclasses</a></td><td>Parsing mime/subclasses files.
-</td></tr><tr><td><a href="./mime/files/treemagic.html">mime.files.treemagic</a></td><td>Parsing mime/treemagic files.
-</td></tr><tr><td><a href="./mime/files/types.html">mime.files.types</a></td><td>Parsing mime/types files.
-</td></tr><tr><td><a href="./mime/stores/files.html">mime.stores.files</a></td><td>MIME store implemented around reading of various files in mime/ subfolder.
-</td></tr><tr><td><a href="./mime/cache.html">mime.cache</a></td><td>Class for reading mime.cache files.
-</td></tr><tr><td><a href="./mime/common.html">mime.common</a></td><td>Common functions and constants to work with MIME types.
-</td></tr><tr><td><a href="./mime/database.html">mime.database</a></td><td>Access to Shared MIME-info database.
-</td></tr><tr><td><a href="./mime/detector.html">mime.detector</a></td><td>MIME type detector interface.
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>API documentation</title>
+		<link rel="stylesheet" type="text/css" href="./styles/ddox.css"/>
+		<link rel="stylesheet" href="./prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="./scripts/jquery.js">/**/</script><script type="text/javascript" src="./scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="./symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "./";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="./desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="./icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="./inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="./mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="./mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="./mime/stores/files.html">files</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/type.html">type</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>API documentation</h1>
+			<table>
+				<col class="caption"/>
+				<tr>
+					<th>Module</th><th>Description</th>
+				</tr>
+			<tr>
+				<td>
+					<a href="./desktopfile/file.html">desktopfile.file</a>
+				</td>
+				<td>
+					Class representation of desktop file.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./desktopfile/paths.html">desktopfile.paths</a>
+				</td>
+				<td>
+					Getting applications paths where desktop files are stored.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./desktopfile/utils.html">desktopfile.utils</a>
+				</td>
+				<td>
+					Utility functions for reading and executing desktop files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./icontheme/cache.html">icontheme.cache</a>
+				</td>
+				<td>
+					This module provides class for loading and validating icon theme caches.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./icontheme/file.html">icontheme.file</a>
+				</td>
+				<td>
+					This module provides class for reading and accessing icon theme descriptions.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./icontheme/lookup.html">icontheme.lookup</a>
+				</td>
+				<td>
+					Lookup of icon themes and icons.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./icontheme/paths.html">icontheme.paths</a>
+				</td>
+				<td>
+					Getting paths where icon themes and icons are stored.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./inilike/common.html">inilike.common</a>
+				</td>
+				<td>
+					Common functions for dealing with entries in ini-like file.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./inilike/exception.html">inilike.exception</a>
+				</td>
+				<td>
+					Exception classes used in the library.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./inilike/file.html">inilike.file</a>
+				</td>
+				<td>
+					Class representation of ini-like file.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./inilike/range.html">inilike.range</a>
+				</td>
+				<td>
+					Parsing contents of ini-like files via range-based interface.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./inilike/read.html">inilike.read</a>
+				</td>
+				<td>
+					Reading ini-like files without usage of <code class="lang-d"><a href="./inilike/file/IniLikeFile.html" title="inilike.file.IniLikeFile"><span class="typ">IniLikeFile</span></a></code> class.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/detectors/cache.html">mime.detectors.cache</a>
+				</td>
+				<td>
+					Detecting MIME type of file using MIME cache.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files/aliases.html">mime.files.aliases</a>
+				</td>
+				<td>
+					Parsing mime/aliases files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files/common.html">mime.files.common</a>
+				</td>
+				<td>
+					Common code for modules that read shared MIME-info database files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files/globs.html">mime.files.globs</a>
+				</td>
+				<td>
+					Parsing mime/globs and mime/globs2 files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files/icons.html">mime.files.icons</a>
+				</td>
+				<td>
+					Parsing mime/icons and mime/generic-icons files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files/magic.html">mime.files.magic</a>
+				</td>
+				<td>
+					Parsing mime/magic files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files/namespaces.html">mime.files.namespaces</a>
+				</td>
+				<td>
+					Parsing mime/XMLnamespaces files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files/subclasses.html">mime.files.subclasses</a>
+				</td>
+				<td>
+					Parsing mime/subclasses files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files/treemagic.html">mime.files.treemagic</a>
+				</td>
+				<td>
+					Parsing mime/treemagic files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files/types.html">mime.files.types</a>
+				</td>
+				<td>
+					Parsing mime/types files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/stores/files.html">mime.stores.files</a>
+				</td>
+				<td>
+					MIME store implemented around reading of various files in mime/ subfolder.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/cache.html">mime.cache</a>
+				</td>
+				<td>
+					Class for reading mime.cache files.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/common.html">mime.common</a>
+				</td>
+				<td>
+					Common functions and constants to work with MIME types.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/database.html">mime.database</a>
+				</td>
+				<td>
+					Access to Shared MIME-info database.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/detector.html">mime.detector</a>
+				</td>
+				<td>
+					MIME type detector interface.
  Implementers should be capable of detecting MIME type name by various properties including file name, file data and namespace uri.
-</td></tr><tr><td><a href="./mime/files.html">mime.files</a></td><td>Parsing various files of shared MIME-info database.
-</td></tr><tr><td><a href="./mime/inode.html">mime.inode</a></td><td>inode/* MIME types.
-</td></tr><tr><td><a href="./mime/magic.html">mime.magic</a></td><td>MIME magic rules object representation.
-</td></tr><tr><td><a href="./mime/paths.html">mime.paths</a></td><td>Functions for building and retrieving paths to shared MIME database directories.
-</td></tr><tr><td><a href="./mime/store.html">mime.store</a></td><td>MIME type store interface.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/files.html">mime.files</a>
+				</td>
+				<td>
+					Parsing various files of shared MIME-info database.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/inode.html">mime.inode</a>
+				</td>
+				<td>
+					inode/* MIME types.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/magic.html">mime.magic</a>
+				</td>
+				<td>
+					MIME magic rules object representation.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/paths.html">mime.paths</a>
+				</td>
+				<td>
+					Functions for building and retrieving paths to shared MIME database directories.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/store.html">mime.store</a>
+				</td>
+				<td>
+					MIME type store interface.
  Implementers should be capable of returning requested MIME types if they exist.
-</td></tr><tr><td><a href="./mime/text.html">mime.text</a></td><td>Text utility functions.
-</td></tr><tr><td><a href="./mime/treemagic.html">mime.treemagic</a></td><td>Treemagic rules object representation.
-</td></tr><tr><td><a href="./mime/type.html">mime.type</a></td><td>Struct represented single MIME type.
-</td></tr><tr><td><a href="./desktopfile.html">desktopfile</a></td><td>Reading, writing and executing .desktop file
-</td></tr><tr><td><a href="./icontheme.html">icontheme</a></td><td>Icon Theme Specification implementation.
-</td></tr><tr><td><a href="./inilike.html">inilike</a></td><td>Reading and writing ini-like files used in some Unix systems and Freedesktop specifications.
-</td></tr><tr><td><a href="./mime.html">mime</a></td><td>Parsing and using shared MIME-info database.
-</td></tr><tr><td><a href="./mimeapps.html">mimeapps</a></td><td>Finding associations between MIME types and applications.
-</td></tr><tr><td><a href="./xdgpaths.html">xdgpaths</a></td><td>Getting XDG base directories.
-</td></tr></table><footer><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/text.html">mime.text</a>
+				</td>
+				<td>
+					Text utility functions.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/treemagic.html">mime.treemagic</a>
+				</td>
+				<td>
+					Treemagic rules object representation.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime/type.html">mime.type</a>
+				</td>
+				<td>
+					Struct represented single MIME type.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./desktopfile.html">desktopfile</a>
+				</td>
+				<td>
+					Reading, writing and executing .desktop file
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./icontheme.html">icontheme</a>
+				</td>
+				<td>
+					Icon Theme Specification implementation.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./inilike.html">inilike</a>
+				</td>
+				<td>
+					Reading and writing ini-like files used in some Unix systems and Freedesktop specifications.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mime.html">mime</a>
+				</td>
+				<td>
+					Parsing and using shared MIME-info database.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./mimeapps.html">mimeapps</a>
+				</td>
+				<td>
+					Finding associations between MIME types and applications.
+
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="./xdgpaths.html">xdgpaths</a>
+				</td>
+				<td>
+					Getting XDG base directories.
+
+				</td>
+			</tr>
+			</table>
+			<footer>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

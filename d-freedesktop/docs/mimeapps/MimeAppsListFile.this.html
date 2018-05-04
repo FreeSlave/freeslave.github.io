@@ -1,46 +1,344 @@
-<!DOCTYPE html><html><head>
-<meta charset="UTF-8"/>
-<title>MimeAppsListFile.this - multiple declarations</title>
-<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
-<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
-<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script></head><body onload="setupDdox();"><nav id="main-nav"><noscript><p style="color: red">The search functionality needs JavaScript enabled</p></noscript><div id="symbolSearchPane" style="display: none"><form action="#" method="GET">
-<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/></form><ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
-$('#symbolSearchPane').show();</script></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package "><a href="../desktopfile.html">desktopfile</a></div><ul class="tree-view"><li><div class="module "><a href="../desktopfile/file.html">file</a></div></li><li><div class="module "><a href="../desktopfile/paths.html">paths</a></div></li><li><div class="module "><a href="../desktopfile/utils.html">utils</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../icontheme.html">icontheme</a></div><ul class="tree-view"><li><div class="module "><a href="../icontheme/cache.html">cache</a></div></li><li><div class="module "><a href="../icontheme/file.html">file</a></div></li><li><div class="module "><a href="../icontheme/lookup.html">lookup</a></div></li><li><div class="module "><a href="../icontheme/paths.html">paths</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../inilike.html">inilike</a></div><ul class="tree-view"><li><div class="module "><a href="../inilike/common.html">common</a></div></li><li><div class="module "><a href="../inilike/exception.html">exception</a></div></li><li><div class="module "><a href="../inilike/file.html">file</a></div></li><li><div class="module "><a href="../inilike/range.html">range</a></div></li><li><div class="module "><a href="../inilike/read.html">read</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../mime.html">mime</a></div><ul class="tree-view"><li class="tree-view collapsed"><div class="package ">detectors</div><ul class="tree-view"><li><div class="module "><a href="../mime/detectors/cache.html">cache</a></div></li></ul></li><li class="tree-view collapsed"><div class="package "><a href="../mime/files.html">files</a></div><ul class="tree-view"><li><div class="module "><a href="../mime/files/aliases.html">aliases</a></div></li><li><div class="module "><a href="../mime/files/common.html">common</a></div></li><li><div class="module "><a href="../mime/files/globs.html">globs</a></div></li><li><div class="module "><a href="../mime/files/icons.html">icons</a></div></li><li><div class="module "><a href="../mime/files/magic.html">magic</a></div></li><li><div class="module "><a href="../mime/files/namespaces.html">namespaces</a></div></li><li><div class="module "><a href="../mime/files/subclasses.html">subclasses</a></div></li><li><div class="module "><a href="../mime/files/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../mime/files/types.html">types</a></div></li></ul></li><li class="tree-view collapsed"><div class="package ">stores</div><ul class="tree-view"><li><div class="module "><a href="../mime/stores/files.html">files</a></div></li></ul></li><li><div class="module "><a href="../mime/cache.html">cache</a></div></li><li><div class="module "><a href="../mime/common.html">common</a></div></li><li><div class="module "><a href="../mime/database.html">database</a></div></li><li><div class="module "><a href="../mime/detector.html">detector</a></div></li><li><div class="module "><a href="../mime/inode.html">inode</a></div></li><li><div class="module "><a href="../mime/magic.html">magic</a></div></li><li><div class="module "><a href="../mime/paths.html">paths</a></div></li><li><div class="module "><a href="../mime/store.html">store</a></div></li><li><div class="module "><a href="../mime/text.html">text</a></div></li><li><div class="module "><a href="../mime/treemagic.html">treemagic</a></div></li><li><div class="module "><a href="../mime/type.html">type</a></div></li></ul></li><li><div class="module selected"><a href="../mimeapps.html">mimeapps</a></div></li><li><div class="module "><a href="../xdgpaths.html">xdgpaths</a></div></li></ul></nav><div id="main-contents"><h1>MimeAppsListFile.this - multiple declarations</h1><nav class="page-nav"><ul><li><a href="#0">Function <code>MimeAppsListFile.this</code></a></li><li><a href="#1">Function <code>MimeAppsListFile.this</code></a></li></ul></nav><h2 id="0">Function MimeAppsListFile.this</h2><p>Read mimeapps.list file.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<span class="pln">this</span>
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<a href="../inilike/file/IniLikeFile.ReadOptions.html"><span class="typ">IniLikeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">ReadOptions</span></a> <span class="pln">readOptions</span> <span class="pun">=</span> <span class="typ">ReadOptions</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">DuplicateGroupPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">DuplicateKeyPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">InvalidKeyPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">Flag</span><span class="pun">)</span><span class="kwd">true</span><span class="pun">)</span>
-<br/>
-<span class="pun">)</span><span class="pln"> </span><span class="kwd">@trusted</span><span class="pun">;</span></div></code></div>
-<section><h3>Throws</h3>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>MimeAppsListFile.this - multiple declarations</title>
+		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
+		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../mime/stores/files.html">files</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/type.html">type</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>MimeAppsListFile.this - multiple declarations</h1>
+			<nav class="page-nav">
+				<ul>
+					<li>
+						<a href="#0">
+							Function <code>MimeAppsListFile.this</code>
+						</a>
+					</li>
+					<li>
+						<a href="#1">
+							Function <code>MimeAppsListFile.this</code>
+						</a>
+					</li>
+				</ul>
+			</nav><h2 id="0">Function MimeAppsListFile.this</h2><p>Read mimeapps.list file.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="pln">this</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<a href="../inilike/file/IniLikeFile.ReadOptions.html"><span class="typ">IniLikeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">ReadOptions</span></a> <span class="pln">readOptions</span> <span class="pun">=</span> <span class="typ">ReadOptions</span><span class="pun">(</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">DuplicateGroupPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">DuplicateKeyPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">InvalidKeyPolicy</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">, </span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">Flag</span><span class="pun">)</span><span class="kwd">true</span><span class="pun">)</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@trusted</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h3>Throws</h3>
 <p><b>ErrnoException</b> if file could not be opened.
   <code class="lang-d"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IniLikeReadException</span></code> if error occured while reading the file or "MIME Cache" group is missing.
 </p>
 </section>
 <h2 id="1">Function MimeAppsListFile.this</h2><p>Read MIME type associations from <code class="lang-d"><a href="../inilike/range/IniLikeReader.html" title="inilike.range.IniLikeReader"><span class="typ">IniLikeReader</span></a></code>, e.g. acquired from <code class="lang-d"><a href="../inilike/range/iniLikeFileReader.html" title="inilike.range.iniLikeFileReader"><span class="pln">iniLikeFileReader</span></a></code> or <code class="lang-d"><a href="../inilike/range/iniLikeStringReader.html" title="inilike.range.iniLikeStringReader"><span class="pln">iniLikeStringReader</span></a></code>.
-</p><div class="prototype"><code class="lang-d"><div class="single-prototype">
-<span class="pln">this</span>(IniLikeReader)
-<span class="pun">(</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">IniLikeReader</span> <span class="pln">reader</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
-<br/>
-&nbsp;&nbsp;<a href="../inilike/file/IniLikeFile.ReadOptions.html"><span class="typ">IniLikeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">ReadOptions</span></a> <span class="pln">readOptions</span> <span class="pun">=</span> <span class="typ">ReadOptions<wbr/></span><span class="pun">.</span><span class="pln">init</span>
-<br/>
-<span class="pun">)</span><span class="pun">;</span></div></code></div>
-<section><h3>Throws</h3>
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="pln">this</span>(IniLikeReader)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">IniLikeReader</span> <span class="pln">reader</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<a href="../inilike/file/IniLikeFile.ReadOptions.html"><span class="typ">IniLikeFile<wbr/></span><span class="pun">.<wbr/></span><span class="typ">ReadOptions</span></a> <span class="pln">readOptions</span> <span class="pun">=</span> <span class="typ">ReadOptions<wbr/></span><span class="pun">.</span><span class="pln">init</span>
+			<br/>
+			<span class="pun">)</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h3>Throws</h3>
 <p><code class="lang-d"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IniLikeReadException</span></code> if error occured while parsing or "MIME Cache" group is missing.
 </p>
 </section>
 
-<footer><table class="license-info"><tr><th>Authors</th><td><p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
 </p>
-</td></tr><tr><th>Copyright</th><td><p>Roman Chistokhodov, 2016
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2016
 </p>
-</td></tr><tr><th>License</th><td><p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
 </p>
-</td></tr></table><p class="faint">Generated using the DDOX documentation generator</p></footer></div></body></html>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>
