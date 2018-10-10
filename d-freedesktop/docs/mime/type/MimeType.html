@@ -178,6 +178,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../mime/stores/files.html">files</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -198,6 +203,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
 					</div>
 				</li>
 				<li>
@@ -233,6 +243,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module selected">
 						<a href="../../mime/type.html">type</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/xml.html">xml</a>
 					</div>
 				</li>
 			</ul>
@@ -291,7 +306,16 @@ $('#symbolSearchPane').show();</script>
 								<code>addAlias</code>
 							</a>
 						</td>
-						<td>Add alias for this MIME type.
+						<td>Add alias for this MIME type. Adding a duplicate does nothing.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mime/type/MimeType.addGlob.html" class="public">
+								<code>addGlob</code>
+							</a>
+						</td>
+						<td>Add glob pattern for this MIME type. Adding a duplicate does nothing.
 </td>
 					</tr>
 					<tr>
@@ -309,16 +333,7 @@ $('#symbolSearchPane').show();</script>
 								<code>addParent</code>
 							</a>
 						</td>
-						<td>Add parent type for this MIME type.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../mime/type/MimeType.addPattern.html" class="public">
-								<code>addPattern</code>
-							</a>
-						</td>
-						<td>Add glob pattern for this MIME type.
+						<td>Add parent type for this MIME type. Adding a duplicate does nothing.
 </td>
 					</tr>
 					<tr>
@@ -328,6 +343,15 @@ $('#symbolSearchPane').show();</script>
 							</a>
 						</td>
 						<td>Add treemagic rule.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mime/type/MimeType.addXMLnamespace.html" class="public">
+								<code>addXMLnamespace</code>
+							</a>
+						</td>
+						<td>Add XML namespace.
 </td>
 					</tr>
 					<tr>
@@ -350,6 +374,15 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
+							<a href="../../mime/type/MimeType.clearGlobs.html" class="public">
+								<code>clearGlobs</code>
+							</a>
+						</td>
+						<td>Remove all glob patterns.
+</td>
+					</tr>
+					<tr>
+						<td>
 							<a href="../../mime/type/MimeType.clearMagic.html" class="public">
 								<code>clearMagic</code>
 							</a>
@@ -368,15 +401,6 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
-							<a href="../../mime/type/MimeType.clearPatterns.html" class="public">
-								<code>clearPatterns</code>
-							</a>
-						</td>
-						<td>Remove all glob patterns.
-</td>
-					</tr>
-					<tr>
-						<td>
 							<a href="../../mime/type/MimeType.clearTreeMagic.html" class="public">
 								<code>clearTreeMagic</code>
 							</a>
@@ -386,11 +410,38 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
+							<a href="../../mime/type/MimeType.clearXMLnamespaces.html" class="public">
+								<code>clearXMLnamespaces</code>
+							</a>
+						</td>
+						<td>Remove all XML namespaces.
+</td>
+					</tr>
+					<tr>
+						<td>
 							<a href="../../mime/type/MimeType.clone.html" class="public">
 								<code>clone</code>
 							</a>
 						</td>
 						<td>Create MimeType deep copy.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mime/type/MimeType.displayName.html" class="public">
+								<code>displayName</code>
+							</a>
+						</td>
+						<td>Descriptive comment of MIME type.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mime/type/MimeType.displayName.html" class="public">
+								<code>displayName</code>
+							</a>
+						</td>
+						<td>Set descriptive comment.
 </td>
 					</tr>
 					<tr>
@@ -432,6 +483,15 @@ $('#symbolSearchPane').show();</script>
 						<td>Get icon name.
  The difference from icon property is that this function provides default icon name if no explicitly set.
  The default form is MIME type name with '/' replaces with '-'.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mime/type/MimeType.globs.html" class="public">
+								<code>globs</code>
+							</a>
+						</td>
+						<td>Array of MIME glob patterns applied to this MIME type.
 </td>
 					</tr>
 					<tr>
@@ -481,24 +541,6 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
-							<a href="../../mime/type/MimeType.namespaceUri.html" class="public">
-								<code>namespaceUri</code>
-							</a>
-						</td>
-						<td>Get namespace uri for XML-based types.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="../../mime/type/MimeType.namespaceUri.html" class="public">
-								<code>namespaceUri</code>
-							</a>
-						</td>
-						<td>Set namespace uri.
-</td>
-					</tr>
-					<tr>
-						<td>
 							<a href="../../mime/type/MimeType.parents.html" class="public">
 								<code>parents</code>
 							</a>
@@ -508,20 +550,20 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 					<tr>
 						<td>
-							<a href="../../mime/type/MimeType.patterns.html" class="public">
-								<code>patterns</code>
-							</a>
-						</td>
-						<td>Array of MIME glob patterns applied to this MIME type.
-</td>
-					</tr>
-					<tr>
-						<td>
 							<a href="../../mime/type/MimeType.treeMagics.html" class="public">
 								<code>treeMagics</code>
 							</a>
 						</td>
 						<td>Treemagic rules for this MIME type.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="../../mime/type/MimeType.XMLnamespaces.html" class="public">
+								<code>XMLnamespaces</code>
+							</a>
+						</td>
+						<td>Get XML namespaces associated with this XML-based MIME type.
 </td>
 					</tr>
 				</table>

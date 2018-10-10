@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function readMediaSubtypeXML</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/files.html">files</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/type.html">type</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../mime/xml.html">xml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function readMediaSubtypeXML</h1><p>Read MIME type from xml formatted data with mime-type root element as defined by spec.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<a href="../../mime/type/MimeType.html"><span class="typ">MimeType</span></a> <span class="pln">readMediaSubtypeXML</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">xmlData</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@trusted</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Returns</h2>
+<p><code class="lang-d"><a href="../../mime/type/MimeType.html" title="mime.type.MimeType"><span class="typ">MimeType</span></a></code> parsed from xml definition.
+</p>
+</section>
+<section><h2>Throws</h2>
+<p><code class="lang-d"><a href="../../mime/xml/XMLMimeException.html"><span class="typ">XMLMimeException</span></a></code> on format error.
+</p>
+</section>
+<section><h2>See Also</h2>
+<p><code class="lang-d"><a href="../../mime/xml/readMediaSubtypeFile.html" title="mime.xml.readMediaSubtypeFile"><span class="pln">readMediaSubtypeFile</span></a></code>
+</p>
+</section>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="kwd">auto <a href="../../mime/xml/readMediaSubtypeXML.html#xmlData"></span><span class="pln">xmlData</span></a><span class="pln"> </span><span class="pun">= </span><span class="str">`&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="text/markdown"&gt;
+&lt;!--Created automatically by update-mime-database. DO NOT EDIT!--&gt;
+&lt;comment&gt;Markdown document&lt;/comment&gt;
+&lt;comment xml:lang="ru"&gt;документ Markdown&lt;/comment&gt;
+&lt;sub-class-of type="text/plain"/&gt;
+&lt;x-unknown&gt;Just for a test&lt;/x-unknown&gt;
+&lt;glob pattern="*.md"/&gt;
+&lt;glob pattern="*.mkd" weight="40"/&gt;
+&lt;glob pattern="*.markdown" case-sensitive="true"/&gt;
+&lt;alias type="text/x-markdown"/&gt;
+&lt;/mime-type&gt;`</span><span class="pun">;
+</span><span class="kwd">auto </span><span class="pln">mimeType </span><span class="pun">= </span><span class="pln">readMediaSubtypeXML</span><span class="pun">(<a href="../../mime/xml/readMediaSubtypeXML.html#xmlData"></span><span class="pln">xmlData</span></a><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"text/markdown"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">displayName </span><span class="pun">== </span><span class="str">"Markdown document"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">aliases </span><span class="pun">== [</span><span class="str">"text/x-markdown"</span><span class="pun">]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">parents </span><span class="pun">== [</span><span class="str">"text/plain"</span><span class="pun">]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">globs </span><span class="pun">== [</span><span class="typ">MimeGlob</span><span class="pun">(</span><span class="str">"*.md"</span><span class="pun">), </span><span class="typ">MimeGlob</span><span class="pun">(</span><span class="str">"*.mkd"</span><span class="pun">, </span><span class="lit">40</span><span class="pun">), </span><span class="typ">MimeGlob</span><span class="pun">(</span><span class="str">"*.markdown"</span><span class="pun">, </span><span class="pln">defaultGlobWeight</span><span class="pun">, </span><span class="kwd">true</span><span class="pun">)]);
+
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">exception </span><span class="pun">: </span><span class="pln">assertThrown</span><span class="pun">, </span><span class="pln">assertNotThrown</span><span class="pun">;
+</span><span class="kwd">auto </span><span class="pln">notXml </span><span class="pun">= </span><span class="str">"not xml"</span><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">!<a href="../../mime/xml/XMLMimeException.html"></span><span class="typ">XMLMimeException</span></a><span class="pun">(</span><span class="pln">readMediaSubtypeXML</span><span class="pun">(</span><span class="pln">notXml</span><span class="pun">));
+</span><span class="kwd">auto </span><span class="pln">invalidEmpty </span><span class="pun">= </span><span class="str">`&lt;?xml version="1.0" encoding="utf-8"?&gt;`</span><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">!<a href="../../mime/xml/XMLMimeException.html"></span><span class="typ">XMLMimeException</span></a><span class="pun">(</span><span class="pln">readMediaSubtypeXML</span><span class="pun">(</span><span class="pln">invalidEmpty</span><span class="pun">));
+
+</span><span class="kwd">auto </span><span class="pln">notNumber </span><span class="pun">= </span><span class="str">`&lt;mime-type type="text/markdown"&gt;
+&lt;glob pattern="*.mkd" weight="not_a_number"/&gt;
+&lt;/mime-type&gt;`</span><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">!<a href="../../mime/xml/XMLMimeException.html"></span><span class="typ">XMLMimeException</span></a><span class="pun">(</span><span class="pln">readMediaSubtypeXML</span><span class="pun">(</span><span class="pln">notNumber</span><span class="pun">));
+
+</span><span class="kwd">auto </span><span class="pln">validEmpty </span><span class="pun">= </span><span class="str">`&lt;mime-type type="text/markdown"&gt;&lt;/mime-type&gt;`</span><span class="pun">;
+</span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="pln">readMediaSubtypeXML</span><span class="pun">(</span><span class="pln">validEmpty</span><span class="pun">));
+
+</span><span class="kwd">auto </span><span class="pln">missingName </span><span class="pun">= </span><span class="str">`&lt;mime-type&gt;&lt;/mime-type&gt;`</span><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">readMediaSubtypeXML</span><span class="pun">(</span><span class="pln">missingName</span><span class="pun">));
+
+</span><span class="kwd">auto </span><span class="pln">noPattern </span><span class="pun">= </span><span class="str">`&lt;mime-type type="text/markdown"&gt;
+&lt;glob pattern=""/&gt;&lt;/mime-type&gt;`</span><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">!<a href="../../mime/xml/XMLMimeException.html"></span><span class="typ">XMLMimeException</span></a><span class="pun">(</span><span class="pln">readMediaSubtypeXML</span><span class="pun">(</span><span class="pln">noPattern</span><span class="pun">));
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2018
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

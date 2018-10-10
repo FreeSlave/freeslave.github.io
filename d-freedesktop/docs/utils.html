@@ -1,0 +1,3074 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>desktopfile.utils</title>
+    <style type="text/css" media="screen">
+      html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+      blockquote, pre, a, abbr, address, cite, code, del, dfn, em, figure,
+      img, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, u, i, dl,
+      dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+      tbody, tfoot, thead, tr, th, td {
+        background: transparent none repeat scroll 0 0;
+        border: 0 none;
+        font-size: 100%;
+        margin: 0;
+        outline: 0 none;
+        padding: 0;
+        vertical-align: baseline;
+      }
+
+      .color_red { color: #dc322f; }
+      .color_blue { color: #268bd2; }
+      .color_green { color: #859901; }
+      .color_yellow { color: #b58901; }
+      .color_black { color: black; }
+      .color_white { color: white; }
+
+      .font_big {
+        font-size: 1.2em;
+      }
+
+      .ddoc_section_h {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 19.5px;
+        margin-top: 11px;
+        display: block;
+      }
+
+      body.dlang .dlang {
+        display: inline-block;
+      }
+
+      body.dlang .declaration .dlang {
+          display: block;
+      }
+
+      body.dlang .ddoc_header_anchor a.dlang {
+        display: block;
+        color: rgba(0, 136, 204, 1);
+        text-decoration: none;
+      }
+
+      body.dlang .ddoc_header_anchor .code {
+        color: rgba(0, 136, 204, 1);
+      }
+
+      #ddoc_main .module {
+          border-color: currentColor rgba(233, 233, 233, 1) rgba(233, 233, 233, 1);
+          border-style: none solid solid;
+          border-width: 0 1px 1px;
+          overflow-x: hidden;
+          padding: 15px;
+      }
+
+      #ddoc_main .section .section {
+        margin-top: 0;
+      }
+
+      #ddoc_main .ddoc_module_members_section {
+          padding: 1px 0 0;
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .ddoc_member, #ddoc_main .ddoc_module_members section.intro {
+          background: #fff none repeat scroll 0 0;
+          list-style-type: none;
+          width: 100%;
+      }
+
+      #ddoc_main .ddoc_header_anchor {
+          font-size: 1.4em;
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .ddoc_header_anchor > .code {
+          display: inline-block;
+
+      }
+
+      #ddoc_main .ddoc_decl {
+        background-color: transparent;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: 0;
+        padding-left: 15px;
+      }
+
+      #ddoc_main .ddoc_decl .section, #ddoc_main .section.ddoc_sections {
+        background: white none repeat scroll 0 0;
+        margin: 0;
+        padding: 5px;
+        position: relative;
+        border-radius: 5px;
+      }
+
+      #ddoc_main .ddoc_decl .section h4, #ddoc_main .section.ddoc_sections h4 {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 21px;
+      }
+
+      #ddoc_main .section .declaration {
+          margin-top: 21px;
+      }
+
+      #ddoc_main .section .declaration .code {
+          color: rgba(0, 0, 0, 1);
+          margin-bottom: 15px;
+          padding-bottom: 6px;
+      }
+
+      #ddoc_main .declaration div .para {
+          margin-bottom: 0;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr td:first-of-type {
+        padding: 7px;
+        text-align: right;
+        vertical-align: top;
+        word-break: normal;
+        white-space: nowrap;
+      }
+
+      #ddoc_main .ddoc_params .graybox {
+        border: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox td {
+        border-color: rgba(214, 214, 214, 1);
+      }
+
+      #ddoc_main .ddoc_params .graybox tr:first-child > td {
+        border-top: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr:last-child > td {
+        border-bottom: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr > td:first-child {
+        border-left: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr > td:last-child {
+        border-right: 0 none;
+        width: 100%;
+      }
+
+      #ddoc_main em.term, #ddoc_main em.term .code {
+        color: rgba(65, 65, 65, 1);
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      #ddoc_main .see-also {
+        cursor: pointer;
+        font-family: Menlo,monospace;
+      }
+
+      #ddoc_main .ddoc_decl .section > div:last-of-type {
+        margin-bottom: 15px;
+      }
+
+      #ddoc_main .ddoc_member, #ddoc_main .ddoc_module_members {
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .code_sample {
+        background: inherit;
+      }
+
+      #ddoc_main .declaration .code-line {
+          display: block;
+          font: 1em Menlo,monospace;
+      }
+
+      #ddoc_main a[name] {
+        margin: -112px 0 0;
+        padding-top: 112px;
+      }
+
+      #ddoc_main .ddoc_decl td {
+        max-width: inherit;
+      }
+
+      #ddoc_main .declaration a {
+        color: inherit;
+      }
+
+      #ddoc_main .declaration a:hover {
+          color: rgba(0, 136, 204, 1);
+          text-decoration: underline;
+      }
+
+      body.ddoc {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 1);
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 62.5%;
+        margin: 0;
+        border: 0;
+        left: 0;
+        top: 0;
+        padding: 0;
+      }
+
+      .ddoc a[name] {
+        display: block;
+        height: 0;
+        margin: -85px 0 0;
+        padding-top: 85px;
+        width: 0;
+      }
+
+      .ddoc .module {
+          border-color: transparent;
+          background-color: rgba(255, 255, 255, 1);
+          border-color: currentColor rgba(233, 233, 233, 1) rgba(233, 233, 233, 1);
+          border-image: none;
+          border-style: none solid solid;
+          border-width: 0 1px 1px;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.07);
+          display: block;
+          margin-left: 0;
+          min-height: calc(100% - 173px);
+          overflow: auto;
+          padding-bottom: 100px;
+      }
+
+      .ddoc .content_wrapper {
+          background-color: rgba(242, 242, 242, 1);
+          margin: 0 auto;
+          max-width: 980px;
+      }
+
+      .ddoc .section {
+        padding: 15px 25px 30px;
+      }
+
+      .ddoc .section .section {
+        margin: 30px 0 0;
+        padding: 0;
+      }
+
+      .ddoc .para {
+        color: rgba(65, 65, 65, 1);
+        font-size: 1.4em;
+        line-height: 145%;
+        margin-bottom: 15px;
+      }
+
+      .ddoc .ddoc_examples .para {
+        margin-bottom: 0;
+      }
+
+      .ddoc .module_name {
+          color: rgba(0, 0, 0, 1);
+          display: block;
+          font-family: Helvetica;
+          font-size: 2.8em;
+          font-weight: 100;
+          margin-bottom: 0;
+          padding: 15px 0;
+      }
+
+      .ddoc .module a {
+          color: rgba(0, 136, 204, 1);
+          text-decoration: none;
+      }
+
+      .ddoc .code {
+        color: rgba(128, 128, 128, 1);
+        font-family: Menlo,monospace;
+        font-size: 0.85em;
+        word-wrap: break-word;
+      }
+
+      .ddoc .code i {
+        font-style: normal;
+      }
+
+      .ddoc .code .code {
+        font-size: 1em;
+      }
+
+      .ddoc .code_sample {
+        background-clip: padding-box;
+        margin: 1px 0;
+        text-align: left;
+      }
+
+      .ddoc .code_sample {
+        display: block;
+        font-size: 1.4em;
+        margin-left: 21px;
+      }
+
+      .ddoc ol .code_sample {
+        font-size: 1em;
+      }
+
+      .ddoc .code_lines {
+        counter-reset: li;
+        line-height: 1.6em;
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ddoc .code_listing .code_sample div {
+        margin-left: 13px;
+        width: 93%;
+      }
+
+      .ddoc .code_listing .code_sample div .code_lines li {
+        list-style-type: none;
+        margin: 0;
+        padding-right: 10px;
+      }
+
+      .ddoc .code_sample div .code_lines li::before {
+        margin-left: -33px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample div .code_lines li:nth-child(n+10)::before {
+        margin-left: -39px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample div .code_lines li:nth-child(n+100)::before {
+        margin-left: -46px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample .code_lines .code {
+        color: #000;
+      }
+
+      .ddoc div.dlang {
+        margin: 10px 0 21px;
+        padding: 4px 0 2px 10px;
+      }
+
+      .ddoc div.dlang {
+          margin: 10px 0 21px;
+          padding: 4px 0 2px 10px;
+      }
+
+      .ddoc div.dlang {
+        border-left: 5px solid rgba(0, 155, 51, 0.2);
+      }
+
+      .ddoc .code_lines li::before {
+        color: rgba(128, 128, 128, 1);
+        content: counter(li, decimal);
+        counter-increment: li;
+        font-family: Menlo,monospace;
+        font-size: 0.9em;
+        margin-right: 16px;
+      }
+
+      .ddoc .code_lines li {
+        padding-left: 0;
+        white-space: pre-wrap;
+      }
+
+      .ddoc .code_lines li:only-of-type::before {
+        color: rgba(255, 255, 255, 1);
+        content: " ";
+      }
+
+      .ddoc .code_lines li:only-of-type {
+        color: rgba(255, 255, 255, 1);
+        content: " ";
+      }
+
+      .ddoc .code_lines li:nth-child(n+10) {
+        text-indent: -17px;
+      }
+
+      .ddoc .code_lines li:nth-child(n+10)::before {
+        margin-right: 12px;
+      }
+
+      .ddoc .graybox {
+        border: 1px solid rgba(233, 233, 233, 1);
+        border-collapse: collapse;
+        border-spacing: 0;
+        empty-cells: hide;
+        margin: 20px 0 36px;
+        text-align: left;
+      }
+
+      .ddoc .graybox p {
+        margin: 0;
+        min-width: 50px;
+      }
+
+      .ddoc td {
+        border: 1px solid rgba(233, 233, 233, 1);
+        margin: 0;
+        max-width: 260px;
+        padding: 5px 25px 5px 10px;
+        vertical-align: middle;
+      }
+
+      .punctuation {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .comment {
+        color: rgba(0, 131, 18, 1);
+      }
+
+      .operator {
+        color: #000;
+      }
+
+      .keyword {
+        color: rgba(170, 13, 145, 1);
+      }
+
+      .keyword_type {
+        color: rgba(170, 51, 145, 1);
+      }
+
+      .string_literal {
+        color: rgba(196, 26, 22, 1);
+      }
+
+      .ddoc_psuper_symbol {
+        color: rgba(92, 38, 153, 1);
+      }
+
+      .param {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .psymbol {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .ddoc_member_header .ddoc_header_anchor .code {
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body id="ddoc_main" class="ddoc dlang">
+    <div class="content_wrapper">
+      <article class="module">
+        <h1 class="module_name">desktopfile.utils</h1>
+        <section id="module_content"><section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Utility functions for reading and executing desktop files.
+
+  </p>
+</div>
+<div class="ddoc_authors">
+  <h4>Authors</h4>
+  <p class="para">
+    <a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+
+  </p>
+</div>
+<div class="ddoc_license">
+  <h4>License</h4>
+  <p class="para">
+    <a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    <a href="https://www.freedesktop.org/wiki/Specifications/desktop-entry-spec/">Desktop Entry Specification</a>
+  </p>
+</div>
+
+</section>
+<section class="section ddoc_module_members_section">
+  <div class="ddoc_module_members">
+    <ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#DesktopExecException" id="DesktopExecException"><code class="code">DesktopExecException</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="DesktopExecException"></span>class <code class="code">DesktopExecException</code>: <span class="ddoc_psuper_symbol">object.Exception</span>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Exception thrown when "Exec" value of DesktopFile or DesktopAction is invalid.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#SpawnParams" id="SpawnParams"><code class="code">SpawnParams</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="SpawnParams"></span>struct <code class="code">SpawnParams</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Parameters for spawnApplication.
+  </p>
+</div>
+
+</section>
+<ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#SpawnParams.urls" id="SpawnParams.urls"><code class="code">urls</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="SpawnParams.urls"></span>const(string)[] <code class="code">urls</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Urls of file paths to open
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#SpawnParams.iconName" id="SpawnParams.iconName"><code class="code">iconName</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="SpawnParams.iconName"></span>string <code class="code">iconName</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Icon to use in place of %i field code.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#SpawnParams.displayName" id="SpawnParams.displayName"><code class="code">displayName</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="SpawnParams.displayName"></span>string <code class="code">displayName</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Name to use in place of %c field code.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#SpawnParams.fileName" id="SpawnParams.fileName"><code class="code">fileName</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="SpawnParams.fileName"></span>string <code class="code">fileName</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    File name to use in place of %k field code.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#SpawnParams.workingDirectory" id="SpawnParams.workingDirectory"><code class="code">workingDirectory</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="SpawnParams.workingDirectory"></span>string <code class="code">workingDirectory</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Working directory of starting process.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#SpawnParams.terminalCommand" id="SpawnParams.terminalCommand"><code class="code">terminalCommand</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="SpawnParams.terminalCommand"></span>const(string)[] <code class="code">terminalCommand</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Terminal command to prepend to exec arguments.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#SpawnParams.allowMultipleInstances" id="SpawnParams.allowMultipleInstances"><code class="code">allowMultipleInstances</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="SpawnParams.allowMultipleInstances"></span>bool <code class="code">allowMultipleInstances</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Allow starting multiple instances of application if needed.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#spawnApplication" id="spawnApplication"><code class="code">spawnApplication</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="spawnApplication"></span>@trusted void <code class="code">spawnApplication</code>(const(string)[] <code class="code">unquotedArgs</code>, const SpawnParams <code class="code">params</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Spawn application with given <code class="code">params</code>.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">const(string)[] <code class="code">unquotedArgs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Unescaped unquoted arguments parsed from "Exec" value.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">SpawnParams <code class="code">params</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Field codes values and other properties to spawn application.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+    <b>ProcessException</b> if could not start process.
+   if <code class="code">unquotedArgs</code> is empty.
+
+  </p>
+</div><div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#unquoteExec" id="unquoteExec"><code class="code">unquoteExec</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="unquoteExec"></span>pure @trusted auto <code class="code">unquoteExec</code>(string <code class="code">unescapedValue</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Apply unquoting to Exec value making it into an array of escaped arguments. It automatically performs quote-related unescaping.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">unescapedValue</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      value of Exec key. Must be unescaped by  before passing (general escape rule is not the same as quote escape rule).
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+     if string can't be unquoted (e.g. no pair quote).
+
+  </p>
+</div><div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+Although Desktop Entry Specification says that arguments must be quoted by double quote, for compatibility reasons this implementation also recognizes single quotes.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s06.html">specification</a>
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">``</span>), string[].init));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`   `</span>), string[].init));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`""`</span>), [<span class="string_literal">``</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"" "  "`</span>), [<span class="string_literal">``</span>, <span class="string_literal">`  `</span>]));
+
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`cmd arg1  arg2   arg3   `</span>), [<span class="string_literal">`cmd`</span>, <span class="string_literal">`arg1`</span>, <span class="string_literal">`arg2`</span>, <span class="string_literal">`arg3`</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"cmd" arg1 arg2  `</span>), [<span class="string_literal">`cmd`</span>, <span class="string_literal">`arg1`</span>, <span class="string_literal">`arg2`</span>]));
+
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"quoted cmd"   arg1  "quoted arg"  `</span>), [<span class="string_literal">`quoted cmd`</span>, <span class="string_literal">`arg1`</span>, <span class="string_literal">`quoted arg`</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"quoted \"cmd\"" arg1 "quoted \"arg\""`</span>), [<span class="string_literal">`quoted "cmd"`</span>, <span class="string_literal">`arg1`</span>, <span class="string_literal">`quoted "arg"`</span>]));
+
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"\\\$" `</span>), [<span class="string_literal">`\$`</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"\\$" `</span>), [<span class="string_literal">`\$`</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"\$" `</span>), [<span class="string_literal">`$`</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"$"`</span>), [<span class="string_literal">`$`</span>]));
+
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"\\" `</span>), [<span class="string_literal">`\`</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"\\\\" `</span>), [<span class="string_literal">`\\`</span>]));
+
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`'quoted cmd' arg`</span>), [<span class="string_literal">`quoted cmd`</span>, <span class="string_literal">`arg`</span>]));
+
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`test\ \ testing`</span>), [<span class="string_literal">`test  testing`</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`test\  testing`</span>), [<span class="string_literal">`test `</span>, <span class="string_literal">`testing`</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`test\ "one""two"\ more\ \ test `</span>), [<span class="string_literal">`test onetwo more  test`</span>]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"one"two"three"`</span>), [<span class="string_literal">`onetwothree`</span>]));
+
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`env WINEPREFIX="/home/freeslave/.wine" wine C:\\windows\\command\\start.exe /Unix /home/freeslave/.wine/dosdevices/c:/windows/profiles/freeslave/Start\ Menu/Programs/True\ Remembrance/True\ Remembrance.lnk`</span>), [
+    <span class="string_literal">"env"</span>, <span class="string_literal">"WINEPREFIX=/home/freeslave/.wine"</span>, <span class="string_literal">"wine"</span>, <span class="string_literal">`C:\windows\command\start.exe`</span>, <span class="string_literal">"/Unix"</span>, <span class="string_literal">"/home/freeslave/.wine/dosdevices/c:/windows/profiles/freeslave/Start Menu/Programs/True Remembrance/True Remembrance.lnk"</span>
+]));
+<span class="keyword">assert</span>(equal(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`Sister\'s\ book\(TM\)`</span>), [<span class="string_literal">`Sister's book(TM)`</span>]));
+
+assertThrown!DesktopExecException(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`cmd "quoted arg`</span>));
+assertThrown!DesktopExecException(<span class="psymbol">unquoteExec</span>(<span class="string_literal">`"`</span>));
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#expandExecArgs" id="expandExecArgs"><code class="code">expandExecArgs</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="expandExecArgs"></span>pure @trusted string[] <code class="code">expandExecArgs</code>(in string[] <code class="code">unquotedArgs</code>, in string[] <code class="code">urls</code> = null, string <code class="code">iconName</code> = null, string <code class="code">displayName</code> = null, string <code class="code">fileName</code> = null);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Expand Exec arguments (usually returned by ) replacing field codes with given values, making the array suitable for passing to spawnProcess.
+ Deprecated field codes are ignored.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+Returned array may be empty and must be checked before passing to spawning the process.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string[] <code class="code">unquotedArgs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Array of unescaped and unquoted arguments.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string[] <code class="code">urls</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Array of <code class="code">urls</code> or file names that inserted in the place of %f, %F, %u or %U field codes.
+      For %f and %u only the first element of array is used.
+      For %f and %F every url started with 'file://' will be replaced with normal path.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">iconName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Icon name used to substitute %i field code by --icon <code class="code">iconName</code>.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">displayName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Name of application used that inserted in the place of %c field code.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">fileName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Name of desktop file that inserted in the place of %k field code.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+     if command line contains unknown field code.
+
+  </p>
+</div><div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>(
+    [<span class="string_literal">"program path"</span>, <span class="string_literal">"%%f"</span>, <span class="string_literal">"%%i"</span>, <span class="string_literal">"%D"</span>, <span class="string_literal">"--deprecated=%d"</span>, <span class="string_literal">"%n"</span>, <span class="string_literal">"%N"</span>, <span class="string_literal">"%m"</span>, <span class="string_literal">"%v"</span>, <span class="string_literal">"--file=%f"</span>, <span class="string_literal">"%i"</span>, <span class="string_literal">"%F"</span>, <span class="string_literal">"--myname=%c"</span>, <span class="string_literal">"--mylocation=%k"</span>, <span class="string_literal">"100%%"</span>],
+    [<span class="string_literal">"one"</span>],
+    <span class="string_literal">"folder"</span>, <span class="string_literal">"program"</span>, <span class="string_literal">"location"</span>
+) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"%f"</span>, <span class="string_literal">"%i"</span>, <span class="string_literal">"--file=one"</span>, <span class="string_literal">"--icon"</span>, <span class="string_literal">"folder"</span>, <span class="string_literal">"one"</span>, <span class="string_literal">"--myname=program"</span>, <span class="string_literal">"--mylocation=location"</span>, <span class="string_literal">"100%"</span>]);
+
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"many%%%%"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"many%%"</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"%f"</span>]) == [<span class="string_literal">"program path"</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"%f%%%f"</span>], [<span class="string_literal">"file"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"file%file"</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"%f"</span>], [<span class="string_literal">"file:///usr/share"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"/usr/share"</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"%u"</span>], [<span class="string_literal">"file:///usr/share"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"file:///usr/share"</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>], [<span class="string_literal">"one"</span>, <span class="string_literal">"two"</span>]) == [<span class="string_literal">"program path"</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"%f"</span>], [<span class="string_literal">"one"</span>, <span class="string_literal">"two"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"one"</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"%F"</span>], [<span class="string_literal">"one"</span>, <span class="string_literal">"two"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"one"</span>, <span class="string_literal">"two"</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"%F"</span>], [<span class="string_literal">"file://one"</span>, <span class="string_literal">"file://two"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"one"</span>, <span class="string_literal">"two"</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"%U"</span>], [<span class="string_literal">"file://one"</span>, <span class="string_literal">"file://two"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"file://one"</span>, <span class="string_literal">"file://two"</span>]);
+
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"--location=%k"</span>, <span class="string_literal">"--myname=%c"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">"--location="</span>, <span class="string_literal">"--myname="</span>]);
+<span class="keyword">assert</span>(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program path"</span>, <span class="string_literal">"%k"</span>, <span class="string_literal">"%c"</span>]) == [<span class="string_literal">"program path"</span>, <span class="string_literal">""</span>, <span class="string_literal">""</span>]);
+assertThrown!DesktopExecException(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program name"</span>, <span class="string_literal">"%y"</span>]));
+assertThrown!DesktopExecException(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program name"</span>, <span class="string_literal">"--file=%x"</span>]));
+assertThrown!DesktopExecException(<span class="psymbol">expandExecArgs</span>([<span class="string_literal">"program name"</span>, <span class="string_literal">"--files=%F"</span>]));
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ParamSupport" id="ParamSupport"><code class="code">ParamSupport</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ParamSupport"></span>enum <code class="code">ParamSupport</code>: int;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Flag set of parameter kinds supported by application.
+ Having more than one flag means that Exec command is ambiguous.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+<ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ParamSupport.none" id="ParamSupport.none"><code class="code">none</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ParamSupport.none"></span><code class="code">none</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Application does not support parameters.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ParamSupport.file" id="ParamSupport.file"><code class="code">file</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ParamSupport.file"></span><code class="code">file</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Application can open single <code class="code">file</code> at once.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ParamSupport.files" id="ParamSupport.files"><code class="code">files</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ParamSupport.files"></span><code class="code">files</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Application can open multiple <code class="code">files</code> at once.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ParamSupport.url" id="ParamSupport.url"><code class="code">url</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ParamSupport.url"></span><code class="code">url</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Application understands URL syntax and can open single link at once.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ParamSupport.urls" id="ParamSupport.urls"><code class="code">urls</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ParamSupport.urls"></span><code class="code">urls</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Application supports URL syntax and can open multiple links at once.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#paramSupport" id="paramSupport"><code class="code">paramSupport</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="paramSupport"></span>pure nothrow @nogc @safe ParamSupport <code class="code">paramSupport</code>(in string[] <code class="code">execArgs</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Evaluate ParamSupport flags for application Exec command.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string[] <code class="code">execArgs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Array of unescaped and unquoted arguments.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , 
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%f"</span>]) == ParamSupport.file);
+<span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%%f"</span>]) == ParamSupport.none);
+<span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%%%f"</span>]) == ParamSupport.file);
+<span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%u"</span>]) == ParamSupport.url);
+<span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%i"</span>]) == ParamSupport.none);
+<span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%u%f"</span>]) == (ParamSupport.url | ParamSupport.file ));
+<span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%F"</span>]) == ParamSupport.files);
+<span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%U"</span>]) == ParamSupport.urls);
+<span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%f"</span>, <span class="string_literal">"%U"</span>]) == (ParamSupport.file|ParamSupport.urls));
+<span class="keyword">assert</span>(<span class="psymbol">paramSupport</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%F"</span>, <span class="string_literal">"%u"</span>]) == (ParamSupport.files|ParamSupport.url));
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#needMultipleInstances" id="needMultipleInstances"><code class="code">needMultipleInstances</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="needMultipleInstances"></span>pure nothrow @nogc @safe bool <code class="code">needMultipleInstances</code>(in string[] <code class="code">execArgs</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Check if application should be started multiple times to open multiple urls.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string[] <code class="code">execArgs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Array of unescaped and unquoted arguments.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    <code class="code">true</code> if <code class="code">execArgs</code> have only %f or %u and not %F or %U. Otherwise <code class="code">false</code> is returned.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , 
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">assert</span>(<span class="psymbol">needMultipleInstances</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%f"</span>]));
+<span class="keyword">assert</span>(<span class="psymbol">needMultipleInstances</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%u"</span>]));
+<span class="keyword">assert</span>(!<span class="psymbol">needMultipleInstances</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%i"</span>]));
+<span class="keyword">assert</span>(!<span class="psymbol">needMultipleInstances</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%F"</span>]));
+<span class="keyword">assert</span>(!<span class="psymbol">needMultipleInstances</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%U"</span>]));
+<span class="keyword">assert</span>(!<span class="psymbol">needMultipleInstances</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%f"</span>, <span class="string_literal">"%U"</span>]));
+<span class="keyword">assert</span>(!<span class="psymbol">needMultipleInstances</span>([<span class="string_literal">"program"</span>, <span class="string_literal">"%F"</span>, <span class="string_literal">"%u"</span>]));
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder" id="ExecBuilder"><code class="code">ExecBuilder</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder"></span>struct <code class="code">ExecBuilder</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Helper struct to build Exec string for desktop file.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+While Desktop Entry Specification says that field codes must not be inside quoted argument,
+  <code class="code">ExecBuilder</code> does not consider it as error and may create quoted argument if field code is prepended by the string that needs quotation.
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">assert</span>(<span class="psymbol">ExecBuilder</span>(<span class="string_literal">"quoted program"</span>).icon()
+        .argument(<span class="string_literal">"-w"</span>).displayName()
+        .argument(<span class="string_literal">"$value"</span>)
+        .argument(<span class="string_literal">"slash\\"</span>)
+        .argument(<span class="string_literal">"100%"</span>)
+        .location(<span class="string_literal">"--location="</span>)
+        .urls().url().file(<span class="string_literal">"--file="</span>).files().result() == <span class="string_literal">`"quoted program" %i -w %c "\\$value" "slash\\\\" 100%% --location=%k %U %u --file=%f %F`</span>);
+
+<span class="keyword">assert</span>(<span class="psymbol">ExecBuilder</span>(<span class="string_literal">"program"</span>).argument(<span class="string_literal">""</span>).url(<span class="string_literal">"my url "</span>).result() == <span class="string_literal">`program "" "my url %u"`</span>);
+
+assertThrown(<span class="psymbol">ExecBuilder</span>(<span class="string_literal">"./relative/path"</span>));
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+<ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.this" id="ExecBuilder.this"><code class="code">this</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.this"></span>@safe this(string <code class="code">executable</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Construct ExecBuilder.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">executable</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      path to <code class="code">executable</code>. Value will be escaped and quoted as needed.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+    Exception if <code class="code">executable</code> is not absolute path nor base name.
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.argument" id="ExecBuilder.argument"><code class="code">argument</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.argument"></span>ref @safe ExecBuilder <code class="code">argument</code>(string <code class="code">arg</code>, Flag!"<code class="code">forceQuoting</code>" <code class="code">forceQuoting</code> = No.<code class="code">forceQuoting</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Add literal <code class="code">argument</code> which is not field code.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">arg</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Literal <code class="code">argument</code>. Value will be escaped and quoted as needed.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Flag!"<code class="code">forceQuoting</code>" <code class="code">forceQuoting</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Whether to force <code class="code">argument</code> quotation.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    this object for chained calls.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.icon" id="ExecBuilder.icon"><code class="code">icon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.icon"></span>ref @safe ExecBuilder <code class="code">icon</code>();
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Add "%i" field code.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    this object for chained calls.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.file" id="ExecBuilder.file"><code class="code">file</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.file"></span>ref @safe ExecBuilder <code class="code">file</code>(string <code class="code">prepend</code> = null);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Add "%f" field code.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    this object for chained calls.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.files" id="ExecBuilder.files"><code class="code">files</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.files"></span>ref @safe ExecBuilder <code class="code">files</code>();
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Add "%F" field code.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    this object for chained calls.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.url" id="ExecBuilder.url"><code class="code">url</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.url"></span>ref @safe ExecBuilder <code class="code">url</code>(string <code class="code">prepend</code> = null);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Add "%u" field code.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    this object for chained calls.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.urls" id="ExecBuilder.urls"><code class="code">urls</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.urls"></span>ref @safe ExecBuilder <code class="code">urls</code>();
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Add "%U" field code.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    this object for chained calls.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.displayName" id="ExecBuilder.displayName"><code class="code">displayName</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.displayName"></span>ref @safe ExecBuilder <code class="code">displayName</code>(string <code class="code">prepend</code> = null);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Add "%c" field code (name of application).
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    this object for chained calls.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.location" id="ExecBuilder.location"><code class="code">location</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.location"></span>ref @safe ExecBuilder <code class="code">location</code>(string <code class="code">prepend</code> = null);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Add "%k" field code (<code class="code">location</code> of desktop file).
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    this object for chained calls.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#ExecBuilder.result" id="ExecBuilder.result"><code class="code">result</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="ExecBuilder.result"></span>const @trusted string <code class="code">result</code>();
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get resulting string that can be set to Exec field of Desktop Entry. The returned string is escaped.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#getTerminalCommand" id="getTerminalCommand"><code class="code">getTerminalCommand</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="getTerminalCommand"></span>nothrow @trusted string[] <code class="code">getTerminalCommand</code>();
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Detect command which will run program in terminal emulator.
+
+  </p>
+</div>
+<div class="ddoc_description">
+  <h4>Discussion</h4>
+  <p class="para">
+    On Freedesktop it looks for x-terminal-emulator first. If found ["/path/to/x-terminal-emulator", "-e"] is returned.
+ Otherwise it looks for xdg-terminal. If found ["/path/to/xdg-terminal"] is returned.
+ Otherwise it tries to detect your desktop environment and find default terminal emulator for it.
+ If all guesses failed, it uses ["xterm", "-e"] as fallback.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+This function always returns empty array on non-freedesktop systems.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions" id="FireOptions"><code class="code">FireOptions</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions"></span>struct <code class="code">FireOptions</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Options to pass to .
+  </p>
+</div>
+
+</section>
+<ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.Exec" id="FireOptions.Exec"><code class="code">Exec</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.Exec"></span><code class="code">Exec</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+     can start applications.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.Link" id="FireOptions.Link"><code class="code">Link</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.Link"></span><code class="code">Link</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+     can open links (urls or file names).
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.FollowLink" id="FireOptions.FollowLink"><code class="code">FollowLink</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.FollowLink"></span><code class="code">FollowLink</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    If desktop file is link and url points to another desktop file fireDesktopFile will be called on this url with the same options.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.All" id="FireOptions.All"><code class="code">All</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.All"></span><code class="code">All</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    <code class="code">All</code> flags described above.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.flags" id="FireOptions.flags"><code class="code">flags</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.flags"></span>int <code class="code">flags</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Flags
+ By default is set to use all <code class="code">flags</code>.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.urls" id="FireOptions.urls"><code class="code">urls</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.urls"></span>const(string)[] <code class="code">urls</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Urls to pass to the program is desktop file points to application.
+ Empty by default.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.locale" id="FireOptions.locale"><code class="code">locale</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.locale"></span>string <code class="code">locale</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Locale of environment.
+ Empty by default.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.opener" id="FireOptions.opener"><code class="code">opener</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.opener"></span>void delegate(string) <code class="code">opener</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Delegate that will be used to open url if desktop file is link.
+ To set static function use std.functional.toDelegate.
+ If it's <code class="code">null</code> fireDesktopFile will use xdg-open.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.terminalDetector" id="FireOptions.terminalDetector"><code class="code">terminalDetector</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.terminalDetector"></span>const(string)[] delegate() <code class="code">terminalDetector</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Delegate that will be used to get terminal command if desktop file is application and needs to ran in terminal.
+ To set static function use std.functional.toDelegate.
+ If it's <code class="code">null</code>, fireDesktopFile will use getTerminalCommand.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#FireOptions.allowMultipleInstances" id="FireOptions.allowMultipleInstances"><code class="code">allowMultipleInstances</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="FireOptions.allowMultipleInstances"></span>bool <code class="code">allowMultipleInstances</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Allow to run multiple instances of application if it does not support opening multiple urls in one instance.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#fireDesktopFile" id="fireDesktopFile"><code class="code">fireDesktopFile</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="fireDesktopFile"></span>void <code class="code">fireDesktopFile</code>(IniLikeReader)(IniLikeReader <code class="code">reader</code>, string <code class="code">fileName</code> = null, FireOptions <code class="code">options</code> = FireOptions.init);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Read the desktop file and run application or open link depending on the type of the given desktop file.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IniLikeReader <code class="code">reader</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+       returned by  or similar function.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">fileName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      file name of desktop file where data read from. Can be used in field code expanding, should be set to the file name from which contents  was constructed.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">FireOptions <code class="code">options</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      <code class="code">options</code> that set behavior of the function.
+ Use this function to execute desktop file fast, without creating of DesktopFile instance.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+    <b>ProcessException</b> on failure to start the process.
+   if exec string is invalid.
+  <b>Exception</b> on other errors.
+
+  </p>
+</div><div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code">string contents;
+FireOptions <span class="param">options</span>;
+
+contents = <span class="string_literal">"[Desktop Entry]\nURL=testurl"</span>;
+<span class="param">options</span>.flags = FireOptions.FollowLink;
+assertThrown(<span class="psymbol">fireDesktopFile</span>(iniLikeStringReader(contents), <span class="keyword">null</span>, <span class="param">options</span>));
+
+contents = <span class="string_literal">"[Group]\nKey=Value"</span>;
+<span class="param">options</span> = FireOptions.init;
+assertThrown(<span class="psymbol">fireDesktopFile</span>(iniLikeStringReader(contents), <span class="keyword">null</span>, <span class="param">options</span>));
+
+contents = <span class="string_literal">"[Desktop Entry]\nURL=testurl"</span>;
+<span class="param">options</span> = FireOptions.init;
+<span class="keyword">bool</span> wasCalled;
+<span class="param">options</span>.opener = <span class="keyword">delegate</span> <span class="keyword">void</span> (string url) {
+    <span class="keyword">assert</span>(url == <span class="string_literal">"testurl"</span>);
+    wasCalled = <span class="keyword">true</span>;
+};
+
+<span class="psymbol">fireDesktopFile</span>(iniLikeStringReader(contents), <span class="keyword">null</span>, <span class="param">options</span>);
+<span class="keyword">assert</span>(wasCalled);
+
+contents = <span class="string_literal">"[Desktop Entry]"</span>;
+<span class="param">options</span> = FireOptions.init;
+assertThrown(<span class="psymbol">fireDesktopFile</span>(iniLikeStringReader(contents), <span class="keyword">null</span>, <span class="param">options</span>));
+
+contents = <span class="string_literal">"[Desktop Entry]\nURL=testurl"</span>;
+<span class="param">options</span>.flags = FireOptions.Exec;
+assertThrown(<span class="psymbol">fireDesktopFile</span>(iniLikeStringReader(contents), <span class="keyword">null</span>, <span class="param">options</span>));
+
+contents = <span class="string_literal">"[Desktop Entry]\nExec=whoami"</span>;
+<span class="param">options</span>.flags = FireOptions.Link;
+assertThrown(<span class="psymbol">fireDesktopFile</span>(iniLikeStringReader(contents), <span class="keyword">null</span>, <span class="param">options</span>));
+
+<span class="keyword">version</span>(desktopfileFileTest) <span class="keyword">static</span> <span class="keyword">if</span> (isFreedesktop) {
+    <span class="keyword">try</span> {
+        contents = <span class="string_literal">"[Desktop Entry]\nExec=whoami\nTerminal=true"</span>;
+        <span class="param">options</span>.flags = FireOptions.Exec;
+        wasCalled = <span class="keyword">false</span>;
+        <span class="param">options</span>.terminalDetector = <span class="keyword">delegate</span> string[] () {wasCalled = <span class="keyword">true</span>; <span class="keyword">return</span> <span class="keyword">null</span>;};
+        <span class="psymbol">fireDesktopFile</span>(iniLikeStringReader(contents), <span class="keyword">null</span>, <span class="param">options</span>);
+        <span class="keyword">assert</span>(wasCalled);
+
+        string tempPath = buildPath(tempDir(), <span class="string_literal">"desktopfile-unittest-tempdir"</span>);
+        <span class="keyword">if</span> (!tempPath.exists) {
+            mkdir(tempPath);
+        }
+        <span class="keyword">scope</span>(exit) rmdir(tempPath);
+
+        string tempDesktopFile = buildPath(tempPath, <span class="string_literal">"followtest.desktop"</span>);
+        <span class="keyword">auto</span> f = File(tempDesktopFile, <span class="string_literal">"w"</span>);
+        <span class="keyword">scope</span>(exit) remove(tempDesktopFile);
+        f.rawWrite(<span class="string_literal">"[Desktop Entry]\nURL=testurl"</span>);
+        f.flush();
+
+        contents = <span class="string_literal">"[Desktop Entry]\nURL="</span> ~ tempDesktopFile;
+        <span class="param">options</span>.flags = FireOptions.Link | FireOptions.FollowLink;
+        <span class="param">options</span>.opener = <span class="keyword">delegate</span> <span class="keyword">void</span> (string url) {
+            <span class="keyword">assert</span>(url == <span class="string_literal">"testurl"</span>);
+            wasCalled = <span class="keyword">true</span>;
+        };
+
+        <span class="psymbol">fireDesktopFile</span>(iniLikeStringReader(contents), <span class="keyword">null</span>, <span class="param">options</span>);
+        <span class="keyword">assert</span>(wasCalled);
+    } <span class="keyword">catch</span>(Exception e) {
+
+    }
+}
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#fireDesktopFile" id="fireDesktopFile"><code class="code">fireDesktopFile</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="fireDesktopFile.2"></span>@trusted void <code class="code">fireDesktopFile</code>(string <code class="code">fileName</code>, FireOptions <code class="code">options</code> = FireOptions.init);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    ditto, but automatically create IniLikeReader from the file.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#desktopId" id="desktopId"><code class="code">desktopId</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="desktopId"></span>string <code class="code">desktopId</code>(Range)(string <code class="code">fileName</code>, Range <code class="code">appsPaths</code>) if (isInputRange!Range &amp;&amp; is(ElementType!Range : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    See <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ape.html">Desktop File ID</a>
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">fileName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Desktop file.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">appsPaths</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Range of base application paths.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Desktop file ID or empty string if file does not have an ID.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code">string[] appPaths;
+string filePath, nestedFilePath, wrongFilePath;
+
+<span class="keyword">version</span>(Windows) {
+    appPaths = [<span class="string_literal">`C:\ProgramData\KDE\share\applications`</span>, <span class="string_literal">`C:\Users\username\.kde\share\applications`</span>];
+    filePath = <span class="string_literal">`C:\ProgramData\KDE\share\applications\example.desktop`</span>;
+    nestedFilePath = <span class="string_literal">`C:\ProgramData\KDE\share\applications\kde\example.desktop`</span>;
+    wrongFilePath = <span class="string_literal">`C:\ProgramData\desktop\example.desktop`</span>;
+} <span class="keyword">else</span> {
+    appPaths = [<span class="string_literal">"/usr/share/applications"</span>, <span class="string_literal">"/usr/local/share/applications"</span>];
+    filePath = <span class="string_literal">"/usr/share/applications/example.desktop"</span>;
+    nestedFilePath = <span class="string_literal">"/usr/share/applications/kde/example.desktop"</span>;
+    wrongFilePath = <span class="string_literal">"/etc/desktop/example.desktop"</span>;
+}
+
+<span class="keyword">assert</span>(<span class="psymbol">desktopId</span>(nestedFilePath, appPaths) == <span class="string_literal">"kde-example.desktop"</span>);
+<span class="keyword">assert</span>(<span class="psymbol">desktopId</span>(filePath, appPaths) == <span class="string_literal">"example.desktop"</span>);
+<span class="keyword">assert</span>(<span class="psymbol">desktopId</span>(wrongFilePath, appPaths).empty);
+<span class="keyword">assert</span>(<span class="psymbol">desktopId</span>(<span class="string_literal">""</span>, appPaths).empty);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#desktopId" id="desktopId"><code class="code">desktopId</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="desktopId.2"></span>nothrow @trusted string <code class="code">desktopId</code>(string <code class="code">fileName</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    See <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ape.html">Desktop File ID</a>
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Desktop file ID or empty string if file does not have an ID.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">fileName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Desktop file.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+This function retrieves applications paths each time it's called and therefore can impact performance. To avoid this issue use the overload with argument.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findDesktopFile" id="findDesktopFile"><code class="code">findDesktopFile</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findDesktopFile"></span>string <code class="code">findDesktopFile</code>(Range)(string <code class="code">desktopId</code>, Range <code class="code">appsPaths</code>) if (isInputRange!Range &amp;&amp; is(ElementType!Range : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find desktop file by Desktop File ID.
+ Desktop file ID can be ambiguous when it has hyphen symbol, so this function can try both variants.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">desktopId</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Desktop file ID.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">appsPaths</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Range of base application paths.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    The first found existing desktop file, or <code class="code">null</code> if could not find any.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+This does not ensure that file is valid .desktop file.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">assert</span>(<span class="psymbol">findDesktopFile</span>(<span class="string_literal">"not base/path.desktop"</span>, [<span class="string_literal">"/usr/share/applications"</span>]) <span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(<span class="psymbol">findDesktopFile</span>(<span class="string_literal">"valid.desktop"</span>, (string[]).init) <span class="keyword">is</span> <span class="keyword">null</span>);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findDesktopFile" id="findDesktopFile"><code class="code">findDesktopFile</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findDesktopFile.2"></span>nothrow @trusted string <code class="code">findDesktopFile</code>(string <code class="code">desktopId</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    ditto
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+This function retrieves applications paths each time it's called and therefore can impact performance. To avoid this issue use the overload with argument.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#isTrusted" id="isTrusted"><code class="code">isTrusted</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="isTrusted"></span>nothrow @trusted bool <code class="code">isTrusted</code>(string <code class="code">appFileName</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Check if .desktop file is trusted.
+
+  </p>
+</div>
+<div class="ddoc_description">
+  <h4>Discussion</h4>
+  <p class="para">
+    This is not actually part of Desktop File Specification but many desktop envrionments have this concept.
+ The trusted .desktop file is a file the current user has executable access on or the owner of which is root.
+ This function should be applicable only to desktop files of  type.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+Always returns <code class="code">true</code> on non-posix systems.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+  </div>
+</section>
+</section>
+      </article>
+    </div>
+  </body>
+</html>

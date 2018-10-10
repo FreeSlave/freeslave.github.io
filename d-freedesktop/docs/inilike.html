@@ -178,6 +178,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="./mime/stores/files.html">files</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -198,6 +203,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="./mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/glob.html">glob</a>
 					</div>
 				</li>
 				<li>
@@ -235,6 +245,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="./mime/type.html">type</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="./mime/xml.html">xml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -253,15 +268,17 @@ $('#symbolSearchPane').show();</script>
 			<h1>Module inilike</h1><p>Reading and writing ini-like files used in some Unix systems and Freedesktop specifications.
 </p><section><p>ini-like is informal name for the file format that look like this:
 </p>
-<pre class="code"><code class="lang-d"><span class="pln"># </span><span class="typ">Comment
-</span><span class="pun">[</span><span class="typ">Group </span><span class="pln">name</span><span class="pun">]
-</span><span class="typ">Key</span><span class="pun">=</span><span class="typ">Value
-</span><span class="pln"># </span><span class="typ">Comment </span><span class="pln">inside group
-</span><span class="typ">AnotherKey</span><span class="pun">=</span><span class="typ">Value
+<pre class="code"><code class="lang-d"><span class="str">`
+# Comment
+[Group name]
+Key=Value
+# Comment inside group
+AnotherKey=Value
 
-</span><span class="pun">[</span><span class="typ">Another </span><span class="pln">group</span><span class="pun">]
-</span><span class="typ">Key</span><span class="pun">=</span><span class="typ">English </span><span class="pln">value
-</span><span class="typ">Key</span><span class="pun">[</span><span class="pln">fr_FR</span><span class="pun">]=</span><span class="typ">Francais </span><span class="pln">value
+[Another group]
+Key=English value
+Key[fr_FR]=Francais value
+`
 </span></code></pre>
 <p> To work with ini-like files correctly it's essential to understand the difference between escaped values and unescaped ones.
  Escaping is needed to represent new line characters in values.
@@ -270,8 +287,8 @@ $('#symbolSearchPane').show();</script>
 </span><span class="typ">Slash</span><span class="pun">=</span><span class="str">"\\"
 </span><span class="typ">CarriageReturn</span><span class="pun">=</span><span class="str">"\r"</span></code></pre>
 
-<p> In <code class="lang-d"><a href="./inilike/file/IniLikeGroup.html" title="inilike.file.IniLikeGroup"><span class="typ">IniLikeGroup</span></a></code> internally all values are stored in the escaped form.
- This is 'true' form of values as this is how they are stored in the file.
+<p> In <code class="lang-d"><a href="./inilike/file/IniLikeGroup.html" title="inilike.file.IniLikeGroup"><span class="typ">IniLikeGroup</span></a></code> internally all values are stored in the escaped form
+ (the same way as they are stored in the file).
 </p>
 </section>
 

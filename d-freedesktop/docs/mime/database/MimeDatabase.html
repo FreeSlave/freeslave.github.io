@@ -178,6 +178,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../mime/stores/files.html">files</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -198,6 +203,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
 					</div>
 				</li>
 				<li>
@@ -233,6 +243,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../../mime/type.html">type</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/xml.html">xml</a>
 					</div>
 				</li>
 			</ul>
@@ -411,8 +426,8 @@ $('#symbolSearchPane').show();</script>
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForData</span><span class="pun">(</span><span class="str">"IDSP\x02\x00\x00\x00"</span><span class="pun">) == </span><span class="str">"image/x-hlsprite"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">resolveAlias</span><span class="pun">(</span><span class="str">"application/nonexistent"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
 
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForNamespaceUri</span><span class="pun">(</span><span class="str">"http://www.w3.org/1999/ent"</span><span class="pun">) == </span><span class="str">"text/x-ent"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForNamespaceUri</span><span class="pun">(</span><span class="str">"nonexistent"</span><span class="pun">)<wbr/>.</span><span class="pln">empty</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForNamespaceURI</span><span class="pun">(</span><span class="str">"http://www.w3.org/1999/ent"</span><span class="pun">) == </span><span class="str">"text/x-ent"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">detector<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForNamespaceURI</span><span class="pun">(</span><span class="str">"nonexistent"</span><span class="pun">)<wbr/>.</span><span class="pln">empty</span><span class="pun">);
 
 </span><span class="kwd">auto </span><span class="pln">database </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">MimeDatabase</span><span class="pun">(<a href="../../mime/database/MimeDatabase.store.html"></span><span class="pln">store</span></a><span class="pun">, <a href="../../mime/database/MimeDatabase.detector.html"></span><span class="pln">detector</span></a><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">detector</span><span class="pun">() </span><span class="kwd">is <a href="../../mime/database/MimeDatabase.detector.html"></span><span class="pln">detector</span></a><span class="pun">);
@@ -529,6 +544,11 @@ $('#symbolSearchPane').show();</script>
 </span><span class="com">//conflicts
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"file.jmf"</span><span class="pun">));
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForData</span><span class="pun">(</span><span class="str">"PACK"</span><span class="pun">));
+
+</span><span class="com">//xml
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFileName</span><span class="pun">(</span><span class="str">"file.xml"</span><span class="pun">)<wbr/>.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"application/xml"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForData</span><span class="pun">(</span><span class="str">"&lt;?xml"</span><span class="pun">)<wbr/>.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"application/xml"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">database<wbr/></span><span class="pun">.</span><span class="pln">mimeTypeForFile</span><span class="pun">(</span><span class="str">"file.xml"</span><span class="pun">, </span><span class="str">`&lt;start-element xmlns="http://www.w3.org/1999/ent"&gt;`</span><span class="pun">)<wbr/>.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"text/x-ent"</span><span class="pun">);
 </span></code></pre>
 </section>
 

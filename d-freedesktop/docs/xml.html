@@ -1,0 +1,1228 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>mime.xml</title>
+    <style type="text/css" media="screen">
+      html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+      blockquote, pre, a, abbr, address, cite, code, del, dfn, em, figure,
+      img, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, u, i, dl,
+      dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+      tbody, tfoot, thead, tr, th, td {
+        background: transparent none repeat scroll 0 0;
+        border: 0 none;
+        font-size: 100%;
+        margin: 0;
+        outline: 0 none;
+        padding: 0;
+        vertical-align: baseline;
+      }
+
+      .color_red { color: #dc322f; }
+      .color_blue { color: #268bd2; }
+      .color_green { color: #859901; }
+      .color_yellow { color: #b58901; }
+      .color_black { color: black; }
+      .color_white { color: white; }
+
+      .font_big {
+        font-size: 1.2em;
+      }
+
+      .ddoc_section_h {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 19.5px;
+        margin-top: 11px;
+        display: block;
+      }
+
+      body.dlang .dlang {
+        display: inline-block;
+      }
+
+      body.dlang .declaration .dlang {
+          display: block;
+      }
+
+      body.dlang .ddoc_header_anchor a.dlang {
+        display: block;
+        color: rgba(0, 136, 204, 1);
+        text-decoration: none;
+      }
+
+      body.dlang .ddoc_header_anchor .code {
+        color: rgba(0, 136, 204, 1);
+      }
+
+      #ddoc_main .module {
+          border-color: currentColor rgba(233, 233, 233, 1) rgba(233, 233, 233, 1);
+          border-style: none solid solid;
+          border-width: 0 1px 1px;
+          overflow-x: hidden;
+          padding: 15px;
+      }
+
+      #ddoc_main .section .section {
+        margin-top: 0;
+      }
+
+      #ddoc_main .ddoc_module_members_section {
+          padding: 1px 0 0;
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .ddoc_member, #ddoc_main .ddoc_module_members section.intro {
+          background: #fff none repeat scroll 0 0;
+          list-style-type: none;
+          width: 100%;
+      }
+
+      #ddoc_main .ddoc_header_anchor {
+          font-size: 1.4em;
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .ddoc_header_anchor > .code {
+          display: inline-block;
+
+      }
+
+      #ddoc_main .ddoc_decl {
+        background-color: transparent;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: 0;
+        padding-left: 15px;
+      }
+
+      #ddoc_main .ddoc_decl .section, #ddoc_main .section.ddoc_sections {
+        background: white none repeat scroll 0 0;
+        margin: 0;
+        padding: 5px;
+        position: relative;
+        border-radius: 5px;
+      }
+
+      #ddoc_main .ddoc_decl .section h4, #ddoc_main .section.ddoc_sections h4 {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 21px;
+      }
+
+      #ddoc_main .section .declaration {
+          margin-top: 21px;
+      }
+
+      #ddoc_main .section .declaration .code {
+          color: rgba(0, 0, 0, 1);
+          margin-bottom: 15px;
+          padding-bottom: 6px;
+      }
+
+      #ddoc_main .declaration div .para {
+          margin-bottom: 0;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr td:first-of-type {
+        padding: 7px;
+        text-align: right;
+        vertical-align: top;
+        word-break: normal;
+        white-space: nowrap;
+      }
+
+      #ddoc_main .ddoc_params .graybox {
+        border: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox td {
+        border-color: rgba(214, 214, 214, 1);
+      }
+
+      #ddoc_main .ddoc_params .graybox tr:first-child > td {
+        border-top: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr:last-child > td {
+        border-bottom: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr > td:first-child {
+        border-left: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr > td:last-child {
+        border-right: 0 none;
+        width: 100%;
+      }
+
+      #ddoc_main em.term, #ddoc_main em.term .code {
+        color: rgba(65, 65, 65, 1);
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      #ddoc_main .see-also {
+        cursor: pointer;
+        font-family: Menlo,monospace;
+      }
+
+      #ddoc_main .ddoc_decl .section > div:last-of-type {
+        margin-bottom: 15px;
+      }
+
+      #ddoc_main .ddoc_member, #ddoc_main .ddoc_module_members {
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .code_sample {
+        background: inherit;
+      }
+
+      #ddoc_main .declaration .code-line {
+          display: block;
+          font: 1em Menlo,monospace;
+      }
+
+      #ddoc_main a[name] {
+        margin: -112px 0 0;
+        padding-top: 112px;
+      }
+
+      #ddoc_main .ddoc_decl td {
+        max-width: inherit;
+      }
+
+      #ddoc_main .declaration a {
+        color: inherit;
+      }
+
+      #ddoc_main .declaration a:hover {
+          color: rgba(0, 136, 204, 1);
+          text-decoration: underline;
+      }
+
+      body.ddoc {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 1);
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 62.5%;
+        margin: 0;
+        border: 0;
+        left: 0;
+        top: 0;
+        padding: 0;
+      }
+
+      .ddoc a[name] {
+        display: block;
+        height: 0;
+        margin: -85px 0 0;
+        padding-top: 85px;
+        width: 0;
+      }
+
+      .ddoc .module {
+          border-color: transparent;
+          background-color: rgba(255, 255, 255, 1);
+          border-color: currentColor rgba(233, 233, 233, 1) rgba(233, 233, 233, 1);
+          border-image: none;
+          border-style: none solid solid;
+          border-width: 0 1px 1px;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.07);
+          display: block;
+          margin-left: 0;
+          min-height: calc(100% - 173px);
+          overflow: auto;
+          padding-bottom: 100px;
+      }
+
+      .ddoc .content_wrapper {
+          background-color: rgba(242, 242, 242, 1);
+          margin: 0 auto;
+          max-width: 980px;
+      }
+
+      .ddoc .section {
+        padding: 15px 25px 30px;
+      }
+
+      .ddoc .section .section {
+        margin: 30px 0 0;
+        padding: 0;
+      }
+
+      .ddoc .para {
+        color: rgba(65, 65, 65, 1);
+        font-size: 1.4em;
+        line-height: 145%;
+        margin-bottom: 15px;
+      }
+
+      .ddoc .ddoc_examples .para {
+        margin-bottom: 0;
+      }
+
+      .ddoc .module_name {
+          color: rgba(0, 0, 0, 1);
+          display: block;
+          font-family: Helvetica;
+          font-size: 2.8em;
+          font-weight: 100;
+          margin-bottom: 0;
+          padding: 15px 0;
+      }
+
+      .ddoc .module a {
+          color: rgba(0, 136, 204, 1);
+          text-decoration: none;
+      }
+
+      .ddoc .code {
+        color: rgba(128, 128, 128, 1);
+        font-family: Menlo,monospace;
+        font-size: 0.85em;
+        word-wrap: break-word;
+      }
+
+      .ddoc .code i {
+        font-style: normal;
+      }
+
+      .ddoc .code .code {
+        font-size: 1em;
+      }
+
+      .ddoc .code_sample {
+        background-clip: padding-box;
+        margin: 1px 0;
+        text-align: left;
+      }
+
+      .ddoc .code_sample {
+        display: block;
+        font-size: 1.4em;
+        margin-left: 21px;
+      }
+
+      .ddoc ol .code_sample {
+        font-size: 1em;
+      }
+
+      .ddoc .code_lines {
+        counter-reset: li;
+        line-height: 1.6em;
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ddoc .code_listing .code_sample div {
+        margin-left: 13px;
+        width: 93%;
+      }
+
+      .ddoc .code_listing .code_sample div .code_lines li {
+        list-style-type: none;
+        margin: 0;
+        padding-right: 10px;
+      }
+
+      .ddoc .code_sample div .code_lines li::before {
+        margin-left: -33px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample div .code_lines li:nth-child(n+10)::before {
+        margin-left: -39px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample div .code_lines li:nth-child(n+100)::before {
+        margin-left: -46px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample .code_lines .code {
+        color: #000;
+      }
+
+      .ddoc div.dlang {
+        margin: 10px 0 21px;
+        padding: 4px 0 2px 10px;
+      }
+
+      .ddoc div.dlang {
+          margin: 10px 0 21px;
+          padding: 4px 0 2px 10px;
+      }
+
+      .ddoc div.dlang {
+        border-left: 5px solid rgba(0, 155, 51, 0.2);
+      }
+
+      .ddoc .code_lines li::before {
+        color: rgba(128, 128, 128, 1);
+        content: counter(li, decimal);
+        counter-increment: li;
+        font-family: Menlo,monospace;
+        font-size: 0.9em;
+        margin-right: 16px;
+      }
+
+      .ddoc .code_lines li {
+        padding-left: 0;
+        white-space: pre-wrap;
+      }
+
+      .ddoc .code_lines li:only-of-type::before {
+        color: rgba(255, 255, 255, 1);
+        content: " ";
+      }
+
+      .ddoc .code_lines li:only-of-type {
+        color: rgba(255, 255, 255, 1);
+        content: " ";
+      }
+
+      .ddoc .code_lines li:nth-child(n+10) {
+        text-indent: -17px;
+      }
+
+      .ddoc .code_lines li:nth-child(n+10)::before {
+        margin-right: 12px;
+      }
+
+      .ddoc .graybox {
+        border: 1px solid rgba(233, 233, 233, 1);
+        border-collapse: collapse;
+        border-spacing: 0;
+        empty-cells: hide;
+        margin: 20px 0 36px;
+        text-align: left;
+      }
+
+      .ddoc .graybox p {
+        margin: 0;
+        min-width: 50px;
+      }
+
+      .ddoc td {
+        border: 1px solid rgba(233, 233, 233, 1);
+        margin: 0;
+        max-width: 260px;
+        padding: 5px 25px 5px 10px;
+        vertical-align: middle;
+      }
+
+      .punctuation {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .comment {
+        color: rgba(0, 131, 18, 1);
+      }
+
+      .operator {
+        color: #000;
+      }
+
+      .keyword {
+        color: rgba(170, 13, 145, 1);
+      }
+
+      .keyword_type {
+        color: rgba(170, 51, 145, 1);
+      }
+
+      .string_literal {
+        color: rgba(196, 26, 22, 1);
+      }
+
+      .ddoc_psuper_symbol {
+        color: rgba(92, 38, 153, 1);
+      }
+
+      .param {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .psymbol {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .ddoc_member_header .ddoc_header_anchor .code {
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body id="ddoc_main" class="ddoc dlang">
+    <div class="content_wrapper">
+      <article class="module">
+        <h1 class="module_name">mime.xml</h1>
+        <section id="module_content"><section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Functions for reading XML descriptions of MIME types.
+
+  </p>
+</div>
+<div class="ddoc_authors">
+  <h4>Authors</h4>
+  <p class="para">
+    <a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+
+  </p>
+</div>
+<div class="ddoc_license">
+  <h4>License</h4>
+  <p class="para">
+    <a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+  </p>
+</div>
+
+</section>
+<section class="section ddoc_module_members_section">
+  <div class="ddoc_module_members">
+    <ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#XMLMimeException" id="XMLMimeException"><code class="code">XMLMimeException</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="XMLMimeException"></span>class <code class="code">XMLMimeException</code>: <span class="ddoc_psuper_symbol">object.Exception</span>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Exception that's thrown on invalid XML definition of MIME type.
+  </p>
+</div>
+
+</section>
+<ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#XMLMimeException.lineNum" id="XMLMimeException.lineNum"><code class="code">lineNum</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="XMLMimeException.lineNum"></span>const nothrow @nogc @safe int <code class="code">lineNum</code>();
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Line number in XML file where error occured. Don't confuse with <b>line</b> property of <b>Throwable</b>
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#XMLMimeException.column" id="XMLMimeException.column"><code class="code">column</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="XMLMimeException.column"></span>const nothrow @nogc @safe int <code class="code">column</code>();
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Column number in XML file where error occured.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#matchTypeFromString" id="matchTypeFromString"><code class="code">matchTypeFromString</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="matchTypeFromString"></span>pure nothrow @nogc @safe MagicMatch.Type <code class="code">matchTypeFromString</code>(const(char)[] <code class="code">str</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get symbolic constant of match type according to the string.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+     for passed string, or  if type name is unknown.
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">assert</span>(<span class="psymbol">matchTypeFromString</span>(<span class="string_literal">"string"</span>) == MagicMatch.Type.string_);
+<span class="keyword">assert</span>(<span class="psymbol">matchTypeFromString</span>(<span class="string_literal">"little32"</span>) == MagicMatch.Type.little32);
+<span class="keyword">assert</span>(<span class="psymbol">matchTypeFromString</span>(<span class="string_literal">"byte"</span>) == MagicMatch.Type.byte_);
+<span class="keyword">assert</span>(<span class="psymbol">matchTypeFromString</span>(<span class="string_literal">""</span>) == MagicMatch.Type.string_);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#treeMatchTypeFromString" id="treeMatchTypeFromString"><code class="code">treeMatchTypeFromString</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="treeMatchTypeFromString"></span>pure nothrow @nogc @safe TreeMatch.Type <code class="code">treeMatchTypeFromString</code>(const(char)[] <code class="code">str</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get symbolic constant of tree match type according to the string.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+     for passed string, or  if type name is unknown.
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">assert</span>(<span class="psymbol">treeMatchTypeFromString</span>(<span class="string_literal">"file"</span>) == TreeMatch.Type.file);
+<span class="keyword">assert</span>(<span class="psymbol">treeMatchTypeFromString</span>(<span class="string_literal">"directory"</span>) == TreeMatch.Type.directory);
+<span class="keyword">assert</span>(<span class="psymbol">treeMatchTypeFromString</span>(<span class="string_literal">"link"</span>) == TreeMatch.Type.link);
+<span class="keyword">assert</span>(<span class="psymbol">treeMatchTypeFromString</span>(<span class="string_literal">""</span>) == TreeMatch.Type.any);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#readMediaSubtypeFile" id="readMediaSubtypeFile"><code class="code">readMediaSubtypeFile</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="readMediaSubtypeFile"></span>@trusted MimeType <code class="code">readMediaSubtypeFile</code>(string <code class="code">filePath</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Read MIME type from MEDIA/SUBTYPE.xml file (e.g. image/png.xml).
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+     parsed from xml definition.
+
+  </p>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+     on format error or <b>std.file.FileException</b> on file reading error.
+
+  </p>
+</div><div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+According to the spec MEDIA/SUBTYPE.xml files have magic, root-XML and glob fields removed.
+  In reality glob fields stay untouched, but this may change in future and this behavior should not be relied on.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#readMediaSubtypeXML" id="readMediaSubtypeXML"><code class="code">readMediaSubtypeXML</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="readMediaSubtypeXML"></span>@trusted MimeType <code class="code">readMediaSubtypeXML</code>(const(char)[] <code class="code">xmlData</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Read MIME type from xml formatted data with mime-type root element as defined by spec.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+     parsed from xml definition.
+
+  </p>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+     on format error.
+
+  </p>
+</div><div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> <span class="param">xmlData</span> = <span class="string_literal">`&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;mime-type xmlns="http://www.freedesktop.org/standards/shared-mime-info" type="text/markdown"&gt;
+&lt;!--Created automatically by update-mime-database. DO NOT EDIT!--&gt;
+&lt;comment&gt;Markdown document&lt;/comment&gt;
+&lt;comment xml:lang="ru"&gt;документ Markdown&lt;/comment&gt;
+&lt;sub-class-of type="text/plain"/&gt;
+&lt;x-unknown&gt;Just for a test&lt;/x-unknown&gt;
+&lt;glob pattern="*.md"/&gt;
+&lt;glob pattern="*.mkd" weight="40"/&gt;
+&lt;glob pattern="*.markdown" case-sensitive="true"/&gt;
+&lt;alias type="text/x-markdown"/&gt;
+&lt;/mime-type&gt;`</span>;
+<span class="keyword">auto</span> mimeType = <span class="psymbol">readMediaSubtypeXML</span>(<span class="param">xmlData</span>);
+<span class="keyword">assert</span>(mimeType.name == <span class="string_literal">"text/markdown"</span>);
+<span class="keyword">assert</span>(mimeType.displayName == <span class="string_literal">"Markdown document"</span>);
+<span class="keyword">assert</span>(mimeType.aliases == [<span class="string_literal">"text/x-markdown"</span>]);
+<span class="keyword">assert</span>(mimeType.parents == [<span class="string_literal">"text/plain"</span>]);
+<span class="keyword">assert</span>(mimeType.globs == [MimeGlob(<span class="string_literal">"*.md"</span>), MimeGlob(<span class="string_literal">"*.mkd"</span>, 40), MimeGlob(<span class="string_literal">"*.markdown"</span>, defaultGlobWeight, <span class="keyword">true</span>)]);
+
+<span class="keyword">import</span> std.exception : assertThrown, assertNotThrown;
+<span class="keyword">auto</span> notXml = <span class="string_literal">"not xml"</span>;
+assertThrown!XMLMimeException(<span class="psymbol">readMediaSubtypeXML</span>(notXml));
+<span class="keyword">auto</span> invalidEmpty = <span class="string_literal">`&lt;?xml version="1.0" encoding="utf-8"?&gt;`</span>;
+assertThrown!XMLMimeException(<span class="psymbol">readMediaSubtypeXML</span>(invalidEmpty));
+
+<span class="keyword">auto</span> notNumber = <span class="string_literal">`&lt;mime-type type="text/markdown"&gt;
+&lt;glob pattern="*.mkd" weight="not_a_number"/&gt;
+&lt;/mime-type&gt;`</span>;
+assertThrown!XMLMimeException(<span class="psymbol">readMediaSubtypeXML</span>(notNumber));
+
+<span class="keyword">auto</span> validEmpty = <span class="string_literal">`&lt;mime-type type="text/markdown"&gt;&lt;/mime-type&gt;`</span>;
+assertNotThrown(<span class="psymbol">readMediaSubtypeXML</span>(validEmpty));
+
+<span class="keyword">auto</span> missingName = <span class="string_literal">`&lt;mime-type&gt;&lt;/mime-type&gt;`</span>;
+assertThrown(<span class="psymbol">readMediaSubtypeXML</span>(missingName));
+
+<span class="keyword">auto</span> noPattern = <span class="string_literal">`&lt;mime-type type="text/markdown"&gt;
+&lt;glob pattern=""/&gt;&lt;/mime-type&gt;`</span>;
+assertThrown!XMLMimeException(<span class="psymbol">readMediaSubtypeXML</span>(noPattern));
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#readMimePackageFile" id="readMimePackageFile"><code class="code">readMimePackageFile</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="readMimePackageFile"></span>XMLPackageRange <code class="code">readMimePackageFile</code>(string <code class="code">filePath</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Lazily read MIME types from packages/package_name.xml file (e.g. packages/freedesktop.org.xml).
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Forward range of  elements parsed from xml definition.
+
+  </p>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+     on format error or <b>std.file.FileException</b> on file reading error.
+
+  </p>
+</div><div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+Package files are source files. They may be not synced with output files produced by <b>update-mime-database</b>
+  (e.g. if source file had been changed, but the mentioned utility was not called after that)
+  Source files however contain the most complete definition of MIME type including globs, magic rules and XML namespaces.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#readMimePackageXML" id="readMimePackageXML"><code class="code">readMimePackageXML</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="readMimePackageXML"></span>XMLPackageRange <code class="code">readMimePackageXML</code>(string <code class="code">xmlData</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Read MIME types from xml formatted data with mime-info root element as defined by spec.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Forward range of  elements parsed from xml definition.
+
+  </p>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+     on format error.
+
+  </p>
+</div><div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code">string <span class="param">xmlData</span> = <span class="string_literal">`&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info"&gt;
+&lt;mime-type type="image/x-sigma-x3f"&gt;
+    &lt;comment&gt;Sigma X3F raw image&lt;/comment&gt;
+    &lt;sub-class-of type="image/x-dcraw"/&gt;
+    &lt;magic priority="60"&gt;
+        &lt;match value="FOVb" type="string" offset="0"&gt;
+            &lt;match value="0x00FF00FF" type="little32" offset="4" mask="0xFF00FF00"/&gt;
+        &lt;/match&gt;
+    &lt;/magic&gt;
+    &lt;glob pattern="*.x3f"/&gt;
+&lt;/mime-type&gt;
+    &lt;mime-type type="image/svg+xml"&gt;
+    &lt;comment&gt;SVG image&lt;/comment&gt;
+    &lt;sub-class-of type="application/xml"/&gt;
+    &lt;magic priority="80"&gt;
+        &lt;match value="&amp;lt;!DOCTYPE svg" type="string" offset="0:256"/&gt;
+        &lt;match value="&amp;lt;svg" type="string" offset="0:256"/&gt;
+    &lt;/magic&gt;
+    &lt;glob pattern="*.svg"/&gt;
+    &lt;root-XML namespaceURI="http://www.w3.org/2000/svg" localName="svg"/&gt;
+&lt;/mime-type&gt;
+&lt;mime-type type="x-content/video-bluray"&gt;
+    &lt;comment&gt;Blu-ray video disc&lt;/comment&gt;
+    &lt;treemagic&gt;
+    &lt;treematch type="directory" path="BDAV" non-empty="true" match-case="true"/&gt;
+    &lt;treematch type="directory" path="BDMV" non-empty="true"/&gt;
+    &lt;/treemagic&gt;
+&lt;/mime-type&gt;
+&lt;mime-type type="application/x-sharedlib"&gt;
+    &lt;magic priority="50"&gt;
+        &lt;match value="\177ELF            \003" type="string" offset="0" mask="0xffffffff000000000000000000000000ff"/&gt;
+    &lt;/magic&gt;
+&lt;/mime-type&gt;
+&lt;/mime-info&gt;`</span>;
+<span class="keyword">auto</span> range = <span class="psymbol">readMimePackageXML</span>(<span class="param">xmlData</span>);
+<span class="keyword">assert</span>(!range.empty);
+<span class="keyword">auto</span> mimeType = range.front;
+<span class="keyword">assert</span>(mimeType <span class="keyword">is</span> range.front);
+<span class="keyword">assert</span>(mimeType.name == <span class="string_literal">"image/x-sigma-x3f"</span>);
+<span class="keyword">assert</span>(mimeType.magics.length == 1);
+<span class="keyword">auto</span> magic = mimeType.magics[0];
+<span class="keyword">assert</span>(magic.weight == 60);
+<span class="keyword">assert</span>(magic.matches.length == 1);
+<span class="keyword">auto</span> match = magic.matches[0];
+<span class="keyword">assert</span>(match.type == MagicMatch.Type.string_);
+<span class="keyword">assert</span>(match.value == <span class="string_literal">"FOVb"</span>);
+<span class="keyword">assert</span>(match.submatches.length == 1);
+<span class="keyword">auto</span> submatch = match.submatches[0];
+<span class="keyword">assert</span>(submatch.type == MagicMatch.Type.little32);
+<span class="keyword">const</span> <span class="keyword">uint</span> val = 0x00FF00FF;
+<span class="keyword">const</span> <span class="keyword">uint</span> mask = 0xFF00FF00;
+<span class="keyword">import</span> std.bitmanip : nativeToLittleEndian;
+<span class="keyword">auto</span> valArr = nativeToLittleEndian(val);
+<span class="keyword">auto</span> maskArr = nativeToLittleEndian(mask);
+<span class="keyword">assert</span>(submatch.value == valArr[]);
+<span class="keyword">assert</span>(submatch.mask == maskArr[]);
+
+range.popFront();
+<span class="keyword">assert</span>(!range.empty);
+
+mimeType = range.front;
+<span class="keyword">assert</span>(mimeType.XMLnamespaces == [XMLnamespace(<span class="string_literal">"http://www.w3.org/2000/svg"</span>, <span class="string_literal">"svg"</span>)]);
+<span class="keyword">assert</span>(mimeType.name == <span class="string_literal">"image/svg+xml"</span>);
+<span class="keyword">assert</span>(mimeType.magics.length == 1);
+<span class="keyword">auto</span> magic2 = mimeType.magics[0];
+<span class="keyword">assert</span>(magic2.weight == 80);
+<span class="keyword">assert</span>(magic2.matches.length == 2);
+<span class="keyword">auto</span> match2 = magic2.matches[1];
+<span class="keyword">assert</span>(match2.type == MagicMatch.Type.string_);
+<span class="keyword">assert</span>(match2.value == <span class="string_literal">"&lt;svg"</span>);
+
+range.popFront();
+<span class="keyword">assert</span>(!range.empty);
+
+mimeType = range.front;
+<span class="keyword">assert</span>(mimeType.name == <span class="string_literal">"x-content/video-bluray"</span>);
+<span class="keyword">assert</span>(mimeType.treeMagics.length == 1);
+<span class="keyword">auto</span> treeMagic = mimeType.treeMagics[0];
+<span class="keyword">assert</span>(treeMagic.matches.length == 2);
+<span class="keyword">auto</span> treeMatch = treeMagic.matches[0];
+<span class="keyword">assert</span>(treeMatch.path == <span class="string_literal">"BDAV"</span>);
+<span class="keyword">assert</span>(treeMatch.nonEmpty);
+<span class="keyword">assert</span>(treeMatch.matchCase);
+
+range.popFront();
+
+mimeType = range.front;
+<span class="keyword">assert</span>(mimeType);
+<span class="keyword">assert</span>(mimeType.magics.length == 1);
+<span class="keyword">auto</span> magic3 = mimeType.magics[0];
+<span class="keyword">assert</span>(magic3.matches.length == 1);
+<span class="keyword">auto</span> match3 = magic3.matches[0];
+<span class="keyword">assert</span>(match3.mask == <span class="string_literal">"\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff"</span>);
+
+range.popFront();
+<span class="keyword">assert</span>(range.empty);
+<span class="keyword">assert</span>(range.empty);
+
+<span class="keyword">import</span> std.exception : collectException;
+<span class="param">xmlData</span> = <span class="string_literal">`&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info"&gt;
+&lt;mime-type type="application/x-sharedlib"&gt;
+    &lt;magic priority="50"&gt;
+        &lt;match value="\177ELF            \003" type="string" offset="0" mask="wrong_format"/&gt;
+    &lt;/magic&gt;
+&lt;/mime-type&gt;
+&lt;/mime-info&gt;`</span>;
+range = <span class="psymbol">readMimePackageXML</span>(<span class="param">xmlData</span>);
+<span class="keyword">assert</span>(!range.empty);
+<span class="keyword">auto</span> e = collectException!XMLMimeException(range.front);
+<span class="keyword">assert</span>(e !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(e.lineNum == 5);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#getXMLnamespaceFromData" id="getXMLnamespaceFromData"><code class="code">getXMLnamespaceFromData</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="getXMLnamespaceFromData"></span>string <code class="code">getXMLnamespaceFromData</code>(const(char)[] <code class="code">xmlData</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get XML namespace from text data. The text is not required to be a data of the whole file.
+ Note however that some xml files may contain a big portion of DOCTYPE declaration at the start.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    xmlns attribute of the root xml element or <code class="code">null</code> if text is not xml-formatted or does not have a namespace.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> <span class="param">xmlData</span> = <span class="string_literal">`&lt;mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info"&gt;`</span>;
+<span class="keyword">assert</span>(<span class="psymbol">getXMLnamespaceFromData</span>(<span class="param">xmlData</span>) == <span class="string_literal">"http://www.freedesktop.org/standards/shared-mime-info"</span>);
+<span class="keyword">assert</span>(<span class="psymbol">getXMLnamespaceFromData</span>(<span class="string_literal">"&lt;start-element&gt;"</span>) == string.init);
+<span class="keyword">assert</span>(<span class="psymbol">getXMLnamespaceFromData</span>(<span class="string_literal">""</span>) == string.init);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#getXMLnamespaceFromFile" id="getXMLnamespaceFromFile"><code class="code">getXMLnamespaceFromFile</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="getXMLnamespaceFromFile"></span>string <code class="code">getXMLnamespaceFromFile</code>(string <code class="code">fileName</code>, size_t <code class="code">upTo</code> = dataSizeToRead);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get XML namespace of file.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+  </div>
+</section>
+</section>
+      </article>
+    </div>
+  </body>
+</html>

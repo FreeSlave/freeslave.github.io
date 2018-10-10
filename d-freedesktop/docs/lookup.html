@@ -1,0 +1,3038 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>icontheme.lookup</title>
+    <style type="text/css" media="screen">
+      html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+      blockquote, pre, a, abbr, address, cite, code, del, dfn, em, figure,
+      img, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, u, i, dl,
+      dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+      tbody, tfoot, thead, tr, th, td {
+        background: transparent none repeat scroll 0 0;
+        border: 0 none;
+        font-size: 100%;
+        margin: 0;
+        outline: 0 none;
+        padding: 0;
+        vertical-align: baseline;
+      }
+
+      .color_red { color: #dc322f; }
+      .color_blue { color: #268bd2; }
+      .color_green { color: #859901; }
+      .color_yellow { color: #b58901; }
+      .color_black { color: black; }
+      .color_white { color: white; }
+
+      .font_big {
+        font-size: 1.2em;
+      }
+
+      .ddoc_section_h {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 19.5px;
+        margin-top: 11px;
+        display: block;
+      }
+
+      body.dlang .dlang {
+        display: inline-block;
+      }
+
+      body.dlang .declaration .dlang {
+          display: block;
+      }
+
+      body.dlang .ddoc_header_anchor a.dlang {
+        display: block;
+        color: rgba(0, 136, 204, 1);
+        text-decoration: none;
+      }
+
+      body.dlang .ddoc_header_anchor .code {
+        color: rgba(0, 136, 204, 1);
+      }
+
+      #ddoc_main .module {
+          border-color: currentColor rgba(233, 233, 233, 1) rgba(233, 233, 233, 1);
+          border-style: none solid solid;
+          border-width: 0 1px 1px;
+          overflow-x: hidden;
+          padding: 15px;
+      }
+
+      #ddoc_main .section .section {
+        margin-top: 0;
+      }
+
+      #ddoc_main .ddoc_module_members_section {
+          padding: 1px 0 0;
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .ddoc_member, #ddoc_main .ddoc_module_members section.intro {
+          background: #fff none repeat scroll 0 0;
+          list-style-type: none;
+          width: 100%;
+      }
+
+      #ddoc_main .ddoc_header_anchor {
+          font-size: 1.4em;
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .ddoc_header_anchor > .code {
+          display: inline-block;
+
+      }
+
+      #ddoc_main .ddoc_decl {
+        background-color: transparent;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: 0;
+        padding-left: 15px;
+      }
+
+      #ddoc_main .ddoc_decl .section, #ddoc_main .section.ddoc_sections {
+        background: white none repeat scroll 0 0;
+        margin: 0;
+        padding: 5px;
+        position: relative;
+        border-radius: 5px;
+      }
+
+      #ddoc_main .ddoc_decl .section h4, #ddoc_main .section.ddoc_sections h4 {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 21px;
+      }
+
+      #ddoc_main .section .declaration {
+          margin-top: 21px;
+      }
+
+      #ddoc_main .section .declaration .code {
+          color: rgba(0, 0, 0, 1);
+          margin-bottom: 15px;
+          padding-bottom: 6px;
+      }
+
+      #ddoc_main .declaration div .para {
+          margin-bottom: 0;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr td:first-of-type {
+        padding: 7px;
+        text-align: right;
+        vertical-align: top;
+        word-break: normal;
+        white-space: nowrap;
+      }
+
+      #ddoc_main .ddoc_params .graybox {
+        border: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox td {
+        border-color: rgba(214, 214, 214, 1);
+      }
+
+      #ddoc_main .ddoc_params .graybox tr:first-child > td {
+        border-top: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr:last-child > td {
+        border-bottom: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr > td:first-child {
+        border-left: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr > td:last-child {
+        border-right: 0 none;
+        width: 100%;
+      }
+
+      #ddoc_main em.term, #ddoc_main em.term .code {
+        color: rgba(65, 65, 65, 1);
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      #ddoc_main .see-also {
+        cursor: pointer;
+        font-family: Menlo,monospace;
+      }
+
+      #ddoc_main .ddoc_decl .section > div:last-of-type {
+        margin-bottom: 15px;
+      }
+
+      #ddoc_main .ddoc_member, #ddoc_main .ddoc_module_members {
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .code_sample {
+        background: inherit;
+      }
+
+      #ddoc_main .declaration .code-line {
+          display: block;
+          font: 1em Menlo,monospace;
+      }
+
+      #ddoc_main a[name] {
+        margin: -112px 0 0;
+        padding-top: 112px;
+      }
+
+      #ddoc_main .ddoc_decl td {
+        max-width: inherit;
+      }
+
+      #ddoc_main .declaration a {
+        color: inherit;
+      }
+
+      #ddoc_main .declaration a:hover {
+          color: rgba(0, 136, 204, 1);
+          text-decoration: underline;
+      }
+
+      body.ddoc {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 1);
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 62.5%;
+        margin: 0;
+        border: 0;
+        left: 0;
+        top: 0;
+        padding: 0;
+      }
+
+      .ddoc a[name] {
+        display: block;
+        height: 0;
+        margin: -85px 0 0;
+        padding-top: 85px;
+        width: 0;
+      }
+
+      .ddoc .module {
+          border-color: transparent;
+          background-color: rgba(255, 255, 255, 1);
+          border-color: currentColor rgba(233, 233, 233, 1) rgba(233, 233, 233, 1);
+          border-image: none;
+          border-style: none solid solid;
+          border-width: 0 1px 1px;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.07);
+          display: block;
+          margin-left: 0;
+          min-height: calc(100% - 173px);
+          overflow: auto;
+          padding-bottom: 100px;
+      }
+
+      .ddoc .content_wrapper {
+          background-color: rgba(242, 242, 242, 1);
+          margin: 0 auto;
+          max-width: 980px;
+      }
+
+      .ddoc .section {
+        padding: 15px 25px 30px;
+      }
+
+      .ddoc .section .section {
+        margin: 30px 0 0;
+        padding: 0;
+      }
+
+      .ddoc .para {
+        color: rgba(65, 65, 65, 1);
+        font-size: 1.4em;
+        line-height: 145%;
+        margin-bottom: 15px;
+      }
+
+      .ddoc .ddoc_examples .para {
+        margin-bottom: 0;
+      }
+
+      .ddoc .module_name {
+          color: rgba(0, 0, 0, 1);
+          display: block;
+          font-family: Helvetica;
+          font-size: 2.8em;
+          font-weight: 100;
+          margin-bottom: 0;
+          padding: 15px 0;
+      }
+
+      .ddoc .module a {
+          color: rgba(0, 136, 204, 1);
+          text-decoration: none;
+      }
+
+      .ddoc .code {
+        color: rgba(128, 128, 128, 1);
+        font-family: Menlo,monospace;
+        font-size: 0.85em;
+        word-wrap: break-word;
+      }
+
+      .ddoc .code i {
+        font-style: normal;
+      }
+
+      .ddoc .code .code {
+        font-size: 1em;
+      }
+
+      .ddoc .code_sample {
+        background-clip: padding-box;
+        margin: 1px 0;
+        text-align: left;
+      }
+
+      .ddoc .code_sample {
+        display: block;
+        font-size: 1.4em;
+        margin-left: 21px;
+      }
+
+      .ddoc ol .code_sample {
+        font-size: 1em;
+      }
+
+      .ddoc .code_lines {
+        counter-reset: li;
+        line-height: 1.6em;
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ddoc .code_listing .code_sample div {
+        margin-left: 13px;
+        width: 93%;
+      }
+
+      .ddoc .code_listing .code_sample div .code_lines li {
+        list-style-type: none;
+        margin: 0;
+        padding-right: 10px;
+      }
+
+      .ddoc .code_sample div .code_lines li::before {
+        margin-left: -33px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample div .code_lines li:nth-child(n+10)::before {
+        margin-left: -39px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample div .code_lines li:nth-child(n+100)::before {
+        margin-left: -46px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample .code_lines .code {
+        color: #000;
+      }
+
+      .ddoc div.dlang {
+        margin: 10px 0 21px;
+        padding: 4px 0 2px 10px;
+      }
+
+      .ddoc div.dlang {
+          margin: 10px 0 21px;
+          padding: 4px 0 2px 10px;
+      }
+
+      .ddoc div.dlang {
+        border-left: 5px solid rgba(0, 155, 51, 0.2);
+      }
+
+      .ddoc .code_lines li::before {
+        color: rgba(128, 128, 128, 1);
+        content: counter(li, decimal);
+        counter-increment: li;
+        font-family: Menlo,monospace;
+        font-size: 0.9em;
+        margin-right: 16px;
+      }
+
+      .ddoc .code_lines li {
+        padding-left: 0;
+        white-space: pre-wrap;
+      }
+
+      .ddoc .code_lines li:only-of-type::before {
+        color: rgba(255, 255, 255, 1);
+        content: " ";
+      }
+
+      .ddoc .code_lines li:only-of-type {
+        color: rgba(255, 255, 255, 1);
+        content: " ";
+      }
+
+      .ddoc .code_lines li:nth-child(n+10) {
+        text-indent: -17px;
+      }
+
+      .ddoc .code_lines li:nth-child(n+10)::before {
+        margin-right: 12px;
+      }
+
+      .ddoc .graybox {
+        border: 1px solid rgba(233, 233, 233, 1);
+        border-collapse: collapse;
+        border-spacing: 0;
+        empty-cells: hide;
+        margin: 20px 0 36px;
+        text-align: left;
+      }
+
+      .ddoc .graybox p {
+        margin: 0;
+        min-width: 50px;
+      }
+
+      .ddoc td {
+        border: 1px solid rgba(233, 233, 233, 1);
+        margin: 0;
+        max-width: 260px;
+        padding: 5px 25px 5px 10px;
+        vertical-align: middle;
+      }
+
+      .punctuation {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .comment {
+        color: rgba(0, 131, 18, 1);
+      }
+
+      .operator {
+        color: #000;
+      }
+
+      .keyword {
+        color: rgba(170, 13, 145, 1);
+      }
+
+      .keyword_type {
+        color: rgba(170, 51, 145, 1);
+      }
+
+      .string_literal {
+        color: rgba(196, 26, 22, 1);
+      }
+
+      .ddoc_psuper_symbol {
+        color: rgba(92, 38, 153, 1);
+      }
+
+      .param {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .psymbol {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .ddoc_member_header .ddoc_header_anchor .code {
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body id="ddoc_main" class="ddoc dlang">
+    <div class="content_wrapper">
+      <article class="module">
+        <h1 class="module_name">icontheme.lookup</h1>
+        <section id="module_content"><section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Lookup of icon themes and icons.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+All found icons are just paths. They are not verified to be valid images.
+
+
+  </p>
+</div>
+<div class="ddoc_authors">
+  <h4>Authors</h4>
+  <p class="para">
+    <a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+
+  </p>
+</div>
+<div class="ddoc_license">
+  <h4>License</h4>
+  <p class="para">
+    <a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    <a href="http://standards.freedesktop.org/icon-theme-spec/icon-theme-spec-latest.html">Icon Theme Specification</a>
+  </p>
+</div>
+
+</section>
+<section class="section ddoc_module_members_section">
+  <div class="ddoc_module_members">
+    <ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#defaultIconExtensions" id="defaultIconExtensions"><code class="code">defaultIconExtensions</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="defaultIconExtensions"></span>enum string[] <code class="code">defaultIconExtensions</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Default icon extensions. This array includes .png and .xpm.
+ PNG is recommended format.
+ XPM is kept for backward compatibility.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+Icon Theme Specificiation also lists .svg as possible format,
+ but it's less common to have SVG support for applications,
+ hence this format is defined as optional by specificiation.
+ If your application has proper support for SVG images,
+ array should include it in the first place as the most preferred format
+ because SVG images are scalable.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#defaultGenericIconTheme" id="defaultGenericIconTheme"><code class="code">defaultGenericIconTheme</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="defaultGenericIconTheme"></span>enum string <code class="code">defaultGenericIconTheme</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Convenient constant for the default icon theme name.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#defaultFallbackIconTheme" id="defaultFallbackIconTheme"><code class="code">defaultFallbackIconTheme</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="defaultFallbackIconTheme"></span>deprecated alias <code class="code">defaultFallbackIconTheme</code> = defaultGenericIconTheme;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#iconThemePaths" id="iconThemePaths"><code class="code">iconThemePaths</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="iconThemePaths"></span>auto <code class="code">iconThemePaths</code>(Range)(Range <code class="code">searchIconDirs</code>) if (is(ElementType!Range : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find all icon themes in <code class="code">searchIconDirs</code>.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+You may want to skip icon themes duplicates if there're different versions of the index.theme file for the same theme.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Range of paths to index.theme files represented icon themes.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      base icon directories to search icon themes.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> paths = <span class="psymbol">iconThemePaths</span>([<span class="string_literal">"test"</span>]).array;
+<span class="keyword">assert</span>(paths.length == 3);
+<span class="keyword">assert</span>(paths.canFind(buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"NewTango"</span>, <span class="string_literal">"index.theme"</span>)));
+<span class="keyword">assert</span>(paths.canFind(buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"index.theme"</span>)));
+<span class="keyword">assert</span>(paths.canFind(buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"hicolor"</span>, <span class="string_literal">"index.theme"</span>)));
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#lookupIconTheme" id="lookupIconTheme"><code class="code">lookupIconTheme</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="lookupIconTheme"></span>auto <code class="code">lookupIconTheme</code>(Range)(string <code class="code">themeName</code>, Range <code class="code">searchIconDirs</code>) if (is(ElementType!Range : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Lookup index.theme files by theme name.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">themeName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      theme name.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      base icon directories to search icon themes.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Range of paths to index.theme file corresponding to the given theme.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+Usually you want to use the only first found file.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , 
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findIconTheme" id="findIconTheme"><code class="code">findIconTheme</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findIconTheme"></span>auto <code class="code">findIconTheme</code>(Range)(string <code class="code">themeName</code>, Range <code class="code">searchIconDirs</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find index.theme file by theme name.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Path to the first found index.theme file or <code class="code">null</code> string if not found.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">themeName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Theme name.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Base icon directories to search icon themes.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Path to the first found index.theme file corresponding to the given theme.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , 
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#openIconTheme" id="openIconTheme"><code class="code">openIconTheme</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="openIconTheme"></span>IconThemeFile <code class="code">openIconTheme</code>(Range)(string <code class="code">themeName</code>, Range <code class="code">searchIconDirs</code>, IconThemeFile.IconThemeReadOptions <code class="code">options</code> = IconThemeFile.IconThemeReadOptions.init);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find index.theme file for given theme and create instance of . The first found file will be used.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+     object read from the first found index.theme file corresponding to given theme or <code class="code">null</code> if none were found.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">themeName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      theme name.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      base icon directories to search icon themes.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemeFile.IconThemeReadOptions <code class="code">options</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      <code class="code">options</code> for  reading.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_throws">
+  <h4>Throws</h4>
+  <p class="para">
+    <b>ErrnoException</b> if file could not be opened.
+  <b>IniLikeException</b> if error occured while reading the file.
+
+  </p>
+</div><div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , 
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> tango = <span class="psymbol">openIconTheme</span>(<span class="string_literal">"Tango"</span>, [<span class="string_literal">"test"</span>]);
+<span class="keyword">assert</span>(tango);
+<span class="keyword">assert</span>(tango.displayName() == <span class="string_literal">"Tango"</span>);
+
+<span class="keyword">auto</span> hicolor = <span class="psymbol">openIconTheme</span>(<span class="string_literal">"hicolor"</span>, [<span class="string_literal">"test"</span>]);
+<span class="keyword">assert</span>(hicolor);
+<span class="keyword">assert</span>(hicolor.displayName() == <span class="string_literal">"Hicolor"</span>);
+
+<span class="keyword">assert</span>(<span class="psymbol">openIconTheme</span>(<span class="string_literal">"Nonexistent"</span>, [<span class="string_literal">"test"</span>]) <span class="keyword">is</span> <span class="keyword">null</span>);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#IconSearchResult" id="IconSearchResult"><code class="code">IconSearchResult</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="IconSearchResult"></span>struct <code class="code">IconSearchResult</code>(IconTheme) if (is(IconTheme : const(IconThemeFile)));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Result of icon lookup.
+  </p>
+</div>
+
+</section>
+<ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#IconSearchResult.filePath" id="IconSearchResult.filePath"><code class="code">filePath</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="IconSearchResult.filePath"></span>string <code class="code">filePath</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    File path of found icon.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#IconSearchResult.subdir" id="IconSearchResult.subdir"><code class="code">subdir</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="IconSearchResult.subdir"></span>IconSubDir <code class="code">subdir</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Subdirectory the found icon belongs to.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#IconSearchResult.iconTheme" id="IconSearchResult.iconTheme"><code class="code">iconTheme</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="IconSearchResult.iconTheme"></span>Rebindable!IconTheme <code class="code">iconTheme</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+     the found icon belongs to.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#lookupIcon" id="lookupIcon"><code class="code">lookupIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="lookupIcon"></span>void <code class="code">lookupIcon</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs, Exts, OutputRange)(string <code class="code">iconName</code>, IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>, Exts <code class="code">extensions</code>, OutputRange <code class="code">sink</code>, Flag!"<code class="code">reverse</code>" <code class="code">reverse</code> = No.<code class="code">reverse</code>) if (isInputRange!IconThemes &amp;&amp; isForwardRange!BaseDirs &amp;&amp; isForwardRange!Exts &amp;&amp; is(ElementType!IconThemes : const(IconThemeFile)) &amp;&amp; is(ElementType!BaseDirs : string) &amp;&amp; is(ElementType!Exts : string) &amp;&amp; isOutputRange!(OutputRange, IconSearchResult!(ElementType!IconThemes)));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Lookup icon alternatives in icon themes. It uses icon theme cache wherever it's loaded. If searched icon is found in some icon theme all subsequent themes are ignored.
+
+  </p>
+</div>
+<div class="ddoc_description">
+  <h4>Discussion</h4>
+  <p class="para">
+    This function may require many <b>stat</b> calls, so beware. Use subdirFilter to filter icons by  properties (e.g. by size or context) to decrease the number of searchable items and allocations. Loading  may also descrease the number of stats.
+
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">iconName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Icon name.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemes <code class="code">iconThemes</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Icon themes to search icon in.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">BaseDirs <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Case icon directories.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Exts <code class="code">extensions</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Possible file <code class="code">extensions</code> of needed icon file, in order of preference.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">OutputRange <code class="code">sink</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Output range accepting s.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Flag!"<code class="code">reverse</code>" <code class="code">reverse</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Iterate over icon theme sub-directories in <code class="code">reverse</code> way.
+      Usually directories with larger icon size are listed the last,
+      so this parameter may speed up the search when looking for the largest icon.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+Specification says that extension must be ".png", ".xpm" or ".svg", though SVG is not required to be supported. Some icon themes also contain .svgz images.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Example:</span>
+
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="psymbol">lookupIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Places"</span> &amp;&amp; subdir.size &gt;= 32)(
+    <span class="string_literal">"folder"</span>, <span class="param">iconThemes</span>, baseIconDirs(), [<span class="string_literal">".png"</span>, <span class="string_literal">".xpm"</span>],
+    <span class="keyword">delegate</span> <span class="keyword">void</span> (IconSearchResult!IconThemeFile item) {
+        writefln(<span class="string_literal">"Icon file: %s. Context: %s. Size: %s. Theme: %s"</span>, item.filePath, item.subdir.context, item.subdir.size, item.iconTheme.displayName);
+    });
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , 
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#lookupThemeIcons" id="lookupThemeIcons"><code class="code">lookupThemeIcons</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="lookupThemeIcons"></span>auto <code class="code">lookupThemeIcons</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs, Exts)(IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>, Exts <code class="code">extensions</code>) if (is(ElementType!IconThemes : const(IconThemeFile)) &amp;&amp; is(ElementType!BaseDirs : string) &amp;&amp; is(ElementType!Exts : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Iterate over all icons in icon themes.
+ <code class="code">iconThemes</code> is usually the range of the main theme and themes it inherits from.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+Usually if some icon was found in icon theme, it should be ignored in all subsequent themes, including sizes not presented in former theme.
+ Use subdirFilter to filter icons by  thus decreasing the number of searchable items and allocations.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Range of .
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemes <code class="code">iconThemes</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      icon themes to search icon in.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">BaseDirs <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      base icon directories.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Exts <code class="code">extensions</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      possible file <code class="code">extensions</code> for icon files.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Example:</span>
+
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">foreach</span>(item; <span class="psymbol">lookupThemeIcons</span>!(subdir =&gt; subdir.context == <span class="string_literal">"MimeTypes"</span> &amp;&amp; subdir.size &gt;= 32)(<span class="param">iconThemes</span>, baseIconDirs(), [<span class="string_literal">".png"</span>, <span class="string_literal">".xpm"</span>]))
+{
+    writefln(<span class="string_literal">"Icon file: %s. Context: %s. Size: %s"</span>, item.filePath, item.subdir.context, item.subdir.size);
+}
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , , 
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#lookupNonThemedIcons" id="lookupNonThemedIcons"><code class="code">lookupNonThemedIcons</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="lookupNonThemedIcons"></span>auto <code class="code">lookupNonThemedIcons</code>(BaseDirs, Exts)(BaseDirs <code class="code">searchIconDirs</code>, Exts <code class="code">extensions</code>) if (isInputRange!BaseDirs &amp;&amp; isForwardRange!Exts &amp;&amp; is(ElementType!BaseDirs : string) &amp;&amp; is(ElementType!Exts : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Iterate over all icons out of icon themes.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Range of found icon file paths.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">BaseDirs <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      base icon directories.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Exts <code class="code">extensions</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      possible file <code class="code">extensions</code> for icon files.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , 
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#lookupNonThemedIcon" id="lookupNonThemedIcon"><code class="code">lookupNonThemedIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="lookupNonThemedIcon"></span>auto <code class="code">lookupNonThemedIcon</code>(BaseDirs, Exts)(string <code class="code">iconName</code>, BaseDirs <code class="code">searchIconDirs</code>, Exts <code class="code">extensions</code>) if (isInputRange!BaseDirs &amp;&amp; isForwardRange!Exts &amp;&amp; is(ElementType!BaseDirs : string) &amp;&amp; is(ElementType!Exts : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Lookup icon alternatives beyond the icon themes. May be used as fallback lookup, if  returned empty range.
+
+  </p>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    The range of found icon file paths.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Example:</span>
+
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> result = <span class="psymbol">lookupNonThemedIcon</span>(<span class="string_literal">"folder"</span>, baseIconDirs(), [<span class="string_literal">".png"</span>, <span class="string_literal">".xpm"</span>]);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , , 
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findNonThemedIcon" id="findNonThemedIcon"><code class="code">findNonThemedIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findNonThemedIcon"></span>string <code class="code">findNonThemedIcon</code>(BaseDirs, Exts)(string <code class="code">iconName</code>, BaseDirs <code class="code">searchIconDirs</code>, Exts <code class="code">extensions</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find icon outside of icon themes. The first found is returned.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , 
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">assert</span>(<span class="psymbol">findNonThemedIcon</span>(<span class="string_literal">"pidgin"</span>, [<span class="string_literal">"test"</span>], defaultIconExtensions) == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"pidgin.png"</span>));
+<span class="keyword">assert</span>(<span class="psymbol">findNonThemedIcon</span>(<span class="string_literal">"nonexistent"</span>, [<span class="string_literal">"test"</span>], defaultIconExtensions).empty);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findClosestThemedIcon" id="findClosestThemedIcon"><code class="code">findClosestThemedIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findClosestThemedIcon"></span>auto <code class="code">findClosestThemedIcon</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs, Exts)(string <code class="code">iconName</code>, uint <code class="code">desiredSize</code>, IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>, Exts <code class="code">extensions</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find icon of the closest size. It uses icon theme cache wherever possible. The first perfect match is used. It searches only for icons in themes.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">iconName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Name of icon to search as defined by Icon Theme Specification (i.e. without path and extension parts).
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">uint <code class="code">desiredSize</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Preferred icon size to get.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemes <code class="code">iconThemes</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Range of  objects.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">BaseDirs <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Base icon directories.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Exts <code class="code">extensions</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Allowed file <code class="code">extensions</code>.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    . filePath will be empty if icon is not found.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+If icon of some size was found in the icon theme, this algorithm does not check following themes, even if they contain icons with closer size. Therefore the icon found in the more preferred theme always has presedence over icons from other themes.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , , , 
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> baseDirs = [<span class="string_literal">"test"</span>];
+<span class="keyword">auto</span> <span class="param">iconThemes</span> = [openIconTheme(<span class="string_literal">"Tango"</span>, baseDirs), openIconTheme(<span class="string_literal">"hicolor"</span>, baseDirs)];
+
+<span class="comment">//exact match
+</span><span class="keyword">auto</span> found = <span class="psymbol">findClosestThemedIcon</span>(<span class="string_literal">"folder"</span>, 32, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 32);
+<span class="keyword">assert</span>(found.subdir.context == <span class="string_literal">"Places"</span>);
+<span class="keyword">assert</span>(found.iconTheme.internalName == <span class="string_literal">"Tango"</span>);
+
+found = <span class="psymbol">findClosestThemedIcon</span>(<span class="string_literal">"folder"</span>, 24, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"24x24/devices"</span>, <span class="string_literal">"folder.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 24);
+<span class="keyword">assert</span>(found.subdir.context == <span class="string_literal">"Devices"</span>);
+
+<span class="comment">// with subdir filter
+</span>found = <span class="psymbol">findClosestThemedIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Places"</span>)(<span class="string_literal">"folder"</span>, 32, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 32);
+
+<span class="comment">// non-exact match
+</span>found = <span class="psymbol">findClosestThemedIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Places"</span>)(<span class="string_literal">"folder"</span>, 24, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 32);
+
+<span class="comment">// no match, wrong subdir
+</span>found = <span class="psymbol">findClosestThemedIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"MimeTypes"</span>)(<span class="string_literal">"folder"</span>, 32, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath.empty);
+
+<span class="comment">//hicolor has exact match, but Tango is more preferred.
+</span>found = <span class="psymbol">findClosestThemedIcon</span>(<span class="string_literal">"folder"</span>, 64, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 32);
+
+<span class="comment">//find xpm
+</span>found = <span class="psymbol">findClosestThemedIcon</span>(<span class="string_literal">"folder"</span>, 32, <span class="param">iconThemes</span>, baseDirs, [<span class="string_literal">".xpm"</span>]);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.xpm"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 32);
+
+<span class="comment">//find big png, not exact match
+</span>found = <span class="psymbol">findClosestThemedIcon</span>(<span class="string_literal">"folder"</span>, 200, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"128x128/places"</span>, <span class="string_literal">"folder.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 128);
+
+<span class="comment">//svg is closer
+</span>found = <span class="psymbol">findClosestThemedIcon</span>(<span class="string_literal">"folder"</span>, 200, <span class="param">iconThemes</span>, baseDirs, [<span class="string_literal">".png"</span>, <span class="string_literal">".svg"</span>]);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"scalable/places"</span>, <span class="string_literal">"folder.svg"</span>));
+<span class="keyword">assert</span>(found.subdir.type == IconSubDir.Type.Scalable);
+
+<span class="comment">// exact match in hicolor
+</span>found = <span class="psymbol">findClosestThemedIcon</span>(<span class="string_literal">"text-plain"</span>, 48, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"hicolor"</span>, <span class="string_literal">"48x48/mimetypes"</span>, <span class="string_literal">"text-plain.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 48);
+<span class="keyword">assert</span>(found.subdir.context == <span class="string_literal">"MimeTypes"</span>);
+<span class="keyword">assert</span>(found.iconTheme.internalName == <span class="string_literal">"hicolor"</span>);
+
+<span class="comment">// with subdir filter
+</span>found = <span class="psymbol">findClosestThemedIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"MimeTypes"</span>)(<span class="string_literal">"text-plain"</span>, 48, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"hicolor"</span>, <span class="string_literal">"48x48/mimetypes"</span>, <span class="string_literal">"text-plain.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 48);
+
+<span class="comment">// no match
+</span>found = <span class="psymbol">findClosestThemedIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Actions"</span>)(<span class="string_literal">"text-plain"</span>, 48, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath.empty);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findClosestThemedIcon" id="findClosestThemedIcon"><code class="code">findClosestThemedIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findClosestThemedIcon.2"></span>auto <code class="code">findClosestThemedIcon</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs)(string <code class="code">iconName</code>, uint <code class="code">size</code>, IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    ditto, but with predefined extensions.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findClosestIcon" id="findClosestIcon"><code class="code">findClosestIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findClosestIcon"></span>string <code class="code">findClosestIcon</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs, Exts)(string <code class="code">iconName</code>, uint <code class="code">desiredSize</code>, IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>, Exts <code class="code">extensions</code>, Flag!"<code class="code">allowNonThemed</code>" <code class="code">allowNonThemed</code> = Yes.<code class="code">allowNonThemed</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find icon of the closest size. It uses icon theme cache wherever possible. The first perfect match is used.
+ This is similar to , but returns file path only and allows to search for non-themed icons.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">iconName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Name of icon to search as defined by Icon Theme Specification (i.e. without path and extension parts).
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">uint <code class="code">desiredSize</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Preferred icon size to get.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemes <code class="code">iconThemes</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Range of  objects.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">BaseDirs <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Base icon directories.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Exts <code class="code">extensions</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Allowed file <code class="code">extensions</code>.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Flag!"<code class="code">allowNonThemed</code>" <code class="code">allowNonThemed</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Allow searching for non-themed icon if could not find icon in themes (non-themed icon can be any size).
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Icon file path or empty string if not found.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+If icon of some size was found in the icon theme, this algorithm does not check following themes, even if they contain icons with closer size. Therefore the icon found in the more preferred theme always has presedence over icons from other themes.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , , , , 
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> baseDirs = [<span class="string_literal">"test"</span>];
+<span class="keyword">auto</span> <span class="param">iconThemes</span> = [openIconTheme(<span class="string_literal">"Tango"</span>, baseDirs), openIconTheme(<span class="string_literal">"hicolor"</span>, baseDirs)];
+
+string found;
+
+<span class="comment">//exact match
+</span>found = <span class="psymbol">findClosestIcon</span>(<span class="string_literal">"folder"</span>, 32, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.png"</span>));
+
+<span class="comment">// with subdir filter
+</span>found = <span class="psymbol">findClosestIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Places"</span>)(<span class="string_literal">"folder"</span>, 32, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.png"</span>));
+
+<span class="comment">// not exact match
+</span>found = <span class="psymbol">findClosestIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Places"</span>)(<span class="string_literal">"folder"</span>, 24, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.png"</span>));
+
+<span class="comment">// no match, wrong subdir
+</span>found = <span class="psymbol">findClosestIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"MimeTypes"</span>)(<span class="string_literal">"folder"</span>, 32, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.empty);
+
+<span class="comment">//hicolor has exact match, but Tango is more preferred.
+</span>found = <span class="psymbol">findClosestIcon</span>(<span class="string_literal">"folder"</span>, 64, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.png"</span>));
+
+<span class="comment">//find xpm
+</span>found = <span class="psymbol">findClosestIcon</span>(<span class="string_literal">"folder"</span>, 32, <span class="param">iconThemes</span>, baseDirs, [<span class="string_literal">".xpm"</span>]);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"folder.xpm"</span>));
+
+<span class="comment">//lookup non-themed
+</span>found = <span class="psymbol">findClosestIcon</span>(<span class="string_literal">"pidgin"</span>, 96, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"pidgin.png"</span>));
+
+<span class="comment">//don't lookup non-themed
+</span>found = <span class="psymbol">findClosestIcon</span>(<span class="string_literal">"pidgin"</span>, 96, <span class="param">iconThemes</span>, baseDirs, defaultIconExtensions, No.<span class="param">allowNonThemed</span>);
+<span class="keyword">assert</span>(found.empty);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findClosestIcon" id="findClosestIcon"><code class="code">findClosestIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findClosestIcon.2"></span>string <code class="code">findClosestIcon</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs)(string <code class="code">iconName</code>, uint <code class="code">size</code>, IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    ditto, but with predefined extensions and non-themed icons allowed.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findLargestThemedIcon" id="findLargestThemedIcon"><code class="code">findLargestThemedIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findLargestThemedIcon"></span>auto <code class="code">findLargestThemedIcon</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs, Exts)(string <code class="code">iconName</code>, IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>, Exts <code class="code">extensions</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find icon of the largest size. It uses icon theme cache wherever possible.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">iconName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Name of icon to search as defined by Icon Theme Specification (i.e. without path and extension parts).
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemes <code class="code">iconThemes</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Range of  objects.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">BaseDirs <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Base icon directories.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Exts <code class="code">extensions</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Allowed file <code class="code">extensions</code>.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    . filePath will be empty if icon is not found.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+If icon of some size was found in the icon theme, this algorithm does not check following themes, even if they contain icons with larger size. Therefore the icon found in the most preferred theme always has presedence over icons from other themes.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , , , 
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> baseDirs = [<span class="string_literal">"test"</span>];
+<span class="keyword">auto</span> <span class="param">iconThemes</span> = [openIconTheme(<span class="string_literal">"Tango"</span>, baseDirs), openIconTheme(<span class="string_literal">"hicolor"</span>, baseDirs)];
+
+<span class="keyword">auto</span> found = <span class="psymbol">findLargestThemedIcon</span>(<span class="string_literal">"folder"</span>, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"128x128/places"</span>, <span class="string_literal">"folder.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 128);
+<span class="keyword">assert</span>(found.subdir.context == <span class="string_literal">"Places"</span>);
+<span class="keyword">assert</span>(found.iconTheme.internalName == <span class="string_literal">"Tango"</span>);
+
+found = <span class="psymbol">findLargestThemedIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Places"</span>)(<span class="string_literal">"folder"</span>, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"128x128/places"</span>, <span class="string_literal">"folder.png"</span>));
+
+found = <span class="psymbol">findLargestThemedIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Actions"</span>)(<span class="string_literal">"folder"</span>, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath.empty);
+
+found = <span class="psymbol">findLargestThemedIcon</span>(<span class="string_literal">"desktop"</span>, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"desktop.png"</span>));
+<span class="keyword">assert</span>(found.subdir.size == 32);
+
+found = <span class="psymbol">findLargestThemedIcon</span>(<span class="string_literal">"desktop"</span>, <span class="param">iconThemes</span>, baseDirs, [<span class="string_literal">".svg"</span>, <span class="string_literal">".png"</span>]);
+<span class="keyword">assert</span>(found.filePath == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"scalable/places"</span>, <span class="string_literal">"desktop.svg"</span>));
+<span class="keyword">assert</span>(found.subdir.type == IconSubDir.Type.Scalable);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findLargestThemedIcon" id="findLargestThemedIcon"><code class="code">findLargestThemedIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findLargestThemedIcon.2"></span>auto <code class="code">findLargestThemedIcon</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs)(string <code class="code">iconName</code>, IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    ditto, but with predefined extensions.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findLargestIcon" id="findLargestIcon"><code class="code">findLargestIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findLargestIcon"></span>string <code class="code">findLargestIcon</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs, Exts)(string <code class="code">iconName</code>, IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>, Exts <code class="code">extensions</code>, Flag!"<code class="code">allowNonThemed</code>" <code class="code">allowNonThemed</code> = Yes.<code class="code">allowNonThemed</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find icon of the largest size. It uses icon theme cache wherever possible.
+ This is similar to , but returns file path only and allows to search for non-themed icons.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">iconName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Name of icon to search as defined by Icon Theme Specification (i.e. without path and extension parts).
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemes <code class="code">iconThemes</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Range of  objects.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">BaseDirs <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Base icon directories.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Exts <code class="code">extensions</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Allowed file <code class="code">extensions</code>.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Flag!"<code class="code">allowNonThemed</code>" <code class="code">allowNonThemed</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Allow searching for non-themed fallback if could not find icon in themes.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Icon file path or empty string if not found.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+If icon of some size was found in the icon theme, this algorithm does not check following themes, even if they contain icons with larger size. Therefore the icon found in the most preferred theme always has presedence over icons from other themes.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , , , 
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> baseDirs = [<span class="string_literal">"test"</span>];
+<span class="keyword">auto</span> <span class="param">iconThemes</span> = [openIconTheme(<span class="string_literal">"Tango"</span>, baseDirs), openIconTheme(<span class="string_literal">"hicolor"</span>, baseDirs)];
+
+string found;
+
+found = <span class="psymbol">findLargestIcon</span>(<span class="string_literal">"folder"</span>, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"128x128/places"</span>, <span class="string_literal">"folder.png"</span>));
+
+found = <span class="psymbol">findLargestIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Places"</span>)(<span class="string_literal">"folder"</span>, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"128x128/places"</span>, <span class="string_literal">"folder.png"</span>));
+
+found = <span class="psymbol">findLargestIcon</span>!(subdir =&gt; subdir.context == <span class="string_literal">"Actions"</span>)(<span class="string_literal">"folder"</span>, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found.empty);
+
+found = <span class="psymbol">findLargestIcon</span>(<span class="string_literal">"desktop"</span>, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"32x32/places"</span>, <span class="string_literal">"desktop.png"</span>));
+
+found = <span class="psymbol">findLargestIcon</span>(<span class="string_literal">"desktop"</span>, <span class="param">iconThemes</span>, baseDirs, [<span class="string_literal">".svg"</span>, <span class="string_literal">".png"</span>]);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"Tango"</span>, <span class="string_literal">"scalable/places"</span>, <span class="string_literal">"desktop.svg"</span>));
+
+<span class="comment">//lookup non-themed
+</span>found = <span class="psymbol">findLargestIcon</span>(<span class="string_literal">"pidgin"</span>, <span class="param">iconThemes</span>, baseDirs);
+<span class="keyword">assert</span>(found == buildPath(<span class="string_literal">"test"</span>, <span class="string_literal">"pidgin.png"</span>));
+
+<span class="comment">//don't lookup non-themed
+</span>found = <span class="psymbol">findLargestIcon</span>(<span class="string_literal">"pidgin"</span>, <span class="param">iconThemes</span>, baseDirs, defaultIconExtensions, No.<span class="param">allowNonThemed</span>);
+<span class="keyword">assert</span>(found.empty);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#findLargestIcon" id="findLargestIcon"><code class="code">findLargestIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="findLargestIcon.2"></span>string <code class="code">findLargestIcon</code>(alias subdirFilter = (a) =&gt; true, IconThemes, BaseDirs)(string <code class="code">iconName</code>, IconThemes <code class="code">iconThemes</code>, BaseDirs <code class="code">searchIconDirs</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    ditto, but with predefined extensions and non-themed icons allowed.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#iconSizeDistance" id="iconSizeDistance"><code class="code">iconSizeDistance</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="iconSizeDistance"></span>pure nothrow @nogc @safe uint <code class="code">iconSizeDistance</code>(in IconSubDir <code class="code">subdir</code>, uint <code class="code">matchSize</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Distance between desired size and minimum or maximum size value supported by icon theme subdirectory.
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> fixed = IconSubDir(32, IconSubDir.Type.Fixed);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(fixed, fixed.size()) == 0);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(fixed, 30) == 2);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(fixed, 35) == 3);
+
+<span class="keyword">auto</span> threshold = IconSubDir(32, IconSubDir.Type.Threshold, <span class="string_literal">""</span>, 0, 0, 5);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(threshold, threshold.size()) == 0);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(threshold, threshold.size() - threshold.threshold()) == 0);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(threshold, threshold.size() + threshold.threshold()) == 0);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(threshold, 26) == 1);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(threshold, 39) == 2);
+
+<span class="keyword">auto</span> scalable = IconSubDir(32, IconSubDir.Type.Scalable, <span class="string_literal">""</span>, 24, 48);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(scalable, scalable.size()) == 0);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(scalable, scalable.minSize()) == 0);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(scalable, scalable.maxSize()) == 0);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(scalable, 20) == 4);
+<span class="keyword">assert</span>(<span class="psymbol">iconSizeDistance</span>(scalable, 50) == 2);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#matchIconSize" id="matchIconSize"><code class="code">matchIconSize</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="matchIconSize"></span>pure nothrow @nogc @safe bool <code class="code">matchIconSize</code>(in IconSubDir <code class="code">subdir</code>, uint <code class="code">matchSize</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Check if <code class="code">matchSize</code> belongs to <code class="code">subdir</code>'s size range.
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> fixed = IconSubDir(32, IconSubDir.Type.Fixed);
+<span class="keyword">assert</span>(<span class="psymbol">matchIconSize</span>(fixed, fixed.size()));
+<span class="keyword">assert</span>(!<span class="psymbol">matchIconSize</span>(fixed, fixed.size() - 2));
+
+<span class="keyword">auto</span> threshold = IconSubDir(32, IconSubDir.Type.Threshold, <span class="string_literal">""</span>, 0, 0, 5);
+<span class="keyword">assert</span>(<span class="psymbol">matchIconSize</span>(threshold, threshold.size() + threshold.threshold()));
+<span class="keyword">assert</span>(<span class="psymbol">matchIconSize</span>(threshold, threshold.size() - threshold.threshold()));
+<span class="keyword">assert</span>(!<span class="psymbol">matchIconSize</span>(threshold, threshold.size() + threshold.threshold() + 1));
+<span class="keyword">assert</span>(!<span class="psymbol">matchIconSize</span>(threshold, threshold.size() - threshold.threshold() - 1));
+
+<span class="keyword">auto</span> scalable = IconSubDir(32, IconSubDir.Type.Scalable, <span class="string_literal">""</span>, 24, 48);
+<span class="keyword">assert</span>(<span class="psymbol">matchIconSize</span>(scalable, scalable.minSize()));
+<span class="keyword">assert</span>(<span class="psymbol">matchIconSize</span>(scalable, scalable.maxSize()));
+<span class="keyword">assert</span>(!<span class="psymbol">matchIconSize</span>(scalable, scalable.minSize() - 1));
+<span class="keyword">assert</span>(!<span class="psymbol">matchIconSize</span>(scalable, scalable.maxSize() + 1));
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#matchBestIcon" id="matchBestIcon"><code class="code">matchBestIcon</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="matchBestIcon"></span>string <code class="code">matchBestIcon</code>(Range)(Range <code class="code">alternatives</code>, uint <code class="code">matchSize</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Find icon closest to the given size among given <code class="code">alternatives</code>.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">alternatives</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      range of s, usually returned by .
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">uint <code class="code">matchSize</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      desired size of icon.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#openBaseThemes" id="openBaseThemes"><code class="code">openBaseThemes</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="openBaseThemes"></span>IconThemeFile[] <code class="code">openBaseThemes</code>(Range)(IconThemeFile <code class="code">iconTheme</code>, Range <code class="code">searchIconDirs</code>, string <code class="code">genericThemeName</code> = defaultGenericIconTheme, IconThemeFile.IconThemeReadOptions <code class="code">options</code> = IconThemeFile.IconThemeReadOptions.init) if (isForwardRange!Range &amp;&amp; is(ElementType!Range : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Recursively find all themes the given theme is inherited from.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemeFile <code class="code">iconTheme</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Original icon theme to search for its base themes. It's NOT included in the resulting array.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Base icon directories to search icon themes.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">genericThemeName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Name of icon theme which is loaded the last even if it's not specified in inheritance tree.
+      Pass empty string to avoid it. It's NOT loaded twice if some theme in inheritance tree has it as base theme.
+      Usually you don't need to change this parameter since  is required to be used by specification.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemeFile.IconThemeReadOptions <code class="code">options</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Options for  reading.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Array of unique  objects represented base themes.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> tango = openIconTheme(<span class="string_literal">"NewTango"</span>, [<span class="string_literal">"test"</span>]);
+<span class="keyword">auto</span> baseThemes = <span class="psymbol">openBaseThemes</span>(tango, [<span class="string_literal">"test"</span>]);
+
+<span class="keyword">assert</span>(baseThemes.length == 2);
+<span class="keyword">assert</span>(baseThemes[0].internalName() == <span class="string_literal">"Tango"</span>);
+<span class="keyword">assert</span>(baseThemes[1].internalName() == <span class="string_literal">"hicolor"</span>);
+
+baseThemes = <span class="psymbol">openBaseThemes</span>(tango, [<span class="string_literal">"test"</span>], <span class="keyword">null</span>);
+<span class="keyword">assert</span>(baseThemes.length == 1);
+<span class="keyword">assert</span>(baseThemes[0].internalName() == <span class="string_literal">"Tango"</span>);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#openThemeFamily" id="openThemeFamily"><code class="code">openThemeFamily</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="openThemeFamily"></span>IconThemeFile[] <code class="code">openThemeFamily</code>(Range)(IconThemeFile <code class="code">iconTheme</code>, Range <code class="code">searchIconDirs</code>, string <code class="code">genericThemeName</code> = defaultGenericIconTheme, IconThemeFile.IconThemeReadOptions <code class="code">options</code> = IconThemeFile.IconThemeReadOptions.init) if (isForwardRange!Range &amp;&amp; is(ElementType!Range : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Recursively find all themes the given theme is inherited from.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemeFile <code class="code">iconTheme</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Original icon theme to search for its base themes. Included as first element in the resulting array.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">searchIconDirs</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Base icon directories to search icon themes.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">genericThemeName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Name of icon theme which is loaded the last even if it's not specified in inheritance tree.
+      Pass empty string to avoid it. It's NOT loaded twice if some theme in inheritance tree has it as base theme.
+      Usually you don't need to change this parameter since  is required to be used by specification.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">IconThemeFile.IconThemeReadOptions <code class="code">options</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Options for  reading.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+    Array of unique  objects represented the provided icon theme and its base themes.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#openThemeFamily" id="openThemeFamily"><code class="code">openThemeFamily</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="openThemeFamily.2"></span>IconThemeFile[] <code class="code">openThemeFamily</code>(Range)(string <code class="code">iconThemeName</code>, Range <code class="code">searchIconDirs</code>, string <code class="code">genericThemeName</code> = defaultGenericIconTheme, IconThemeFile.IconThemeReadOptions <code class="code">options</code> = IconThemeFile.IconThemeReadOptions.init) if (isForwardRange!Range &amp;&amp; is(ElementType!Range : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    ditto, but firstly loads the given icon theme by name. Returns an empty array if theme specified by  could be loaded.
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">auto</span> iconThemes = <span class="psymbol">openThemeFamily</span>(<span class="string_literal">"NewTango"</span>, [<span class="string_literal">"test"</span>]);
+
+<span class="keyword">assert</span>(iconThemes.length == 3);
+<span class="keyword">assert</span>(iconThemes[0].internalName() == <span class="string_literal">"NewTango"</span>);
+<span class="keyword">assert</span>(iconThemes[1].internalName() == <span class="string_literal">"Tango"</span>);
+<span class="keyword">assert</span>(iconThemes[2].internalName() == <span class="string_literal">"hicolor"</span>);
+
+iconThemes = <span class="psymbol">openThemeFamily</span>(<span class="string_literal">"NewTango"</span>, [<span class="string_literal">"test"</span>], <span class="keyword">null</span>);
+<span class="keyword">assert</span>(iconThemes.length == 2);
+<span class="keyword">assert</span>(iconThemes[0].internalName() == <span class="string_literal">"NewTango"</span>);
+<span class="keyword">assert</span>(iconThemes[1].internalName() == <span class="string_literal">"Tango"</span>);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+
+</div>
+
+</li>
+</ul>
+  </div>
+</section>
+</section>
+      </article>
+    </div>
+  </body>
+</html>

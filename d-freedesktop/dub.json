@@ -5,6 +5,7 @@
     "authors": ["freeslave"],
     "dependencies": {
         "detached" : "0.1.1",
+        "dxml" : "~>0.4.0",
         "isfreedesktop" : "0.1.0"
     },
     "targetType" : "library",

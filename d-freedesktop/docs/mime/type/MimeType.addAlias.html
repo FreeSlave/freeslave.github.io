@@ -178,6 +178,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../mime/stores/files.html">files</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -198,6 +203,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
 					</div>
 				</li>
 				<li>
@@ -235,6 +245,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../mime/type.html">type</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/xml.html">xml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -250,7 +265,7 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Function MimeType.addAlias</h1><p>Add alias for this MIME type.
+			<h1>Function MimeType.addAlias</h1><p>Add alias for this MIME type. Adding a duplicate does nothing.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -270,6 +285,7 @@ $('#symbolSearchPane').show();</script>
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">mimeType </span><span class="pun">= </span><span class="kwd">new <a href="../../mime/type/MimeType.html"></span><span class="typ">MimeType</span></a><span class="pun">(</span><span class="str">"text/html"</span><span class="pun">);
 </span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">addAlias</span><span class="pun">(</span><span class="str">"application/html"</span><span class="pun">);
 </span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">addAlias</span><span class="pun">(</span><span class="str">"text/x-html"</span><span class="pun">);
+</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">addAlias</span><span class="pun">(</span><span class="str">"application/html"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">aliases </span><span class="pun">== [</span><span class="str">"application/html"</span><span class="pun">, </span><span class="str">"text/x-html"</span><span class="pun">]);
 </span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">clearAliases</span><span class="pun">();
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">aliases</span><span class="pun">()<wbr/>.</span><span class="pln">empty</span><span class="pun">);

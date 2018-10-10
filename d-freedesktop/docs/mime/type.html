@@ -178,6 +178,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../mime/stores/files.html">files</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -198,6 +203,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/glob.html">glob</a>
 					</div>
 				</li>
 				<li>
@@ -235,6 +245,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../mime/type.html">type</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../mime/xml.html">xml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -250,7 +265,7 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Module mime.type</h1><p>Struct represented single MIME type.
+			<h1>Module mime.type</h1><p>Struct that represents a MIME type.
 </p>
 			<section></section>
 			<section>
@@ -272,20 +287,22 @@ $('#symbolSearchPane').show();</script>
 				</table>
 			</section>
 			<section>
-				<h2>Structs</h2>
+				<h2>Aliases</h2>
 				<table>
 					<col class="caption"/>
 					<tr>
-						<th>Name</th><th>Description</th>
+						<th>Name</th><th>Type</th><th>Description</th>
 					</tr>
 					<tr>
 						<td>
-							<code>
-								<a id="MimePattern" class="public" href="../mime/type/MimePattern.html">MimePattern</a>
-							</code>
+							<a id="XMLnamespace" class="public" href="../mime/type/XMLnamespace.html">
+								<code>XMLnamespace</code>
+							</a>
 						</td>
-						<td>Glob pattern for detecting MIME type of file by name.
-</td>
+						<td>
+							<code class="prettyprint lang-d"><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">typecons<wbr/></span><span class="pun">.</span><span class="typ">Tuple</span>!(string,"namespaceURI",string,"localName")</code>
+						</td>
+						<td></td>
 					</tr>
 				</table>
 			</section>

@@ -178,6 +178,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../../mime/stores/files.html">files</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -198,6 +203,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../mime/glob.html">glob</a>
 					</div>
 				</li>
 				<li>
@@ -235,6 +245,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../../mime/type.html">type</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../mime/xml.html">xml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -258,7 +273,7 @@ $('#symbolSearchPane').show();</script>
 			<span class="typ">void</span> <span class="pln">magicFileReader</span>(OutRange)
 			<span class="pun">(</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">immutable</span><span class="pun">(</span><span class="typ">void</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">data</span><span class="pun">,</span>
+			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">void</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">data</span><span class="pun">,</span>
 			<br/>
 			&nbsp;&nbsp;<span class="typ">OutRange</span> <span class="pln">sink</span>
 			<br/>
@@ -285,7 +300,7 @@ $('#symbolSearchPane').show();</script>
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">mimeType </span><span class="pun">== </span><span class="str">"text/x-diff"</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">weight </span><span class="pun">== </span><span class="lit">60</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">matches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
-    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">shouldDeleteMagic</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">deleteMagic</span><span class="pun">);
 
     </span><span class="kwd">auto </span><span class="pln">match </span><span class="pun">= </span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">matches</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">match<wbr/></span><span class="pun">.</span><span class="pln">startOffset </span><span class="pun">== </span><span class="lit">4</span><span class="pun">);

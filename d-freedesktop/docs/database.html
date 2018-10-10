@@ -1,0 +1,1429 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>mime.database</title>
+    <style type="text/css" media="screen">
+      html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+      blockquote, pre, a, abbr, address, cite, code, del, dfn, em, figure,
+      img, ins, kbd, q, s, samp, small, strong, sub, sup, var, b, u, i, dl,
+      dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+      tbody, tfoot, thead, tr, th, td {
+        background: transparent none repeat scroll 0 0;
+        border: 0 none;
+        font-size: 100%;
+        margin: 0;
+        outline: 0 none;
+        padding: 0;
+        vertical-align: baseline;
+      }
+
+      .color_red { color: #dc322f; }
+      .color_blue { color: #268bd2; }
+      .color_green { color: #859901; }
+      .color_yellow { color: #b58901; }
+      .color_black { color: black; }
+      .color_white { color: white; }
+
+      .font_big {
+        font-size: 1.2em;
+      }
+
+      .ddoc_section_h {
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 19.5px;
+        margin-top: 11px;
+        display: block;
+      }
+
+      body.dlang .dlang {
+        display: inline-block;
+      }
+
+      body.dlang .declaration .dlang {
+          display: block;
+      }
+
+      body.dlang .ddoc_header_anchor a.dlang {
+        display: block;
+        color: rgba(0, 136, 204, 1);
+        text-decoration: none;
+      }
+
+      body.dlang .ddoc_header_anchor .code {
+        color: rgba(0, 136, 204, 1);
+      }
+
+      #ddoc_main .module {
+          border-color: currentColor rgba(233, 233, 233, 1) rgba(233, 233, 233, 1);
+          border-style: none solid solid;
+          border-width: 0 1px 1px;
+          overflow-x: hidden;
+          padding: 15px;
+      }
+
+      #ddoc_main .section .section {
+        margin-top: 0;
+      }
+
+      #ddoc_main .ddoc_module_members_section {
+          padding: 1px 0 0;
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .ddoc_member, #ddoc_main .ddoc_module_members section.intro {
+          background: #fff none repeat scroll 0 0;
+          list-style-type: none;
+          width: 100%;
+      }
+
+      #ddoc_main .ddoc_header_anchor {
+          font-size: 1.4em;
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .ddoc_header_anchor > .code {
+          display: inline-block;
+
+      }
+
+      #ddoc_main .ddoc_decl {
+        background-color: transparent;
+        height: 100%;
+        left: 0;
+        top: 0;
+        padding: 0;
+        padding-left: 15px;
+      }
+
+      #ddoc_main .ddoc_decl .section, #ddoc_main .section.ddoc_sections {
+        background: white none repeat scroll 0 0;
+        margin: 0;
+        padding: 5px;
+        position: relative;
+        border-radius: 5px;
+      }
+
+      #ddoc_main .ddoc_decl .section h4, #ddoc_main .section.ddoc_sections h4 {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-top: 21px;
+      }
+
+      #ddoc_main .section .declaration {
+          margin-top: 21px;
+      }
+
+      #ddoc_main .section .declaration .code {
+          color: rgba(0, 0, 0, 1);
+          margin-bottom: 15px;
+          padding-bottom: 6px;
+      }
+
+      #ddoc_main .declaration div .para {
+          margin-bottom: 0;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr td:first-of-type {
+        padding: 7px;
+        text-align: right;
+        vertical-align: top;
+        word-break: normal;
+        white-space: nowrap;
+      }
+
+      #ddoc_main .ddoc_params .graybox {
+        border: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox td {
+        border-color: rgba(214, 214, 214, 1);
+      }
+
+      #ddoc_main .ddoc_params .graybox tr:first-child > td {
+        border-top: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr:last-child > td {
+        border-bottom: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr > td:first-child {
+        border-left: 0 none;
+      }
+
+      #ddoc_main .ddoc_params .graybox tr > td:last-child {
+        border-right: 0 none;
+        width: 100%;
+      }
+
+      #ddoc_main em.term, #ddoc_main em.term .code {
+        color: rgba(65, 65, 65, 1);
+        font-size: 12px;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      #ddoc_main .see-also {
+        cursor: pointer;
+        font-family: Menlo,monospace;
+      }
+
+      #ddoc_main .ddoc_decl .section > div:last-of-type {
+        margin-bottom: 15px;
+      }
+
+      #ddoc_main .ddoc_member, #ddoc_main .ddoc_module_members {
+          transition: transform 0.3s ease 0s;
+      }
+
+      #ddoc_main .code_sample {
+        background: inherit;
+      }
+
+      #ddoc_main .declaration .code-line {
+          display: block;
+          font: 1em Menlo,monospace;
+      }
+
+      #ddoc_main a[name] {
+        margin: -112px 0 0;
+        padding-top: 112px;
+      }
+
+      #ddoc_main .ddoc_decl td {
+        max-width: inherit;
+      }
+
+      #ddoc_main .declaration a {
+        color: inherit;
+      }
+
+      #ddoc_main .declaration a:hover {
+          color: rgba(0, 136, 204, 1);
+          text-decoration: underline;
+      }
+
+      body.ddoc {
+        background-color: transparent;
+        color: rgba(0, 0, 0, 1);
+        font-family: Helvetica,Arial,sans-serif;
+        font-size: 62.5%;
+        margin: 0;
+        border: 0;
+        left: 0;
+        top: 0;
+        padding: 0;
+      }
+
+      .ddoc a[name] {
+        display: block;
+        height: 0;
+        margin: -85px 0 0;
+        padding-top: 85px;
+        width: 0;
+      }
+
+      .ddoc .module {
+          border-color: transparent;
+          background-color: rgba(255, 255, 255, 1);
+          border-color: currentColor rgba(233, 233, 233, 1) rgba(233, 233, 233, 1);
+          border-image: none;
+          border-style: none solid solid;
+          border-width: 0 1px 1px;
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.07);
+          display: block;
+          margin-left: 0;
+          min-height: calc(100% - 173px);
+          overflow: auto;
+          padding-bottom: 100px;
+      }
+
+      .ddoc .content_wrapper {
+          background-color: rgba(242, 242, 242, 1);
+          margin: 0 auto;
+          max-width: 980px;
+      }
+
+      .ddoc .section {
+        padding: 15px 25px 30px;
+      }
+
+      .ddoc .section .section {
+        margin: 30px 0 0;
+        padding: 0;
+      }
+
+      .ddoc .para {
+        color: rgba(65, 65, 65, 1);
+        font-size: 1.4em;
+        line-height: 145%;
+        margin-bottom: 15px;
+      }
+
+      .ddoc .ddoc_examples .para {
+        margin-bottom: 0;
+      }
+
+      .ddoc .module_name {
+          color: rgba(0, 0, 0, 1);
+          display: block;
+          font-family: Helvetica;
+          font-size: 2.8em;
+          font-weight: 100;
+          margin-bottom: 0;
+          padding: 15px 0;
+      }
+
+      .ddoc .module a {
+          color: rgba(0, 136, 204, 1);
+          text-decoration: none;
+      }
+
+      .ddoc .code {
+        color: rgba(128, 128, 128, 1);
+        font-family: Menlo,monospace;
+        font-size: 0.85em;
+        word-wrap: break-word;
+      }
+
+      .ddoc .code i {
+        font-style: normal;
+      }
+
+      .ddoc .code .code {
+        font-size: 1em;
+      }
+
+      .ddoc .code_sample {
+        background-clip: padding-box;
+        margin: 1px 0;
+        text-align: left;
+      }
+
+      .ddoc .code_sample {
+        display: block;
+        font-size: 1.4em;
+        margin-left: 21px;
+      }
+
+      .ddoc ol .code_sample {
+        font-size: 1em;
+      }
+
+      .ddoc .code_lines {
+        counter-reset: li;
+        line-height: 1.6em;
+        list-style: outside none none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .ddoc .code_listing .code_sample div {
+        margin-left: 13px;
+        width: 93%;
+      }
+
+      .ddoc .code_listing .code_sample div .code_lines li {
+        list-style-type: none;
+        margin: 0;
+        padding-right: 10px;
+      }
+
+      .ddoc .code_sample div .code_lines li::before {
+        margin-left: -33px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample div .code_lines li:nth-child(n+10)::before {
+        margin-left: -39px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample div .code_lines li:nth-child(n+100)::before {
+        margin-left: -46px;
+        margin-right: 25px;
+      }
+
+      .ddoc .code_sample .code_lines .code {
+        color: #000;
+      }
+
+      .ddoc div.dlang {
+        margin: 10px 0 21px;
+        padding: 4px 0 2px 10px;
+      }
+
+      .ddoc div.dlang {
+          margin: 10px 0 21px;
+          padding: 4px 0 2px 10px;
+      }
+
+      .ddoc div.dlang {
+        border-left: 5px solid rgba(0, 155, 51, 0.2);
+      }
+
+      .ddoc .code_lines li::before {
+        color: rgba(128, 128, 128, 1);
+        content: counter(li, decimal);
+        counter-increment: li;
+        font-family: Menlo,monospace;
+        font-size: 0.9em;
+        margin-right: 16px;
+      }
+
+      .ddoc .code_lines li {
+        padding-left: 0;
+        white-space: pre-wrap;
+      }
+
+      .ddoc .code_lines li:only-of-type::before {
+        color: rgba(255, 255, 255, 1);
+        content: " ";
+      }
+
+      .ddoc .code_lines li:only-of-type {
+        color: rgba(255, 255, 255, 1);
+        content: " ";
+      }
+
+      .ddoc .code_lines li:nth-child(n+10) {
+        text-indent: -17px;
+      }
+
+      .ddoc .code_lines li:nth-child(n+10)::before {
+        margin-right: 12px;
+      }
+
+      .ddoc .graybox {
+        border: 1px solid rgba(233, 233, 233, 1);
+        border-collapse: collapse;
+        border-spacing: 0;
+        empty-cells: hide;
+        margin: 20px 0 36px;
+        text-align: left;
+      }
+
+      .ddoc .graybox p {
+        margin: 0;
+        min-width: 50px;
+      }
+
+      .ddoc td {
+        border: 1px solid rgba(233, 233, 233, 1);
+        margin: 0;
+        max-width: 260px;
+        padding: 5px 25px 5px 10px;
+        vertical-align: middle;
+      }
+
+      .punctuation {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .comment {
+        color: rgba(0, 131, 18, 1);
+      }
+
+      .operator {
+        color: #000;
+      }
+
+      .keyword {
+        color: rgba(170, 13, 145, 1);
+      }
+
+      .keyword_type {
+        color: rgba(170, 51, 145, 1);
+      }
+
+      .string_literal {
+        color: rgba(196, 26, 22, 1);
+      }
+
+      .ddoc_psuper_symbol {
+        color: rgba(92, 38, 153, 1);
+      }
+
+      .param {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .psymbol {
+        color: rgba(0, 0, 0, 1);
+      }
+
+      .ddoc_member_header .ddoc_header_anchor .code {
+        font-size: 1em;
+      }
+    </style>
+  </head>
+  <body id="ddoc_main" class="ddoc dlang">
+    <div class="content_wrapper">
+      <article class="module">
+        <h1 class="module_name">mime.database</h1>
+        <section id="module_content"><section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Access to Shared MIME-info <code class="code">database</code>.
+
+  </p>
+</div>
+<div class="ddoc_authors">
+  <h4>Authors</h4>
+  <p class="para">
+    <a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+
+  </p>
+</div>
+<div class="ddoc_license">
+  <h4>License</h4>
+  <p class="para">
+    <a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    <a href="https://www.freedesktop.org/wiki/Specifications/shared-mime-info-spec/">Shared MIME <code class="code">database</code> specification</a>
+  </p>
+</div>
+
+</section>
+<section class="section ddoc_module_members_section">
+  <div class="ddoc_module_members">
+    <ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase" id="MimeDatabase"><code class="code">MimeDatabase</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase"></span>class <code class="code">MimeDatabase</code>;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    High-level class for accessing Shared MIME-info database.
+  </p>
+</div>
+<div class="ddoc_examples">
+  <h4>Examples</h4>
+  <p class="para">
+    
+<section class="code_listing">
+  <div class="code_sample">
+    <div class="dlang">
+      <ol class="code_lines">
+        <li><code class="code"><span class="keyword">import</span> mime.stores.files;
+<span class="keyword">import</span> mime.detectors.cache;
+
+<span class="keyword">auto</span> mimePaths = [<span class="string_literal">"./test/mime"</span>, <span class="string_literal">"./test/discard"</span>, <span class="string_literal">"./test/nonexistent"</span>];
+
+<span class="keyword">alias</span> FilesMimeStore.Options FOptions;
+FOptions foptions;
+<span class="keyword">ubyte</span> opt = FOptions.required;
+
+foptions.types = opt;
+foptions.aliases = opt;
+foptions.subclasses = opt;
+foptions.icons = opt;
+foptions.genericIcons = opt;
+foptions.XMLnamespaces = opt;
+foptions.globs2 = opt;
+foptions.globs = opt;
+foptions.magic = opt;
+foptions.treemagic = opt;
+
+<span class="keyword">auto</span> store = <span class="keyword">new</span> FilesMimeStore(mimePaths, foptions);
+<span class="keyword">assert</span>(!store.byMimeType().empty);
+<span class="keyword">auto</span> detector = <span class="keyword">new</span> MimeDetectorFromCache(mimePaths);
+
+<span class="keyword">assert</span>(detector.mimeCaches().length == 2);
+<span class="keyword">assert</span>(detector.mimeTypeForFileName(<span class="string_literal">"sprite.spr"</span>).length);
+<span class="keyword">assert</span>(detector.mimeTypeForFileName(<span class="string_literal">"model01.mdl"</span>).length);
+<span class="keyword">assert</span>(detector.mimeTypeForFileName(<span class="string_literal">"liblist.gam"</span>).length);
+<span class="keyword">assert</span>(detector.mimeTypeForFileName(<span class="string_literal">"no.exist"</span>).empty);
+<span class="keyword">assert</span>(detector.mimeTypeForData(<span class="string_literal">"IDSP\x02\x00\x00\x00"</span>) == <span class="string_literal">"image/x-hlsprite"</span>);
+<span class="keyword">assert</span>(detector.resolveAlias(<span class="string_literal">"application/nonexistent"</span>) <span class="keyword">is</span> <span class="keyword">null</span>);
+
+<span class="keyword">assert</span>(detector.mimeTypeForNamespaceURI(<span class="string_literal">"http://www.w3.org/1999/ent"</span>) == <span class="string_literal">"text/x-ent"</span>);
+<span class="keyword">assert</span>(detector.mimeTypeForNamespaceURI(<span class="string_literal">"nonexistent"</span>).empty);
+
+<span class="keyword">auto</span> database = <span class="keyword">new</span> <span class="psymbol">MimeDatabase</span>(store, detector);
+<span class="keyword">assert</span>(database.detector() <span class="keyword">is</span> detector);
+<span class="keyword">assert</span>(database.store() <span class="keyword">is</span> store);
+
+<span class="keyword">assert</span>(database.mimeType(string.init) <span class="keyword">is</span> <span class="keyword">null</span>);
+
+<span class="keyword">auto</span> imageSprite = database.mimeType(<span class="string_literal">"image/x-hlsprite"</span>);
+<span class="keyword">auto</span> appSprite = database.mimeType(<span class="string_literal">"application/x-hlsprite"</span>);
+<span class="keyword">assert</span>(database.mimeType(<span class="string_literal">"application/x-hlsprite"</span>, No.resolveAlias) <span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(imageSprite !<span class="keyword">is</span> <span class="keyword">null</span> &amp;&amp; imageSprite <span class="keyword">is</span> appSprite);
+
+<span class="keyword">assert</span>(database.detector().isSubclassOf(<span class="string_literal">"text/x-fgd"</span>, <span class="string_literal">"text/plain"</span>));
+<span class="keyword">assert</span>(!database.detector().isSubclassOf(<span class="string_literal">"text/x-fgd"</span>, <span class="string_literal">"application/octet-stream"</span>));
+
+<span class="keyword">auto</span> fgdType = database.mimeTypeForFileName(<span class="string_literal">"name.fgd"</span>);
+<span class="keyword">assert</span>(fgdType !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(fgdType.name == <span class="string_literal">"text/x-fgd"</span>);
+
+<span class="comment">//testing Match options
+</span><span class="keyword">auto</span> iqm = database.mimeTypeForFile(<span class="string_literal">"model.iqm"</span>, <span class="psymbol">MimeDatabase</span>.Match.globPatterns);
+<span class="keyword">assert</span>(iqm !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(iqm.name == <span class="string_literal">"application/x-iqm"</span>);
+
+<span class="keyword">auto</span> spriteType = database.mimeTypeForFile(<span class="string_literal">"sprite.spr"</span>, <span class="psymbol">MimeDatabase</span>.Match.globPatterns);
+<span class="keyword">assert</span>(spriteType !<span class="keyword">is</span> <span class="keyword">null</span>);
+
+<span class="keyword">auto</span> sprite32 = database.mimeTypeForFile(<span class="string_literal">"sprite.spr"</span>, <span class="string_literal">"IDSP\x20\x00\x00\x00"</span>, <span class="psymbol">MimeDatabase</span>.Match.magicRules);
+<span class="keyword">assert</span>(sprite32 !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(sprite32.name == <span class="string_literal">"image/x-sprite32"</span>);
+
+<span class="keyword">auto</span> zeroType = database.mimeTypeForFile(<span class="string_literal">"nonexistent"</span>, (<span class="keyword">void</span>[]).init, <span class="psymbol">MimeDatabase</span>.Match.emptyFileFallback);
+<span class="keyword">assert</span>(zeroType !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(zeroType.name == <span class="string_literal">"application/x-zerosize"</span>);
+
+zeroType = database.mimeTypeForFile(<span class="string_literal">"test/emptyfile"</span>, <span class="psymbol">MimeDatabase</span>.Match.emptyFileFallback);
+<span class="keyword">assert</span>(zeroType !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(zeroType.name == <span class="string_literal">"application/x-zerosize"</span>);
+
+<span class="keyword">auto</span> textType = database.mimeTypeForFile(<span class="string_literal">"test/mime/types"</span>, <span class="psymbol">MimeDatabase</span>.Match.textFallback);
+<span class="keyword">assert</span>(textType !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(textType.name == <span class="string_literal">"text/plain"</span>);
+
+<span class="keyword">auto</span> dirType = database.mimeTypeForFile(<span class="string_literal">"test"</span>, <span class="psymbol">MimeDatabase</span>.Match.inodeType);
+<span class="keyword">assert</span>(dirType !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(dirType.name == <span class="string_literal">"inode/directory"</span>);
+
+<span class="keyword">auto</span> octetStreamType = database.mimeTypeForFile(<span class="string_literal">"test/mime/mime.cache"</span>, <span class="psymbol">MimeDatabase</span>.Match.octetStreamFallback);
+<span class="keyword">assert</span>(octetStreamType !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(octetStreamType.name == <span class="string_literal">"application/octet-stream"</span>);
+
+<span class="keyword">assert</span>(database.mimeTypeForFile(<span class="string_literal">"file.unknown"</span>, <span class="psymbol">MimeDatabase</span>.Match.globPatterns) <span class="keyword">is</span> <span class="keyword">null</span>);
+
+<span class="comment">//testing data
+</span><span class="keyword">auto</span> hlsprite = database.mimeTypeForData(<span class="string_literal">"IDSP\x02\x00\x00\x00"</span>);
+<span class="keyword">assert</span>(hlsprite !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(hlsprite.name == <span class="string_literal">"image/x-hlsprite"</span>);
+
+<span class="keyword">auto</span> qsprite = database.mimeTypeForData(<span class="string_literal">"IDSP\x01\x00\x00\x00"</span>);
+<span class="keyword">assert</span>(qsprite !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(qsprite.name == <span class="string_literal">"image/x-qsprite"</span>);
+
+<span class="keyword">auto</span> q2sprite = database.mimeTypeForData(<span class="string_literal">"IDS2"</span>);
+<span class="keyword">assert</span>(q2sprite !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(q2sprite.name == <span class="string_literal">"image/x-q2sprite"</span>);
+
+<span class="comment">//testing case-insensitive suffix
+</span><span class="keyword">auto</span> vpk = database.mimeTypeForFileName(<span class="string_literal">"pakdir.vpk"</span>);
+<span class="keyword">assert</span>(vpk !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(vpk.name == <span class="string_literal">"application/vnd.valve.vpk"</span>);
+
+vpk = database.mimeTypeForFileName(<span class="string_literal">"pakdir.VPK"</span>);
+<span class="keyword">assert</span>(vpk !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(vpk.name == <span class="string_literal">"application/vnd.valve.vpk"</span>);
+
+<span class="comment">//testing generic glob
+</span><span class="keyword">auto</span> modelseq = database.mimeTypeForFileName(<span class="string_literal">"model01.mdl"</span>);
+<span class="keyword">assert</span>(modelseq !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(modelseq.name == <span class="string_literal">"application/x-hlmdl-sequence"</span>);
+modelseq = database.mimeTypeForFileName(<span class="string_literal">"model01.MDL"</span>);
+<span class="keyword">assert</span>(modelseq !<span class="keyword">is</span> <span class="keyword">null</span> &amp;&amp; modelseq.name == <span class="string_literal">"application/x-hlmdl-sequence"</span>);
+
+<span class="keyword">auto</span> generalGlob = database.mimeTypeForFileName(<span class="string_literal">"general_test_long_glob"</span>);
+<span class="keyword">assert</span>(generalGlob !<span class="keyword">is</span> <span class="keyword">null</span>);
+<span class="keyword">assert</span>(generalGlob.name == <span class="string_literal">"application/x-general-long-glob"</span>);
+<span class="keyword">assert</span>(database.detector.mimeTypeForFileName(<span class="string_literal">"general_test_long_glob"</span>));
+
+<span class="keyword">assert</span>(!database.mimeTypeForFileName(<span class="string_literal">"pak1.PAK"</span>));
+<span class="keyword">assert</span>(database.mimeTypeForFileName(<span class="string_literal">"pak1.pak"</span>));
+
+<span class="comment">//testing case-sensitive suffix
+</span><span class="keyword">assert</span>(database.mimeTypeForFileName(<span class="string_literal">"my.shader"</span>));
+<span class="keyword">assert</span>(!database.mimeTypeForFileName(<span class="string_literal">"my.SHADER"</span>));
+
+<span class="comment">//testing literal
+</span><span class="keyword">assert</span>(database.mimeTypeForFileName(<span class="string_literal">"liblist.gam"</span>));
+<span class="keyword">assert</span>(database.mimeTypeForFileName(<span class="string_literal">"makefile"</span>));
+
+<span class="comment">//testing discard glob
+</span><span class="keyword">assert</span>(!database.mimeTypeForFileName(<span class="string_literal">"GNUmakefile"</span>));
+<span class="keyword">assert</span>(!database.detector.mimeTypeForFileName(<span class="string_literal">"GNUmakefile"</span>));
+
+<span class="keyword">assert</span>(!database.mimeTypeForFileName(<span class="string_literal">"file.qvm3"</span>));
+<span class="keyword">assert</span>(!database.detector.mimeTypeForFileName(<span class="string_literal">"file.qvm3"</span>));
+
+<span class="keyword">assert</span>(!database.mimeTypeForFileName(<span class="string_literal">"model01.sequence"</span>));
+<span class="keyword">assert</span>(!database.detector.mimeTypeForFileName(<span class="string_literal">"model01.sequence"</span>));
+
+<span class="comment">//testing discard magic
+</span><span class="keyword">assert</span>(!database.mimeTypeForData(<span class="string_literal">"PAK"</span>));
+<span class="keyword">assert</span>(!database.detector.mimeTypeForData(<span class="string_literal">"PAK"</span>));
+<span class="keyword">assert</span>(!database.mimeTypeForFileName(<span class="string_literal">"file.qwad"</span>));
+
+<span class="comment">//conflicts
+</span><span class="keyword">assert</span>(database.mimeTypeForFileName(<span class="string_literal">"file.jmf"</span>));
+<span class="keyword">assert</span>(database.mimeTypeForData(<span class="string_literal">"PACK"</span>));
+
+<span class="comment">//xml
+</span><span class="keyword">assert</span>(database.mimeTypeForFileName(<span class="string_literal">"file.xml"</span>).name == <span class="string_literal">"application/xml"</span>);
+<span class="keyword">assert</span>(database.mimeTypeForData(<span class="string_literal">"&lt;?xml"</span>).name == <span class="string_literal">"application/xml"</span>);
+<span class="keyword">assert</span>(database.mimeTypeForFile(<span class="string_literal">"file.xml"</span>, <span class="string_literal">`&lt;start-element xmlns="http://www.w3.org/1999/ent"&gt;`</span>).name == <span class="string_literal">"text/x-ent"</span>);
+</code></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+  </p>
+</div>
+</section>
+<ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.Match" id="MimeDatabase.Match"><code class="code">Match</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.Match"></span>enum <code class="code">Match</code>: int;
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Options for 
+  </p>
+</div>
+
+</section>
+<ul class="ddoc_members">
+  <li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.Match.globPatterns" id="MimeDatabase.Match.globPatterns"><code class="code">globPatterns</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.Match.globPatterns"></span><code class="code">globPatterns</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Match file name against glob patterns.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.Match.magicRules" id="MimeDatabase.Match.magicRules"><code class="code">magicRules</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.Match.magicRules"></span><code class="code">magicRules</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Match file content against magic rules. With MatchOptions.globPatterns flag it's used only in conflicts.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.Match.namespaceURI" id="MimeDatabase.Match.namespaceURI"><code class="code">namespaceURI</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.Match.namespaceURI"></span><code class="code">namespaceURI</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Try to clarify mime type in case it's XML.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.Match.inodeType" id="MimeDatabase.Match.inodeType"><code class="code">inodeType</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.Match.inodeType"></span><code class="code">inodeType</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Provide inode/* type for files other than regular files.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.Match.textFallback" id="MimeDatabase.Match.textFallback"><code class="code">textFallback</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.Match.textFallback"></span><code class="code">textFallback</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Provide  fallback if data seems to be textual.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.Match.octetStreamFallback" id="MimeDatabase.Match.octetStreamFallback"><code class="code">octetStreamFallback</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.Match.octetStreamFallback"></span><code class="code">octetStreamFallback</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Provide  fallback if data seems to be binary.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.Match.emptyFileFallback" id="MimeDatabase.Match.emptyFileFallback"><code class="code">emptyFileFallback</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.Match.emptyFileFallback"></span><code class="code">emptyFileFallback</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Provide <b>application/x-zerosize</b> fallback if mime type can't be detected, but data is known to be zero size.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.Match.all" id="MimeDatabase.Match.all"><code class="code">all</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.Match.all"></span><code class="code">all</code>
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Use <code class="code">all</code> recipes to detect MIME type.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.this" id="MimeDatabase.this"><code class="code">this</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.this"></span>this(Range)(Range <code class="code">mimePaths</code>) if (isInputRange!Range &amp;&amp; is(ElementType!Range : string));
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Constructor based on MIME paths.
+ It uses  as MIME type detector and  as MIME type store.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Range <code class="code">mimePaths</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Range of paths to base mime directories where needed files will be read.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    , , 
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.this" id="MimeDatabase.this"><code class="code">this</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.this.2"></span>@safe this(IMimeStore <code class="code">store</code>, IMimeDetector <code class="code">detector</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Create MimeDatabase object with given <code class="code">store</code> and <code class="code">detector</code>.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.store" id="MimeDatabase.store"><code class="code">store</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.store"></span>IMimeStore <code class="code">store</code>();
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get MIME types <code class="code">store</code> used in MimeDatabase instance.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.detector" id="MimeDatabase.detector"><code class="code">detector</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.detector"></span>IMimeDetector <code class="code">detector</code>();
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get MIME type <code class="code">detector</code> used in MimeDatabase instance.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.mimeTypeForFileName" id="MimeDatabase.mimeTypeForFileName"><code class="code">mimeTypeForFileName</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.mimeTypeForFileName"></span>Rebindable!(const(MimeType)) <code class="code">mimeTypeForFileName</code>(string <code class="code">fileName</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get MIME type for given <code class="code">fileName</code>.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.mimeTypeForData" id="MimeDatabase.mimeTypeForData"><code class="code">mimeTypeForData</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.mimeTypeForData"></span>Rebindable!(const(MimeType)) <code class="code">mimeTypeForData</code>(const(void)[] <code class="code">data</code>);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get MIME type for given <code class="code">data</code>.
+
+  </p>
+</div>
+<div class="ddoc_section">
+  <p class="para">
+    <span class="ddoc_section_h">Note:</span>
+This does NOT provide any fallbacks like text/plain, application/octet-stream or application/x-zerosize.
+
+  </p>
+</div>
+<div class="ddoc_see_also">
+  <h4>See Also</h4>
+  <p class="para">
+    
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.mimeTypeForFile" id="MimeDatabase.mimeTypeForFile"><code class="code">mimeTypeForFile</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.mimeTypeForFile"></span>Rebindable!(const(MimeType)) <code class="code">mimeTypeForFile</code>(string <code class="code">fileName</code>, const(void)[] <code class="code">data</code>, Match <code class="code">options</code> = Match.all);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get MIME type for file and its <code class="code">data</code> using methods describing in <code class="code">options</code>.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">string <code class="code">fileName</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Name of file
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">const(void)[] <code class="code">data</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Data chunk read from the file. It's not necessary to read the whole file.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Match <code class="code">options</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Lookup <code class="code">options</code>
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.mimeTypeForFile" id="MimeDatabase.mimeTypeForFile"><code class="code">mimeTypeForFile</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.mimeTypeForFile.2"></span>Rebindable!(const(MimeType)) <code class="code">mimeTypeForFile</code>(string <code class="code">fileName</code>, Match <code class="code">options</code> = Match.all);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get MIME type for file using methods describing in <code class="code">options</code>.
+ File contents will be read automatically if needed.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li><li class="ddoc_member">
+  <div class="ddoc_member_header">
+  <div class="ddoc_header_anchor">
+  <a href="#MimeDatabase.mimeType" id="MimeDatabase.mimeType"><code class="code">mimeType</code></a>
+</div>
+</div><div class="ddoc_decl">
+  <section class="section">
+    <div class="declaration">
+      <h4>Declaration</h4>
+      <div class="dlang">
+        <p class="para">
+          <code class="code">
+            <span class="ddoc_anchor" id="MimeDatabase.mimeType"></span>Rebindable!(const(MimeType)) <code class="code">mimeType</code>(const(char)[] <code class="code">nameOrAlias</code>, Flag!"resolveAlias" <code class="code">resolve</code> = Yes.resolveAlias);
+
+          </code>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="ddoc_decl">
+  <section class="section ddoc_sections">
+  <div class="ddoc_summary">
+  <p class="para">
+    Get mime type by name or alias.
+
+  </p>
+</div>
+<div class="ddoc_params">
+  <h4>Parameters</h4>
+  <table cellspacing="0" cellpadding="5" border="0" class="graybox">
+    <tbody>
+      <tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">const(char)[] <code class="code">nameOrAlias</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      MIME type name or alias.
+    </p>
+  </div>
+</td>
+</tr>
+<tr class="ddoc_param_row">
+  <td scope="ddoc_param_id">
+  <code class="code">
+    <em class="term">Flag!"resolveAlias" <code class="code">resolve</code></em>
+  </code>
+</td>
+<td>
+  <div class="ddoc_param_desc">
+    <p class="para">
+      Try to <code class="code">resolve</code> alias if could not find MIME type with given name.
+    </p>
+  </div>
+</td>
+</tr>
+
+    </tbody>
+  </table>
+</div>
+<div class="ddoc_returns">
+  <h4>Return Value</h4>
+  <p class="para">
+     for given <code class="code">nameOrAlias</code>, resolving alias if needed. Null if no mime type found.
+  </p>
+</div>
+
+</section>
+
+</div>
+
+</li>
+</ul>
+
+</div>
+
+</li>
+</ul>
+  </div>
+</section>
+</section>
+      </article>
+    </div>
+  </body>
+</html>

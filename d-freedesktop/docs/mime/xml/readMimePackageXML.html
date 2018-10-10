@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function readMimePackageXML</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/files.html">files</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/type.html">type</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../mime/xml.html">xml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function readMimePackageXML</h1><p>Read MIME types from xml formatted data with mime-info root element as defined by spec.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">xml<wbr/></span><span class="pun">.</span><span class="typ">XMLPackageRange</span> <span class="pln">readMimePackageXML</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">xmlData</span>
+			<br/>
+			<span class="pun">)</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Returns</h2>
+<p>Forward range of <code class="lang-d"><a href="../../mime/type/MimeType.html" title="mime.type.MimeType"><span class="typ">MimeType</span></a></code> elements parsed from xml definition.
+</p>
+</section>
+<section><h2>Throws</h2>
+<p><code class="lang-d"><a href="../../mime/xml/XMLMimeException.html"><span class="typ">XMLMimeException</span></a></code> on format error.
+</p>
+</section>
+<section><h2>See Also</h2>
+<p><code class="lang-d"><a href="../../mime/xml/readMimePackageFile.html" title="mime.xml.readMimePackageFile"><span class="pln">readMimePackageFile</span></a></code>
+</p>
+</section>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">xmlData </span><span class="pun">= </span><span class="str">`&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info"&gt;
+&lt;mime-type type="image/x-sigma-x3f"&gt;
+    &lt;comment&gt;Sigma X3F raw image&lt;/comment&gt;
+    &lt;sub-class-of type="image/x-dcraw"/&gt;
+    &lt;magic priority="60"&gt;
+        &lt;match value="FOVb" type="string" offset="0"&gt;
+            &lt;match value="0x00FF00FF" type="little32" offset="4" mask="0xFF00FF00"/&gt;
+        &lt;/match&gt;
+    &lt;/magic&gt;
+    &lt;glob pattern="*.x3f"/&gt;
+&lt;/mime-type&gt;
+    &lt;mime-type type="image/svg+xml"&gt;
+    &lt;comment&gt;SVG image&lt;/comment&gt;
+    &lt;sub-class-of type="application/xml"/&gt;
+    &lt;magic priority="80"&gt;
+        &lt;match value="&amp;lt;!DOCTYPE svg" type="string" offset="0:256"/&gt;
+        &lt;match value="&amp;lt;svg" type="string" offset="0:256"/&gt;
+    &lt;/magic&gt;
+    &lt;glob pattern="*.svg"/&gt;
+    &lt;root-XML namespaceURI="http://www.w3.org/2000/svg" localName="svg"/&gt;
+&lt;/mime-type&gt;
+&lt;mime-type type="x-content/video-bluray"&gt;
+    &lt;comment&gt;Blu-ray video disc&lt;/comment&gt;
+    &lt;treemagic&gt;
+    &lt;treematch type="directory" path="BDAV" non-empty="true" match-case="true"/&gt;
+    &lt;treematch type="directory" path="BDMV" non-empty="true"/&gt;
+    &lt;/treemagic&gt;
+&lt;/mime-type&gt;
+&lt;mime-type type="application/x-sharedlib"&gt;
+    &lt;magic priority="50"&gt;
+        &lt;match value="\177ELF            \003" type="string" offset="0" mask="0xffffffff000000000000000000000000ff"/&gt;
+    &lt;/magic&gt;
+&lt;/mime-type&gt;
+&lt;/mime-info&gt;`</span><span class="pun">;
+</span><span class="kwd">auto </span><span class="pln">range </span><span class="pun">= </span><span class="pln">readMimePackageXML</span><span class="pun">(<a href="../../mime/xml/readMimePackageXML.html#xmlData"></span><span class="pln">xmlData</span></a><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">empty</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">mimeType </span><span class="pun">= </span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType </span><span class="kwd">is </span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"image/x-sigma-x3f"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">magic </span><span class="pun">= </span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">weight </span><span class="pun">== </span><span class="lit">60</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">matches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">match </span><span class="pun">= </span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">matches</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">match<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== </span><span class="typ">MagicMatch<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">string_</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">match<wbr/></span><span class="pun">.</span><span class="pln">value </span><span class="pun">== </span><span class="str">"FOVb"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">match<wbr/></span><span class="pun">.</span><span class="pln">submatches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">submatch </span><span class="pun">= </span><span class="pln">match<wbr/></span><span class="pun">.</span><span class="pln">submatches</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== </span><span class="typ">MagicMatch<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">little32</span><span class="pun">);
+</span><span class="kwd">const </span><span class="typ">uint </span><span class="pln">val </span><span class="pun">= </span><span class="lit">0x00FF00FF</span><span class="pun">;
+</span><span class="kwd">const </span><span class="typ">uint </span><span class="pln">mask </span><span class="pun">= </span><span class="lit">0xFF00FF00</span><span class="pun">;
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">bitmanip </span><span class="pun">: </span><span class="pln">nativeToLittleEndian</span><span class="pun">;
+</span><span class="kwd">auto </span><span class="pln">valArr </span><span class="pun">= </span><span class="pln">nativeToLittleEndian</span><span class="pun">(</span><span class="pln">val</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">maskArr </span><span class="pun">= </span><span class="pln">nativeToLittleEndian</span><span class="pun">(</span><span class="pln">mask</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">value </span><span class="pun">== </span><span class="pln">valArr</span><span class="pun">[]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">mask </span><span class="pun">== </span><span class="pln">maskArr</span><span class="pun">[]);
+
+</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">empty</span><span class="pun">);
+
+</span><span class="pln">mimeType </span><span class="pun">= </span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="typ">XMLnamespaces </span><span class="pun">== [</span><span class="typ">XMLnamespace</span><span class="pun">(</span><span class="str">"http://www.w3.org/2000/svg"</span><span class="pun">, </span><span class="str">"svg"</span><span class="pun">)]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"image/svg+xml"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">magic2 </span><span class="pun">= </span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">magic2<wbr/></span><span class="pun">.</span><span class="pln">weight </span><span class="pun">== </span><span class="lit">80</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">magic2<wbr/></span><span class="pun">.</span><span class="pln">matches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">2</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">match2 </span><span class="pun">= </span><span class="pln">magic2<wbr/></span><span class="pun">.</span><span class="pln">matches</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">match2<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== </span><span class="typ">MagicMatch<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">string_</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">match2<wbr/></span><span class="pun">.</span><span class="pln">value </span><span class="pun">== </span><span class="str">"&lt;svg"</span><span class="pun">);
+
+</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">empty</span><span class="pun">);
+
+</span><span class="pln">mimeType </span><span class="pun">= </span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"x-content/video-bluray"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">treeMagics<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">treeMagic </span><span class="pun">= </span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">treeMagics</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">treeMagic<wbr/></span><span class="pun">.</span><span class="pln">matches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">2</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">treeMatch </span><span class="pun">= </span><span class="pln">treeMagic<wbr/></span><span class="pun">.</span><span class="pln">matches</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">treeMatch<wbr/></span><span class="pun">.</span><span class="pln">path </span><span class="pun">== </span><span class="str">"BDAV"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">treeMatch<wbr/></span><span class="pun">.</span><span class="pln">nonEmpty</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">treeMatch<wbr/></span><span class="pun">.</span><span class="pln">matchCase</span><span class="pun">);
+
+</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">();
+
+</span><span class="pln">mimeType </span><span class="pun">= </span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">magic3 </span><span class="pun">= </span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">magic3<wbr/></span><span class="pun">.</span><span class="pln">matches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">match3 </span><span class="pun">= </span><span class="pln">magic3<wbr/></span><span class="pun">.</span><span class="pln">matches</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">match3<wbr/></span><span class="pun">.</span><span class="pln">mask </span><span class="pun">== </span><span class="str">"\xff\xff\xff\xff\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xff"</span><span class="pun">);
+
+</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">popFront</span><span class="pun">();
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">empty</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">empty</span><span class="pun">);
+
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">exception </span><span class="pun">: </span><span class="pln">collectException</span><span class="pun">;
+<a href="../../mime/xml/readMimePackageXML.html#xmlData"></span><span class="pln">xmlData</span></a><span class="pln"> </span><span class="pun">= </span><span class="str">`&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info"&gt;
+&lt;mime-type type="application/x-sharedlib"&gt;
+    &lt;magic priority="50"&gt;
+        &lt;match value="\177ELF            \003" type="string" offset="0" mask="wrong_format"/&gt;
+    &lt;/magic&gt;
+&lt;/mime-type&gt;
+&lt;/mime-info&gt;`</span><span class="pun">;
+</span><span class="pln">range </span><span class="pun">= </span><span class="pln">readMimePackageXML</span><span class="pun">(<a href="../../mime/xml/readMimePackageXML.html#xmlData"></span><span class="pln">xmlData</span></a><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(!</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">empty</span><span class="pun">);
+</span><span class="kwd">auto </span><span class="pln">e </span><span class="pun">= </span><span class="pln">collectException</span><span class="pun">!<a href="../../mime/xml/XMLMimeException.html"></span><span class="typ">XMLMimeException</span></a><span class="pun">(</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">e </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">e<wbr/></span><span class="pun">.</span><span class="pln">lineNum </span><span class="pun">== </span><span class="lit">5</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2018
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

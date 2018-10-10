@@ -178,6 +178,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../../mime/stores/files.html">files</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -198,6 +203,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../mime/glob.html">glob</a>
 					</div>
 				</li>
 				<li>
@@ -235,6 +245,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../../mime/type.html">type</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../../mime/xml.html">xml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -258,7 +273,7 @@ $('#symbolSearchPane').show();</script>
 			<span class="typ">void</span> <span class="pln">treeMagicFileReader</span>(OutRange)
 			<span class="pun">(</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">immutable</span><span class="pun">(</span><span class="typ">void</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">data</span><span class="pun">,</span>
+			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">void</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">data</span><span class="pun">,</span>
 			<br/>
 			&nbsp;&nbsp;<span class="typ">OutRange</span> <span class="pln">sink</span>
 			<br/>
@@ -290,20 +305,21 @@ $('#symbolSearchPane').show();</script>
     </span><span class="kwd">auto </span><span class="pln">submatch </span><span class="pun">= </span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">matches</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">path </span><span class="pun">== </span><span class="str">"BDAV"</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== </span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">directory</span><span class="pun">);
-    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">options </span><span class="pun">== </span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Options<wbr/></span><span class="pun">.</span><span class="pln">nonEmpty</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">nonEmpty</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">submatches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">2</span><span class="pun">);
 
     </span><span class="kwd">auto </span><span class="pln">otherSubmatch </span><span class="pun">= </span><span class="pln">t<wbr/></span><span class="pun">.</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">matches</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">otherSubmatch<wbr/></span><span class="pun">.</span><span class="pln">path </span><span class="pun">== </span><span class="str">"testfile"</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">otherSubmatch<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== </span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">any</span><span class="pun">);
-    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">otherSubmatch<wbr/></span><span class="pun">.</span><span class="pln">options </span><span class="pun">== (</span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Options<wbr/></span><span class="pun">.</span><span class="pln">executable </span><span class="pun">| </span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Options<wbr/></span><span class="pun">.</span><span class="pln">mimeType</span><span class="pun">));
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">otherSubmatch<wbr/></span><span class="pun">.</span><span class="pln">executable</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">otherSubmatch<wbr/></span><span class="pun">.</span><span class="pln">mimeType </span><span class="pun">== </span><span class="str">"application/x-executable"</span><span class="pun">);
 
     </span><span class="kwd">auto </span><span class="pln">autorun </span><span class="pun">= </span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">submatches</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">autorun<wbr/></span><span class="pun">.</span><span class="pln">path </span><span class="pun">== </span><span class="str">"autorun"</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">autorun<wbr/></span><span class="pun">.</span><span class="pln">submatches<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">0</span><span class="pun">);
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">autorun<wbr/></span><span class="pun">.</span><span class="pln">type </span><span class="pun">== </span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">file</span><span class="pun">);
-    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">autorun<wbr/></span><span class="pun">.</span><span class="pln">options </span><span class="pun">== (</span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Options<wbr/></span><span class="pun">.</span><span class="pln">executable </span><span class="pun">| </span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Options<wbr/></span><span class="pun">.</span><span class="pln">matchCase</span><span class="pun">));
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">autorun<wbr/></span><span class="pun">.</span><span class="pln">executable</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">autorun<wbr/></span><span class="pun">.</span><span class="pln">matchCase</span><span class="pun">);
 
     </span><span class="kwd">auto </span><span class="pln">testlink </span><span class="pun">= </span><span class="pln">submatch<wbr/></span><span class="pun">.</span><span class="pln">submatches</span><span class="pun">[</span><span class="lit">1</span><span class="pun">];
     </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">testlink<wbr/></span><span class="pun">.</span><span class="pln">path </span><span class="pun">== </span><span class="str">"testlink"</span><span class="pun">);

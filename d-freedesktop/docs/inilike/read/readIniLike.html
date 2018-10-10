@@ -178,6 +178,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../mime/stores/files.html">files</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -198,6 +203,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
 					</div>
 				</li>
 				<li>
@@ -235,6 +245,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../mime/type.html">type</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/xml.html">xml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -250,7 +265,7 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Function readIniLike</h1><p>Read ini-like file entries via the set of callbacks.
+			<h1>Function readIniLike</h1><p>Read ini-like file entries via the set of callbacks. Callbacks can be null, but basic format validation is still run in this case.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -260,13 +275,13 @@ $('#symbolSearchPane').show();</script>
 			<br/>
 			&nbsp;&nbsp;<span class="typ">IniLikeReader</span> <span class="pln">reader</span><span class="pun">,</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onLeadingComment</span><span class="pun">,</span>
+			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onLeadingComment</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">scope </span><a href="../../inilike/read/ActionOnGroup.html"><span class="typ">ActionOnGroup</span></a> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onGroup</span><span class="pun">,</span>
+			&nbsp;&nbsp;<span class="kwd">scope </span><a href="../../inilike/read/ActionOnGroup.html"><span class="typ">ActionOnGroup</span></a> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onGroup</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onKeyValue</span><span class="pun">,</span>
+			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onKeyValue</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onCommentInGroup</span><span class="pun">,</span>
+			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">void</span> <span class="kwd">delegate</span><span class="pun">(</span><span class="typ">string</span><span class="pun">, </span><span class="typ">string</span><span class="pun">)</span> <span class="pln">onCommentInGroup</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
 			<br/>
 			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">fileName</span> <span class="pun">=</span> <span class="kwd">null</span>
 			<br/>
@@ -279,9 +294,9 @@ $('#symbolSearchPane').show();</script>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="reader">reader</td><td> <code class="lang-d"><a href="../../inilike/range/IniLikeReader.html" title="inilike.range.IniLikeReader"><span class="typ">IniLikeReader</span></a></code> object as returned by <code class="lang-d"><a href="../../inilike/range/iniLikeRangeReader.html" title="inilike.range.iniLikeRangeReader"><span class="pln">iniLikeRangeReader</span></a></code> or similar function.</td></tr>
 <tr><td id="onLeadingComment">onLeadingComment</td><td> Delegate to call after leading comment (i.e. the one before any group) is read. The parameter is either comment of empty line.</td></tr>
-<tr><td id="onGroup">onGroup</td><td> Delegate to call after group header is read. The parameter is group name (without brackets). Must return <code class="lang-d"><a href="../../inilike/read/ActionOnGroup.html"><span class="typ">ActionOnGroup</span></a></code>.</td></tr>
-<tr><td id="onKeyValue">onKeyValue</td><td> Delegate to call after key-value entry is read and parsed. Parameters are key, value and group name.</td></tr>
-<tr><td id="onCommentInGroup">onCommentInGroup</td><td> Delegate to call after comment or empty line is read inside group section. The parameter is either comment of empty line.</td></tr>
+<tr><td id="onGroup">onGroup</td><td> Delegate to call after group header is read. The parameter is group name (without brackets). Must return <code class="lang-d"><a href="../../inilike/read/ActionOnGroup.html"><span class="typ">ActionOnGroup</span></a></code>. Providing the null callback is equal to providing the callback that always returns <code class="lang-d"><a href="../../inilike/read/ActionOnGroup.html#skip"><span class="typ">ActionOnGroup<wbr/></span><span class="pun">.</span><span class="pln">skip</span></a></code>.</td></tr>
+<tr><td id="onKeyValue">onKeyValue</td><td> Delegate to call after key-value entry is read and parsed. Parameters are key, value and the current group name. It's recommended to throw <code class="lang-d"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">exceptions<wbr/></span><span class="pun">.</span><span class="typ">IniLikeEntryException</span></code> from this function in case if the key-value pair is invalid.</td></tr>
+<tr><td id="onCommentInGroup">onCommentInGroup</td><td> Delegate to call after comment or empty line is read inside group section. The first parameter is either comment or empty line. The second parameter is the current group name.</td></tr>
 <tr><td id="fileName">fileName</td><td> Optional file name parameter to use in thrown exceptions.</td></tr>
 </table>
 </section>
@@ -324,6 +339,14 @@ KeyNeverGetThere=Value4
     </span><span class="kwd">assert</span><span class="pun">((</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"ToProceed" </span><span class="pun">&amp;&amp; </span><span class="pln">line </span><span class="pun">== </span><span class="str">"# Comment2"</span><span class="pun">) || (</span><span class="pln">groupName </span><span class="pun">== </span><span class="str">"ToStopAfter" </span><span class="pun">&amp;&amp; </span><span class="pln">line </span><span class="pun">== </span><span class="str">"# Comment3"</span><span class="pun">));
 };
 </span><span class="pln">readIniLike</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">), <a href="../../inilike/read/readIniLike.html#onLeadingComment"></span><span class="pln">onLeadingComment</span></a><span class="pun">, <a href="../../inilike/read/readIniLike.html#onGroup"></span><span class="pln">onGroup</span></a><span class="pun">, <a href="../../inilike/read/readIniLike.html#onKeyValue"></span><span class="pln">onKeyValue</span></a><span class="pun">, <a href="../../inilike/read/readIniLike.html#onCommentInGroup"></span><span class="pln">onCommentInGroup</span></a><span class="pun">);
+</span><span class="pln">readIniLike</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">));
+
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">exception </span><span class="pun">: </span><span class="pln">assertThrown</span><span class="pun">;
+</span><span class="pln">contents </span><span class="pun">=
+</span><span class="str">`Not a comment
+[Group name]
+Key=Value`</span><span class="pun">;
+</span><span class="pln">assertThrown</span><span class="pun">!</span><span class="typ">IniLikeReadException</span><span class="pun">(</span><span class="pln">readIniLike</span><span class="pun">(</span><span class="pln">iniLikeStringReader</span><span class="pun">(</span><span class="pln">contents</span><span class="pun">)));
 </span></code></pre>
 </section>
 

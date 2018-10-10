@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function readMimePackageFile</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/files.html">files</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/type.html">type</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../mime/xml.html">xml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function readMimePackageFile</h1><p>Lazily read MIME types from packages/package_name.xml file (e.g. packages/freedesktop.org.xml).
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">xml<wbr/></span><span class="pun">.</span><span class="typ">XMLPackageRange</span> <span class="pln">readMimePackageFile</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">filePath</span>
+			<br/>
+			<span class="pun">)</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Returns</h2>
+<p>Forward range of <code class="lang-d"><a href="../../mime/type/MimeType.html" title="mime.type.MimeType"><span class="typ">MimeType</span></a></code> elements parsed from xml definition.
+</p>
+</section>
+<section><h2>Throws</h2>
+<p><code class="lang-d"><a href="../../mime/xml/XMLMimeException.html" title="mime.xml.XMLMimeException"><span class="typ">XMLMimeException</span></a></code> on format error or <b>std.file.FileException</b> on file reading error.
+</p>
+</section>
+<section><h2>See Also</h2>
+<p><code class="lang-d"><a href="../../mime/xml/readMimePackageXML.html" title="mime.xml.readMimePackageXML"><span class="pln">readMimePackageXML</span></a></code>
+</p>
+</section>
+<section><h2>Note</h2>
+<p>Package files are source files. They may be not synced with output files produced by <b>update-mime-database</b>
+  (e.g. if source file had been changed, but the mentioned utility was not called after that)
+  Source files however contain the most complete definition of MIME type including globs, magic rules and XML namespaces.
+</p>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2018
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

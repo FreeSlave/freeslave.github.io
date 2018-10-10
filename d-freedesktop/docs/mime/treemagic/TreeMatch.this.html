@@ -178,6 +178,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../mime/stores/files.html">files</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -198,6 +203,11 @@ $('#symbolSearchPane').show();</script>
 				<li>
 					<div class="module ">
 						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
 					</div>
 				</li>
 				<li>
@@ -235,6 +245,11 @@ $('#symbolSearchPane').show();</script>
 						<a href="../../mime/type.html">type</a>
 					</div>
 				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/xml.html">xml</a>
+					</div>
+				</li>
 			</ul>
 				</li>
 				<li>
@@ -257,11 +272,13 @@ $('#symbolSearchPane').show();</script>
 			<span class="kwd">ref </span><span class="pln">this</span>
 			<span class="pun">(</span>
 			<br/>
-			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">itemPath</span><span class="pun">,</span>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">path</span><span class="pun">,</span>
 			<br/>
-			&nbsp;&nbsp;<a href="../../mime/treemagic/TreeMatch.Type.html"><span class="typ">TreeMatch<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Type</span></a> <span class="pln">itemType</span><span class="pun">,</span>
+			&nbsp;&nbsp;<a href="../../mime/treemagic/TreeMatch.Type.html"><span class="typ">TreeMatch<wbr/></span><span class="pun">.<wbr/></span><span class="typ">Type</span></a> <span class="pln">type</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Type</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">,</span>
 			<br/>
-			&nbsp;&nbsp;<span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">treemagic<wbr/></span><span class="pun">.</span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Options</span> <span class="pln">itemOptions</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Options</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span>
+			&nbsp;&nbsp;<span class="pln">mime<wbr/></span><span class="pun">.</span><span class="pln">treemagic<wbr/></span><span class="pun">.</span><span class="typ">TreeMatch<wbr/></span><span class="pun">.</span><span class="typ">Options</span> <span class="pln">options</span> <span class="pun">=</span> <span class="kwd">cast</span><span class="pun">(</span><span class="typ">Options</span><span class="pun">)</span><span class="kwd">cast</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)</span><span class="lit">0u</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">mimeType</span> <span class="pun">=</span> <span class="kwd">null</span>
 			<br/>
 			<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow @nogc @safe</span><span class="pun">;</span>
 					</div>
