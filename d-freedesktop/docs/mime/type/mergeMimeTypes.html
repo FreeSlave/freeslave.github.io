@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function mergeMimeTypes</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/files.html">files</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module selected">
+						<a href="../../mime/type.html">type</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/xml.html">xml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function mergeMimeTypes</h1><p>Merge MIME types definitions parsed from different mime/ directories.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<a href="../../mime/type/MimeType.html"><span class="typ">MimeType</span></a> <span class="pln">mergeMimeTypes</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../mime/type/MimeType.html"><span class="typ">MimeType</span></a><span class="pun">)</span> <span class="pln">origin</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><a href="../../mime/type/MimeType.html"><span class="typ">MimeType</span></a><span class="pun">)</span> <span class="pln">additive</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure @safe</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="origin">origin</td><td> MIME type definition that was read from a less preferable mime/ directory.</td></tr>
+<tr><td id="additive">additive</td><td> MIME type definition override from a more preferable mime/ directory.</td></tr>
+</table>
+</section>
+<section><h2>Throws</h2>
+<p><b>Exception</b> when trying to merge MIME types with different names.
+</p>
+</section>
+<section><h2>See Also</h2>
+<p><code class="lang-d"><a href="../../mime/type/mergeMimeTypesInPlace.html" title="mime.type.mergeMimeTypesInPlace"><span class="pln">mergeMimeTypesInPlace</span></a></code>
+</p>
+</section>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="typ">string </span><span class="pun">: </span><span class="pln">representation</span><span class="pun">;
+</span><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">exception </span><span class="pun">: </span><span class="pln">assertThrown</span><span class="pun">;
+
+<a href="../../mime/type/MimeType.html"></span><span class="typ">MimeType</span></a><span class="pln"> mimeType1 </span><span class="pun">= </span><span class="kwd">new <a href="../../mime/type/MimeType.html"></span><span class="typ">MimeType</span></a><span class="pun">(</span><span class="str">"text/plain"</span><span class="pun">);
+<a href="../../mime/type/MimeType.html"></span><span class="typ">MimeType</span></a><span class="pln"> mimeType2 </span><span class="pun">= </span><span class="kwd">new <a href="../../mime/type/MimeType.html"></span><span class="typ">MimeType</span></a><span class="pun">(</span><span class="str">"text/xml"</span><span class="pun">);
+
+</span><span class="pln">assertThrown</span><span class="pun">(</span><span class="pln">mergeMimeTypes</span><span class="pun">(</span><span class="pln">mimeType1</span><span class="pun">, </span><span class="pln">mimeType2</span><span class="pun">));
+
+</span><span class="pln">mimeType1<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">= </span><span class="str">"text/html"</span><span class="pun">;
+</span><span class="pln">mimeType2<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">= </span><span class="pln">mimeType1<wbr/></span><span class="pun">.</span><span class="pln">name</span><span class="pun">;
+
+</span><span class="pln">mimeType1<wbr/></span><span class="pun">.</span><span class="pln">addGlob</span><span class="pun">(</span><span class="str">"*.htm"</span><span class="pun">);
+</span><span class="typ">MimeMagic </span><span class="pln">magic1</span><span class="pun">;
+</span><span class="pln">magic1<wbr/></span><span class="pun">.</span><span class="pln">addMatch</span><span class="pun">(</span><span class="typ">MagicMatch</span><span class="pun">(</span><span class="typ">MagicMatch<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">string_</span><span class="pun">, </span><span class="str">"&lt;HTML"<wbr/></span><span class="pun">.</span><span class="pln">representation</span><span class="pun">));
+</span><span class="pln">mimeType1<wbr/></span><span class="pun">.</span><span class="pln">addMagic</span><span class="pun">(</span><span class="pln">magic1</span><span class="pun">);
+
+</span><span class="pln">mimeType2<wbr/></span><span class="pun">.</span><span class="pln">addAlias</span><span class="pun">(</span><span class="str">"application/html"</span><span class="pun">);
+</span><span class="pln">mimeType2<wbr/></span><span class="pun">.</span><span class="pln">addParent</span><span class="pun">(</span><span class="str">"text/xml"</span><span class="pun">);
+</span><span class="pln">mimeType2<wbr/></span><span class="pun">.</span><span class="pln">addXMLnamespace</span><span class="pun">(</span><span class="str">"http://www.w3.org/1999/xhtml"</span><span class="pun">, </span><span class="str">"html"</span><span class="pun">);
+</span><span class="pln">mimeType2<wbr/></span><span class="pun">.</span><span class="pln">deleteGlobs </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
+</span><span class="pln">mimeType2<wbr/></span><span class="pun">.</span><span class="pln">deleteMagic </span><span class="pun">= </span><span class="kwd">true</span><span class="pun">;
+</span><span class="pln">mimeType2<wbr/></span><span class="pun">.</span><span class="pln">icon </span><span class="pun">= </span><span class="str">"application-html"</span><span class="pun">;
+</span><span class="pln">mimeType2<wbr/></span><span class="pun">.</span><span class="pln">addGlob</span><span class="pun">(</span><span class="str">"*.html"</span><span class="pun">);
+</span><span class="typ">MimeMagic </span><span class="pln">magic2</span><span class="pun">;
+</span><span class="pln">magic2<wbr/></span><span class="pun">.</span><span class="pln">addMatch</span><span class="pun">(</span><span class="typ">MagicMatch</span><span class="pun">(</span><span class="typ">MagicMatch<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="pln">string_</span><span class="pun">, </span><span class="str">"&lt;html"<wbr/></span><span class="pun">.</span><span class="pln">representation</span><span class="pun">));
+</span><span class="pln">mimeType2<wbr/></span><span class="pun">.</span><span class="pln">addMagic</span><span class="pun">(</span><span class="pln">magic2</span><span class="pun">);
+
+</span><span class="kwd">auto </span><span class="pln">mimeType </span><span class="pun">= </span><span class="pln">mergeMimeTypes</span><span class="pun">(</span><span class="pln">mimeType1</span><span class="pun">, </span><span class="pln">mimeType2</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="pln">mimeType1<wbr/></span><span class="pun">.</span><span class="pln">name</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">aliases </span><span class="pun">== [</span><span class="str">"application/html"</span><span class="pun">]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">parents </span><span class="pun">== [</span><span class="str">"text/xml"</span><span class="pun">]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="typ">XMLnamespaces </span><span class="pun">== [<a href="../../mime/type/XMLnamespace.html"></span><span class="typ">XMLnamespace</span></a><span class="pun">(</span><span class="str">"http://www.w3.org/1999/xhtml"</span><span class="pun">, </span><span class="str">"html"</span><span class="pun">)]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">globs </span><span class="pun">== [</span><span class="typ">MimeGlob</span><span class="pun">(</span><span class="str">"*.html"</span><span class="pun">)]);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">icon </span><span class="pun">== </span><span class="str">"application-html"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">matches</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">value </span><span class="pun">== </span><span class="str">"&lt;html"</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2015-2016
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

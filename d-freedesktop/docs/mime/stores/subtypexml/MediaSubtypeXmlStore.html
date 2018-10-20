@@ -266,6 +266,9 @@ $('#symbolSearchPane').show();</script>
 		</nav>
 		<div id="main-contents">
 			<h1>Class MediaSubtypeXmlStore</h1><p>Implementation of <code class="lang-d"><a href="../../../mime/store/IMimeStore.html" title="mime.store.IMimeStore"><span class="typ">IMimeStore</span></a></code> interface that uses MEDIA/SUBTYPE.xml files from mime/ subfolder to read MIME types.
+ It does not read any MIME type definitions at the construction time.
+ Instead MediaSubtypeXmlStore performs parsing of separate files on demand when calling <code class="lang-d"><a href="../../../mime/stores/subtypexml/MediaSubtypeXmlStore.mimeType.html"><span class="pln">mimeType</span></a></code> or <code class="lang-d"><a href="../../../mime/stores/subtypexml/MediaSubtypeXmlStore.byMimeType.html"><span class="pln">byMimeType</span></a></code>.
+ All parsed definitions are getting cached to avoid re-parsing on every demand.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -314,12 +317,17 @@ $('#symbolSearchPane').show();</script>
 								<code>mimeType</code>
 							</a>
 						</td>
-						<td>Find and parse MEDIA/SUBTYPE.xml file for given MIME type name.
+						<td>Find and parse MEDIA/SUBTYPE.xml file(s) for given MIME type name.
+ If it finds more then one file for the MIME type, merging operation is performed.
 </td>
 					</tr>
 				</table>
 			</section>
-			
+			<section><h2>See Also</h2>
+<p><code class="lang-d"><a href="../../../mime/xml/readMediaSubtypeFile.html" title="mime.xml.readMediaSubtypeFile"><span class="pln">readMediaSubtypeFile</span></a></code>
+</p>
+</section>
+
 			<footer>
 				<table class="license-info">
 					<tr>

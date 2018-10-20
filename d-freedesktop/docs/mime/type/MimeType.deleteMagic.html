@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Module mime.stores.subtypexml</title>
+		<title>MimeType.deleteMagic - multiple declarations</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
@@ -169,7 +169,7 @@ $('#symbolSearchPane').show();</script>
 				</li>
 			</ul>
 				</li>
-				<li class="tree-view ">
+				<li class="tree-view collapsed">
 					<div class="package ">stores
 					</div>
 			<ul class="tree-view">
@@ -179,7 +179,7 @@ $('#symbolSearchPane').show();</script>
 					</div>
 				</li>
 				<li>
-					<div class="module selected">
+					<div class="module ">
 						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
 					</div>
 				</li>
@@ -241,7 +241,7 @@ $('#symbolSearchPane').show();</script>
 					</div>
 				</li>
 				<li>
-					<div class="module ">
+					<div class="module selected">
 						<a href="../../mime/type.html">type</a>
 					</div>
 				</li>
@@ -265,31 +265,50 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Module mime.stores.subtypexml</h1><p>MIME store implemented around reading of various files in mime/ subfolder.
-</p><section></section>
-
-			<section></section>
-			<section>
-				<h2>Classes</h2>
-				<table>
-					<col class="caption"/>
-					<tr>
-						<th>Name</th><th>Description</th>
-					</tr>
-					<tr>
-						<td>
-							<code>
-								<a id="MediaSubtypeXmlStore" class="public" href="../../mime/stores/subtypexml/MediaSubtypeXmlStore.html">MediaSubtypeXmlStore</a>
-							</code>
-						</td>
-						<td>Implementation of <code class="lang-d"><a href="../../mime/store/IMimeStore.html" title="mime.store.IMimeStore"><span class="typ">IMimeStore</span></a></code> interface that uses MEDIA/SUBTYPE.xml files from mime/ subfolder to read MIME types.
- It does not read any MIME type definitions at the construction time.
- Instead MediaSubtypeXmlStore performs parsing of separate files on demand when calling <code class="lang-d"><a href="../../mime/stores/subtypexml/MediaSubtypeXmlStore.mimeType.html"><span class="pln">mimeType</span></a></code> or <code class="lang-d"><a href="../../mime/stores/subtypexml/MediaSubtypeXmlStore.byMimeType.html"><span class="pln">byMimeType</span></a></code>.
- All parsed definitions are getting cached to avoid re-parsing on every demand.
-</td>
-					</tr>
-				</table>
-			</section>
+			<h1>MimeType.deleteMagic - multiple declarations</h1>
+			<nav class="page-nav">
+				<ul>
+					<li>
+						<a href="#0">
+							Function <code>MimeType.deleteMagic</code>
+						</a>
+					</li>
+					<li>
+						<a href="#1">
+							Function <code>MimeType.deleteMagic</code>
+						</a>
+					</li>
+				</ul>
+			</nav><h2 id="0">Function MimeType.deleteMagic</h2><p>Whether to discard magic matches parsed from a less preferable directory. Used in merges.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">bool</span> <span class="pln">deleteMagic</span><span class="pun">(</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow @nogc @safe const</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../mime/type/mergeMimeTypes.html" title="mime.type.mergeMimeTypes"><span class="pln">mergeMimeTypes</span></a></code>
+</p>
+</section>
+<h2 id="1">Function MimeType.deleteMagic</h2><p>Setter
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">bool</span> <span class="pln">deleteMagic</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">bool</span> <span class="pln">clearMagic</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow @nogc @safe</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			
 			<footer>
 				<table class="license-info">
 					<tr>

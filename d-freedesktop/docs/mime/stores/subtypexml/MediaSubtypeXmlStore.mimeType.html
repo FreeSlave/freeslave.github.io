@@ -265,7 +265,8 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Function MediaSubtypeXmlStore.mimeType</h1><p>Find and parse MEDIA/SUBTYPE.xml file for given MIME type name.
+			<h1>Function MediaSubtypeXmlStore.mimeType</h1><p>Find and parse MEDIA/SUBTYPE.xml file(s) for given MIME type name.
+ If it finds more then one file for the MIME type, merging operation is performed.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -286,6 +287,10 @@ $('#symbolSearchPane').show();</script>
 </section>
 <section><h2>Throws</h2>
 <p><code class="lang-d"><a href="../../../mime/xml/XMLMimeException.html" title="mime.xml.XMLMimeException"><span class="typ">XMLMimeException</span></a></code> on format error or <b>std.file.FileException</b> on file reading error.
+</p>
+</section>
+<section><h2>See Also</h2>
+<p><code class="lang-d"><a href="../../../mime/type/mergeMimeTypes.html" title="mime.type.mergeMimeTypes"><span class="pln">mergeMimeTypes</span></a></code>
 </p>
 </section>
 

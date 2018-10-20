@@ -793,6 +793,8 @@
 <url><loc>http://127.0.0.1/mime/treemagic/treeMimeType.html</loc></url>
 <url><loc>http://127.0.0.1/mime/treemagic/treeMimeType.html</loc></url>
 <url><loc>http://127.0.0.1/mime/type.html</loc></url>
+<url><loc>http://127.0.0.1/mime/type/mergeMimeTypes.html</loc></url>
+<url><loc>http://127.0.0.1/mime/type/mergeMimeTypesInPlace.html</loc></url>
 <url><loc>http://127.0.0.1/mime/type/MimeType.html</loc></url>
 <url><loc>http://127.0.0.1/mime/type/MimeType.addAlias.html</loc></url>
 <url><loc>http://127.0.0.1/mime/type/MimeType.addGlob.html</loc></url>
@@ -810,6 +812,10 @@
 <url><loc>http://127.0.0.1/mime/type/MimeType.clearTreeMagic.html</loc></url>
 <url><loc>http://127.0.0.1/mime/type/MimeType.clearXMLnamespaces.html</loc></url>
 <url><loc>http://127.0.0.1/mime/type/MimeType.clone.html</loc></url>
+<url><loc>http://127.0.0.1/mime/type/MimeType.deleteGlobs.html</loc></url>
+<url><loc>http://127.0.0.1/mime/type/MimeType.deleteGlobs.html</loc></url>
+<url><loc>http://127.0.0.1/mime/type/MimeType.deleteMagic.html</loc></url>
+<url><loc>http://127.0.0.1/mime/type/MimeType.deleteMagic.html</loc></url>
 <url><loc>http://127.0.0.1/mime/type/MimeType.displayName.html</loc></url>
 <url><loc>http://127.0.0.1/mime/type/MimeType.displayName.html</loc></url>
 <url><loc>http://127.0.0.1/mime/type/MimeType.genericIcon.html</loc></url>

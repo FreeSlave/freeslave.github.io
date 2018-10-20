@@ -299,11 +299,13 @@ $('#symbolSearchPane').show();</script>
 &lt;mime-type type="image/x-sigma-x3f"&gt;
     &lt;comment&gt;Sigma X3F raw image&lt;/comment&gt;
     &lt;sub-class-of type="image/x-dcraw"/&gt;
+    &lt;magic-deleteall/&gt;
     &lt;magic priority="60"&gt;
         &lt;match value="FOVb" type="string" offset="0"&gt;
             &lt;match value="0x00FF00FF" type="little32" offset="4" mask="0xFF00FF00"/&gt;
         &lt;/match&gt;
     &lt;/magic&gt;
+    &lt;glob-deleteall/&gt;
     &lt;glob pattern="*.x3f"/&gt;
 &lt;/mime-type&gt;
     &lt;mime-type type="image/svg+xml"&gt;
@@ -334,6 +336,8 @@ $('#symbolSearchPane').show();</script>
 </span><span class="kwd">auto </span><span class="pln">mimeType </span><span class="pun">= </span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">;
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType </span><span class="kwd">is </span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="pln">front</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">name </span><span class="pun">== </span><span class="str">"image/x-sigma-x3f"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">deleteMagic</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">deleteGlobs</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
 </span><span class="kwd">auto </span><span class="pln">magic </span><span class="pun">= </span><span class="pln">mimeType<wbr/></span><span class="pun">.</span><span class="pln">magics</span><span class="pun">[</span><span class="lit">0</span><span class="pun">];
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">magic<wbr/></span><span class="pun">.</span><span class="pln">weight </span><span class="pun">== </span><span class="lit">60</span><span class="pun">);
