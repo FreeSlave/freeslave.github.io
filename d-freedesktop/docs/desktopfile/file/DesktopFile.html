@@ -307,7 +307,7 @@ $('#symbolSearchPane').show();</script>
 								<code>this</code>
 							</a>
 						</td>
-						<td>Constructs DesktopFile with "Desktop Entry" group and Version set to 1.0
+						<td>Constructs DesktopFile with "Desktop Entry" group and Version set to 1.1
 </td>
 					</tr>
 				</table>
@@ -324,7 +324,7 @@ $('#symbolSearchPane').show();</script>
 								<code>action</code>
 							</a>
 						</td>
-						<td>Get <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ar01s10.html">additional application action</a> by name.
+						<td>Get <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s11.html">additional application action</a> by name.
 </td>
 					</tr>
 					<tr>
@@ -360,7 +360,7 @@ $('#symbolSearchPane').show();</script>
 								<code>id</code>
 							</a>
 						</td>
-						<td>See <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ape.html">Desktop File ID</a>
+						<td>See <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s02.html#desktop-file-id">Desktop File ID</a>
 </td>
 					</tr>
 					<tr>
@@ -369,7 +369,7 @@ $('#symbolSearchPane').show();</script>
 								<code>id</code>
 							</a>
 						</td>
-						<td>See <a href="http://standards.freedesktop.org/desktop-entry-spec/latest/ape.html">Desktop File ID</a>
+						<td>See <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s02.html#desktop-file-id">Desktop File ID</a>
 </td>
 					</tr>
 					<tr>
@@ -907,6 +907,10 @@ Name=Notspecified Action`</span><span class="pun">;
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">byAction</span><span class="pun">()<wbr/>.</span><span class="pln">map</span><span class="pun">!(</span><span class="pln">desktopAction </span><span class="pun">=&gt;
 </span><span class="pln">tuple</span><span class="pun">(</span><span class="pln">desktopAction<wbr/></span><span class="pun">.</span><span class="pln">displayName</span><span class="pun">(), </span><span class="pln">desktopAction<wbr/></span><span class="pun">.</span><span class="pln">localizedDisplayName</span><span class="pun">(</span><span class="str">"ru"</span><span class="pun">), </span><span class="pln">desktopAction<wbr/></span><span class="pun">.</span><span class="pln">iconName</span><span class="pun">(), </span><span class="pln">desktopAction<wbr/></span><span class="pun">.</span><span class="pln">execValue</span><span class="pun">())),
              [</span><span class="pln">tuple</span><span class="pun">(</span><span class="str">"Open directory"</span><span class="pun">, </span><span class="str">"Открыть папку"</span><span class="pun">, </span><span class="str">"open"</span><span class="pun">, </span><span class="str">"doublecmd %u"</span><span class="pun">), </span><span class="pln">tuple</span><span class="pun">(</span><span class="str">"Settings"</span><span class="pun">, </span><span class="str">"Настройки"</span><span class="pun">, </span><span class="str">"edit"</span><span class="pun">, </span><span class="str">"doublecmd settings"</span><span class="pun">)]));
+
+<a href="../../desktopfile/file/DesktopAction.html"></span><span class="typ">DesktopAction</span></a><span class="pln"> desktopAction </span><span class="pun">= </span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">action</span><span class="pun">(</span><span class="str">"OpenDirectory"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopAction </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">desktopAction<wbr/></span><span class="pun">.</span><span class="pln">expandExecValue</span><span class="pun">([</span><span class="str">"path/to/file"</span><span class="pun">]) == [</span><span class="str">"doublecmd"</span><span class="pun">, </span><span class="str">"path/to/file"</span><span class="pun">]);
 
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">action</span><span class="pun">(</span><span class="str">"NotPresented"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">action</span><span class="pun">(</span><span class="str">"Notspecified"</span><span class="pun">) </span><span class="kwd">is null</span><span class="pun">);

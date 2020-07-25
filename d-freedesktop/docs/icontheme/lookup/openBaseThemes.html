@@ -290,7 +290,7 @@ $('#symbolSearchPane').show();</script>
 			
 			<section><h2>Parameters</h2>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="iconTheme">iconTheme</td><td> Original icon theme to search for its base themes. It's NOT included in the resulting array.</td></tr>
+<tr><td id="iconTheme">iconTheme</td><td> Original icon theme to search for its base themes. It's NOT included in the resulting array. Must be not null.</td></tr>
 <tr><td id="searchIconDirs">searchIconDirs</td><td> Base icon directories to search icon themes.</td></tr>
 <tr><td id="genericThemeName">genericThemeName</td><td> Name of icon theme which is loaded the last even if it's not specified in inheritance tree.
       Pass empty string to avoid it. It's NOT loaded twice if some theme in inheritance tree has it as base theme.
@@ -305,20 +305,6 @@ $('#symbolSearchPane').show();</script>
 <section><h2>See Also</h2>
 <p><code class="lang-d"><a href="../../icontheme/lookup/openThemeFamily.html"><span class="pln">openThemeFamily</span></a></code>
 </p>
-</section>
-<section><h2>Example</h2>
-
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">tango </span><span class="pun">= <a href="../../icontheme/lookup/openIconTheme.html"></span><span class="pln">openIconTheme</span></a><span class="pun">(</span><span class="str">"NewTango"</span><span class="pun">, [</span><span class="str">"test"</span><span class="pun">]);
-</span><span class="kwd">auto </span><span class="pln">baseThemes </span><span class="pun">= </span><span class="pln">openBaseThemes</span><span class="pun">(</span><span class="pln">tango</span><span class="pun">, [</span><span class="str">"test"</span><span class="pun">]);
-
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">baseThemes<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">2</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">baseThemes</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">internalName</span><span class="pun">() == </span><span class="str">"Tango"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">baseThemes</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">internalName</span><span class="pun">() == </span><span class="str">"hicolor"</span><span class="pun">);
-
-</span><span class="pln">baseThemes </span><span class="pun">= </span><span class="pln">openBaseThemes</span><span class="pun">(</span><span class="pln">tango</span><span class="pun">, [</span><span class="str">"test"</span><span class="pun">], </span><span class="kwd">null</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">baseThemes<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">1</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">baseThemes</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">internalName</span><span class="pun">() == </span><span class="str">"Tango"</span><span class="pun">);
-</span></code></pre>
 </section>
 
 			<footer>

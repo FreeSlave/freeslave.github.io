@@ -304,15 +304,6 @@ $('#symbolSearchPane').show();</script>
 <p><code class="lang-d"><a href="../mimeapps/findAssociatedApplications.html"><span class="pln">findAssociatedApplications</span></a></code>, <code class="lang-d"><a href="../mimeapps/listKnownAssociatedApplications.html"><span class="pln">listKnownAssociatedApplications</span></a></code>
 </p>
 </section>
-<section><h2>Example</h2>
-
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">desktopProvider </span><span class="pun">= </span><span class="kwd">new <a href="../mimeapps/DesktopFileProvider.html"></span><span class="typ">DesktopFileProvider</span></a><span class="pun">([</span><span class="str">"test/applications"</span><span class="pun">]);
-</span><span class="kwd">auto </span><span class="pln">mimeAppsList </span><span class="pun">= </span><span class="kwd">new <a href="../mimeapps/MimeAppsListFile.html"></span><span class="typ">MimeAppsListFile</span></a><span class="pun">(</span><span class="str">"test/applications/mimeapps.list"</span><span class="pun">);
-</span><span class="kwd">auto </span><span class="pln">mimeInfoCache </span><span class="pun">= </span><span class="kwd">new <a href="../mimeapps/MimeInfoCacheFile.html"></span><span class="typ">MimeInfoCacheFile</span></a><span class="pun">(</span><span class="str">"test/applications/mimeinfo.cache"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">findKnownAssociatedApplications</span><span class="pun">(</span><span class="str">"text/plain"</span><span class="pun">, [</span><span class="kwd">null</span><span class="pun">, </span><span class="pln">mimeAppsList</span><span class="pun">], [</span><span class="kwd">null</span><span class="pun">, </span><span class="pln">mimeInfoCache</span><span class="pun">], </span><span class="pln">desktopProvider</span><span class="pun">)
-    <wbr/>.</span><span class="pln">map</span><span class="pun">!(</span><span class="pln">d </span><span class="pun">=&gt; </span><span class="pln">d<wbr/></span><span class="pun">.</span><span class="pln">displayName</span><span class="pun">())<wbr/>.</span><span class="pln">equal</span><span class="pun">([</span><span class="str">"Geany"</span><span class="pun">, </span><span class="str">"Kate"</span><span class="pun">, </span><span class="str">"Emacs"</span><span class="pun">, </span><span class="str">"Okular"</span><span class="pun">]));
-</span></code></pre>
-</section>
 
 			<footer>
 				<table class="license-info">

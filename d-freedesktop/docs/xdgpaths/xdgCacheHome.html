@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>xdgCacheHome - multiple declarations</title>
+		<title>Function xdgCacheHome</title>
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
@@ -265,21 +265,7 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>xdgCacheHome - multiple declarations</h1>
-			<nav class="page-nav">
-				<ul>
-					<li>
-						<a href="#0">
-							Function <code>xdgCacheHome</code>
-						</a>
-					</li>
-					<li>
-						<a href="#1">
-							Function <code>xdgCacheHome</code>
-						</a>
-					</li>
-				</ul>
-			</nav><h2 id="0">Function xdgCacheHome</h2><p>The base directory relative to which user-specific non-essential files should be stored.
+			<h1>Function xdgCacheHome</h1><p>The base directory relative to which user-specific non-essential files should be stored.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -296,44 +282,17 @@ $('#symbolSearchPane').show();</script>
 				</code>
 			</div>
 			
-			<section><h3>Returns</h3>
+			<section><h2>Returns</h2>
 <p>Path to user-specific cache directory or empty string on error.
 </p>
 </section>
-<section><h3>Parameters</h3>
+<section><h2>Parameters</h2>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="subfolder">subfolder</td><td> Subfolder to append to determined path.</td></tr>
 <tr><td id="shouldCreate">shouldCreate</td><td> If path does not exist, create directory using 700 permissions (i.e. allow access only for current user).</td></tr>
 </table>
 </section>
-<h2 id="1">Function xdgCacheHome</h2><p>The base directory relative to which user-specific non-essential files should be stored.
-</p>
-			<div class="prototype">
-				<code class="lang-d">
-					<div class="single-prototype">
-			<span class="typ">string</span> <span class="pln">xdgCacheHome</span>
-			<span class="pun">(</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">subfolder</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">bool</span> <span class="pln">shouldCreate</span> <span class="pun">=</span> <span class="kwd">false</span>
-			<br/>
-			<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @trusted</span><span class="pun">;</span>
-					</div>
-				</code>
-			</div>
-			
-			<section><h3>Returns</h3>
-<p>Path to user-specific cache directory or empty string on error.
-</p>
-</section>
-<section><h3>Parameters</h3>
-<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="subfolder">subfolder</td><td> Subfolder to append to determined path.</td></tr>
-<tr><td id="shouldCreate">shouldCreate</td><td> If path does not exist, create directory using 700 permissions (i.e. allow access only for current user).</td></tr>
-</table>
-</section>
-<section><h3>Example</h3>
+<section><h2>Example</h2>
 
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">dataDirsGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_DIRS"</span><span class="pun">, </span><span class="str">"/usr/local/data:/usr/data:/usr/local/data/:/usr/data/"</span><span class="pun">);
 </span><span class="kwd">auto </span><span class="pln">newDataDirs </span><span class="pun">= [</span><span class="str">"/usr/local/data"</span><span class="pun">, </span><span class="str">"/usr/data"</span><span class="pun">];
@@ -347,7 +306,7 @@ $('#symbolSearchPane').show();</script>
 
 </span></code></pre>
 </section>
-<section><h3>Example</h3>
+<section><h2>Example</h2>
 
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">newDataHome </span><span class="pun">= </span><span class="str">"/home/myuser/data"</span><span class="pun">;
 </span><span class="kwd">auto </span><span class="pln">newDataDirs </span><span class="pun">= [</span><span class="str">"/usr/local/data"</span><span class="pun">, </span><span class="str">"/usr/data"</span><span class="pun">];
@@ -365,7 +324,7 @@ $('#symbolSearchPane').show();</script>
 
 </span></code></pre>
 </section>
-<section><h3>Example</h3>
+<section><h2>Example</h2>
 
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">dataConfigGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_CONFIG_DIRS"</span><span class="pun">, </span><span class="str">"/usr/local/config:/usr/config"</span><span class="pun">);
 </span><span class="kwd">auto </span><span class="pln">newConfigDirs </span><span class="pun">= [</span><span class="str">"/usr/local/config"</span><span class="pun">, </span><span class="str">"/usr/config"</span><span class="pun">];
@@ -379,71 +338,7 @@ $('#symbolSearchPane').show();</script>
 
 </span></code></pre>
 </section>
-<section><h3>Example</h3>
-
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">newConfigHome </span><span class="pun">= </span><span class="str">"/home/myuser/data"</span><span class="pun">;
-</span><span class="kwd">auto </span><span class="pln">newConfigDirs </span><span class="pun">= [</span><span class="str">"/usr/local/data"</span><span class="pun">, </span><span class="str">"/usr/data"</span><span class="pun">];
-
-</span><span class="kwd">auto </span><span class="pln">homeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"HOME"</span><span class="pun">, </span><span class="str">""</span><span class="pun">);
-</span><span class="kwd">auto </span><span class="pln">configHomeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_CONFIG_HOME"</span><span class="pun">, </span><span class="pln">newConfigHome</span><span class="pun">);
-</span><span class="kwd">auto </span><span class="pln">configDirsGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_CONFIG_DIRS"</span><span class="pun">, </span><span class="str">"/usr/local/data:/usr/data"</span><span class="pun">);
-
-</span><span class="kwd">assert</span><span class="pun">(<a href="../xdgpaths/xdgAllConfigDirs.html"></span><span class="pln">xdgAllConfigDirs</span></a><span class="pun">() == </span><span class="pln">newConfigHome </span><span class="pun">~ </span><span class="pln">newConfigDirs</span><span class="pun">);
-
-</span><span class="pln">environment<wbr/></span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="str">"XDG_CONFIG_HOME"</span><span class="pun">);
-</span><span class="pln">environment<wbr/></span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="str">"HOME"</span><span class="pun">);
-
-</span><span class="kwd">assert</span><span class="pun">(<a href="../xdgpaths/xdgAllConfigDirs.html"></span><span class="pln">xdgAllConfigDirs</span></a><span class="pun">() == </span><span class="pln">newConfigDirs</span><span class="pun">);
-
-</span></code></pre>
-</section>
-<section><h3>Example</h3>
-
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">dataDirsGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_DIRS"</span><span class="pun">, </span><span class="str">"/usr/local/data:/usr/data:/usr/local/data/:/usr/data/"</span><span class="pun">);
-</span><span class="kwd">auto </span><span class="pln">newDataDirs </span><span class="pun">= [</span><span class="str">"/usr/local/data"</span><span class="pun">, </span><span class="str">"/usr/data"</span><span class="pun">];
-
-</span><span class="kwd">assert</span><span class="pun">(<a href="../xdgpaths/xdgDataDirs.html"></span><span class="pln">xdgDataDirs</span></a><span class="pun">() == </span><span class="pln">newDataDirs</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(<a href="../xdgpaths/xdgDataDirs.html"></span><span class="pln">xdgDataDirs</span></a><span class="pun">(</span><span class="str">"applications"</span><span class="pun">), </span><span class="pln">newDataDirs<wbr/></span><span class="pun">.</span><span class="pln">map</span><span class="pun">!(</span><span class="pln">p </span><span class="pun">=&gt; </span><span class="pln">buildPath</span><span class="pun">(</span><span class="pln">p</span><span class="pun">, </span><span class="str">"applications"</span><span class="pun">))));
-
-</span><span class="pln">environment<wbr/></span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="str">"XDG_DATA_DIRS"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(<a href="../xdgpaths/xdgDataDirs.html"></span><span class="pln">xdgDataDirs</span></a><span class="pun">() == [</span><span class="str">"/usr/local/share"</span><span class="pun">, </span><span class="str">"/usr/share"</span><span class="pun">]);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(<a href="../xdgpaths/xdgDataDirs.html"></span><span class="pln">xdgDataDirs</span></a><span class="pun">(</span><span class="str">"icons"</span><span class="pun">), [</span><span class="str">"/usr/local/share"</span><span class="pun">, </span><span class="str">"/usr/share"</span><span class="pun">]<wbr/>.</span><span class="pln">map</span><span class="pun">!(</span><span class="pln">p </span><span class="pun">=&gt; </span><span class="pln">buildPath</span><span class="pun">(</span><span class="pln">p</span><span class="pun">, </span><span class="str">"icons"</span><span class="pun">))));
-
-</span></code></pre>
-</section>
-<section><h3>Example</h3>
-
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">newDataHome </span><span class="pun">= </span><span class="str">"/home/myuser/data"</span><span class="pun">;
-</span><span class="kwd">auto </span><span class="pln">newDataDirs </span><span class="pun">= [</span><span class="str">"/usr/local/data"</span><span class="pun">, </span><span class="str">"/usr/data"</span><span class="pun">];
-
-</span><span class="kwd">auto </span><span class="pln">homeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"HOME"</span><span class="pun">, </span><span class="str">""</span><span class="pun">);
-</span><span class="kwd">auto </span><span class="pln">dataHomeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_HOME"</span><span class="pun">, </span><span class="pln">newDataHome</span><span class="pun">);
-</span><span class="kwd">auto </span><span class="pln">dataDirsGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_DIRS"</span><span class="pun">, </span><span class="str">"/usr/local/data:/usr/data"</span><span class="pun">);
-
-</span><span class="kwd">assert</span><span class="pun">(<a href="../xdgpaths/xdgAllDataDirs.html"></span><span class="pln">xdgAllDataDirs</span></a><span class="pun">() == </span><span class="pln">newDataHome </span><span class="pun">~ </span><span class="pln">newDataDirs</span><span class="pun">);
-
-</span><span class="pln">environment<wbr/></span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="str">"XDG_DATA_HOME"</span><span class="pun">);
-</span><span class="pln">environment<wbr/></span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="str">"HOME"</span><span class="pun">);
-
-</span><span class="kwd">assert</span><span class="pun">(<a href="../xdgpaths/xdgAllDataDirs.html"></span><span class="pln">xdgAllDataDirs</span></a><span class="pun">() == </span><span class="pln">newDataDirs</span><span class="pun">);
-
-</span></code></pre>
-</section>
-<section><h3>Example</h3>
-
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">dataConfigGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_CONFIG_DIRS"</span><span class="pun">, </span><span class="str">"/usr/local/config:/usr/config"</span><span class="pun">);
-</span><span class="kwd">auto </span><span class="pln">newConfigDirs </span><span class="pun">= [</span><span class="str">"/usr/local/config"</span><span class="pun">, </span><span class="str">"/usr/config"</span><span class="pun">];
-
-</span><span class="kwd">assert</span><span class="pun">(<a href="../xdgpaths/xdgConfigDirs.html"></span><span class="pln">xdgConfigDirs</span></a><span class="pun">() == </span><span class="pln">newConfigDirs</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(<a href="../xdgpaths/xdgConfigDirs.html"></span><span class="pln">xdgConfigDirs</span></a><span class="pun">(</span><span class="str">"menus"</span><span class="pun">), </span><span class="pln">newConfigDirs<wbr/></span><span class="pun">.</span><span class="pln">map</span><span class="pun">!(</span><span class="pln">p </span><span class="pun">=&gt; </span><span class="pln">buildPath</span><span class="pun">(</span><span class="pln">p</span><span class="pun">, </span><span class="str">"menus"</span><span class="pun">))));
-
-</span><span class="pln">environment<wbr/></span><span class="pun">.</span><span class="pln">remove</span><span class="pun">(</span><span class="str">"XDG_CONFIG_DIRS"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(<a href="../xdgpaths/xdgConfigDirs.html"></span><span class="pln">xdgConfigDirs</span></a><span class="pun">() == [</span><span class="str">"/etc/xdg"</span><span class="pun">]);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">equal</span><span class="pun">(<a href="../xdgpaths/xdgConfigDirs.html"></span><span class="pln">xdgConfigDirs</span></a><span class="pun">(</span><span class="str">"autostart"</span><span class="pun">), [</span><span class="str">"/etc/xdg"</span><span class="pun">]<wbr/>.</span><span class="pln">map</span><span class="pun">!(</span><span class="pln">p </span><span class="pun">=&gt; </span><span class="pln">buildPath</span><span class="pun">(</span><span class="pln">p</span><span class="pun">, </span><span class="str">"autostart"</span><span class="pun">))));
-
-</span></code></pre>
-</section>
-<section><h3>Example</h3>
+<section><h2>Example</h2>
 
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">newConfigHome </span><span class="pun">= </span><span class="str">"/home/myuser/data"</span><span class="pun">;
 </span><span class="kwd">auto </span><span class="pln">newConfigDirs </span><span class="pun">= [</span><span class="str">"/usr/local/data"</span><span class="pun">, </span><span class="str">"/usr/data"</span><span class="pun">];

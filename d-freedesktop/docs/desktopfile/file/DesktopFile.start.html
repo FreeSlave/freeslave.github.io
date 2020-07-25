@@ -276,8 +276,10 @@ $('#symbolSearchPane').show();</script>
 			</div>
 			
 			<section><h2>Throws</h2>
-<p>ProcessException on failure to start the process.
-  Exception if type is <code class="lang-d"><a href="../../desktopfile/file/DesktopEntry.Type.html#Unknown"><span class="typ">DesktopEntry<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Unknown</span></a></code> or <code class="lang-d"><a href="../../desktopfile/file/DesktopEntry.Type.html#Directory"><span class="typ">DesktopEntry<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Directory</span></a></code>.
+<p><b>ProcessException</b> on failure to start the process.
+  <code class="lang-d"><a href="../../desktopfile/utils/DesktopExecException.html" title="desktopfile.utils.DesktopExecException"><span class="typ">DesktopExecException</span></a></code> if type is <code class="lang-d"><a href="../../desktopfile/file/DesktopEntry.Type.html#Application"><span class="typ">DesktopEntry<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Application</span></a></code> and the exec string is invalid.
+  <b>Exception</b> if type is <code class="lang-d"><a href="../../desktopfile/file/DesktopEntry.Type.html#Unknown"><span class="typ">DesktopEntry<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Unknown</span></a></code> or <code class="lang-d"><a href="../../desktopfile/file/DesktopEntry.Type.html#Directory"><span class="typ">DesktopEntry<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Directory</span></a></code>,
+   or if type is <code class="lang-d"><a href="../../desktopfile/file/DesktopEntry.Type.html#Link"><span class="typ">DesktopEntry<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Link</span></a></code>, but no url provided.
 </p>
 </section>
 <section><h2>See Also</h2>

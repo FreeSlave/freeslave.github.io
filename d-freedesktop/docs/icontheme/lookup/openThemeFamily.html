@@ -304,7 +304,7 @@ $('#symbolSearchPane').show();</script>
 			
 			<section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="iconTheme">iconTheme</td><td> Original icon theme to search for its base themes. Included as first element in the resulting array.</td></tr>
+<tr><td id="iconTheme">iconTheme</td><td> Original icon theme to search for its base themes. Included as first element in the resulting array. Must be not null.</td></tr>
 <tr><td id="searchIconDirs">searchIconDirs</td><td> Base icon directories to search icon themes.</td></tr>
 <tr><td id="genericThemeName">genericThemeName</td><td> Name of icon theme which is loaded the last even if it's not specified in inheritance tree.
       Pass empty string to avoid it. It's NOT loaded twice if some theme in inheritance tree has it as base theme.
@@ -313,14 +313,14 @@ $('#symbolSearchPane').show();</script>
 </table>
 </section>
 <section><h3>Returns</h3>
-<p>Array of unique <code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html" title="icontheme.file.IconThemeFile"><span class="typ">IconThemeFile</span></a></code> objects represented the provided icon theme and its base themes.
+<p>Array of unique <code class="lang-d"><a href="../../icontheme/file/IconThemeFile.html" title="icontheme.file.IconThemeFile"><span class="typ">IconThemeFile</span></a></code> objects that represent the provided icon theme and its base themes.
 </p>
 </section>
 <section><h3>See Also</h3>
 <p><code class="lang-d"><a href="../../icontheme/lookup/openBaseThemes.html"><span class="pln">openBaseThemes</span></a></code>
 </p>
 </section>
-<h2 id="1">Function openThemeFamily</h2><p>ditto, but firstly loads the given icon theme by name. Returns an empty array if theme specified by <code class="lang-d"><a href="../../icontheme/lookup/openThemeFamily.html#iconThemeName"><span class="pln">iconThemeName</span></a></code> could be loaded.
+<h2 id="1">Function openThemeFamily</h2><p>ditto, but firstly loads the given icon theme by name. Returns an empty array if theme specified by <code class="lang-d"><a href="../../icontheme/lookup/openThemeFamily.html#iconThemeName"><span class="pln">iconThemeName</span></a></code> could not be loaded.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -343,22 +343,7 @@ $('#symbolSearchPane').show();</script>
 				</code>
 			</div>
 			
-			<section><h3>Example</h3>
-
-<pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">iconThemes </span><span class="pun">= <a href="../../icontheme/lookup/openThemeFamily.html"></span><span class="pln">openThemeFamily</span></a><span class="pun">(</span><span class="str">"NewTango"</span><span class="pun">, [</span><span class="str">"test"</span><span class="pun">]);
-
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">iconThemes<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">3</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">iconThemes</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">internalName</span><span class="pun">() == </span><span class="str">"NewTango"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">iconThemes</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">internalName</span><span class="pun">() == </span><span class="str">"Tango"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">iconThemes</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]<wbr/>.</span><span class="pln">internalName</span><span class="pun">() == </span><span class="str">"hicolor"</span><span class="pun">);
-
-</span><span class="pln">iconThemes </span><span class="pun">= <a href="../../icontheme/lookup/openThemeFamily.html"></span><span class="pln">openThemeFamily</span></a><span class="pun">(</span><span class="str">"NewTango"</span><span class="pun">, [</span><span class="str">"test"</span><span class="pun">], </span><span class="kwd">null</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">iconThemes<wbr/></span><span class="pun">.</span><span class="pln">length </span><span class="pun">== </span><span class="lit">2</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">iconThemes</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]<wbr/>.</span><span class="pln">internalName</span><span class="pun">() == </span><span class="str">"NewTango"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">iconThemes</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]<wbr/>.</span><span class="pln">internalName</span><span class="pun">() == </span><span class="str">"Tango"</span><span class="pun">);
-</span></code></pre>
-</section>
-
+			
 			<footer>
 				<table class="license-info">
 					<tr>

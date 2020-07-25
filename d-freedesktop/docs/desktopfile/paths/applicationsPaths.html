@@ -278,11 +278,6 @@ $('#symbolSearchPane').show();</script>
 							Function <code>applicationsPaths</code>
 						</a>
 					</li>
-					<li>
-						<a href="#2">
-							Function <code>applicationsPaths</code>
-						</a>
-					</li>
 				</ul>
 			</nav><h2 id="0">Function applicationsPaths</h2><p>Applications paths based on data paths.
  This function is available on all platforms, but requires dataPaths argument (e.g. C:\ProgramData\KDE\share on Windows)
@@ -312,27 +307,6 @@ $('#symbolSearchPane').show();</script>
 </span></code></pre>
 </section>
 <h2 id="1">Function applicationsPaths</h2><p>ditto, but returns paths based on known data paths.
- This function is defined only on freedesktop systems to avoid confusion with other systems that have data paths not compatible with Desktop Entry Spec.
-</p>
-			<div class="prototype">
-				<code class="lang-d">
-					<div class="single-prototype">
-			<span class="typ">string</span><span class="pun">[]</span> <span class="pln">applicationsPaths</span><span class="pun">(</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @trusted</span><span class="pun">;</span>
-					</div>
-				</code>
-			</div>
-			
-			<section><h3>Example</h3>
-
-<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">process </span><span class="pun">: </span><span class="pln">environment</span><span class="pun">;
-</span><span class="kwd">auto </span><span class="pln">dataHomeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_HOME"</span><span class="pun">, </span><span class="str">"/home/user/data"</span><span class="pun">);
-</span><span class="kwd">auto </span><span class="pln">dataDirsGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_DIRS"</span><span class="pun">, </span><span class="str">"/usr/local/data:/usr/data"</span><span class="pun">);
-
-</span><span class="kwd">assert</span><span class="pun">(<a href="../../desktopfile/paths/applicationsPaths.html"></span><span class="pln">applicationsPaths</span></a><span class="pun">() == [</span><span class="str">"/home/user/data/applications"</span><span class="pun">, </span><span class="str">"/usr/local/data/applications"</span><span class="pun">, </span><span class="str">"/usr/data/applications"</span><span class="pun">]);
-
-</span></code></pre>
-</section>
-<h2 id="2">Function applicationsPaths</h2><p>ditto, but returns paths based on known data paths.
  This function is defined only on freedesktop systems to avoid confusion with other systems that have data paths not compatible with Desktop Entry Spec.
 </p>
 			<div class="prototype">

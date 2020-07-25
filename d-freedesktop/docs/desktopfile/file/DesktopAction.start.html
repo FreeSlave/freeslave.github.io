@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function DesktopAction.start</title>
+		<title>DesktopAction.start - multiple declarations</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
@@ -265,7 +265,69 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Function DesktopAction.start</h1><p>Start this action.
+			<h1>DesktopAction.start - multiple declarations</h1>
+			<nav class="page-nav">
+				<ul>
+					<li>
+						<a href="#0">
+							Function <code>DesktopAction.start</code>
+						</a>
+					</li>
+					<li>
+						<a href="#1">
+							Function <code>DesktopAction.start</code>
+						</a>
+					</li>
+					<li>
+						<a href="#2">
+							Function <code>DesktopAction.start</code>
+						</a>
+					</li>
+				</ul>
+			</nav><h2 id="0">Function DesktopAction.start</h2><p>Start this action with provided urls.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">void</span> <span class="pln">start</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">[]</span><span class="pun">)</span> <span class="pln">urls</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">locale</span> <span class="pun">=</span> <span class="kwd">null</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@safe const</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h3>Throws</h3>
+<p><b>ProcessException</b> on failure to start the process.
+  <code class="lang-d"><a href="../../desktopfile/utils/DesktopExecException.html" title="desktopfile.utils.DesktopExecException"><span class="typ">DesktopExecException</span></a></code> if exec string is invalid.
+</p>
+</section>
+<section><h3>See Also</h3>
+<p><code class="lang-d"><a href="../../desktopfile/file/DesktopAction.execValue.html"><span class="pln">execValue</span></a></code>, <code class="lang-d"><a href="../../desktopfile/utils/spawnApplication.html" title="desktopfile.utils.spawnApplication"><span class="pln">spawnApplication</span></a></code>
+</p>
+</section>
+<h2 id="1">Function DesktopAction.start</h2><p>ditto, but using a single url
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="typ">void</span> <span class="pln">start</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">url</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">locale</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@safe const</span><span class="pun">;</span>
+					</div>
+				</code>
+			</div>
+			
+			<h2 id="2">Function DesktopAction.start</h2><p>ditto, but without any urls.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -280,16 +342,7 @@ $('#symbolSearchPane').show();</script>
 				</code>
 			</div>
 			
-			<section><h2>Throws</h2>
-<p><b>ProcessException</b> on failure to start the process.
-  <code class="lang-d"><a href="../../desktopfile/utils/DesktopExecException.html" title="desktopfile.utils.DesktopExecException"><span class="typ">DesktopExecException</span></a></code> if exec string is invalid.
-</p>
-</section>
-<section><h2>See Also</h2>
-<p><code class="lang-d"><a href="../../desktopfile/file/DesktopAction.execValue.html"><span class="pln">execValue</span></a></code>
-</p>
-</section>
-
+			
 			<footer>
 				<table class="license-info">
 					<tr>

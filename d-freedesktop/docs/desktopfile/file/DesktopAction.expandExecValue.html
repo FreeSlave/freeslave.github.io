@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>Function MimeCache.literals</title>
+		<title>Function DesktopAction.expandExecValue</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
@@ -20,13 +20,13 @@
 $('#symbolSearchPane').show();</script>
 			</div>
 			<ul class="tree-view">
-				<li class="tree-view collapsed">
+				<li class="tree-view ">
 					<div class="package ">
 						<a href="../../desktopfile.html">desktopfile</a>
 					</div>
 			<ul class="tree-view">
 				<li>
-					<div class="module ">
+					<div class="module selected">
 						<a href="../../desktopfile/file.html">file</a>
 					</div>
 				</li>
@@ -101,7 +101,7 @@ $('#symbolSearchPane').show();</script>
 				</li>
 			</ul>
 				</li>
-				<li class="tree-view ">
+				<li class="tree-view collapsed">
 					<div class="package ">
 						<a href="../../mime.html">mime</a>
 					</div>
@@ -186,7 +186,7 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 				</li>
 				<li>
-					<div class="module selected">
+					<div class="module ">
 						<a href="../../mime/cache.html">cache</a>
 					</div>
 				</li>
@@ -265,18 +265,26 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>Function MimeCache.literals</h1><p>Literal patterns.
+			<h1>Function DesktopAction.expandExecValue</h1><p>Expand "Exec" value into the array of command line arguments to use to start the action.
+ It applies unquoting and unescaping.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
 					<div class="single-prototype">
-			<span class="kwd">auto </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">range<wbr/></span><span class="pun">.</span><span class="typ">SortedRange</span>!(std.algorithm.iteration.MapResult!(mime.cache.MimeCache.literalsImpl().__dgliteral2,std.algorithm.iteration.MapResult!(mime.cache.MimeCache.literalsImpl().__lambda1,std.range.iota!(uint,uint).iota(uint,uint).Result).MapResult).MapResult,"a.literal < b.literal",0) <span class="pln">literals</span><span class="pun">(</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">pure @trusted const</span><span class="pun">;</span>
+			<span class="typ">string</span><span class="pun">[]</span> <span class="pln">expandExecValue</span>
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">string</span><span class="pun">[]</span><span class="pun">)</span> <span class="pln">urls</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">locale</span> <span class="pun">=</span> <span class="kwd">null</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@safe const</span><span class="pun">;</span>
 					</div>
 				</code>
 			</div>
 			
-			<section><h2>Returns</h2>
-<p>SortedRange of <code class="lang-d"><a href="../../mime/cache/LiteralEntry.html"><span class="typ">LiteralEntry</span></a></code> tuples sorted by literal.
+			<section><h2>See Also</h2>
+<p><code class="lang-d"><a href="../../desktopfile/file/DesktopAction.execValue.html"><span class="pln">execValue</span></a></code>, <code class="lang-d"><a href="../../desktopfile/utils/expandExecArgs.html" title="desktopfile.utils.expandExecArgs"><span class="pln">expandExecArgs</span></a></code>, <code class="lang-d"><a href="../../desktopfile/file/DesktopAction.start.html"><span class="pln">start</span></a></code>
 </p>
 </section>
 

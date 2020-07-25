@@ -382,56 +382,7 @@ $('#symbolSearchPane').show();</script>
 					</tr>
 				</table>
 			</section>
-			<section><h2>Example</h2>
-
-<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">cachePath </span><span class="pun">= </span><span class="str">"./test/Tango/icon-theme.cache"</span><span class="pun">;
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cachePath<wbr/></span><span class="pun">.</span><span class="pln">exists</span><span class="pun">);
-
-</span><span class="kwd">const</span><span class="pun">(</span><span class="typ">IconThemeCache</span><span class="pun">) </span><span class="pln">cache </span><span class="pun">= </span><span class="kwd">new </span><span class="typ">IconThemeCache</span><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">fileName </span><span class="pun">== </span><span class="pln">cachePath</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">containsIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">));
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">containsIcon</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">, </span><span class="str">"24x24/places"</span><span class="pun">));
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">containsIcon</span><span class="pun">(</span><span class="str">"edit-copy"</span><span class="pun">, </span><span class="str">"32x32/actions"</span><span class="pun">));
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">iconDirectories</span><span class="pun">(</span><span class="str">"text-x-generic"</span><span class="pun">)<wbr/>.</span><span class="pln">canFind</span><span class="pun">(</span><span class="str">"32x32/mimetypes"</span><span class="pun">));
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">directories</span><span class="pun">()<wbr/>.</span><span class="pln">canFind</span><span class="pun">(</span><span class="str">"32x32/devices"</span><span class="pun">));
-
-</span><span class="kwd">auto <a href="../../icontheme/cache/IconThemeCache.icons.html"></span><span class="pln">icons</span></a><span class="pln"> </span><span class="pun">= </span><span class="pln">cache<wbr/></span><span class="pun">.</span><span class="pln">icons</span><span class="pun">();
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">icons<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">(</span><span class="str">"folder"</span><span class="pun">));
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">icons<wbr/></span><span class="pun">.</span><span class="pln">canFind</span><span class="pun">(</span><span class="str">"text-x-generic"</span><span class="pun">));
-
-</span><span class="kwd">try </span><span class="pun">{
-    </span><span class="typ">SysTime </span><span class="pln">pathAccessTime</span><span class="pun">, </span><span class="pln">pathModificationTime</span><span class="pun">;
-    </span><span class="typ">SysTime </span><span class="pln">fileAccessTime</span><span class="pun">, </span><span class="pln">fileModificationTime</span><span class="pun">;
-
-    </span><span class="pln">getTimes</span><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">, </span><span class="pln">fileAccessTime</span><span class="pun">, </span><span class="pln">fileModificationTime</span><span class="pun">);
-    </span><span class="pln">getTimes</span><span class="pun">(</span><span class="pln">cachePath<wbr/></span><span class="pun">.</span><span class="pln">dirName</span><span class="pun">, </span><span class="pln">pathAccessTime</span><span class="pun">, </span><span class="pln">pathModificationTime</span><span class="pun">);
-
-    </span><span class="pln">setTimes</span><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">, </span><span class="pln">pathAccessTime</span><span class="pun">, </span><span class="pln">pathModificationTime</span><span class="pun">);
-    </span><span class="kwd">assert</span><span class="pun">(!<a href="../../icontheme/cache/IconThemeCache.isOutdated.html"></span><span class="typ">IconThemeCache<wbr/></span><span class="pun">.</span><span class="pln">isOutdated</span></a><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">));
-}
-</span><span class="kwd">catch</span><span class="pun">(</span><span class="typ">Exception </span><span class="pln">e</span><span class="pun">) {
-    </span><span class="com">// some environmental error, just ignore
-</span><span class="pun">}
-
-</span><span class="kwd">try </span><span class="pun">{
-    </span><span class="kwd">auto </span><span class="pln">fileData </span><span class="pun">= </span><span class="pln">assumeUnique</span><span class="pun">(</span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">cachePath</span><span class="pun">));
-    </span><span class="pln">assertNotThrown</span><span class="pun">(</span><span class="kwd">new </span><span class="typ">IconThemeCache</span><span class="pun">(</span><span class="pln">fileData</span><span class="pun">, </span><span class="pln">cachePath</span><span class="pun">));
-} </span><span class="kwd">catch</span><span class="pun">(</span><span class="typ">FileException </span><span class="pln">e</span><span class="pun">) {
-
-}
-
-</span><span class="kwd">immutable</span><span class="pun">(</span><span class="typ">ubyte</span><span class="pun">)[] </span><span class="pln">data </span><span class="pun">= [</span><span class="lit">0</span><span class="pun">,</span><span class="lit">2</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">0</span><span class="pun">];
-<a href="../../icontheme/cache/IconThemeCacheException.html"></span><span class="typ">IconThemeCacheException</span></a><span class="pln"> thrown </span><span class="pun">= </span><span class="pln">collectException</span><span class="pun">!<a href="../../icontheme/cache/IconThemeCacheException.html"></span><span class="typ">IconThemeCacheException</span></a><span class="pun">(</span><span class="kwd">new </span><span class="typ">IconThemeCache</span><span class="pun">(</span><span class="pln">data</span><span class="pun">, </span><span class="pln">cachePath</span><span class="pun">));
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Invalid cache must throw"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"major version"</span><span class="pun">);
-
-</span><span class="pln">data </span><span class="pun">= [</span><span class="lit">0</span><span class="pun">,</span><span class="lit">1</span><span class="pun">,</span><span class="lit">0</span><span class="pun">,</span><span class="lit">1</span><span class="pun">];
-</span><span class="pln">thrown </span><span class="pun">= </span><span class="pln">collectException</span><span class="pun">!<a href="../../icontheme/cache/IconThemeCacheException.html"></span><span class="typ">IconThemeCacheException</span></a><span class="pun">(</span><span class="kwd">new </span><span class="typ">IconThemeCache</span><span class="pun">(</span><span class="pln">data</span><span class="pun">, </span><span class="pln">cachePath</span><span class="pun">));
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown </span><span class="pun">!</span><span class="kwd">is null</span><span class="pun">, </span><span class="str">"Invalid cache must throw"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">thrown<wbr/></span><span class="pun">.</span><span class="pln">context </span><span class="pun">== </span><span class="str">"minor version"</span><span class="pun">);
-</span></code></pre>
-</section>
-
+			
 			<footer>
 				<table class="license-info">
 					<tr>

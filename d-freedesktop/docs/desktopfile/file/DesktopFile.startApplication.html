@@ -304,8 +304,8 @@ $('#symbolSearchPane').show();</script>
 			<section><h3>Parameters</h3>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="urls">urls</td><td> urls application will start with.</td></tr>
-<tr><td id="locale">locale</td><td> locale that may be needed to be placed in urls if Exec value has %c code.</td></tr>
-<tr><td id="terminalCommand">terminalCommand</td><td> preferable terminal emulator command. If not set then terminal is determined via getTerminalCommand.</td></tr>
+<tr><td id="locale">locale</td><td> locale that may be needed to be placed in params if Exec value has %c code.</td></tr>
+<tr><td id="terminalCommand">terminalCommand</td><td> preferable terminal emulator command. If not set then terminal is determined via <code class="lang-d"><a href="../../desktopfile/utils/getTerminalCommand.html" title="desktopfile.utils.getTerminalCommand"><span class="pln">getTerminalCommand</span></a></code>.</td></tr>
 </table>
 </section>
 <section><h3>Note</h3>
@@ -313,12 +313,12 @@ $('#symbolSearchPane').show();</script>
 </p>
 </section>
 <section><h3>Throws</h3>
-<p>ProcessException on failure to start the process.
+<p><b>ProcessException</b> on failure to start the process.
   <code class="lang-d"><a href="../../desktopfile/utils/DesktopExecException.html" title="desktopfile.utils.DesktopExecException"><span class="typ">DesktopExecException</span></a></code> if exec string is invalid.
 </p>
 </section>
 <section><h3>See Also</h3>
-<p><code class="lang-d"><a href="../../desktopfile/utils/getTerminalCommand.html" title="desktopfile.utils.getTerminalCommand"><span class="pln">getTerminalCommand</span></a></code>, <code class="lang-d"><a href="../../desktopfile/file/DesktopFile.start.html"><span class="pln">start</span></a></code>, <code class="lang-d"><a href="../../desktopfile/file/DesktopFile.expandExecValue.html"><span class="pln">expandExecValue</span></a></code>
+<p><code class="lang-d"><a href="../../desktopfile/utils/spawnApplication.html" title="desktopfile.utils.spawnApplication"><span class="pln">spawnApplication</span></a></code>, <code class="lang-d"><a href="../../desktopfile/utils/getTerminalCommand.html" title="desktopfile.utils.getTerminalCommand"><span class="pln">getTerminalCommand</span></a></code>, <code class="lang-d"><a href="../../desktopfile/file/DesktopFile.start.html"><span class="pln">start</span></a></code>, <code class="lang-d"><a href="../../desktopfile/file/DesktopFile.expandExecValue.html"><span class="pln">expandExecValue</span></a></code>
 </p>
 </section>
 <section><h3>Example</h3>

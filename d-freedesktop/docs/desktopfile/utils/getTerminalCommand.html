@@ -266,6 +266,8 @@ $('#symbolSearchPane').show();</script>
 		</nav>
 		<div id="main-contents">
 			<h1>Function getTerminalCommand</h1><p>Detect command which will run program in terminal emulator.
+ It tries to detect your desktop environment and find default terminal emulator for it.
+ If all guesses failed, it uses ["xterm", "-e"] as fallback.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -274,16 +276,24 @@ $('#symbolSearchPane').show();</script>
 					</div>
 				</code>
 			</div>
-			<section><p>On Freedesktop it looks for x-terminal-emulator first. If found ["/path/to/x-terminal-emulator", "-e"] is returned.
- Otherwise it looks for xdg-terminal. If found ["/path/to/xdg-terminal"] is returned.
- Otherwise it tries to detect your desktop environment and find default terminal emulator for it.
- If all guesses failed, it uses ["xterm", "-e"] as fallback.
-</p>
-</section>
-
+			
 			<section><h2>Note</h2>
 <p>This function always returns empty array on non-freedesktop systems.
 </p>
+</section>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="kwd">if </span><span class="pun">(</span><span class="pln">isFreedesktop</span><span class="pun">)
+{
+    </span><span class="kwd">import <a href="../../desktopfile/paths.html"></span><span class="pln">desktopfile<wbr/></span><span class="pun">.</span><span class="pln">paths</span></a><span class="pln"> </span><span class="pun">: </span><span class="typ">EnvGuard</span><span class="pun">;
+    </span><span class="typ">EnvGuard </span><span class="pln">pathGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"PATH"</span><span class="pun">, </span><span class="str">":"</span><span class="pun">);
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">getTerminalCommand</span><span class="pun">() == [</span><span class="str">"xterm"</span><span class="pun">, </span><span class="str">"-e"</span><span class="pun">]);
+}
+</span><span class="kwd">else
+</span><span class="pun">{
+    </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">getTerminalCommand</span><span class="pun">()<wbr/>.</span><span class="pln">empty</span><span class="pun">);
+}
+</span></code></pre>
 </section>
 
 			<footer>

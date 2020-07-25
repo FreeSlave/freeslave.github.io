@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>xdgDataHome - multiple declarations</title>
+		<title>Function xdgDataHome</title>
 		<link rel="stylesheet" type="text/css" href="../styles/ddox.css"/>
 		<link rel="stylesheet" href="../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../scripts/jquery.js">/**/</script><script type="text/javascript" src="../scripts/ddox.js">/**/</script>
@@ -265,21 +265,7 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>xdgDataHome - multiple declarations</h1>
-			<nav class="page-nav">
-				<ul>
-					<li>
-						<a href="#0">
-							Function <code>xdgDataHome</code>
-						</a>
-					</li>
-					<li>
-						<a href="#1">
-							Function <code>xdgDataHome</code>
-						</a>
-					</li>
-				</ul>
-			</nav><h2 id="0">Function xdgDataHome</h2><p>The base directory relative to which user-specific data files should be stored.
+			<h1>Function xdgDataHome</h1><p>The base directory relative to which user-specific data files should be stored.
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -296,48 +282,17 @@ $('#symbolSearchPane').show();</script>
 				</code>
 			</div>
 			
-			<section><h3>Returns</h3>
+			<section><h2>Returns</h2>
 <p>Path to user-specific data directory or empty string on error.
 </p>
 </section>
-<section><h3>Parameters</h3>
+<section><h2>Parameters</h2>
 <table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
 <tr><td id="subfolder">subfolder</td><td> Subfolder to append to determined path.</td></tr>
 <tr><td id="shouldCreate">shouldCreate</td><td> If path does not exist, create directory using 700 permissions (i.e. allow access only for current user).</td></tr>
 </table>
 </section>
-<section><h3>See Also</h3>
-<p><code class="lang-d"><a href="../xdgpaths/xdgAllDataDirs.html"><span class="pln">xdgAllDataDirs</span></a></code>, <code class="lang-d"><a href="../xdgpaths/xdgDataDirs.html"><span class="pln">xdgDataDirs</span></a></code>
-</p>
-</section>
-<h2 id="1">Function xdgDataHome</h2><p>The base directory relative to which user-specific data files should be stored.
-</p>
-			<div class="prototype">
-				<code class="lang-d">
-					<div class="single-prototype">
-			<span class="typ">string</span> <span class="pln">xdgDataHome</span>
-			<span class="pun">(</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">string</span> <span class="pln">subfolder</span> <span class="pun">=</span> <span class="kwd">null</span><span class="pun">,</span>
-			<br/>
-			&nbsp;&nbsp;<span class="typ">bool</span> <span class="pln">shouldCreate</span> <span class="pun">=</span> <span class="kwd">false</span>
-			<br/>
-			<span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @trusted</span><span class="pun">;</span>
-					</div>
-				</code>
-			</div>
-			
-			<section><h3>Returns</h3>
-<p>Path to user-specific data directory or empty string on error.
-</p>
-</section>
-<section><h3>Parameters</h3>
-<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
-<tr><td id="subfolder">subfolder</td><td> Subfolder to append to determined path.</td></tr>
-<tr><td id="shouldCreate">shouldCreate</td><td> If path does not exist, create directory using 700 permissions (i.e. allow access only for current user).</td></tr>
-</table>
-</section>
-<section><h3>See Also</h3>
+<section><h2>See Also</h2>
 <p><code class="lang-d"><a href="../xdgpaths/xdgAllDataDirs.html"><span class="pln">xdgAllDataDirs</span></a></code>, <code class="lang-d"><a href="../xdgpaths/xdgDataDirs.html"><span class="pln">xdgDataDirs</span></a></code>
 </p>
 </section>

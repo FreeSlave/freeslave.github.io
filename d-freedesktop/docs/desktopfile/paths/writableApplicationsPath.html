@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-		<title>writableApplicationsPath - multiple declarations</title>
+		<title>Function writableApplicationsPath</title>
 		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
 		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
 		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
@@ -265,21 +265,7 @@ $('#symbolSearchPane').show();</script>
 			</ul>
 		</nav>
 		<div id="main-contents">
-			<h1>writableApplicationsPath - multiple declarations</h1>
-			<nav class="page-nav">
-				<ul>
-					<li>
-						<a href="#0">
-							Function <code>writableApplicationsPath</code>
-						</a>
-					</li>
-					<li>
-						<a href="#1">
-							Function <code>writableApplicationsPath</code>
-						</a>
-					</li>
-				</ul>
-			</nav><h2 id="0">Function writableApplicationsPath</h2><p>Path where .desktop files can be stored by user.
+			<h1>Function writableApplicationsPath</h1><p>Path where .desktop files can be stored by user.
  This function is defined only on freedesktop systems.
 </p>
 			<div class="prototype">
@@ -290,38 +276,15 @@ $('#symbolSearchPane').show();</script>
 				</code>
 			</div>
 			
-			<section><h3>Note</h3>
+			<section><h2>Note</h2>
 <p>it does not check if returned path exists and appears to be directory.
 </p>
 </section>
-<section><h3>Example</h3>
+<section><h2>Example</h2>
 
 <pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">process </span><span class="pun">: </span><span class="pln">environment</span><span class="pun">;
 </span><span class="kwd">auto </span><span class="pln">dataHomeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_HOME"</span><span class="pun">, </span><span class="str">"/home/user/data"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">writableApplicationsPath</span><span class="pun">() == </span><span class="str">"/home/user/data/applications"</span><span class="pun">);
-}
-</span></code></pre>
-</section>
-<h2 id="1">Function writableApplicationsPath</h2><p>Path where .desktop files can be stored by user.
- This function is defined only on freedesktop systems.
-</p>
-			<div class="prototype">
-				<code class="lang-d">
-					<div class="single-prototype">
-			<span class="typ">string</span> <span class="pln">writableApplicationsPath</span><span class="pun">(</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">nothrow @safe</span><span class="pun">;</span>
-					</div>
-				</code>
-			</div>
-			
-			<section><h3>Note</h3>
-<p>it does not check if returned path exists and appears to be directory.
-</p>
-</section>
-<section><h3>Example</h3>
-
-<pre class="code"><code class="lang-d"><span class="kwd">import </span><span class="pln">std<wbr/></span><span class="pun">.</span><span class="pln">process </span><span class="pun">: </span><span class="pln">environment</span><span class="pun">;
-</span><span class="kwd">auto </span><span class="pln">dataHomeGuard </span><span class="pun">= </span><span class="typ">EnvGuard</span><span class="pun">(</span><span class="str">"XDG_DATA_HOME"</span><span class="pun">, </span><span class="str">"/home/user/data"</span><span class="pun">);
-</span><span class="kwd">assert</span><span class="pun">(<a href="../../desktopfile/paths/writableApplicationsPath.html"></span><span class="pln">writableApplicationsPath</span></a><span class="pun">() == </span><span class="str">"/home/user/data/applications"</span><span class="pun">);
 }
 </span></code></pre>
 </section>

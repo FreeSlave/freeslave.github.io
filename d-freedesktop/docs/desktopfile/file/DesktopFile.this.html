@@ -341,7 +341,7 @@ $('#symbolSearchPane').show();</script>
 <p><code class="lang-d"><span class="pln">inilike<wbr/></span><span class="pun">.</span><span class="pln">file<wbr/></span><span class="pun">.</span><span class="typ">IniLikeReadException</span></code> if error occured while parsing or "Desktop Entry" group is missing.
 </p>
 </section>
-<h2 id="2">Function DesktopFile.this</h2><p>Constructs DesktopFile with "Desktop Entry" group and Version set to 1.0
+<h2 id="2">Function DesktopFile.this</h2><p>Constructs DesktopFile with "Desktop Entry" group and Version set to 1.1
 </p>
 			<div class="prototype">
 				<code class="lang-d">
@@ -355,7 +355,7 @@ $('#symbolSearchPane').show();</script>
 
 <pre class="code"><code class="lang-d"><span class="kwd">auto </span><span class="pln">df </span><span class="pun">= </span><span class="kwd">new <a href="../../desktopfile/file/DesktopFile.html"></span><span class="typ">DesktopFile</span></a><span class="pun">();
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">());
-</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">()<wbr/>.</span><span class="pln">escapedValue</span><span class="pun">(</span><span class="str">"Version"</span><span class="pun">) == </span><span class="str">"1.0"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">desktopEntry</span><span class="pun">()<wbr/>.</span><span class="pln">escapedValue</span><span class="pun">(</span><span class="str">"Version"</span><span class="pun">) == </span><span class="str">"1.1"</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">categories</span><span class="pun">()<wbr/>.</span><span class="pln">empty</span><span class="pun">);
 </span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">df<wbr/></span><span class="pun">.</span><span class="pln">type</span><span class="pun">() == </span><span class="typ">DesktopFile<wbr/></span><span class="pun">.</span><span class="typ">Type<wbr/></span><span class="pun">.</span><span class="typ">Unknown</span><span class="pun">);
 
