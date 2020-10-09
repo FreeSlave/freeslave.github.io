@@ -19,9 +19,9 @@ do
     if [ ! -d $REPOS/$repo ]; then
         (cd $REPOS && git clone https://github.com/FreeSlave/$repo --branch master --single-branch)
     fi
-    
+
     (cd $REPOS/$repo && git pull --ff --rebase=false origin master)
-    cp -r $REPOS/$repo/source $COMMONDIR/
+    find $REPOS/$repo/source -maxdepth 1 -mindepth 1 -exec ln -sfr "{}" ${COMMONDIR}/source \;
 done
 
 (cd $COMMONDIR && dub build -b ddox)
