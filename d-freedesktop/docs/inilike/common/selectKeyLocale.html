@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Function selectKeyLocale</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/ddox.css"/>
+		<link rel="stylesheet" href="../../prettify/prettify.css" type="text/css"/>
+		<script type="text/javascript" src="../../scripts/jquery.js">/**/</script><script type="text/javascript" src="../../scripts/ddox.js">/**/</script>
+	</head>
+	<body onload="setupDdox();">
+		<nav id="main-nav">
+			<noscript>
+				<p style="color: red">The search functionality needs JavaScript enabled</p>
+			</noscript>
+			<div id="symbolSearchPane" style="display: none">
+				<form action="#" method="GET">
+					<input id="symbolSearch" type="text" name="q" placeholder="Search for symbols" autocomplete="off" onchange="performSymbolSearch(40);" onkeypress="this.onchange();" onpaste="this.onchange();" oninput="this.onchange();"/>
+				</form>
+				<ul id="symbolSearchResults" class="symbolList" style="display: none"></ul><script type="application/javascript" src="../../symbols.js"></script><script type="application/javascript">var symbolSearchRootDir = "../../";
+$('#symbolSearchPane').show();</script>
+			</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../desktopfile.html">desktopfile</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../desktopfile/utils.html">utils</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../icontheme.html">icontheme</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/lookup.html">lookup</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../icontheme/paths.html">paths</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view ">
+					<div class="package ">
+						<a href="../../inilike.html">inilike</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module selected">
+						<a href="../../inilike/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/exception.html">exception</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/file.html">file</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/range.html">range</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../inilike/read.html">read</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../mime.html">mime</a>
+					</div>
+			<ul class="tree-view">
+				<li class="tree-view collapsed">
+					<div class="package ">detectors
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/detectors/cache.html">cache</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">
+						<a href="../../mime/files.html">files</a>
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/aliases.html">aliases</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/globs.html">globs</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/icons.html">icons</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/namespaces.html">namespaces</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/subclasses.html">subclasses</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/files/types.html">types</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li class="tree-view collapsed">
+					<div class="package ">stores
+					</div>
+			<ul class="tree-view">
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/files.html">files</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/stores/subtypexml.html">subtypexml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/cache.html">cache</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/common.html">common</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/database.html">database</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/detector.html">detector</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/glob.html">glob</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/inode.html">inode</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/magic.html">magic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/paths.html">paths</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/store.html">store</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/text.html">text</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/treemagic.html">treemagic</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/type.html">type</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mime/xml.html">xml</a>
+					</div>
+				</li>
+			</ul>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../mimeapps.html">mimeapps</a>
+					</div>
+				</li>
+				<li>
+					<div class="module ">
+						<a href="../../xdgpaths.html">xdgpaths</a>
+					</div>
+				</li>
+			</ul>
+		</nav>
+		<div id="main-contents">
+			<h1>Function selectKeyLocale</h1><p>Between two key locales (i.e. locales found in keys of .ini-like file) select a better match for the provided locale. The "goodness" is determined using algorithm described in <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s05.html">Localized values for keys</a>.
+</p>
+			<div class="prototype">
+				<code class="lang-d">
+					<div class="single-prototype">
+			<span class="kwd">auto </span><span class="kwd">auto</span> <span class="pln">selectKeyLocale</span>(String)
+			<span class="pun">(</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">scope </span><span class="typ">String</span> <span class="pln">locale</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">scope return </span><span class="typ">String</span> <span class="pln">firstKeyLocale</span><span class="pun">,</span>
+			<br/>
+			&nbsp;&nbsp;<span class="kwd">scope return </span><span class="typ">String</span> <span class="pln">secondKeyLocale</span>
+			<br/>
+			<span class="pun">)</span><span class="pln"> </span><span class="kwd">@nogc @trusted</span>
+			<br/>
+			<span class="kwd">if</span> <span class="pun">(</span><span class="pln">isSomeString</span><span class="pun">!</span><span class="typ">String </span><span class="pun">&amp;&amp; </span><span class="kwd">is</span><span class="pun">(</span><span class="typ">ElementEncodingType</span><span class="pun">!</span><span class="typ">String </span><span class="pun">: </span><span class="typ">char</span><span class="pun">)</span><span class="pun">);</span>
+					</div>
+				</code>
+			</div>
+			
+			<section><h2>Parameters</h2>
+<table><col class="caption"><tr><th>Name</th><th>Description</th></tr>
+<tr><td id="locale">locale</td><td> original locale to match to</td></tr>
+<tr><td id="firstKeyLocale">firstKeyLocale</td><td> first key locale, can be empty</td></tr>
+<tr><td id="secondKeyLocale">secondKeyLocale</td><td> second key locale, can be empty</td></tr>
+</table>
+</section>
+<section><h2>Returns</h2>
+<p>a locale which is considered a better alternative or an empty string if none of alternatives match the provided locale.
+</p>
+</section>
+<section><h2>Note</h2>
+<p>Empty locale is considered a better choice than a locale that does not match the original one.
+</p>
+</section>
+<section><h2>See Also</h2>
+<p><code class="lang-d"><a href="../../inilike/common/separateFromLocale.html"><span class="pln">separateFromLocale</span></a></code>, <code class="lang-d"><a href="../../inilike/common/selectLocalizedValue.html"><span class="pln">selectLocalizedValue</span></a></code>
+</p>
+</section>
+<section><h2>Example</h2>
+
+<pre class="code"><code class="lang-d"><span class="typ">string </span><span class="pln">locale </span><span class="pun">= </span><span class="str">"ru_RU.UTF-8@jargon"</span><span class="pun">;
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(</span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">, </span><span class="str">"ru_RU"</span><span class="pun">, </span><span class="str">"ru@jargon"</span><span class="pun">) == </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(<a href="../../inilike/common/selectKeyLocale.html#locale"></span><span class="pln">locale</span></a><span class="pun">, </span><span class="str">"fr_FR"</span><span class="pun">, </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">) == </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(<a href="../../inilike/common/selectKeyLocale.html#locale"></span><span class="pln">locale</span></a><span class="pun">, </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">, </span><span class="str">"de_DE"</span><span class="pun">) == </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(<a href="../../inilike/common/selectKeyLocale.html#locale"></span><span class="pln">locale</span></a><span class="pun">, </span><span class="str">"fr_FR"</span><span class="pun">, </span><span class="str">"de_DE"</span><span class="pun">) == </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(<a href="../../inilike/common/selectKeyLocale.html#locale"></span><span class="pln">locale</span></a><span class="pun">, </span><span class="str">"ru"</span><span class="pun">, </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">) == </span><span class="str">"ru"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(<a href="../../inilike/common/selectKeyLocale.html#locale"></span><span class="pln">locale</span></a><span class="pun">, </span><span class="str">"ru"</span><span class="pun">, </span><span class="str">"ru@jargon"</span><span class="pun">) == </span><span class="str">"ru@jargon"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(<a href="../../inilike/common/selectKeyLocale.html#locale"></span><span class="pln">locale</span></a><span class="pun">, </span><span class="str">"ru_RU"</span><span class="pun">, </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">) == </span><span class="str">"ru_RU"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(<a href="../../inilike/common/selectKeyLocale.html#locale"></span><span class="pln">locale</span></a><span class="pun">, </span><span class="str">"ru_RU"</span><span class="pun">, </span><span class="str">"ru"</span><span class="pun">) == </span><span class="str">"ru_RU"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(<a href="../../inilike/common/selectKeyLocale.html#locale"></span><span class="pln">locale</span></a><span class="pun">, </span><span class="str">"ru_RU"</span><span class="pun">, </span><span class="str">"ru@jargon"</span><span class="pun">) == </span><span class="str">"ru_RU"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(<a href="../../inilike/common/selectKeyLocale.html#locale"></span><span class="pln">locale</span></a><span class="pun">, </span><span class="str">"ru_RU"</span><span class="pun">, </span><span class="str">"ru_RU@jargon"</span><span class="pun">) == </span><span class="str">"ru_RU@jargon"</span><span class="pun">);
+
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(</span><span class="str">"en_US.UTF-8"</span><span class="pun">, </span><span class="str">"en"</span><span class="pun">, </span><span class="str">"en_GB"</span><span class="pun">) == </span><span class="str">"en"</span><span class="pun">);
+</span><span class="kwd">assert</span><span class="pun">(</span><span class="pln">selectKeyLocale</span><span class="pun">(</span><span class="str">"en_US.UTF-8"</span><span class="pun">, </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">, </span><span class="str">"en_GB"</span><span class="pun">) == </span><span class="typ">string<wbr/></span><span class="pun">.</span><span class="pln">init</span><span class="pun">);
+</span></code></pre>
+</section>
+
+			<footer>
+				<table class="license-info">
+					<tr>
+						<th>Authors</th>
+						<td>
+							<p><a href="https://github.com/FreeSlave">Roman Chistokhodov</a>
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>Copyright</th>
+						<td>
+							<p>Roman Chistokhodov, 2015-2016
+</p>
+
+						</td>
+					</tr>
+					<tr>
+						<th>License</th>
+						<td>
+							<p><a href="http://www.boost.org/LICENSE_1_0.txt">Boost License 1.0</a>.
+</p>
+
+						</td>
+					</tr>
+				</table>
+				<p class="faint">Generated using the DDOX documentation generator</p>
+			</footer>
+		</div>
+	</body>
+</html>

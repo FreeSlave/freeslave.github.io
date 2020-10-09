@@ -273,7 +273,7 @@ $('#symbolSearchPane').show();</script>
 			<span class="typ">bool</span> <span class="pln">isValidDesktopFileKey</span>
 			<span class="pun">(</span>
 			<br/>
-			&nbsp;&nbsp;<span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">[]</span><span class="pun">)</span> <span class="pln">desktopKey</span>
+			&nbsp;&nbsp;<span class="kwd">scope </span><span class="kwd">const</span><span class="pun">(</span><span class="typ">char</span><span class="pun">)</span><span class="pun">[]</span> <span class="pln">desktopKey</span>
 			<br/>
 			<span class="pun">)</span><span class="pln"> </span><span class="kwd">pure nothrow @nogc @safe</span><span class="pun">;</span>
 					</div>
@@ -285,7 +285,7 @@ $('#symbolSearchPane').show();</script>
 </section>
 
 			<section><h2>Note</h2>
-<p>this function automatically separate key from locale. Locale is validated against isValidKey.
+<p>this function automatically separate key from locale. Locale is validated against <code class="lang-d"><a href="../../inilike/common/isValidKey.html"><span class="pln">isValidKey</span></a></code>.
 </p>
 </section>
 <section><h2>See Also</h2>

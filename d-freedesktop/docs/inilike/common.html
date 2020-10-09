@@ -291,15 +291,6 @@ $('#symbolSearchPane').show();</script>
 					<tr>
 						<td>
 							<code>
-								<a id="chooseLocalizedValue" class="public" href="../inilike/common/chooseLocalizedValue.html">chooseLocalizedValue</a><span class="decoration">(locale, firstLocale, firstValue, secondLocale, secondValue)</span>
-							</code>
-						</td>
-						<td>Choose the better localized value matching to locale between two localized values. The "goodness" is determined using algorithm described in <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s05.html">Localized values for keys</a>.
-</td>
-					</tr>
-					<tr>
-						<td>
-							<code>
 								<a id="doUnescape" class="public" href="../inilike/common/doUnescape.html">doUnescape</a><span class="decoration">(value, pairs)</span>
 							</code>
 						</td>
@@ -449,6 +440,24 @@ $('#symbolSearchPane').show();</script>
 							</code>
 						</td>
 						<td>Parse locale name into the tuple of 4 values corresponding to language, country, encoding and modifier
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="selectKeyLocale" class="public" href="../inilike/common/selectKeyLocale.html">selectKeyLocale</a><span class="decoration">(locale, firstKeyLocale, secondKeyLocale)</span>
+							</code>
+						</td>
+						<td>Between two key locales (i.e. locales found in keys of .ini-like file) select a better match for the provided locale. The "goodness" is determined using algorithm described in <a href="https://specifications.freedesktop.org/desktop-entry-spec/latest/ar01s05.html">Localized values for keys</a>.
+</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								<a id="selectLocalizedValue" class="public" href="../inilike/common/selectLocalizedValue.html">selectLocalizedValue</a><span class="decoration">(locale, firstLocale, firstValue, secondLocale, secondValue)</span>
+							</code>
+						</td>
+						<td>Same as <code class="lang-d"><a href="../inilike/common/selectKeyLocale.html"><span class="pln">selectKeyLocale</span></a></code>, but returns a locale bundled with a value in one tuple.
 </td>
 					</tr>
 					<tr>

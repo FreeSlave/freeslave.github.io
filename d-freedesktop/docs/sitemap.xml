@@ -390,7 +390,6 @@
 <url><loc>http://127.0.0.1/icontheme/paths/writableIconsPath.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/common.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/common/boolToString.html</loc></url>
-<url><loc>http://127.0.0.1/inilike/common/chooseLocalizedValue.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/common/doUnescape.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/common/dropEncodingPart.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/common/escapeValue.html</loc></url>
@@ -408,6 +407,8 @@
 <url><loc>http://127.0.0.1/inilike/common/parseGroupHeader.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/common/parseKeyValue.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/common/parseLocaleName.html</loc></url>
+<url><loc>http://127.0.0.1/inilike/common/selectKeyLocale.html</loc></url>
+<url><loc>http://127.0.0.1/inilike/common/selectLocalizedValue.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/common/separateFromLocale.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/common/unescapeValue.html</loc></url>
 <url><loc>http://127.0.0.1/inilike/exception.html</loc></url>
